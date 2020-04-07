@@ -1,0 +1,15 @@
+Cw3215.dll
+----------
+
+Some earlier versions of Blat required Cw3215.dll, this version doesn't
+and (hopefully) futur versions won't either.
+
+For those that still want or need it, it is available at
+
+	http://pages.infinit.net/che/blat/cw3215.zip
+
+
+
+ch
+
+1998-08-25

@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?> 
+<!-- Attribute list usage -->
+<ReportObject roid="Store" xmlns="urn:schemas-fullplaymedia-com:mmd" >
+	<Attr atid="idStore" name="Store Id" />
+	<Attr atid="sName" name="Name" />
+	<Attr atid="sZipCode" name="Zip Code" />
+	<ReportObject roid="RecListType">
+		<Attr atid="sName" name="List Type" />
+		<ReportObject roid="RecList">
+			<Attr atid="sName" name="Rec List" />
+			<ReportObject roid="RecListRequest">
+				<Agg agid="ProductRequestCount" roid="ProductRequest" name="View Count" />
+				<Agg agid="TotalSelectCount" roid="ProductRequest" name="Click Thru Count" />
+				<Criterion atid="dtLogged" op="gte" operand="1/1/1990" /> 
+				<Criterion atid="dtLogged" op="lte" operand="1/1/2003" />
+			</ReportObject>
+		</ReportObject>
+		<Sort atid="sName" sort="ASC" />
+	</ReportObject>	
+	<Sort atid="sName" sort="ASC" />
+</ReportObject>

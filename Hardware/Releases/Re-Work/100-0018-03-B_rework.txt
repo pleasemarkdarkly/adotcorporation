@@ -1,0 +1,11 @@
+REWORK instructions 100-0018-03-A first batch of 8 prototypes
+Rev A board to rev B board
+Rework to remove 12.288 MHz oscillator.
+
+1.  Remove R6
+2.  Remove Y3
+3.  Remove R7
+4.  Remove C16
+5.  Remove C15, and replace with 0-ohm resistor. 
+6.  Label board rev as B
+

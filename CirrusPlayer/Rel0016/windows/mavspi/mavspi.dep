@@ -1,0 +1,204 @@
+# Microsoft Developer Studio Generated Dependency File, included by mavspi.mak
+
+.\device.cpp : \
+	".\device.h"\
+	".\enumdev.h"\
+	".\enumstor.h"\
+	".\mavcmd.h"\
+	".\mavdefs.h"\
+	".\mavinfo.h"\
+	".\mavspi.h"\
+	".\Resource.h"\
+	".\servprov.h"\
+	".\StdAfx.h"\
+	".\storage.h"\
+	".\storglob.h"\
+	"c:\program files\microsoft visual studio\vc98\include\basetsd.h"\
+	"c:\program files\microsoft visual studio\vc98\include\servprov.h"\
+	"c:\progra~1\wmsdk\wmfsdk\include\des.h"\
+	"c:\progra~1\wmsdk\wmfsdk\include\sac.h"\
+	"c:\progra~1\wmsdk\wmfsdk\include\scserver.h"\
+	
+
+.\enumdev.cpp : \
+	".\device.h"\
+	".\enumdev.h"\
+	".\enumstor.h"\
+	".\mavcmd.h"\
+	".\mavdefs.h"\
+	".\mavinfo.h"\
+	".\mavspi.h"\
+	".\Resource.h"\
+	".\servprov.h"\
+	".\StdAfx.h"\
+	".\storage.h"\
+	".\storglob.h"\
+	"c:\program files\microsoft visual studio\vc98\include\basetsd.h"\
+	"c:\program files\microsoft visual studio\vc98\include\servprov.h"\
+	"c:\progra~1\wmsdk\wmfsdk\include\des.h"\
+	"c:\progra~1\wmsdk\wmfsdk\include\sac.h"\
+	"c:\progra~1\wmsdk\wmfsdk\include\scserver.h"\
+	
+
+.\enumstor.cpp : \
+	".\device.h"\
+	".\enumdev.h"\
+	".\enumstor.h"\
+	".\mavcmd.h"\
+	".\mavdefs.h"\
+	".\mavinfo.h"\
+	".\mavspi.h"\
+	".\Resource.h"\
+	".\servprov.h"\
+	".\StdAfx.h"\
+	".\storage.h"\
+	".\storglob.h"\
+	"c:\program files\microsoft visual studio\vc98\include\basetsd.h"\
+	"c:\program files\microsoft visual studio\vc98\include\servprov.h"\
+	"c:\progra~1\wmsdk\wmfsdk\include\des.h"\
+	"c:\progra~1\wmsdk\wmfsdk\include\sac.h"\
+	"c:\progra~1\wmsdk\wmfsdk\include\scserver.h"\
+	
+
+.\mavcmd.c : \
+	"..\usbdrvr\mavguid.h"\
+	"..\usbdrvr\mavusb.h"\
+	".\mavcmd.h"\
+	"c:\program files\microsoft visual studio\vc98\include\basetsd.h"\
+	"c:\program files\microsoft visual studio\vc98\include\servprov.h"\
+	
+
+.\mavinfo.cpp : \
+	".\device.h"\
+	".\enumdev.h"\
+	".\enumstor.h"\
+	".\mavcmd.h"\
+	".\mavdefs.h"\
+	".\mavinfo.h"\
+	".\mavspi.h"\
+	".\Resource.h"\
+	".\servprov.h"\
+	".\StdAfx.h"\
+	".\storage.h"\
+	".\storglob.h"\
+	"c:\program files\microsoft visual studio\vc98\include\basetsd.h"\
+	"c:\program files\microsoft visual studio\vc98\include\servprov.h"\
+	"c:\progra~1\wmsdk\wmfsdk\include\des.h"\
+	"c:\progra~1\wmsdk\wmfsdk\include\sac.h"\
+	"c:\progra~1\wmsdk\wmfsdk\include\scserver.h"\
+	
+
+.\mavspi.cpp : \
+	".\device.h"\
+	".\enumdev.h"\
+	".\enumstor.h"\
+	".\mavcmd.h"\
+	".\mavdefs.h"\
+	".\mavinfo.h"\
+	".\mavspi.h"\
+	".\mavspi_i.c"\
+	".\Resource.h"\
+	".\servprov.h"\
+	".\StdAfx.h"\
+	".\storage.h"\
+	".\storglob.h"\
+	"c:\program files\microsoft visual studio\vc98\include\basetsd.h"\
+	"c:\program files\microsoft visual studio\vc98\include\servprov.h"\
+	"c:\progra~1\wmsdk\wmfsdk\include\des.h"\
+	"c:\progra~1\wmsdk\wmfsdk\include\sac.h"\
+	"c:\progra~1\wmsdk\wmfsdk\include\scserver.h"\
+	
+
+.\mavspi.idl : \
+	"c:\progra~1\wmsdk\wmfsdk\include\icomponentauthenticate.idl"\
+	"c:\progra~1\wmsdk\wmfsdk\include\WMDM.idl"\
+	"c:\progra~1\wmsdk\wmfsdk\include\WMSP.idl"\
+	
+
+.\mavspi.rc : \
+	".\icon_hd.ico"\
+	".\mavspi.tlb"\
+	".\Resource.h"\
+	".\servprov.rgs"\
+	
+
+.\servprov.cpp : \
+	".\device.h"\
+	".\enumdev.h"\
+	".\enumstor.h"\
+	".\mavcmd.h"\
+	".\mavdefs.h"\
+	".\mavinfo.h"\
+	".\mavspi.h"\
+	".\Resource.h"\
+	".\servprov.h"\
+	".\StdAfx.h"\
+	".\storage.h"\
+	".\storglob.h"\
+	"c:\program files\microsoft visual studio\vc98\include\basetsd.h"\
+	"c:\program files\microsoft visual studio\vc98\include\servprov.h"\
+	"c:\progra~1\wmsdk\wmfsdk\include\des.h"\
+	"c:\progra~1\wmsdk\wmfsdk\include\key.c"\
+	"c:\progra~1\wmsdk\wmfsdk\include\sac.h"\
+	"c:\progra~1\wmsdk\wmfsdk\include\scserver.h"\
+	
+
+.\StdAfx.cpp : \
+	".\device.h"\
+	".\enumdev.h"\
+	".\enumstor.h"\
+	".\mavcmd.h"\
+	".\mavdefs.h"\
+	".\mavinfo.h"\
+	".\mavspi.h"\
+	".\Resource.h"\
+	".\servprov.h"\
+	".\StdAfx.h"\
+	".\storage.h"\
+	".\storglob.h"\
+	"c:\program files\microsoft visual studio\vc98\include\basetsd.h"\
+	"c:\program files\microsoft visual studio\vc98\include\servprov.h"\
+	"c:\progra~1\wmsdk\wmfsdk\include\des.h"\
+	"c:\progra~1\wmsdk\wmfsdk\include\sac.h"\
+	"c:\progra~1\wmsdk\wmfsdk\include\scserver.h"\
+	
+
+.\storage.cpp : \
+	".\device.h"\
+	".\enumdev.h"\
+	".\enumstor.h"\
+	".\mavcmd.h"\
+	".\mavdefs.h"\
+	".\mavinfo.h"\
+	".\mavspi.h"\
+	".\Resource.h"\
+	".\servprov.h"\
+	".\StdAfx.h"\
+	".\storage.h"\
+	".\storglob.h"\
+	"c:\program files\microsoft visual studio\vc98\include\basetsd.h"\
+	"c:\program files\microsoft visual studio\vc98\include\servprov.h"\
+	"c:\progra~1\wmsdk\wmfsdk\include\des.h"\
+	"c:\progra~1\wmsdk\wmfsdk\include\sac.h"\
+	"c:\progra~1\wmsdk\wmfsdk\include\scserver.h"\
+	
+
+.\storglob.cpp : \
+	".\device.h"\
+	".\enumdev.h"\
+	".\enumstor.h"\
+	".\mavcmd.h"\
+	".\mavdefs.h"\
+	".\mavinfo.h"\
+	".\mavspi.h"\
+	".\Resource.h"\
+	".\servprov.h"\
+	".\StdAfx.h"\
+	".\storage.h"\
+	".\storglob.h"\
+	"c:\program files\microsoft visual studio\vc98\include\basetsd.h"\
+	"c:\program files\microsoft visual studio\vc98\include\servprov.h"\
+	"c:\progra~1\wmsdk\wmfsdk\include\des.h"\
+	"c:\progra~1\wmsdk\wmfsdk\include\sac.h"\
+	"c:\progra~1\wmsdk\wmfsdk\include\scserver.h"\
+	

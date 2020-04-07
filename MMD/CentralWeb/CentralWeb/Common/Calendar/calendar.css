@@ -1,0 +1,111 @@
+.Calendar
+{
+    BORDER-RIGHT: black 1px solid;
+    BORDER-TOP: black 1px solid;
+    FONT-SIZE: 8pt;
+    BORDER-LEFT: black 1px solid;
+    BORDER-BOTTOM: black 1px solid;
+    FONT-FAMILY: 'Arial Black';
+    BACKGROUND-COLOR: #f1f1f1
+}
+.Calendar TD.calDate
+{
+    BORDER-RIGHT: #f1f1f1 0px;
+    PADDING-RIGHT: 0px;
+    BORDER-TOP: #f1f1f1 0px;
+    PADDING-LEFT: 0px;
+    FONT-SIZE: 8pt;
+    PADDING-BOTTOM: 0px;
+    BORDER-LEFT: #f1f1f1 0px;
+    WIDTH: 19pt;
+    CURSOR: hand;
+    PADDING-TOP: 0px;
+    BORDER-BOTTOM: #f1f1f1 0px;
+    FONT-FAMILY: Verdana, Arial, Helvetica;
+    HEIGHT: 19pt;
+    TEXT-ALIGN: center
+}
+
+.Calendar TD.calBadDate
+{
+    BORDER-RIGHT: #f1f1f1 0px;
+    PADDING-RIGHT: 0px;
+    BORDER-TOP: #f1f1f1 0px;
+    PADDING-LEFT: 0px;
+    FONT-SIZE: 8pt;
+    PADDING-BOTTOM: 0px;
+    BORDER-LEFT: #f1f1f1 0px;
+    background-color: pink;
+    WIDTH: 19pt;
+    CURSOR: default;
+    PADDING-TOP: 0px;
+    BORDER-BOTTOM: #f1f1f1 0px;
+    FONT-FAMILY: Verdana, Arial, Helvetica;
+    HEIGHT: 19pt;
+    TEXT-ALIGN: center
+}
+
+.Calendar TD.calDayOfWeek
+{
+    FONT-WEIGHT: bolder;
+    FONT-SIZE: 8pt;
+    BORDER-BOTTOM: gray solid;
+    FONT-FAMILY: Verdana, Arial, Helvetica;
+    TEXT-ALIGN: center
+}
+.Calendar TD.calHeader
+{
+    BORDER-RIGHT: white thin solid;
+    BORDER-TOP: white thin solid;
+    FONT-SIZE: 8pt;
+    BORDER-LEFT: white thin solid;
+    COLOR: white;
+    BORDER-BOTTOM: white thin solid;
+    FONT-FAMILY: Verdana, Arial;
+    BACKGROUND-COLOR: gray;
+    TEXT-ALIGN: center
+}
+.Calendar TD.calHeaderButton
+{
+    BORDER-RIGHT: white thin solid;
+    BORDER-TOP: white thin solid;
+    FONT-SIZE: 8pt;
+    BORDER-LEFT: white thin solid;
+    CURSOR: hand;
+    COLOR: white;
+    BORDER-BOTTOM: white thin solid;
+    FONT-FAMILY: Verdana, Arial;
+    BACKGROUND-COLOR: gray;
+    TEXT-ALIGN: center
+}
+
+.Calendar TD.calInput
+{
+    FONT-SIZE: 8pt;
+    CURSOR: hand;
+    COLOR: white;
+    FONT-FAMILY: Verdana, Arial;
+    BACKGROUND-COLOR: silver;
+    TEXT-ALIGN: center	
+}
+
+.Calendar TD.calToday
+{
+    FONT-SIZE: 8pt;
+    CURSOR: hand;
+    COLOR: black;
+    FONT-FAMILY: Verdana, Arial;
+    TEXT-ALIGN: center;
+    background-color: #e0e0e0;
+}
+.Calendar TD.calNoDate
+{
+    FONT-SIZE: 8pt;
+    WIDTH: 19pt;
+    CURSOR: default;
+    FONT-FAMILY: Verdana, Arial;
+    HEIGHT: 19pt;
+    BACKGROUND-COLOR: white;
+    TEXT-ALIGN: center;
+    color: silver;
+}

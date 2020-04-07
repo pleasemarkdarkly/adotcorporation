@@ -1,0 +1,59 @@
+
+<html>
+<head>
+<title>Calendar Test Page </title>
+<LINK REL="SHORTCUT ICON" HREF="http://www.expedia.com/favicon.ico">
+
+
+
+</head>
+<body bgcolor=#ffffff link=#333399 vlink=#660066 alink=#333399 topmargin=0 leftmargin=0 marginwidth=0 marginheight=0>
+
+
+
+<!-- BEGIN IFRAME AND SCRIPT BLOCK FOR CALENDAR - CHANGE SRC ATTRIBUTES AS REQUIRED -->
+<IFRAME STYLE="display:none;position:absolute;height: 500px;z-index=100" ID="CalFrame" 
+	MARGINHEIGHT=0 MARGINWIDTH=0 NORESIZE FRAMEBORDER=0 SCROLLING=NO SRC="/CentralWeb/Common/Calendar/calendar.htm"></IFRAME>
+<SCRIPT LANGUAGE="javascript" SRC="/CentralWeb/Common/Calendar/calendar.js"></SCRIPT>
+<SCRIPT FOR=document EVENT="onclick()">
+<!--
+document.all.CalFrame.style.display="none";
+//-->
+</SCRIPT>
+<!-- END -->
+
+<form name=Wiz method=post action="process.asp">
+
+
+<!-- CALENDAR EXAMPLE SPECIFYING DATE RANGES -->
+Test min/max dates<br>
+		<INPUT class=text3 maxLength=12 name=date1 size=9 value="10/9/01">
+		<A href="javascript:ShowCalendar(document.Wiz.dimg1,document.Wiz.date1,null, '9/18/2001', '10/31/2001')" 
+			onclick=event.cancelBubble=true;>
+		<IMG align=top border=0 height=21 id=dimg1 src="calendar.gif" style="POSITION: relative" width=34></A>
+<p>
+
+<!-- CALENDAR EXAMPLE SPECIFYING NO DATE RANGES -->
+Test no limit<br>
+		<INPUT class=text3 maxLength=12 name=date2 size=9 value="">
+		<A href="javascript:ShowCalendar(document.Wiz.dimg2,document.Wiz.date2,null, null, null)" 
+			onclick=event.cancelBubble=true;>
+		<IMG align=top border=0 height=21 id=dimg2 src="calendar.gif" style="POSITION: relative" width=34></A>
+<p>
+
+
+</form>
+
+<b>ShowCalendar Method</b><br>
+&nbsp;<br>
+PARAMETERS
+<ul>
+<li>Document element to position calendar popup near.</li>
+<li>Document input element whose value is set when a date is selected from the popup</li>
+<li>Hidden document input element whose value is used to set the currently selected date if parameter 2 has no valid value set, can be <b>null</b>.</li>
+<li>Date in <b>mm/dd/yy</b> format to set a minimum valid date for this field, can be <b>null</b>.</li>
+<li>Date in <b>mm/dd/yy</b> format to set a maximum valid date for this field, can be <b>null</b>.</li>
+</ul>
+
+</body>
+</html>

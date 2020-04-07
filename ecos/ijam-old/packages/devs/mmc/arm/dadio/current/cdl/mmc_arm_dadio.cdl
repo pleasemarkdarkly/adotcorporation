@@ -1,0 +1,96 @@
+# ====================================================================
+#
+#      mmc_arm_dadio.cdl
+#
+#      eCos mmc layer for iobjects dadio
+#
+# ====================================================================
+# ====================================================================
+######DESCRIPTIONBEGIN####
+#
+# Author(s):      toddm
+# Original data:  toddm
+# Contributors:   toddm
+# Date:           2000-06-07
+#
+#####DESCRIPTIONEND####
+#
+# ====================================================================
+
+
+cdl_package DDOPKG_IO_MMC_ARM_DADIO {
+    display       "Dadio MMC device drivers for ARM"
+#    parent        CYGPKG_IO_BLOCK
+    include_dir   dadio/io
+    include_files blk_dev.h dev_mmc.h intrface.h mmcoem.h drive.h sdapi.h sdconfig.h sdmmc.h sdtypes.h pckernel.h oem.h
+
+    description   "
+           This option enables the Dadio MMC block device driver."
+#    doc           redirect/ecos-device-drivers.html
+
+#    compile       -library=libextras.a   mmc.c edk.c edk_hw.c iome_fat.c
+    compile       -library=libextras.a	mmc.c __mmc_asm.S __mmcoem_c0.S __mmcoem_c1.S dev_mmc.c ioconst.c ioutil.c \
+			mmcdrv.c mmcoem.c mmcoem_c0.c mmcoem_c1.c sdmmc.c crc.c timer.c util.c
+
+    cdl_option DDODAT_IO_MMC_NAME_DRIVE0 {
+        display       "Device name for the Dadio MMC device driver"
+        flavor        data
+	default_value	{ "\"/dev/hda\"" }
+        description   "
+            This option specifies the name of the MMC device."
+    }
+
+    cdl_option DDODAT_IO_MMC_NAME_DRIVE1 {
+        display       "Device name for the Dadio MMC device driver"
+        flavor        data
+	default_value	{ "\"/dev/hdb\"" }
+        description   "
+            This option specifies the name of the MMC device."
+    }
+
+    cdl_component DDOPKG_IO_MMC_ARM_DADIO_OPTIONS {
+        display "Dadio MMC device driver build options"
+        flavor  none
+        description   "
+	    Package specific build options including control over
+	    compiler flags used only in building this package,
+	    and details of which tests are built."
+
+
+        cdl_option DDOPKG_IO_MMC_ARM_DADIO_CFLAGS_ADD {
+            display "Additional compiler flags"
+            flavor  data
+            no_define
+            default_value { "" }
+            description   "
+                This option modifies the set of compiler flags for
+                building these serial device drivers. These flags are used in addition
+                to the set of global flags."
+        }
+
+        cdl_option DDOPKG_IO_MMC_ARM_DADIO_CFLAGS_REMOVE {
+            display "Suppressed compiler flags"
+            flavor  data
+            no_define
+            default_value { "" }
+            description   "
+                This option modifies the set of compiler flags for
+                building these serial device drivers. These flags are removed from
+                the set of global flags if present."
+        }
+
+	cdl_option DDOPKG_IO_MMC_ARM_DADIO_TESTS {
+	    display "MMC tests"
+ 	    flavor  data
+            no_define
+            calculated { "tests/mmctest" }
+	    description "
+                This option specifies the set of tests for the MMC driver."
+	}	
+    }
+}
+
+# EOF mmc_arm_dadio.cdl
+
+
+

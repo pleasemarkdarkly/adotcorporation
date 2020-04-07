@@ -1,0 +1,49 @@
+Note:  These intructions will work regardless of whether U15 (Cypress CPLD) is stuffed, or U21 (Xilinx PLD) is stuffed.  If a part is not stuffed, solder jumps to pins directly to the bare pad instead. 
+
+Terminology definitions
+  pin:	IC pin soldered and pad, soldered together as normal. 
+  leg:  IC pin that has been lifted, and is not connected to
+	anything; it is floating in free air.
+  pad:  Pad on PCB that does not have an IC pin or other part
+	currently connected to it. 
+  lift:	unsolder an IC pin and bend it upward to break the
+	connection between pad and leg.
+  jump:	solder a rework wire between two locations. 
+	Gauge is not critical unless noted. 
+  cut:	Use knife and solder iron to cut a small segment 
+	out of a top-layer PCB trace, to break the connection. 
+
+
+New Build (raw PCB) instructions: 
+
+1.  Cut trace leading to U19 pin 62
+2.  Cut trace leading to U19 pin 61
+3.  Cut trace between U19 pin 36 and via
+4.  Cut trace between R56 pad and U19 pin 64
+5.  (build board per normal instructions)
+6.  Jump TP16 to U15 pin 9
+7.  Jump U15 pin 9 to U19 pin 62
+8.  Jump TP19 to U15 pin 10
+9.  Jump U15 pin 10 to U19 pin 61
+10. Jump U19 pin 36 to TP21
+11. Jump U15 pin 12 to TP21
+12. Jump U15 pin 11 to U21 pin 35
+13. Label board rev as -C.
+
+
+Rework (existing PCA) instructions:
+
+1.  Cut trace leading to U19 pin 62
+2.  Lift U19 pin 61
+3.  Cut trace between U19 pin 36 and via
+4.  Cut trace between R56 pad and U19 pin 64
+5.  Jump TP16 to U15 pin 9
+6.  Jump U15 pin 9 to U19 pin 62
+7.  Jump TP19 to U15 pin 10
+8.  Jump U15 pin 10 to U19 leg 61
+9.  Jump U19 pin 36 to TP21
+10. Jump U15 pin 12 to TP21
+11. Jump U15 pin 11 to U21 pin 35
+12. Reprogram Cypress CPLD CY37032VP44-100AC, U15, with new ide.jed image (for pn 100-0018-03-C).  Relabel Cypress part U15 as "300-0055-02".
+13. Label board rev as -C.
+14. Test by loading functional test image, and run HDSTRESS and NET tests. 

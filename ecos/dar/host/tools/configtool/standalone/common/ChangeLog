@@ -1,0 +1,45 @@
+2000-07-07  Bart Veer  <bartv@redhat.com>
+
+	* cdl_exec.cxx (transaction_callback):
+	Output the correct value irrespective of the option flavor.
+
+2000-06-28  Bart Veer  <bartv@redhat.com>
+
+	* cdl_exec.cxx, cdl_exec.hxx, ecosconfig.cxx:
+	Fix up the reporting of conflicts, inference engine changes, etc. 
+
+2000-04-10  Bart Veer  <bartv@redhat.com>
+
+	* cdl_exec.cxx:
+	Add diagnostic callbacks to database initialization.
+
+2000-03-08  Bart Veer  <bartv@redhat.com>
+
+	* configure.in (cyg_ac_infra_libdir):
+	Fix typo detected by Solaris build
+
+2000-01-20  Bart Veer  <bartv@redhat.com>
+
+	* cdl_exec.cxx:
+	Allow for libcdl interface change to CdlConfigurationBody::add()
+
+1999-11-11  Bart Veer  <bartv@redhat.co.uk>
+
+	* configure.in
+	* configure
+	* Makefile.am
+	* Makefile
+	Fixed VC++ build problems
+
+1999-11-10  Bart Veer  <bartv@redhat.co.uk>
+
+	* acinclude.m4
+	* configure.in
+	* Makefile.am
+	* aclocal.m4
+	* configure
+	* Makefile.in
+	Created
+
+	* ChangeLog
+	Created

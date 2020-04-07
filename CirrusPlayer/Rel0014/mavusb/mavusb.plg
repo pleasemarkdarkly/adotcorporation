@@ -1,0 +1,57 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: mavusb - Win32 Release--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating command line "rc.exe /l 0x409 /fo"Release/mavusb.res" /d "NDEBUG" "D:\ep7209\rel14\mavusb\mavusb.rc"" 
+Creating temporary file "C:\WINDOWS\TEMP\RSPC015.TMP" with contents
+[
+/nologo /ML /W3 /GX /O2 /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /D "_MBCS" /Fp"Release/mavusb.pch" /Yu"stdafx.h" /Fo"Release/" /Fd"Release/" /FD /c 
+"D:\ep7209\rel14\mavusb\auddat.cpp"
+"D:\ep7209\rel14\mavusb\mavusb.cpp"
+]
+Creating command line "cl.exe @C:\WINDOWS\TEMP\RSPC015.TMP" 
+Creating temporary file "C:\WINDOWS\TEMP\RSPC016.TMP" with contents
+[
+/nologo /ML /W3 /GX /O2 /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /D "_MBCS" /Fo"Release/" /Fd"Release/" /FD /c 
+"D:\ep7209\rel14\mavusb\mavcmd.c"
+]
+Creating command line "cl.exe @C:\WINDOWS\TEMP\RSPC016.TMP" 
+Creating temporary file "C:\WINDOWS\TEMP\RSPC017.TMP" with contents
+[
+/nologo /ML /W3 /GX /O2 /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /D "_MBCS" /Fp"Release/mavusb.pch" /Yc"stdafx.h" /Fo"Release/" /Fd"Release/" /FD /c 
+"D:\ep7209\rel14\mavusb\StdAfx.cpp"
+]
+Creating command line "cl.exe @C:\WINDOWS\TEMP\RSPC017.TMP" 
+Creating temporary file "C:\WINDOWS\TEMP\RSPC018.TMP" with contents
+[
+kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib comctl32.lib setupapi.lib /nologo /subsystem:windows /incremental:no /pdb:"Release/mavusb.pdb" /machine:I386 /out:"Release/mavusb.exe" 
+.\Release\auddat.obj
+.\Release\mavcmd.obj
+.\Release\mavusb.obj
+.\Release\StdAfx.obj
+.\Release\mavusb.res
+]
+Creating command line "link.exe @C:\WINDOWS\TEMP\RSPC018.TMP"
+<h3>Output Window</h3>
+Compiling resources...
+Compiling...
+StdAfx.cpp
+Compiling...
+auddat.cpp
+mavusb.cpp
+Generating Code...
+Compiling...
+mavcmd.c
+Linking...
+
+
+
+<h3>Results</h3>
+mavusb.exe - 0 error(s), 0 warning(s)
+</pre>
+</body>
+</html>

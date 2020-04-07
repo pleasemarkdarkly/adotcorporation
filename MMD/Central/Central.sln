@@ -1,0 +1,65 @@
+Microsoft Visual Studio Solution File, Format Version 7.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CentralLib", "CentralLib\CentralLib.csproj", "{0E0D7464-2197-429C-9712-A6490CF61054}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CommonLib", "..\common\CommonLib\CommonLib.csproj", "{EE1437C6-3CAD-42CA-AF68-7A13E52E87D1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CentralWeb", "http://localhost/CentralWeb/CentralWeb.csproj", "{81511D29-0455-41F2-83F2-66D3E9EA9154}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MMDWebService", "http://localhost/MMDWebService/MMDWebService.csproj", "{252D8834-83F2-451D-881E-78B842D28596}"
+EndProject
+Global
+	GlobalSection(SourceCodeControl) = preSolution
+		SccNumberOfProjects = 5
+		SccProjectName0 = \u0022$/MMD/Central\u0022,\u0020CVZGAAAA
+		SccLocalPath0 = .
+		SccProvider0 = MSSCCI:Microsoft\u0020Visual\u0020SourceSafe
+		CanCheckoutShared = false
+		SolutionUniqueID = {C8166E52-28D4-4AA7-BEA9-6B73A4D1EADF}
+		SccProjectUniqueName1 = CentralLib\\CentralLib.csproj
+		SccLocalPath1 = .
+		CanCheckoutShared = false
+		SccProjectFilePathRelativizedFromConnection1 = CentralLib\\
+		SccProjectUniqueName2 = ..\\common\\CommonLib\\CommonLib.csproj
+		SccProjectName2 = \u0022$/MMD/Common\u0022,\u0020ZBAHAAAA
+		SccLocalPath2 = ..\\common
+		CanCheckoutShared = false
+		SccProjectFilePathRelativizedFromConnection2 = CommonLib\\
+		SccProjectUniqueName3 = http://localhost/CentralWeb/CentralWeb.csproj
+		SccProjectName3 = \u0022$/MMD/Central/CentralWeb\u0022,\u0020KCAHAAAA
+		SccLocalPath3 = http://localhost/CentralWeb/
+		CanCheckoutShared = false
+		SccProjectEnlistmentChoice3 = 2
+		SccProjectUniqueName4 = http://localhost/MMDWebService/MMDWebService.csproj
+		SccProjectName4 = \u0022$/MMD/WebService\u0022,\u0020JHYGAAAA
+		SccLocalPath4 = ..\\..\\..\\Inetpub\\wwwroot\\MMDWebService
+		CanCheckoutShared = false
+		SccProjectEnlistmentChoice4 = 2
+	EndGlobalSection
+	GlobalSection(SolutionConfiguration) = preSolution
+		ConfigName.0 = Debug
+		ConfigName.1 = Release
+	EndGlobalSection
+	GlobalSection(ProjectDependencies) = postSolution
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+		{0E0D7464-2197-429C-9712-A6490CF61054}.Debug.ActiveCfg = Debug|.NET
+		{0E0D7464-2197-429C-9712-A6490CF61054}.Debug.Build.0 = Debug|.NET
+		{0E0D7464-2197-429C-9712-A6490CF61054}.Release.ActiveCfg = Release|.NET
+		{0E0D7464-2197-429C-9712-A6490CF61054}.Release.Build.0 = Release|.NET
+		{EE1437C6-3CAD-42CA-AF68-7A13E52E87D1}.Debug.ActiveCfg = Debug|.NET
+		{EE1437C6-3CAD-42CA-AF68-7A13E52E87D1}.Release.ActiveCfg = Release|.NET
+		{EE1437C6-3CAD-42CA-AF68-7A13E52E87D1}.Release.Build.0 = Release|.NET
+		{81511D29-0455-41F2-83F2-66D3E9EA9154}.Debug.ActiveCfg = Debug|.NET
+		{81511D29-0455-41F2-83F2-66D3E9EA9154}.Debug.Build.0 = Debug|.NET
+		{81511D29-0455-41F2-83F2-66D3E9EA9154}.Release.ActiveCfg = Release|.NET
+		{81511D29-0455-41F2-83F2-66D3E9EA9154}.Release.Build.0 = Release|.NET
+		{252D8834-83F2-451D-881E-78B842D28596}.Debug.ActiveCfg = Debug|.NET
+		{252D8834-83F2-451D-881E-78B842D28596}.Debug.Build.0 = Debug|.NET
+		{252D8834-83F2-451D-881E-78B842D28596}.Release.ActiveCfg = Release|.NET
+		{252D8834-83F2-451D-881E-78B842D28596}.Release.Build.0 = Release|.NET
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal

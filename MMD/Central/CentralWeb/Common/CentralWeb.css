@@ -1,0 +1,159 @@
+body {}
+table { border: solid black 0px; }
+
+/* Classes used only in header */
+.ErrMsg { color: Red;	font-family: Arial, Helvetica, sans-serif;	font-size: small; }
+.StatusMsg { color: Blue;	font-family: Arial, Helvetica, sans-serif;	font-size: small; }
+
+/* Classes used only in footer */
+.FooterHdr { font-family: Arial, Helvetica, sans-serif; font-size: x-small; font-weight: bold }
+.Footer { font-family: Arial, Helvetica, sans-serif; font-size: x-small; }
+
+/* Classes That I know we use in the application */
+.PageTitle { color: Black; font-family: Arial, Helvetica, sans-serif; font-size: medium; font-weight: 500;  padding-left: 2px; }
+.SectionTitle { color: Black; font-family: Arial, Helvetica, sans-serif; font-size: 15; font-weight: 600; padding-top: 2mm; }
+
+.SmallText { color: Black; font-family: Arial, Helvetica, sans-serif; font-size: smaller; font-weight: normal; }
+.SmallTextBold { color: Black; font-family: Arial, Helvetica, sans-serif; font-size: smaller; font-weight: bold; }
+.NavLink {  font-family: Arial, Helvetica, sans-serif; font-size: 10pt; font-weight: bold;  text-decoration: underline;}
+.NavLink:hover { font-family: Arial, Helvetica, sans-serif; font-size: 10pt; font-style: bold; line-height: 18px; font-weight: bold; color: #66cc33; text-decoration: underline; }
+
+.ShortCut { color: Red; font-family: Arial, Helvetica, sans-serif; font-size: smaller; font-weight: normal; text-decoration: underline; }
+.ShortCut:hover { color: #66cc33; font-family: Arial, Helvetica, sans-serif; font-size: smaller; font-weight: normal; text-decoration: underline; }
+
+/* Deprecating and/or Misc. Classes */
+.HdrSection { font-family: Arial, Helvetica, sans-serif; font-size: medium; background-color : Gray; border: solid black 1px; text-align: center; }
+.HdrSectionSelected { font-family: Arial, Helvetica, sans-serif; font-size: medium; background-color : White; border: solid black 1px; text-align: center; }
+.HdrTitle {	color: Black; font-family: Arial, Helvetica, sans-serif; font-size: large; font-weight: bold; }
+
+.PageSubTitle { color: Black; font-family: Arial, Helvetica, sans-serif; font-size: medium; font-weight: bold; padding-top: 2mm; }
+
+
+.BreadCrumb { color: Red; font-family: Arial, Helvetica, sans-serif; font-size: x-small ; font-weight: normal; }
+
+
+.AlertMsg {font-size: smaller; font-weight: normal; margin-top: 5px; margin-left: 5px; margin-right: 5px; }
+.AlertLink {font-size: smaller; font-weight: normal; margin-top: 5px; margin-left: 5px; margin-right: 5px; text-align: center;}
+
+
+.Hidden { display: none; }
+
+.Text { color: Black; font-family: Arial, Helvetica, sans-serif; font-size: smaller; font-weight: normal; padding-left: 10mm; }
+
+.NavChildren { margin-left: 10px; }
+
+/* Classes used by popup forms */
+.StdTable 
+	{ 
+	margin: 0pt;
+	font-family: Arial, Helvetica, sans-serif; 
+	}
+	
+.StdRow 
+	{
+	margin:0pt;
+	font-family: Arial, Helvetica, sans-serif; 
+	}
+
+.StdHdr
+	{ 
+	margin:0pt;
+	font-family: Arial, Helvetica, sans-serif; 
+	padding-left: 2px;
+	padding-right: 2px;
+	border-bottom: 1px black solid;
+	font-weight: bold;
+	line-height: 15px;
+	}	
+		
+.StdCell 
+	{ 
+	margin:0pt;
+	font-family: Arial, Helvetica, sans-serif; 
+	padding-left: 2px;
+	padding-right: 2px;
+	border-bottom: 1px black solid;
+	}	
+
+/* Standard List View Styles */
+.LVNavTable { font-family: Arial, Helvetica, sans-serif; font-size: 10pt; }
+.LVViewTable { font-family: Arial, Helvetica, sans-serif; font-size: smaller; }
+	
+.LVNavRow {	}
+.LVViewRow { }
+.LVHdrRow { }
+.LVFilterRow  { }
+.LVNavCell  { }
+.LVHdrCell {
+	margin: 0pt; padding-left: 4px; padding-right: 4px;  padding-bottom: 2px;
+	font-weight: bold;	font-family: Arial, Helvetica, sans-serif;	font-size: 10pt;
+	border-bottom: 1px black solid;
+}
+
+.LVFilterCell {	margin:0pt;	padding-left: 2pt;	padding-right: 2pt; 	
+	border-bottom: 1px black solid;
+}			 
+
+.LVViewCell	{	margin:0pt;	padding-left: 2pt;	padding-right: 2pt;
+	font-family: Arial, Helvetica, sans-serif;	font-size: 10pt;
+	border-bottom: 1px black solid;
+	}
+	
+.LVNavLink { }
+.LVSortLink { }
+.LVViewLink { }	
+
+.LVNavTable { font-family: Arial, Helvetica, sans-serif; font-size: 10pt; }
+.LVViewTable { font-family: Arial, Helvetica, sans-serif; font-size: smaller; }
+
+/* Report List View Styles */	
+.RPTNavRow {	}
+.RPTViewRow { }
+.RPTHdrRow { }
+.RPTFilterRow  { }
+.RPTNavCell  { }
+.RPTHdrCell {
+	margin: 0pt; padding-left: 4px; padding-right: 4px;  padding-bottom: 2px;
+	font-weight: bold;	font-family: Arial, Helvetica, sans-serif;	font-size: 10pt;
+	border-bottom: 1px black solid;
+}
+
+.RPTFilterCell {	margin:0pt;	padding-left: 2pt;	padding-right: 2pt; 	
+	border-bottom: 1px black solid;
+}			 
+
+.RPTViewCell	{	margin:0pt;	padding-left: 2pt;	padding-right: 2pt;
+	font-family: Arial, Helvetica, sans-serif;	font-size: 8pt;
+	}
+	
+.RPTNavLink { }
+.RPTSortLink { }
+.RPTViewLink { }	
+
+.BVT { display: none; border: solid 1px purple }
+.BVTHeader { color: Purple; font-weight: bold;	font-family: Arial, Helvetica, sans-serif;	font-size: 10pt; }
+.BVTText { color: Purple; font-family: Arial, Helvetica, sans-serif; font-size: smaller; font-weight: normal; }
+
+/* CES Styles */
+.Home_newstext {  font-family: Arial, Helvetica, sans-serif; font-size: 12px; font-style: normal; font-weight: normal; color: #000000; text-decoration: none; line-height: 13px}
+.Header_blue {  font-family: Arial, Helvetica, sans-serif; font-size: 18px; font-weight: bold; color: #333366; text-decoration: none; line-height: 20px}
+.Header_orange {  font-family: Arial, Helvetica, sans-serif; font-size: 18px; line-height: 20px; font-weight: bold; color: #FF9900; text-decoration: none}
+.Header_green { font-family: Arial, Helvetica, sans-serif; font-size: 18px; font-weight: bold; color: #66CC33; text-decoration: none; line-height: 20px }
+.Header_blue2 { font-family: Arial, Helvetica, sans-serif; font-size: 24px; font-weight: bold; color: #333366; text-decoration: none; line-height: 28px}
+.Header_green2 { font-family: Arial, Helvetica, sans-serif; font-size: 24px; font-weight: bold; color: #66CC33; text-decoration: none; line-height: 28px}
+.Header_orange2 { font-family: Arial, Helvetica, sans-serif; font-size: 24px; line-height: 28px; font-weight: bold; color: #FF9900; text-decoration: none }
+.bodytext {  font-family: Arial, Helvetica, sans-serif; font-size: 13px; font-style: normal; line-height: 18px; font-weight: normal; color: #000000; text-decoration: none}
+li {  font-family: Arial, Helvetica, sans-serif; font-size: 13px; font-style: normal; font-weight: normal; color: #000000; text-decoration: none; line-height: 18px; list-style-type: square}
+.copyright {  font-family: Arial, Helvetica, sans-serif; font-size: 10px; font-style: normal; line-height: 13px; color: #000000; text-decoration: none}
+a {  font-family: Arial, Helvetica, sans-serif; font-size: 13px; font-style: normal; line-height: 18px; font-weight: bold; color: #333366; text-decoration: underline}
+a:hover {  font-family: Arial, Helvetica, sans-serif; font-size: 13px; font-style: normal; line-height: 18px; font-weight: bold; color: #66cc33; text-decoration: underline}
+.textwhite { font-family: Arial, Helvetica, sans-serif; font-size: 13px; font-style: normal; line-height: 18px; font-weight: normal; color: #FFFFFF; text-decoration: none }
+.Header_tangerine0 { font-family: Arial, Helvetica, sans-serif; font-size: 18px; line-height: 20px; font-weight: normal; color: #FF9900; text-decoration: none }
+.bodytext_tangerine { font-family: Arial, Helvetica, sans-serif; font-size: 13px; font-style: normal; line-height: 18px; font-weight: normal; color: #FF9900; text-decoration: none }
+.Header_purple { font-family: Arial, Helvetica, sans-serif; font-size: 18px; font-weight: bold; color: #666699; text-decoration: none; line-height: 20px }
+.Header_purple2 { font-family: Arial, Helvetica, sans-serif; font-size: 24px; font-weight: bold; color: #666699; text-decoration: none; line-height: 28px }
+.Header_bluelite { font-family: Arial, Helvetica, sans-serif; font-size: 18px; font-weight: bold; color: #6699CC; text-decoration: none; line-height: 20px }
+.Header_bluelite2 { font-family: Arial, Helvetica, sans-serif; font-size: 24px; font-weight: bold; color: #6699CC; text-decoration: none; line-height: 28px }
+.Home_newstext_orange { font-family: Arial, Helvetica, sans-serif; font-size: 12px; font-style: normal; font-weight: normal; color: #FF9900; text-decoration: none; line-height: 13px }
+.Home_newstext_black { font-family: Arial, Helvetica, sans-serif; font-size: 12px; font-style: normal; font-weight: normal; color: #000000; text-decoration: none; line-height: 13px }
+.Home_newstext_black_large { font-family: Arial, Helvetica, sans-serif; font-size: 14px; font-style: normal; font-weight: bold; color: #000000; text-decoration: none; line-height: 15px }

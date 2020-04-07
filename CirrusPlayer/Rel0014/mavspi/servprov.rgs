@@ -1,0 +1,25 @@
+HKCR
+{
+    MDServiceProviderMavSPI.MDServiceProviderMavSPI.1 = s 'MDServiceProviderMavSPI Class'
+    {
+        CLSID = s '{0ed48f80-ae38-11D4-9a3c-00aa00b881c3}'
+    }
+    MDServiceProviderMavSPI.MDServiceProviderMavSPI = s 'MDServiceProviderMavSPI Class'
+    {
+        CLSID = s '{0ed48f80-ae38-11D4-9a3c-00aa00b881c3}'
+        CurVer = s 'MDServiceProviderMavSPI.MDServiceProviderMavSPI.1'
+    }
+    NoRemove CLSID
+    {
+        ForceRemove {0ed48f80-ae38-11D4-9a3c-00aa00b881c3} = s 'MDServiceProviderMavSPI Class'
+        {
+            ProgID = s 'MDServiceProviderMavSPI.MDServiceProviderMavSPI.1'
+            VersionIndependentProgID = s 'MDServiceProviderMavSPI.MDServiceProviderMavSPI'
+            ForceRemove 'Programmable'
+            InprocServer32 = s '%MODULE%'
+            {
+                val ThreadingModel = s 'Apartment'
+            }
+        }
+    }
+}

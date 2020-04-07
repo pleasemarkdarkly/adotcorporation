@@ -1,0 +1,291 @@
+Script started on Thu Sep 21 17:23:47 2000
+[root@fidelio tests]# ./nc_test_master ecos
+Start Network Characterization - MASTER
+================== No load, master at 100% ========================
+Start UDP echo [640,1024] - no delays
+Slave timed out after 16 buffers
+Slave timed out after 27 buffers
+Slave timed out after 40 buffers
+Slave timed out after 59 buffers
+Slave timed out after 73 buffers
+Slave timed out after 79 buffers
+Slave timed out after 106 buffers
+Slave timed out after 113 buffers
+Slave timed out after 138 buffers
+Slave timed out after 158 buffers
+Slave timed out after 168 buffers
+Slave timed out after 196 buffers
+Slave timed out after 207 buffers
+Slave timed out after 214 buffers
+Slave timed out after 216 buffers
+Packets out of sequence - recvd: 216, expected: 217
+Packets out of sequence - recvd: 217, expected: 218
+Packets out of sequence - recvd: 218, expected: 219
+Packets out of sequence - recvd: 219, expected: 220
+Packets out of sequence - recvd: 220, expected: 221
+Packets out of sequence - recvd: 221, expected: 222
+Packets out of sequence - recvd: 222, expected: 223
+Packets out of sequence - recvd: 223, expected: 224
+Packets out of sequence - recvd: 224, expected: 225
+Packets out of sequence - recvd: 225, expected: 226
+Packets out of sequence - recvd: 226, expected: 227
+Packets out of sequence - recvd: 227, expected: 228
+Packets out of sequence - recvd: 228, expected: 229
+Packets out of sequence - recvd: 229, expected: 230
+Packets out of sequence - recvd: 230, expected: 231
+Packets out of sequence - recvd: 231, expected: 232
+Packets out of sequence - recvd: 232, expected: 233
+Packets out of sequence - recvd: 233, expected: 234
+Packets out of sequence - recvd: 234, expected: 235
+Packets out of sequence - recvd: 235, expected: 236
+Packets out of sequence - recvd: 236, expected: 237
+Packets out of sequence - recvd: 237, expected: 238
+Packets out of sequence - recvd: 238, expected: 239
+Packets out of sequence - recvd: 239, expected: 240
+Packets out of sequence - recvd: 240, expected: 241
+Packets out of sequence - recvd: 241, expected: 242
+Packets out of sequence - recvd: 242, expected: 243
+Packets out of sequence - recvd: 243, expected: 244
+Packets out of sequence - recvd: 244, expected: 245
+Packets out of sequence - recvd: 245, expected: 246
+Packets out of sequence - recvd: 246, expected: 247
+Packets out of sequence - recvd: 247, expected: 248
+Packets out of sequence - recvd: 248, expected: 249
+Packets out of sequence - recvd: 249, expected: 250
+Packets out of sequence - recvd: 250, expected: 251
+Packets out of sequence - recvd: 251, expected: 252
+Packets out of sequence - recvd: 252, expected: 253
+Packets out of sequence - recvd: 253, expected: 254
+Packets out of sequence - recvd: 254, expected: 255
+Packets out of sequence - recvd: 255, expected: 256
+Slave timed out after 265 buffers
+Slave timed out after 271 buffers
+Slave timed out after 277 buffers
+Packets out of sequence - recvd: 277, expected: 278
+Packets out of sequence - recvd: 278, expected: 279
+Packets out of sequence - recvd: 279, expected: 280
+Packets out of sequence - recvd: 280, expected: 281
+Packets out of sequence - recvd: 281, expected: 282
+Packets out of sequence - recvd: 282, expected: 283
+Packets out of sequence - recvd: 283, expected: 284
+Packets out of sequence - recvd: 284, expected: 285
+Packets out of sequence - recvd: 285, expected: 286
+Packets out of sequence - recvd: 286, expected: 287
+Packets out of sequence - recvd: 287, expected: 288
+Packets out of sequence - recvd: 288, expected: 289
+Packets out of sequence - recvd: 289, expected: 290
+Packets out of sequence - recvd: 290, expected: 291
+Packets out of sequence - recvd: 291, expected: 292
+Packets out of sequence - recvd: 292, expected: 293
+Packets out of sequence - recvd: 293, expected: 294
+Packets out of sequence - recvd: 294, expected: 295
+Packets out of sequence - recvd: 295, expected: 296
+Packets out of sequence - recvd: 296, expected: 297
+Packets out of sequence - recvd: 297, expected: 298
+Packets out of sequence - recvd: 298, expected: 299
+Slave timed out after 300 buffers
+Packets out of sequence - recvd: 300, expected: 301
+Packets out of sequence - recvd: 301, expected: 302
+Packets out of sequence - recvd: 302, expected: 303
+Packets out of sequence - recvd: 303, expected: 304
+Packets out of sequence - recvd: 304, expected: 305
+Packets out of sequence - recvd: 305, expected: 306
+Packets out of sequence - recvd: 306, expected: 307
+Packets out of sequence - recvd: 307, expected: 308
+Packets out of sequence - recvd: 308, expected: 309
+Packets out of sequence - recvd: 309, expected: 310
+Packets out of sequence - recvd: 310, expected: 311
+Packets out of sequence - recvd: 311, expected: 312
+Packets out of sequence - recvd: 312, expected: 313
+Packets out of sequence - recvd: 313, expected: 314
+Packets out of sequence - recvd: 314, expected: 315
+Packets out of sequence - recvd: 315, expected: 316
+Packets out of sequence - recvd: 316, expected: 317
+Packets out of sequence - recvd: 317, expected: 318
+Packets out of sequence - recvd: 318, expected: 319
+Packets out of sequence - recvd: 319, expected: 320
+Packets out of sequence - recvd: 320, expected: 321
+Slave timed out after 354 buffers
+Slave timed out after 358 buffers
+Slave timed out after 370 buffers
+Packets out of sequence - recvd: 370, expected: 371
+Packets out of sequence - recvd: 371, expected: 372
+Packets out of sequence - recvd: 372, expected: 373
+Packets out of sequence - recvd: 373, expected: 374
+Packets out of sequence - recvd: 374, expected: 375
+Packets out of sequence - recvd: 375, expected: 376
+Packets out of sequence - recvd: 376, expected: 377
+Packets out of sequence - recvd: 377, expected: 378
+Packets out of sequence - recvd: 378, expected: 379
+Packets out of sequence - recvd: 379, expected: 380
+Packets out of sequence - recvd: 380, expected: 381
+Packets out of sequence - recvd: 381, expected: 382
+Packets out of sequence - recvd: 382, expected: 383
+Packets out of sequence - recvd: 383, expected: 384
+Packets out of sequence - recvd: 384, expected: 385
+Packets out of sequence - recvd: 385, expected: 386
+Packets out of sequence - recvd: 386, expected: 387
+Packets out of sequence - recvd: 387, expected: 388
+Packets out of sequence - recvd: 388, expected: 389
+Packets out of sequence - recvd: 389, expected: 390
+Packets out of sequence - recvd: 390, expected: 391
+Packets out of sequence - recvd: 391, expected: 392
+Packets out of sequence - recvd: 392, expected: 393
+Packets out of sequence - recvd: 393, expected: 394
+Packets out of sequence - recvd: 394, expected: 395
+Packets out of sequence - recvd: 395, expected: 396
+Packets out of sequence - recvd: 396, expected: 397
+Packets out of sequence - recvd: 397, expected: 398
+Packets out of sequence - recvd: 398, expected: 399
+Packets out of sequence - recvd: 399, expected: 400
+Packets out of sequence - recvd: 400, expected: 401
+Packets out of sequence - recvd: 401, expected: 402
+Packets out of sequence - recvd: 402, expected: 403
+Packets out of sequence - recvd: 403, expected: 404
+Packets out of sequence - recvd: 404, expected: 405
+Packets out of sequence - recvd: 405, expected: 406
+Packets out of sequence - recvd: 406, expected: 407
+Packets out of sequence - recvd: 407, expected: 408
+Packets out of sequence - recvd: 408, expected: 409
+Packets out of sequence - recvd: 409, expected: 410
+Packets out of sequence - recvd: 410, expected: 411
+Packets out of sequence - recvd: 411, expected: 412
+Packets out of sequence - recvd: 412, expected: 413
+Packets out of sequence - recvd: 413, expected: 414
+Packets out of sequence - recvd: 414, expected: 415
+Packets out of sequence - recvd: 415, expected: 416
+Packets out of sequence - recvd: 416, expected: 417
+Packets out of sequence - recvd: 417, expected: 418
+Packets out of sequence - recvd: 418, expected: 419
+Packets out of sequence - recvd: 419, expected: 420
+Packets out of sequence - recvd: 420, expected: 421
+Packets out of sequence - recvd: 421, expected: 422
+Packets out of sequence - recvd: 422, expected: 423
+Packets out of sequence - recvd: 423, expected: 424
+Packets out of sequence - recvd: 424, expected: 425
+Packets out of sequence - recvd: 425, expected: 426
+Packets out of sequence - recvd: 426, expected: 427
+Packets out of sequence - recvd: 427, expected: 428
+Packets out of sequence - recvd: 428, expected: 429
+Packets out of sequence - recvd: 429, expected: 430
+Slave timed out after 454 buffers
+Slave timed out after 474 buffers
+Slave timed out after 479 buffers
+Slave timed out after 507 buffers
+Slave timed out after 530 buffers
+Slave timed out after 538 buffers
+Slave timed out after 564 buffers
+Slave timed out after 580 buffers
+Slave timed out after 586 buffers
+Slave timed out after 590 buffers
+Packets out of sequence - recvd: 590, expected: 591
+Packets out of sequence - recvd: 591, expected: 592
+Packets out of sequence - recvd: 592, expected: 593
+Packets out of sequence - recvd: 593, expected: 594
+Packets out of sequence - recvd: 594, expected: 595
+Packets out of sequence - recvd: 595, expected: 596
+Packets out of sequence - recvd: 596, expected: 597
+Packets out of sequence - recvd: 597, expected: 598
+Packets out of sequence - recvd: 598, expected: 599
+Packets out of sequence - recvd: 599, expected: 600
+Packets out of sequence - recvd: 600, expected: 601
+Packets out of sequence - recvd: 601, expected: 602
+Packets out of sequence - recvd: 602, expected: 603
+Packets out of sequence - recvd: 603, expected: 604
+Packets out of sequence - recvd: 604, expected: 605
+Packets out of sequence - recvd: 605, expected: 606
+Packets out of sequence - recvd: 606, expected: 607
+Packets out of sequence - recvd: 607, expected: 608
+Packets out of sequence - recvd: 608, expected: 609
+Packets out of sequence - recvd: 609, expected: 610
+Packets out of sequence - recvd: 610, expected: 611
+Slave timed out after 617 buffers
+Slave timed out after 631 buffers
+Slave timed out after 635 buffers
+UDP echo - 1245 bufs of 1024 bytes in 107.70 seconds - 11.56 KB/S - 0.0947 Mbit/S (M = 10^6), 35 lost, 164 out of sequence
+   slave sent 635, recvd 630
+Start UDP send [640,1024] - no delays
+Slave timed out after 32 buffers
+Slave timed out after 33 buffers
+Slave timed out after 34 buffers
+Slave timed out after 35 buffers
+Slave timed out after 36 buffers
+Slave timed out after 37 buffers
+Slave timed out after 38 buffers
+Slave timed out after 39 buffers
+Slave timed out after 40 buffers
+Slave timed out after 41 buffers
+Slave timed out after 42 buffers
+Slave timed out after 43 buffers
+Slave timed out after 44 buffers
+Slave timed out after 45 buffers
+Slave timed out after 46 buffers
+Slave timed out after 47 buffers
+Slave timed out after 48 buffers
+Slave timed out after 49 buffers
+Slave timed out after 50 buffers
+Slave timed out after 51 buffers
+Slave timed out after 52 buffers
+Slave timed out after 53 buffers
+Slave timed out after 54 buffers
+Slave timed out after 55 buffers
+Slave timed out after 56 buffers
+Slave timed out after 57 buffers
+Slave timed out after 58 buffers
+Slave timed out after 59 buffers
+Slave timed out after 60 buffers
+Slave timed out after 61 buffers
+Slave timed out after 62 buffers
+Slave timed out after 63 buffers
+Slave timed out after 64 buffers
+Slave timed out after 65 buffers
+Slave timed out after 66 buffers
+Slave timed out after 67 buffers
+Slave timed out after 68 buffers
+Slave timed out after 69 buffers
+Slave timed out after 70 buffers
+Slave timed out after 71 buffers
+Slave timed out after 72 buffers
+Slave timed out after 73 buffers
+Slave timed out after 74 buffers
+Slave timed out after 75 buffers
+Slave timed out after 76 buffers
+Slave timed out after 77 buffers
+Slave timed out after 78 buffers
+Slave timed out after 79 buffers
+Slave timed out after 80 buffers
+Slave timed out after 81 buffers
+Slave timed out after 82 buffers
+Slave timed out after 83 buffers
+Slave timed out after 84 buffers
+Slave timed out after 85 buffers
+Slave timed out after 86 buffers
+Slave timed out after 87 buffers
+Slave timed out after 88 buffers
+Slave timed out after 89 buffers
+Slave timed out after 90 buffers
+Slave timed out after 91 buffers
+Slave timed out after 92 buffers
+Slave timed out after 93 buffers
+Slave timed out after 94 buffers
+Slave timed out after 95 buffers
+Slave timed out after 96 buffers
+Slave timed out after 97 buffers
+Slave timed out after 98 buffers
+Slave timed out after 99 buffers
+Slave timed out after 100 buffers
+Slave timed out after 101 buffers
+Slave timed out after 102 buffers
+Slave timed out after 103 buffers
+Slave timed out after 104 buffers
+Slave timed out after 105 buffers
+
+[root@fidelio tests]# pwd
+/usr/src/ecos/packages/net/tcpip/current/tests
+[root@fidelio tests]# ./tcp_sink ecos
+Start TCP test - SINK mode to ecos
+Using 1024 buffers of 8192 bytes each
+SINK complete - 1024 bufs of 8192 bytes in 381.10 seconds - 21.50 KB/S - 0.1761 Mbit/S (M = 10^6)
+[root@fidelio tests]# exit
+
+Script done on Thu Sep 21 17:52:14 2000

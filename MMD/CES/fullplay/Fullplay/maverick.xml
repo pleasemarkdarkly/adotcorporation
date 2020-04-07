@@ -1,0 +1,176 @@
+﻿<?xml version="1.0"?>
+
+<maverick version="2.0" default-view-type="xml" default-transform-type="xslt">
+
+	<modules>
+		<transform-factory type="xslt" provider="Maverick.Transform.XsltTransformFactory, Maverick">
+			<!-- disabling template caching will slow things down at runtime, but makes development easier -->
+			<!-- this should be set to "preload" or "lazy" on a production server -->
+			<template-caching value="disabled"/>
+			<content-type value="text/xml"/>
+			<default-output-type value="xml/html" />
+		</transform-factory>
+  	</modules>
+	
+<commands>
+
+
+		<command name="getReclist">
+			<controller class="Fullplay.Ctl.getReclist, Fullplay"/>
+			<view name="success">
+				<transform output-type="text/xml" path="templates/reclist.xsl"/>
+			</view>
+			<!--
+			<view name="error" type="redirect" path="getView.m?view=SystemError"/>
+			
+			<view name="NewReleases">
+				<transform output-type="text/xml" path="templates/concept/demo/en/NewRelease.xsl" />
+			</view>
+			<view name="NewReleases_Games">
+				<transform output-type="text/xml" path="templates/concept/demo/en/NewRelease_Games.xsl" />
+			</view>
+			<view name="NewReleases_Movies">
+				<transform output-type="text/xml" path="templates/concept/demo/en/NewRelease_Movies.xsl" />
+			</view>
+			
+			
+			
+			<view name="On_Sale">
+				<transform output-type="text/xml" path="templates/concept/demo/en/ReserveYours.xsl" />
+			</view>
+			<view name="On_Sale_Games">
+				<transform output-type="text/xml" path="templates/concept/demo/en/ReserveYours_Games.xsl" />
+			</view>
+			<view name="On_Sale_Movies">
+				<transform output-type="text/xml" path="templates/concept/demo/en/ReserveYours_Movies.xsl" />
+			</view>
+			
+			<view name="Top_Sellers">
+				<transform output-type="text/xml" path="templates/concept/demo/en/Top20.xsl" />
+			</view>
+			<view name="Top_Sellers_Games">
+				<transform output-type="text/xml" path="templates/concept/demo/en/Top20_Games.xsl" />
+			</view>
+			<view name="Top_Sellers_Movies">
+				<transform output-type="text/xml" path="templates/concept/demo/en/Top20_Movies.xsl" />
+			</view>
+			-->
+		</command>
+		
+
+		<command name="getItemDetail">
+			<controller class="Fullplay.Ctl.getItemDetail, Fullplay"/>
+			
+			<view name="error" type="redirect" path="getView.m?view=SystemError"/>
+			
+			<view name="success">
+				<transform output-type="text/xml" path="templates/mucisdetail.xsl" />
+			</view>	
+			<view name="review">
+				<transform output-type="text/xml" path="templates/review.xsl" />
+			</view>
+			<view name="game">
+				<transform output-type="text/xml" path="templates/gamedetail.xsl" />
+			</view>
+			<view name="video">
+				<transform output-type="text/xml" path="templates/videodetail.xsl" />
+			</view>
+			
+			<view name="nomedia" type="redirect" path="getView.m?view=NoMedia"/>
+			
+		</command>
+
+		<command name="getHome">
+			<controller class="Fullplay.Ctl.getHome, Fullplay"/>
+			<view name="success" type="redirect" path="getGenres.m?mediaid=1"/>
+		</command>
+		
+		<command name="getDiscography">
+			<controller class="Fullplay.Ctl.getDiscography, Fullplay"/>
+			
+			<view name="success">
+				<transform output-type="text/xml" path="templates/disco.xsl"/>
+			</view>
+		</command>
+		
+		<command name="getGenres">
+			<controller class="Fullplay.Ctl.getGenres, Fullplay"/>
+			<view name="success">
+				<transform output-type="text/xml" path="templates/browse.xsl"/>
+			</view>
+			<view name="game">
+					<transform output-type="text/xml" path="templates/browse_game.xsl"/>
+			</view>
+			<view name="video">
+					<transform output-type="text/xml" path="templates/browse_video.xsl"/>
+			</view>
+				
+		</command>
+		
+		<command name="getArtists">
+			<controller class="Fullplay.Ctl.getArtists, Fullplay"/>
+			<view name="success">
+				<transform output-type="text/xml" path="templates/browsedetailmusic.xsl"/>
+			</view>
+		</command>
+
+		<command name="getView">
+			<controller class="Fullplay.Ctl.getView, Fullplay"/>
+			
+			<view name="keyboard">
+				<transform output-type="text/xml" path="templates/keyboard.xsl"/>
+			</view>
+			<view name="browse">
+				<transform output-type="text/xml" path="templates/browse.xsl"/>
+			</view>
+			<view name="proddetail">
+				<transform output-type="text/xml" path="templates/proddetail.xsl"/>
+			</view>
+			<view name="reclist">
+				<transform output-type="text/xml" path="templates/reclist.xsl"/>
+			</view>
+			<view name="browsedetail">
+				<transform output-type="text/xml" path="templates/browsedetail.xsl"/>
+			</view>
+			
+			<view name="default">
+				<transform output-type="text/xml" path="templates/browse.xsl"/>
+			</view>
+			<view name="musicdetail">
+				<transform output-type="text/xml" path="templates/musicdetail.xsl"/>
+			</view>
+			<view name="videodetail">
+				<transform output-type="text/xml" path="templates/videodetail.xsl"/>
+			</view>
+			<view name="gamedetail">
+				<transform output-type="text/xml" path="templates/gamedetail.xsl"/>
+			</view>
+			
+		</command>
+		
+		<command name="scan">
+			<controller class="Fullplay.Ctl.scan, Fullplay"/>
+			<view name="itemdetail" type="redirect" path="getItemDetail.m"/>
+			<view name="HardSellItemDetail" type="redirect" path="getHardSellItem.m"/>
+			<view name="admin" type="redirect" path="admin_home.aspx"/>
+			<view name="login" type="redirect" path="login.m"/>
+			<view name="error" type="redirect" path="getView.m?view=NoMedia"/>
+			<view name="home" type ="redirect" path="getHome.m"/>
+		</command>
+		
+		<command name="Search">
+			<controller class="Fullplay.Ctl.Search, Fullplay"/>
+			<view name="content">
+				<transform output-type="text/xml" path="templates/SearchContent.xsl" />
+			</view>
+			<view name="success">
+				<transform output-type="text/xml" path="templates/keyboardSearch.xsl" />
+			</view>
+		</command>
+		<command name="unlock">
+			<controller class="Fullplay.Ctl.unlock, Fullplay"/>
+			<view name="success" type="redirect" path="admin_setlocation.aspx"/>
+		</command>
+		
+	</commands>
+</maverick>

@@ -1,0 +1,78 @@
+# ====================================================================
+#
+#      usb_arm_dadio.cdl
+#
+#      eCos usb layer for iobjects dadio
+#
+# ====================================================================
+# ====================================================================
+######DESCRIPTIONBEGIN####
+#
+# Author(s):      toddm
+# Original data:  toddm
+# Contributors:   toddm
+# Date:           2000-06-07
+#
+#####DESCRIPTIONEND####
+#
+# ====================================================================
+
+
+cdl_package DDOPKG_IO_USB_ARM_DADIO {
+    display       "Dadio USB device drivers for ARM"
+#    parent        CYGPKG_IO_BLOCK
+    include_dir   dadio/io
+    include_files class_dev_req.h descriptors.h help_devreq.h isr.h mainloop.h mass_storage.h pdiusbd12.h rbc.h \
+			std_dev_req.h usb.h usb_shared_data.h usb100.h vendor_dev_req.h
+    description   "
+           This option enables the Dadio USB driver."
+#    doc           redirect/ecos-device-drivers.html
+    compile       -library=libextras.a	bulk_thread.c class_dev_req.c control_thread.c descriptors.c help_devreq.c \
+					isr.c pdiusbd12.c std_dev_req.c usb.c usb_shared_data.c vendor_dev_req.c
+
+    cdl_component DDOPKG_IO_USB_ARM_DADIO_OPTIONS {
+        display "Dadio USB device driver build options"
+        flavor  none
+        description   "
+	    Package specific build options including control over
+	    compiler flags used only in building this package,
+	    and details of which tests are built."
+
+
+        cdl_option DDOPKG_IO_USB_ARM_DADIO_CFLAGS_ADD {
+            display "Additional compiler flags"
+            flavor  data
+            no_define
+            default_value { "" }
+            description   "
+                This option modifies the set of compiler flags for
+                building these serial device drivers. These flags are used in addition
+                to the set of global flags."
+        }
+
+        cdl_option DDOPKG_IO_USB_ARM_DADIO_CFLAGS_REMOVE {
+            display "Suppressed compiler flags"
+            flavor  data
+            no_define
+            default_value { "-fdata-sections -ffunction-sections -Wl,--gc-sections" }
+            description   "
+                This option modifies the set of compiler flags for
+                building these serial device drivers. These flags are removed from
+                the set of global flags if present."
+        }
+
+	cdl_option DDOPKG_IO_USB_ARM_DADIO_TESTS {
+	    display "USB tests"
+ 	    flavor  data
+            no_define
+            calculated { "tests/usb_test" }
+	    description "
+                This option specifies the set of tests for the USB driver."
+	}	
+    }
+}
+
+# EOF usb_arm_dadio.cdl
+
+
+

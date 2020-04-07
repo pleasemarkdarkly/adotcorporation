@@ -1,0 +1,11 @@
+/kern_subr.c/1.1/Tue Jun 06 08:39:42 2000//
+/sockio.c/1.1/Fri Aug 25 17:33:46 2000//
+/sys_generic.c/1.1/Tue Jun 06 08:39:42 2000//
+/sys_socket.c/1.1/Tue Jun 06 08:39:42 2000//
+/uipc_domain.c/1.1/Tue Jun 06 08:39:42 2000//
+/uipc_mbuf.c/1.1/Tue Jun 06 08:39:42 2000//
+/uipc_proto.c/1.1/Tue Jun 06 08:39:42 2000//
+/uipc_socket.c/1.1/Tue Jun 06 08:39:42 2000//
+/uipc_socket2.c/1.1/Tue Jun 06 08:39:42 2000//
+/uipc_syscalls.c/1.1/Tue Jun 06 08:39:42 2000//
+D

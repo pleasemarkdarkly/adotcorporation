@@ -1,0 +1,167 @@
+# ====================================================================
+#
+#      atapi_arm_dadio.cdl
+#
+#      eCos atapi layer for iobjects dadio
+#
+# ====================================================================
+# ====================================================================
+######DESCRIPTIONBEGIN####
+#
+# Author(s):      danc
+# Original data:  danc
+# Contributors:   toddm
+# Date:           2000-06-07
+#
+#####DESCRIPTIONEND####
+#
+# ====================================================================
+
+
+cdl_package DDOPKG_IO_ATAPI_ARM_DADIO {
+    display       "Dadio ATA/ATAPI device drivers for ARM"
+#    parent        CYGPKG_IO_BLOCK
+    include_dir   dadio/io
+    include_files atapi.h blk_dev.h ata.h edk.h edk_hw.h edk_sw.h sectors.h
+
+    description   "
+           This option enables the Dadio ATA/ATAPI block device driver."
+#    doc           redirect/ecos-device-drivers.html
+
+#    compile       -library=libextras.a   atapi.c edk.c edk_hw.c iome_fat.c
+    compile       -library=libextras.a	atapi.c ata.c edk.c edk_hw.c
+
+    cdl_option DDODAT_IO_ATAPI_NAME {
+        display       "Device name for the Dadio ATA/ATAPI device driver"
+        flavor        data
+	default_value	{ "\"/dev/hda\"" }
+        description   "
+            This option specifies the name of the ATA/ATAPI device."
+    }
+
+    cdl_option DDOHWR_IO_ATAPI_INTERFACE {
+	display "Hardware version of ATA interface"
+	flavor  data
+     	legal_values { "CLIK" "CF_V2" }
+	default_value { "CF_V2" }
+	description "
+	    The task file registers, and others, are set up differently
+	    depending on which version of the ATA interface is being used.
+	    Valid interfaces are the Iomega Clik! drive and Compact Flash
+	    version 2 (CF_V2)."
+	define_proc {
+	    puts $::cdl_header ""
+	    puts $::cdl_header "#ifdef DDOHWR_IO_ATAPI_INTERFACE_CF_V2"
+ 	    puts $::cdl_header "#define DDOIMP_IO_ATAPI_USE_ATA"
+	    puts $::cdl_header "#endif // DDOHWR_IO_ATAPI_INTERFACE_CF_V2"
+	    puts $::cdl_header ""
+	}
+    }
+	
+#    cdl_option DDOIMP_IO_ATAPI_INTERRUPT_DRIVEN {
+#	display "Interrupt or polled mode"
+#	flavor	bool
+#	default_value 1
+#	description "
+#	    This option controls whether the driver is interrupt driven
+#	    or polled."
+#    }
+
+####
+
+#    cdl_component DDOPKG_IO_ATAPI_ARM_DADIO_DEVICE1 {
+#        display       "Dadio ATAPI device 1 driver for ARM"
+#        flavor        bool
+#        default_value 1
+#        description   "
+#            This option includes the Dadio ATAPI device 1 driver for ARM."
+
+
+#        cdl_component DDODAT_IO_ATAPI_ARM_DADIO_DEVICE1_USE_INTS {
+#            display        "Interrupt driven I/O for Dadio ATAPI device 1"
+#            flavor         bool
+#            default_value  1
+#            description    "
+#                This option determines whether or not I/O on the Dadio ATAPI device 1 is interrupt driven.
+#                Interrupt driven I/O uses less CPU time, since the thread using the ATAPI interface is
+#                suspended until the interrupt occurs, but requires the interrupt line from the drive to be
+#                connected to the CPU, and uses a few more resources."
+
+        
+#            cdl_option DDODAT_IO_ATAPI_ARM_DADIO_DEVICE1_INT_NUM {
+#                display        "Interrupt line to use for Dadio ATAPI device 1"
+#                flavor         data
+#                legal_values   { "CYGNUM_HAL_INTERRUPT_EINT1" "CYGNUM_HAL_INTERRUPT_EINT2" "CYGNUM_HAL_INTERRUPT_EINT3" }
+#                default_value  "CYGNUM_HAL_INTERRUPT_EINT3"
+#                description    "
+#                    This option determines which interrupt line the Dadio ATAPI device 1 driver
+#                    should attach itself to. This value should match the interrupt line that
+#                    the ATAPI interface is connected to on your schematic."
+#            }
+#        }
+
+
+#        cdl_option DDODAT_IO_ATAPI_ARM_DADIO_DEVICE1_NAME {
+#            display       "Device name for the Dadio ATAPI device 1 driver for ARM"
+#            flavor        data
+#            default_value ("\"/dev/hda\"")
+#            description   "
+#                This option specifies the name of the ATAPI device on port 1."
+#        }
+
+#        cdl_option DDODAT_IO_ATA_ARM_DADIO_DEVICE1_BASE_ADDRESS {
+#            display       "Base address for the Dadio ATAPI device 1 driver for ARM"
+#            flavor        data
+#            legal_values  { 0x10000000 0x20000000 0x30000000 0x40000000 0x50000000 0x70000000 }
+#            default_value 0x50000000
+#            description   "
+#                This option specifies the base address of the ATA device on port 1."
+#        }
+#    }
+
+    cdl_component DDOPKG_IO_ATAPI_ARM_DADIO_OPTIONS {
+        display "Dadio ATAPI device driver build options"
+        flavor  none
+        description   "
+	    Package specific build options including control over
+	    compiler flags used only in building this package,
+	    and details of which tests are built."
+
+
+        cdl_option DDOPKG_IO_ATAPI_ARM_DADIO_CFLAGS_ADD {
+            display "Additional compiler flags"
+            flavor  data
+            no_define
+            default_value { "" }
+            description   "
+                This option modifies the set of compiler flags for
+                building these serial device drivers. These flags are used in addition
+                to the set of global flags."
+        }
+
+        cdl_option DDOPKG_IO_ATAPI_ARM_DADIO_CFLAGS_REMOVE {
+            display "Suppressed compiler flags"
+            flavor  data
+            no_define
+            default_value { "" }
+            description   "
+                This option modifies the set of compiler flags for
+                building these serial device drivers. These flags are removed from
+                the set of global flags if present."
+        }
+
+	cdl_option DDOPKG_IO_ATAPI_ARM_DADIO_TESTS {
+	    display "ATA/ATAPI tests"
+ 	    flavor  data
+            no_define
+            calculated { "tests/atapi_test" }
+	    description "
+                This option specifies the set of tests for the ATA/ATAPI driver."
+	}	
+    }
+}
+
+# EOF atapi_arm_dadio.cdl
+
+
+

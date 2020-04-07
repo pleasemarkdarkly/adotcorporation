@@ -1,0 +1,24 @@
+copy 
+
+cygwin1.dll
+master.exe
+netmst.bat
+
+to c:\
+
+copy 
+beta.ttl
+
+to c:\program files\ttermpro (or tera term install directory)
+
+copy func90.bin and downloader.exe anywhere
+
+
+program a board with func90.bin
+open tera term for 57600 on the com port
+open beta.ttl macro
+
+follow instructions
+macro may suspend if focus in on the tera term window, make sure the status windows have focus.
+
+

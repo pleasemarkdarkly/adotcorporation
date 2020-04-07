@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8" ?> 
+<MMDStyles default_language="EN" >
+	<language code="EN">
+		<user>
+			<style name="BackgroundImage">blue_background.gif</style>
+			 <style name="ItemDetailBackground">Item_Detail_Background.png</style> 
+			<style name="LogoImage">never_stop_playing.gif</style>
+			<style name="SelectIconImage">select_icon_t.jpg</style>
+			<style name="NoSelectIconImage">select_no_icon_t.jpg</style>
+			<style name="NavMenuImage">nav_menu_en.gif</style>
+			<style name="BackTabImage">Back_Tab_En.gif</style>
+			<style name="ExplicitImage">explicit_en.gif</style>
+			<style name="MetadataGameImage">amg_logo_game.gif</style>
+			<style name="MetadataMovieImage">amg_logo_movie.gif</style>
+			<style name="MetadataMusicImage">amg_logo_media.gif</style>
+			<style name="NormalSpeakerImage">blue_speaker.gif</style>
+			<style name="SelectedSpeakerImage">white_speaker.gif</style>
+			
+			<style name="HeadingFont">Trebuchet22Bold</style>
+			<style name="HeadingFontColor">255,255,255</style>
+			<style name="SubHeadingColor">0,51,153</style>
+			<style name="SubHeadingFont">Trebuchet14Bold</style>
+			<style name="SubHeadingFontColor">255,255,255</style>
+			<style name="DescriptionColor">255,153,0</style>	
+			<style name="DescriptionFont">Verdana12</style>
+			<style name="DescriptionFontColor">0,0,0</style>
+			<style name="ListNormalBackgroundColor">194,214,235</style>
+			<style name="ListNormalFont">Verdana12</style>
+			<style name="ListNormalFontColor">0,0,0</style>
+			<style name="ListHighlightedBackgroundColor">255,255,255</style>
+			<style name="ListHighlightedFont">Verdana12Bold</style>
+			<style name="ListHighlightedFontColor">0,0,0</style>
+			<style name="BorderNormalColor">255,153,0</style>
+			<style name="BorderSelectedColor">0,0,0</style>
+			<style name="BorderWidth">1</style>
+			<style name="SpacingColor">255,255,255</style>
+			<style name="SpacingSize">1</style>
+			<style name="TitleFont">Verdana11Bold</style>
+			<style name="TitleFontColor">0,0,0</style>
+		</user>
+		<admin>
+			<!--<style name="BackgroundImage">admin_background.gif</style>-->
+			<style name="BackgroundImage">detail_background.png</style>
+			<style name="HeadingFont">Trebuchet16Bold</style>
+			<style name="HeadingFontColor">255,255,255</style>
+			<style name="DescriptionFont">Verdana11</style>
+			<style name="ListNormalBackgroundColor">127,127,127</style>
+			<style name="ListNormalFontColor">255,255,255</style>
+			<style name="BorderNormalColor">255,255,255</style>	
+		</admin>
+	</language>
+	<language code="SP">
+		<user>
+			<style name="NavMenuImage">nav_menu_sp.gif</style>
+			<style name="BackTabImage">Back_Tab_Sp.gif</style>
+			<style name="ExplicitImage">explicit_sp.gif</style>			
+		</user>
+	</language>
+</MMDStyles>

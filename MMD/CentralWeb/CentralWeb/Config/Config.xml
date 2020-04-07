@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<config>
+    <databases>
+        <database type="deploy">Network Address=remotedemo;Initial Catalog=CSW2;User ID=sa;Password=greenday</database>
+        <database type="staging">Network Address=remotedemo;Initial Catalog=CSW2;User ID=sa;Password=greenday</database>
+        <database type="log">Network Address=remotedemo;Initial Catalog=CSW2;User ID=sa;Password=greenday</database>
+<!--
+        <database type="deploy">Network Address=remotedemo;Initial Catalog=CSW;User ID=sa;Password=greenday</database>
+        <database type="staging">Network Address=remotedemo;Initial Catalog=CSW;User ID=sa;Password=greenday</database>
+        <database type="log">Network Address=remotedemo;Initial Catalog=CSW;User ID=sa;Password=greenday</database>
+-->
+    </databases>
+    <web>
+		<concept id="0" name="default">
+			<IdleLoopElement>
+				<virtualdir>/MMDResources/concept/default/idleloop</virtualdir>
+			</IdleLoopElement>
+			<RecListAttribute>
+				<virtualdir>/MMDResources/concept/default/reclist</virtualdir>
+			</RecListAttribute>
+		</concept>
+		<concept id="1" name="sam goody">
+			<IdleLoopElement>
+				<virtualdir>/MMDResources/concept/sam_goody/idleloop</virtualdir>
+			</IdleLoopElement>
+			<RecListAttribute>
+				<virtualdir>/MMDResources/concept/sam_goody/reclist</virtualdir>
+			</RecListAttribute>
+		</concept>
+		<concept id="2" name="suncoast">
+			<IdleLoopElement>
+				<virtualdir>/MMDResources/concept/suncoast/idleloop</virtualdir>
+			</IdleLoopElement>
+			<RecListAttribute>
+				<virtualdir>/MMDResources/concept/suncoast/reclist</virtualdir>
+			</RecListAttribute>
+		</concept>
+		<concept id="3" name="sam goody rural">
+			<IdleLoopElement>
+				<virtualdir>/MMDResources/concept/sam_goody_rural/idleloop</virtualdir>
+			</IdleLoopElement>
+			<RecListAttribute>
+				<virtualdir>/MMDResources/concept/sam_goody_rural/reclist</virtualdir>
+			</RecListAttribute>
+		</concept>
+		<concept id="4" name="media play">
+			<IdleLoopElement>
+				<virtualdir>/MMDResources/concept/media_play/idleloop</virtualdir>
+			</IdleLoopElement>
+			<RecListAttribute>
+				<virtualdir>/MMDResources/concept/media_play/reclist</virtualdir>
+			</RecListAttribute>
+		</concept>
+		
+		
+    </web>
+    <services>
+		<service id="Scheduler" interval_minutes="5" />
+		<service id="ReceiveUpdate" 
+		 ftp_server="ftp.coolmusic.com"
+		 ftp_user="henry"
+		 ftp_password="secret"
+		 ftp_dir="dowload/clients/bby/"
+		 ftp_file_pattern="*.zip"
+		 receiving_dir="h:\receiving\content\"
+		/>
+		
+		<service id="ImportUpdate"
+		 database_type="deploy"
+		 receiving_dir="h:\receiving\content\"		 
+		/>
+		
+		<service id="CreatePackage"
+		 database_type="deploy"
+		 staging_dir="h:\staging\content\"
+		 archive_dir="h:\archive\content\"
+		/>
+		
+		<service id="TransferPackage"
+		 staging_dir="h:\staging\content\"
+		 publish_dir="h:\publishing\content\"
+		/>
+		
+		<service id="ReceiveLogs"
+		 receiving_dir="h:\receiving\logs\"
+		 staging_dir="h:\staging\logs\"
+		/>
+		
+		<service id="ImportLogs"
+		 database_type="deploy"
+		 staging_dir="h:\staging\logs\"
+		 archive_dir="h:\archive\logs\"
+		/>
+    </services>
+</config>

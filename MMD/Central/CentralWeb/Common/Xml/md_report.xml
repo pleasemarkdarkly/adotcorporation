@@ -1,0 +1,506 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!-- setting the default XML Namespace will currently break the XPath queries in SystemActivity.cs -->
+<ReportMetaData aaxmlns="urn:schemas-fullplaymedia-com:mmd-report-md">
+	<ReportObjects>
+		<!--
+Customer Profile
+
+Description: Link to CRM info??
+Tables/SQL: 		
+		-->
+		<ReportObject name="Customer Profile" roid="CustomerProfile" key="sCustomerId" >
+			<Attributes>
+				<!-- data/calculated fields for each object -->
+				<Attr atid="sCustomerId" name="Customer Id" dt="string" />
+			</Attributes>
+			<Aggregates>
+				<!-- besides count(), these are aggregate functions available to the reportobjects' parent --></Aggregates>
+			<Relationships>
+			<!-- children related to this reportobject...specify left/right key(s) -->
+				<Rel roidref="CustomerSession" key="sCustomerId" />
+			</Relationships>
+		</ReportObject>
+		<!--
+Customer Session
+
+Description: 
+Tables/SQL: 		
+		-->
+		<ReportObject name="Customer Session" roid="CustomerSession" key="idCustomerLogin" >
+			<Attributes>
+				<!-- data/calculated fields for each object -->
+				<Attr atid="idCustomerLogin" dt="int" />
+				<Attr atid="idStore" name="Store Id" dt="int" />
+				<Attr atid="idDevice" name="Device Id" dt="int" />
+				<Attr atid="sCustomerId" name="Customer Id" dt="string" />
+				<Attr atid="dtLogged" name="Login Date" dt="datetime" />
+				<Attr atid="dtLogout" name="Logout Date" dt="datetime" />
+				<Attr atid="SessionLength" name="Session Length" dt="int" calc="true" />
+			</Attributes>
+			<Aggregates>
+				<!-- besides count(), these are aggregate functions available to the reportobjects' parent -->
+				<Agg agid="SessionLengthTotal" name="Sessions Duration" dt="int" />
+			</Aggregates>
+			<Relationships>
+			<!-- children related to this reportobject...specify left/right key(s) -->
+				<Rel roidref="ProductSampleRequest" key="expr:Between(dtLogged,dtLogout)" relkey="dtLogged" />
+				<Rel roidref="ProductRequest" key="expr:Between(dtLogged,dtLogout)" relkey="dtLogged" />
+				<Rel roidref="RecListRequest">
+					<Key key="sCustomerId" />
+					<Key key="dtLogged" op="gte" relkey="dtLogged" />
+					<Key key="dtLogout" op="lte" relkey="dtLogged" />
+				</Rel>
+			</Relationships>
+		</ReportObject>
+		<!--
+Device
+
+Description: 
+Tables/SQL: 
+		-->
+		<ReportObject name="Store Device" roid="Device" key="idDevice" >
+			<Attributes>
+				<!-- data/calculated fields for each object -->
+				<Attr atid="idDevice" name="Device Id" dt="int" />
+				<Attr atid="idStore" name="Store Id" dt="int" />
+				<Attr atid="idLocationType" name="Location Type Id" dt="int" />
+				<Attr atid="byStatus" name="Device Status" dt="lookup" lookup="lkp-DeviceStatus" />
+				<Attr atid="idIdleLoop" name="Idle Loop Id" dt="int" />
+				<Attr atid="RebootCount" name="Reboot Count" dt="int" calc="true" />
+				<Attr atid="PingCount" name="Ping Count" dt="int" calc="true" />
+				<Attr atid="POSErrorCount" name="POS Error Count" dt="int" calc="true" />
+				<Attr atid="UPCNotFoundErrorCount" name="UPC Not Found Errors" dt="int" calc="true" />
+				<Attr atid="NoSampleAvailableErrorCount" name="No Sample Available Errors" dt="int" calc="true" />
+				<Attr atid="ProductViewCount" name="Product View Count" dt="int" calc="true" />
+			</Attributes>
+			<Aggregates>
+				<!-- besides count(), these are aggregate functions available to the reportobjects' parent -->
+				<Agg agid="TotalRebootCount" name="Reboot Count" dt="int" />
+				<Agg agid="TotalPingCount" name="Ping Count" dt="int" />
+				<Agg agid="TotalPOSErrorCount" name="POS Error Count" dt="int" />
+				<Agg agid="TotalUPCNotFoundErrorCount" name="UPC Not Found Errors" dt="int" />
+				<Agg agid="TotalNoSampleAvailableErrorCount" name="No Sample Available Errors" dt="int" />
+				<!--<Agg agid="TotalProductViewCount" name="Product View Count" dt="int" />-->
+			</Aggregates>
+			<Relationships>
+			<!-- children related to this reportobject...specify left/right key(s), multiplicity? -->
+				<Rel roidref="CustomerSession" >
+					<Key key="idStore" />
+					<Key key="idDevice" />
+				</Rel>
+				<Rel roidref="LogError" >
+					<Key key="idStore" />
+					<Key key="idDevice" />
+				</Rel>
+				<Rel roidref="ProductSampleRequest" >
+					<Key key="idStore" />
+					<Key key="idDevice" />
+				</Rel>
+				<Rel roidref="ProductRequest" >
+					<Key key="idStore" />
+					<Key key="idDevice" />
+				</Rel>
+				<Rel roidref="RecListRequest" >
+					<Key key="idStore" />
+					<Key key="idDevice" />
+				</Rel>
+			</Relationships>
+		</ReportObject>
+		<!--
+Genre
+
+Description: 
+Tables/SQL: 
+		-->
+		<ReportObject name="Genre" roid="Genre" key="idGenre" >
+			<Attributes>
+				<!-- data/calculated fields for each object -->
+				<Attr atid="idGenre" name="Genre Id" dt="int" />
+				<Attr atid="sName" name="Genre Name" dt="string" />
+				<Attr atid="idMediaType" name="MediaType Id" dt="int" />
+			</Attributes>
+			<Aggregates>
+			<!-- besides count(), these are aggregate functions available to the reportobjects' parent -->
+			</Aggregates>
+			<Relationships>
+			<!-- children related to this reportobject...specify left/right key(s) -->
+				<Rel roidref="Product" key="idGenre" />
+				<Rel roidref="RecListRequest" key="idGenre" />
+				<Rel roidref="RecList" key="idGenre" />
+			</Relationships>
+		</ReportObject>
+		<!--
+LocationType
+
+Description: 
+Tables/SQL: 
+				-->
+		<ReportObject name="Device Location Type" roid="LocationType" key="idLocationType">
+			<Attributes>
+				<!-- data/calculated fields for each object -->
+				<Attr atid="idLocationType" name="Location Type Id" dt="int" />
+				<Attr atid="sName" name="Location Type Name" dt="string" />
+			</Attributes>
+			<Aggregates>
+			<!-- besides count(), these are aggregate functions available to the reportobjects' parent -->
+			</Aggregates>
+			<Relationships>
+			<!-- children related to this reportobject...specify left/right key(s) -->
+			<Rel roidref="Device" key="idLocationType" />
+		</Relationships>
+		</ReportObject>
+		<!--
+LogError
+
+Description: 
+Tables/SQL: 
+		-->
+		<ReportObject name="Log Error" roid="LogError" key="idLogError" >
+			<Attributes>
+				<!-- data/calculated fields for each object -->
+				<Attr atid="idLogError" name="Log Error Id" dt="int" />
+				<Attr atid="idStore" name="Store Id" dt="int" />
+				<Attr atid="idDevice" name="Device Id" dt="int" />
+				<Attr atid="dtLogged" name="Date Logged" dt="datetime" />
+				<Attr atid="iError" name="Error Code" dt="int" />
+				<Attr atid="sSource" name="Source" dt="string" />
+				<Attr atid="sDescription" name="Description" dt="string" />
+			</Attributes>
+			<Aggregates>
+				<!-- besides count(), these are aggregate functions available to the reportobjects' parent -->
+				<!-- group error counts by iError?? --></Aggregates>
+			<Relationships>
+				<!-- children related to this reportobject...specify left/right key(s) --></Relationships>
+		</ReportObject>
+		<!--
+MediaType
+
+Description: 
+Tables/SQL: 		
+		-->
+		<ReportObject name="MediaType" roid="MediaType" key="idMediaType" >
+			<Attributes>
+				<!-- data/calculated fields for each object -->
+				<Attr atid="idMediaType" name="MediaType Id" dt="int" />
+				<Attr atid="sName" name="MediaType Name" dt="string" />
+			</Attributes>
+			<Aggregates>
+			<!-- besides count(), these are aggregate functions available to the reportobjects' parent -->
+		</Aggregates>
+			<Relationships>
+			<!-- children related to this reportobject...specify left/right key(s) -->
+				<Rel roidref="Product" key="idMediaType" />
+				<Rel roidref="Genre" key="idMediaType" />
+				<Rel roidref="RecList" key="idMediaType" />
+				<Rel roidref="RecListRequest" key="idMediaType" />
+			</Relationships>
+		</ReportObject>
+		<!--
+Package
+
+Description: 
+Tables/SQL: 
+		-->
+		<ReportObject name="Package" roid="Package" key="idPackage" >
+			<Attributes>
+				<Attr atid="idPackage" dt="int" />
+				<Attr atid="bIncremental" dt="bool" />
+				<Attr atid="bArchived" dt="bool" />
+				<Attr atid="dtPackageBuilt" dt="datetime" />
+				<Attr atid="iBuildNumber" dt="int" />
+				<Attr atid="sVersion" dt="string" />
+				<Attr atid="sFileName" dt="string" />
+				<Attr atid="sBuiltBy" dt="string" />
+			</Attributes>
+			<Aggregates />
+			<Relationships />
+		</ReportObject>
+		<!--
+Product
+
+Description: 
+Tables/SQL: 
+		-->
+
+		<ReportObject name="Product" roid="Product" key="idItem" >
+			<Attributes>
+				<!-- data/calculated fields for each object -->
+				<Attr atid="idItem" name="Item Id" dt="int" />
+				<Attr atid="idProduct" name="Product Id" dt="int" />
+				<Attr atid="sTitle" name="Title" dt="string" />
+				<Attr atid="sArtist" name="Artist" dt="string" />
+				<Attr atid="sUPC" name="UPC" dt="string" />
+				<Attr atid="sMediaType" name="Media Type" dt="string" /> <!-- join to media type? -->
+				<Attr atid="idMediaType" name="Media Type Id" dt="int" />
+				<Attr atid="sGenre" name="Genre" dt="string" /> <!-- join to genre ? -->
+				<Attr atid="dtReleased" name="Release Date" dt="datetime" />
+				<Attr atid="bSampleExists" name="Sample Exists" dt="bool" />
+				<Attr atid="sVendor" name="Vendor" dt="string" />
+			</Attributes>
+			<Aggregates>
+			<!-- besides count(), these are aggregate functions available to the reportobjects' parent -->
+				<Agg agid="SampleExistsCount" dt="int" />
+				<Agg agid="SampleNotExistsCount" dt="int" />
+			</Aggregates>
+			<Relationships>
+			<!-- children related to this reportobject...specify left/right key(s) -->			
+				<Rel roidref="ProductSampleRequest" key="idItem" />
+				<Rel roidref="ProductRequest" key="idItem" />
+			</Relationships>
+		</ReportObject>
+		<!--
+ProductSampleRequest
+
+Description: 
+Tables/SQL: 		
+		-->
+		<ReportObject name="Product Sample Request" roid="ProductSampleRequest" key="idLogPlayMedia">
+			<Attributes>
+				<!-- data/calculated fields for each object -->
+				<Attr atid="idLogPlayMedia" name="Log Id" dt="int" />
+				<Attr atid="idLogMetaData" name="Log MetaData Id" dt="int" />
+				<Attr atid="idStore" name="Store Id" dt="int" />
+				<Attr atid="idDevice" name="Device Id" dt="int" />
+				<Attr atid="dtLogged" name="Date Logged" dt="datetime" />
+				<Attr atid="sSampleURL" name="Sample URL" dt="string" />
+				<Attr atid="idItem" name="Item Id" dt="int" />
+				<Attr atid="iDisc" name="Disc Number" dt="int" />
+				<Attr atid="iTrack" name="Track Number" dt="int" />
+			</Attributes>
+			<Aggregates>
+				<!-- besides count(), these are aggregate functions available to the reportobjects' parent --></Aggregates>
+			<Relationships>
+				<!-- children related to this reportobject...specify left/right key(s) --></Relationships>
+		</ReportObject>
+		<!--
+ProductRequest
+
+Description: 
+Tables/SQL: 		
+		-->
+		<ReportObject name="Product Request" roid="ProductRequest" key="idLogMetaData" >
+			<DataView>tblMMD_LogMetaData</DataView>
+			<Attributes>
+				<!-- data/calculated fields for each object -->
+				<Attr atid="idLogMetaData" dt="int" />
+				<Attr atid="idLogListRequest" dt="int" />
+				<Attr atid="idStore" dt="int" />
+				<Attr atid="idDevice" dt="int" />
+				<Attr atid="dtLogged" dt="datetime" />
+				<Attr atid="idSource" dt="int" />
+				<Attr atid="idItem" dt="int" />
+				<Attr atid="bScanEvent" dt="bool" />
+				<Attr atid="iErrorCode" dt="int" />
+				<Attr atid="shSampleCount" dt="int" />
+			</Attributes>
+			<Aggregates>
+				<!-- besides count(), these are aggregate functions available to the reportobjects' parent -->
+				<Agg agid="TotalScanCount" dt="int" expr="SUM(CASE bScanEvent WHEN 1 THEN 1 ELSE 0 END)" />
+				<Agg agid="TotalSelectCount" dt="int" expr="SUM(CASE bScanEvent WHEN 0 THEN 1 ELSE 0 END)" />				
+			</Aggregates>
+				
+			<Relationships>
+			<!-- children related to this reportobject...specify left/right key(s) -->
+				<Rel roidref="ProductSampleRequest" key="idLogMetaData" />
+			</Relationships>
+		</ReportObject>
+		<!--		
+RecListRequest
+
+Description: 
+Tables/SQL: 		
+		-->
+		<ReportObject name="Recommend List Request" roid="RecListRequest" key="idLogListRequest" >
+			<DataView>tblMMD_LogListRequest</DataView>
+			<Attributes>
+				<!-- data/calculated fields for each object -->
+				<Attr atid="idLogListRequest" name="Log Id" dt="int" />
+				<Attr atid="idStore" name="Store Id" dt="int" />
+				<Attr atid="idDevice" name="Device Id" dt="int" />
+				<Attr atid="dtLogged" name="Date Logged" dt="datetime" />
+				<Attr atid="idRecommendListType" name="Recommend List Type Id" dt="int" />
+				<Attr atid="idMediaType" name="Media Type Id" dt="int" />
+				<Attr atid="idGenre" name="Genre Id" dt="int" />
+				<Attr atid="idSource" name="Source Id" dt="int" />
+				<Attr atid="iErrorCode" name="Error Code" dt="int" />
+				<Attr atid="sCustomerId" name="Customer Id" dt="string" />
+				<Attr atid="sName" name="Rec List" calc="true" />
+			</Attributes>
+			<Aggregates>
+				<!-- besides count(), these are aggregate functions available to the reportobjects' parent --></Aggregates>
+			<Relationships>
+			<!-- children related to this reportobject...specify left/right key(s) -->
+				<Rel roidref="ProductRequest" key="idSource" />
+
+		</Relationships>
+		</ReportObject>
+		<!--
+		
+RecList
+		
+		-->
+		<ReportObject name="Rec List" roid="RecList" key="idRecList">
+			<DataView>tblMMD_RecommendList</DataView>
+			<Attributes>
+				<Attr atid="idRecList" dt="int" />
+				<Attr atid="idRecListType" dt="int" />
+				<Attr atid="idMediaType" dt="int" />
+				<Attr atid="idGenre" dt="int" />
+				<Attr atid="sName" dt="string" calc="true" />	
+		
+			</Attributes>
+			<Aggregates>
+			
+			</Aggregates>
+			<Relationships>
+				<Rel roidref="Product" >
+					<Key key="idGenre" />
+					<Key key="idMediaType" />
+				</Rel>
+				<Rel roidref="RecListRequest" >
+					<Key key="idRecListType" relkey="idRecommendListType" />
+					<Key key="idMediaType" />
+					<Key key="idGenre" nullable="true" />
+				</Rel>
+			</Relationships>
+		</ReportObject>
+		<!--
+RecListType
+
+Description: 
+Tables/SQL: 		
+		-->
+		<ReportObject name="Recommend List Type" roid="RecListType" key="idRecListType" >
+			<DataView>tblMMD_RecommendListType</DataView>
+			<Attributes>
+				<!-- data/calculated fields for each object -->
+				<Attr atid="idRecListType" dt="int" />
+				<Attr atid="sName" dt="string" />
+			</Attributes>
+			<Aggregates>
+				<!-- besides count(), these are aggregate functions available to the reportobjects' parent --></Aggregates>
+			<Relationships>
+			<!-- children related to this reportobject...specify left/right key(s) -->
+				<Rel roidref="RecList" key="idRecListType" />
+				<Rel roidref="RecListRequest" key="idRecListType" relkey="idRecommendListType" />
+			</Relationships>
+		</ReportObject>
+		<!--		
+Store
+
+Description: 
+Tables/SQL: 
+		-->
+		<ReportObject name="Store" roid="Store"  key="idStore" >
+			<DataView>tblCSW_StoreConfiguration</DataView>
+			<Attributes>
+				<!-- data/calculated fields for each object -->
+				<Attr atid="idStore" dt="int" />
+				<Attr atid="sName" dt="string" />
+				<Attr atid="sCity" dt="string" />
+				<Attr atid="sState" dt="string" />
+				<Attr atid="sZipCode" dt="string" />
+				<Attr atid="idStoreConcept" dt="int" />
+				<Attr atid="dtLastLogUpdated" dt="datetime" />
+				<Attr atid="idCurrentPackage" dt="int" />
+			</Attributes>
+			<Aggregates>
+				<!-- besides count(), these are aggregate functions available to the reportobjects' parent --></Aggregates>
+			<Relationships>
+			<!-- children related to this reportobject...specify left/right key(s) -->
+				<Rel roidref="Device" key="idStore" />
+				<Rel roidref="CustomerSession" key="idStore" />
+				<Rel roidref="LogError" key="idStore" />
+				<Rel roidref="ProductSampleRequest" key="idStore" />
+				<Rel roidref="ProductRequest" key="idStore" />
+				<Rel roidref="RecListRequest" key="idStore" />
+				<Rel roidref="LocationType" all="1" />
+				<Rel roidref="RecListType" all="1" />
+			</Relationships>
+		</ReportObject>
+		<!--
+StoreConcept
+
+Description: 
+Tables/SQL: 		
+		-->
+		<ReportObject name="Store Concept" roid="StoreConcept" key="idStoreConcept">
+			<Attributes>
+				<!-- data/calculated fields for each object -->
+				<Attr atid="idStoreConcept" dt="int" />
+				<Attr atid="sName" dt="string" />
+			</Attributes>
+			<Aggregates>
+				<!-- besides count(), these are aggregate functions available to the reportobjects' parent --></Aggregates>
+			<Relationships>
+			<!-- children related to this reportobject...specify left/right key(s) -->
+				<Rel roidref="Store" key="idStoreConcept" />
+			</Relationships>
+		</ReportObject>
+		<!--		
+GroupType
+
+Description: 
+Tables/SQL: 
+		-->
+		<ReportObject name="GroupType" roid="GroupType" key="idGroupType" >
+			<Attributes>
+				<!-- data/calculated fields for each object -->
+				<Attr atid="idGroupType" dt="int" />
+				<Attr atid="sName" dt="string" />
+			</Attributes>
+			<Aggregates>
+				<!-- besides count(), these are aggregate functions available to the reportobjects' parent --></Aggregates>
+			<Relationships>
+			<!-- children related to this reportobject...specify left/right key(s) -->
+				<Rel roidref="Group" key="idGroupType" />
+			</Relationships>
+		</ReportObject>
+		<!--		
+Group
+
+Description: 
+Tables/SQL: 		
+		-->
+		<ReportObject name="Group" roid="Group" key="idGroup">
+			<Attributes>
+				<!-- data/calculated fields for each object -->
+				<Attr atid="idGroupType" dt="int" />
+				<Attr atid="idGroup" dt="int" />
+				<Attr atid="sName" dt="int" />
+			</Attributes>
+			<Aggregates>
+				<!-- besides count(), these are aggregate functions available to the reportobjects' parent --></Aggregates>
+			<Relationships>
+			<!-- children related to this reportobject...specify left/right key(s) -->
+				<Rel roidref="Store" key="idGroup" relkey="idStore" reltable="tblCSW_StoreGroup" />
+			</Relationships>
+		</ReportObject>
+		<!--		
+System
+
+Description: Root of all queries?? Should this even exist?
+Tables/SQL: 		
+		-->
+		<ReportObject name="System" roid="System" >
+			<Attributes>
+				<!-- data/calculated fields for each object --></Attributes>
+			<Aggregates>
+				<!-- besides count(), these are aggregate functions available to the reportobjects' parent --></Aggregates>
+			<Relationships>
+				<!-- children related to this reportobject...specify left/right key(s) -->
+				<Rel roidref="StoreConcept" all="1" />
+				<Rel roidref="Store" all="1" />
+				<!-- etc.. -->
+			</Relationships>				
+		</ReportObject>
+	</ReportObjects>
+	<Lookups>
+		<Lookup name="DeviceStatus" id="lkp-DeviceStatus">
+			<LkpItem value="0" name="Unconfigured" />
+			<LkpItem value="1" name="Active" />
+			<LkpItem value="2" name="Active" />
+			<LkpItem value="3" name="Inactive" />
+		</Lookup>
+	</Lookups>
+</ReportMetaData>

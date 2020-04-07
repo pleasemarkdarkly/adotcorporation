@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" ?> 
+<page tag="Home" display="MMD Admin" url="/CentralWeb/default.aspx" >
+	<page tag="RecommendLists" display="Recommend Lists" url="/CentralWeb/Profiles/Home.aspx">
+		<page tag="ViewRecLists" display="View Recommend Lists" url="/CentralWeb/Profiles/RecListView.aspx" />
+		<page tag="CreateRecList" display="Create Recommend List" url="" />
+		<page tag="ViewRecListTypes" display="View Recommend List Types" url="/CentralWeb/Profiles/RecListTypeView.aspx" />
+		<page tag="CreateRecListType" display="Create Recommend List Type" url="/CentralWeb/Profiles/RecListTypeAdd.aspx" />
+	</page>
+	<page tag="AttractLoops" display="Attract Loops" url="/CentralWeb/Advertisment/Home.aspx" />
+	<page tag="Promotion" display="Promotion" url="" />
+	<page tag="Activity" display="Shopper Activity and Reporting" url="" />
+	<page tag="SystemConf" display="System Management and Configuration" url="" />
+	<page tag="PackageConf" display="Delta Package Propogation" url="" />
+</page>

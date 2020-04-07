@@ -1,0 +1,783 @@
+Timing Diagram Editor v5.1f - Output File
+
+PROJECT
+DefaultFont	USER	{-13,0,0,0,400,0,0,0,0,0,2,1,34,Arial,0}
+DrawWndFont	DEFAULT
+DrawWndColor	DEFAULT
+GridWndFont	DEFAULT
+GridWndColor	DEFAULT
+LabelWndFont	DEFAULT
+ParamStripColor	8388607
+ParamStripBkgnd	16777215
+ParamStripFontColor	0
+TimeStripColor	8388736
+EditWndBkgnd	16777215
+StatusBarText	16777215
+StatusBarBkgnd	6956042
+ReportWndColor	0
+ReportWndBkgnd	16777215
+WaveformColor	0
+LabelWndColor	DEFAULT
+ParamDispPref	0
+ParamWndCellDisplay	0
+CustDispString	%n v=%mv,%Mv f=%mf,%Mf m=%mm,%Mm d=%md,%Md %c 
+CustomDisplayStringRTF	{\rtf1\ansi\deff0\deftab720{\fonttbl{\f0\fswiss MS Sans Serif;}}{\colortbl\red0\green0\blue0;}\deflang1033\pard\plain\f0\fs20 %n v=%mv,%Mv f=%mf,%Mf m=%mm,%Mm d=%md,%Md %c \par}
+BaseTimeUnit	1
+DisplayTimeUnit	2
+TimePerPixel	337.635
+Visible	DELAYS	SETUPS	HOLDS	SAMPLES	TEXT	HIDDENATTACHMENTS	CRITICALPATHS	GRIDLINES	UNCERTAINTY	
+ColWidths	77,119,164,289,1112
+ScrollPos	13,0,0
+DefDelayRule	2
+NoEventOverlap	NO
+SignalColor	2
+WaveFormWidth	1
+WaveFormColor	0
+InputWaveFormColor	16711680
+SlantedEdges	1
+PixelSlant	2
+LoadLibsToMem	1
+UseFullPathNames	1
+LibPath	
+BusDisplay	0
+EntireTime	YES
+PrintTimeSpecified	NO
+FromTime	0
+ToTime	292.054
+AllSignals	YES
+CurrSelSigs	NO
+CurrDispSigs	NO
+PrintTo	0
+PrintFileName	
+PreviewInterchange	YES
+PreviewTIFF5	NO
+UseMargins	YES
+PrintTimeLine	YES
+PrintBorderBox	YES
+PrintSigNames	YES
+PrintSigNamesOnEachPage	YES
+AddPreviewToEPS	NO
+PreviewRes	150
+MarginLR	.25
+MarginTB	1.00
+Header	%d %t;%f;%p
+Footer	
+ScaleHorz	100
+ScaleVert	100
+ScaleHPage	1
+DefaultTimingModel	minmax
+DefaultClock	Unclocked
+DefaultEdgeLevel	neg
+DefaultSet	Not Used
+DefaultClear	Not Used
+DefaultClockEnable	Not Used
+DefaultRadix	bin
+DefaultClockToOut	0
+DefaultSetup	0
+DefaultHold	0
+DefaultRegStartupState	unknown
+DefaultActiveLowSetClear	True
+DefaultAsyncSetClear	True
+DefaultActiveLowClockEnable	True
+PROPS!
+!
+
+MACROS
+!
+
+CLOCK	MEMCLK
+PERIODE	9.708738
+DUTY	50
+OFFSETE	0
+INITIAL	HIGH
+JRISEE	1.2
+JFALLE	1.4
+GRID	0	1	0	2	0	16711680
+ENDGRID	-1
+DIRECTION	shared output
+MASTERCLOCK	None
+Clock	Unclocked
+EdgeLevel	neg
+Set	Not Used
+Clear	Not Used
+ClockEnable	Not Used
+ActiveLowSetClear	True
+AsyncSetClear	True
+ActiveLowClockEnable	True
+VhdlType	std_logic
+VerilogType	wire
+TemporalEquation	8ns=Z (5=1 5=0)*5 9=H 9=L 5=V 5=X
+StateEquation	Hex(Inc(0,2,5))
+MSB	0
+LSB	0
+BooleanEquation	
+ContinuouslySimulated	False
+VerilogCode	
+PROPS!
+E0	0	0	1200		1	0	DR	0
+E1	1	4854.5	6254.5		1	0	DR	0
+E2	0	9709	10909		1	0	DR	0
+E3	1	14563.5	15963.5		1	0	DR	0
+E4	0	19418	20618		1	0	DR	0
+E5	1	24272.5	25672.5		1	0	DR	0
+E6	0	29127	30327		1	0	DR	0
+E7	1	33981.5	35381.5		1	0	DR	0
+E8	0	38836	40036		1	0	DR	0
+E9	1	43690.5	45090.5		1	0	DR	0
+E10	0	48545	49745		1	0	DR	0
+E11	1	53399.5	54799.5		1	0	DR	0
+E12	0	58254	59454		1	0	DR	0
+E13	1	63108.5	64508.5		1	0	DR	0
+E14	0	67963	69163		1	0	DR	0
+E15	1	72817.5	74217.5		1	0	DR	0
+E16	0	77672	78872		1	0	DR	0
+E17	1	82526.5	83926.5		1	0	DR	0
+E18	0	87381	88581		1	0	DR	0
+E19	1	92235.5	93635.5		1	0	DR	0
+E20	0	97090	98290		1	0	DR	0
+E21	1	101945	103345		1	0	DR	0
+E22	0	106799	107999		1	0	DR	0
+E23	1	111654	113054		1	0	DR	0
+E24	0	116508	117708		1	0	DR	0
+E25	1	121363	122763		1	0	DR	0
+E26	0	126217	127417		1	0	DR	0
+E27	1	131072	132472		1	0	DR	0
+E28	0	135926	137126		1	0	DR	0
+E29	1	140781	142181		1	0	DR	0
+E30	0	145635	146835		1	0	DR	0
+E31	1	150490	151890		1	0	DR	0
+E32	0	155344	156544		1	0	DR	0
+E33	1	160199	161599		1	0	DR	0
+E34	0	165053	166253		1	0	DR	0
+E35	1	171308	171308		1	0	DR	0
+E36	0	174762	175962		1	0	DR	0
+E37	1	179617	181017		1	0	DR	0
+E38	0	184471	185671		1	0	DR	0
+E39	1	189326	190726		1	0	DR	0
+E40	0	194180	195380		1	0	DR	0
+E41	1	199035	200435		1	0	DR	0
+E42	0	203889	205089		1	0	DR	0
+E43	1	208744	210144		1	0	DR	0
+E44	0	213598	214798		1	0	DR	0
+E45	1	218453	219853		1	0	DR	0
+E46	0	223307	224507		1	0	DR	0
+E47	1	228162	229562		1	0	DR	0
+E48	0	233016	234216		1	0	DR	0
+E50	0	242725	243925		1	0	DR	0
+E51	1	247580	248980		1	0	DR	0
+E56	0	271852	273052		1	0	DR	0
+E57	1	276707	278107		1	0	DR	0
+E58	0	281561	282761		1	0	DR	0
+E59	1	286416	287816		1	0	DR	0
+E62	0	300979	302179		1	0	DR	0
+E65	1	315543	316943		1	0	DR	0
+E69	1	334961	336361		1	0	DR	0
+!
+
+SIGNAL	SA_CS3$BAR
+DIRECTION	shared output
+RADIX	hex
+GRID	0	1	0	1	0	16711680	0	0
+ENDGRID	-1
+Clock	Unclocked
+EdgeLevel	neg
+Set	Not Used
+Clear	Not Used
+ClockEnable	Not Used
+ActiveLowSetClear	True
+AsyncSetClear	True
+ActiveLowClockEnable	True
+VhdlType	std_logic
+VerilogType	wire
+TemporalEquation	8ns=Z (5=1 5=0)*5 9=H 9=L 5=V 5=X
+StateEquation	Hex(Inc(0,2,5))
+MSB	0
+LSB	0
+BooleanEquation	
+ContinuouslySimulated	False
+VerilogCode	
+PROPS!
+E1	1	9709	20909		1	0	DR	0
+E2	0	194180	205380		1	0	DR	0
+E3	1	290061	290061		1	0	DR	0
+!
+
+SIGNAL	SA_OE$BAR
+DIRECTION	shared output
+RADIX	hex
+GRID	0	1	0	1	0	16711680	0	0
+ENDGRID	-1
+Clock	Unclocked
+EdgeLevel	neg
+Set	Not Used
+Clear	Not Used
+ClockEnable	Not Used
+ActiveLowSetClear	True
+AsyncSetClear	True
+ActiveLowClockEnable	True
+VhdlType	std_logic
+VerilogType	wire
+TemporalEquation	8ns=Z (5=1 5=0)*5 9=H 9=L 5=V 5=X
+StateEquation	Hex(Inc(0,2,5))
+MSB	0
+LSB	0
+BooleanEquation	
+ContinuouslySimulated	False
+VerilogCode	
+PROPS!
+E1	1	29127	40327		1	0	DR	0
+E2	0	184471	195671		1	0	DR	0
+E3	1	290310	290310		1	0	DR	0
+!
+
+SIGNAL	ADDR
+DIRECTION	shared output
+RADIX	hex
+GRID	0	1	0	1	0	16711680	0	0
+ENDGRID	-1
+Clock	Unclocked
+EdgeLevel	neg
+Set	Not Used
+Clear	Not Used
+ClockEnable	Not Used
+ActiveLowSetClear	True
+AsyncSetClear	True
+ActiveLowClockEnable	True
+VhdlType	std_logic
+VerilogType	wire
+TemporalEquation	8ns=Z (5=1 5=0)*5 9=H 9=L 5=V 5=X
+StateEquation	Hex(Inc(0,2,5))
+MSB	0
+LSB	0
+BooleanEquation	
+ContinuouslySimulated	False
+VerilogCode	
+PROPS!
+E1	X	4854.5	16254.5		1	0	DR	0
+E2	V	189326	200726		1	0	DR	0
+E3	X	292054	292054		1	0	DR	0
+!
+
+SIGNAL	DATA
+DIRECTION	shared output
+RADIX	hex
+GRID	0	1	0	1	0	16711680	0	0
+ENDGRID	-1
+Clock	Unclocked
+EdgeLevel	neg
+Set	Not Used
+Clear	Not Used
+ClockEnable	Not Used
+ActiveLowSetClear	True
+AsyncSetClear	True
+ActiveLowClockEnable	True
+VhdlType	std_logic
+VerilogType	wire
+TemporalEquation	8ns=Z (5=1 5=0)*5 9=H 9=L 5=V 5=X
+StateEquation	Hex(Inc(0,2,5))
+MSB	0
+LSB	0
+BooleanEquation	
+ContinuouslySimulated	False
+VerilogCode	
+PROPS!
+E1	X	29127	175327		1	0	DR	0
+E2	V	186375	186375		1	0	DR	0
+E3	X	290061	290061		1	0	DR	0
+!
+
+PARM	t2
+MIN	0
+MAX	35
+COMMENT	ADDR change to valid write DATA
+NameRTF	{\rtf1\ansi{\fonttbl{\f0 \fswiss Arial;}}\sectd\marglsxn1800\margrsxn1800\margtsxn1440\margbsxn1440\headery1440\footery1440\sbkpage\pgncont t2}
+MinRTF	{\rtf1\ansi{\fonttbl{\f0 \fswiss Arial;}}\sectd\marglsxn1800\margrsxn1800\margtsxn1440\margbsxn1440\headery1440\footery1440\sbkpage\pgncont 0}
+MaxRTF	{\rtf1\ansi{\fonttbl{\f0 \fswiss Arial;}}\sectd\marglsxn1800\margrsxn1800\margtsxn1440\margbsxn1440\headery1440\footery1440\sbkpage\pgncont 35}
+CommentRTF	{\rtf1\ansi{\fonttbl{\f0 \fswiss Arial;}}\sectd\marglsxn1800\margrsxn1800\margtsxn1440\margbsxn1440\headery1440\footery1440\sbkpage\pgncont ADDR change to valid write DATA}
+PROPS!
+!
+
+PARM	t3
+MIN	18
+MAX	NULL
+COMMENT	DATA in to falling EXPCLK setup
+NameRTF	{\rtf1\ansi{\fonttbl{\f0 \fswiss Arial;}}\sectd\marglsxn1800\margrsxn1800\margtsxn1440\margbsxn1440\headery1440\footery1440\sbkpage\pgncont t3}
+MinRTF	{\rtf1\ansi{\fonttbl{\f0 \fswiss Arial;}}\sectd\marglsxn1800\margrsxn1800\margtsxn1440\margbsxn1440\headery1440\footery1440\sbkpage\pgncont 18}
+MaxRTF	{\rtf1\ansi{\fonttbl{\f0 \fswiss Arial;}}\sectd\marglsxn1800\margrsxn1800\margtsxn1440\margbsxn1440\headery1440\footery1440\sbkpage\pgncont}
+CommentRTF	{\rtf1\ansi{\fonttbl{\f0 \fswiss Arial;}}\sectd\marglsxn1800\margrsxn1800\margtsxn1440\margbsxn1440\headery1440\footery1440\sbkpage\pgncont DATA in to falling EXPCLK setup}
+PROPS!
+!
+
+PARM	t4
+MIN	0
+MAX	NULL
+COMMENT	DATA in to falling EXPCLK hold
+NameRTF	{\rtf1\ansi{\fonttbl{\f0 \fswiss Arial;}}\sectd\marglsxn1800\margrsxn1800\margtsxn1440\margbsxn1440\headery1440\footery1440\sbkpage\pgncont t4}
+MinRTF	{\rtf1\ansi{\fonttbl{\f0 \fswiss Arial;}}\sectd\marglsxn1800\margrsxn1800\margtsxn1440\margbsxn1440\headery1440\footery1440\sbkpage\pgncont 0}
+MaxRTF	{\rtf1\ansi{\fonttbl{\f0 \fswiss Arial;}}\sectd\marglsxn1800\margrsxn1800\margtsxn1440\margbsxn1440\headery1440\footery1440\sbkpage\pgncont}
+CommentRTF	{\rtf1\ansi{\fonttbl{\f0 \fswiss Arial;}}\sectd\marglsxn1800\margrsxn1800\margtsxn1440\margbsxn1440\headery1440\footery1440\sbkpage\pgncont DATA in to falling EXPCLK hold}
+PROPS!
+!
+
+PARM	t5
+MIN	18
+MAX	NULL
+COMMENT	EXPRDY to falling EXPCLK setup
+NameRTF	{\rtf1\ansi{\fonttbl{\f0 \fswiss Arial;}}\sectd\marglsxn1800\margrsxn1800\margtsxn1440\margbsxn1440\headery1440\footery1440\sbkpage\pgncont t5}
+MinRTF	{\rtf1\ansi{\fonttbl{\f0 \fswiss Arial;}}\sectd\marglsxn1800\margrsxn1800\margtsxn1440\margbsxn1440\headery1440\footery1440\sbkpage\pgncont 18}
+MaxRTF	{\rtf1\ansi{\fonttbl{\f0 \fswiss Arial;}}\sectd\marglsxn1800\margrsxn1800\margtsxn1440\margbsxn1440\headery1440\footery1440\sbkpage\pgncont}
+CommentRTF	{\rtf1\ansi{\fonttbl{\f0 \fswiss Arial;}}\sectd\marglsxn1800\margrsxn1800\margtsxn1440\margbsxn1440\headery1440\footery1440\sbkpage\pgncont EXPRDY to falling EXPCLK setup}
+PROPS!
+!
+
+PARM	t6
+MIN	0
+MAX	50
+COMMENT	Falling EXPCLK to EXPRDY hold
+NameRTF	{\rtf1\ansi{\fonttbl{\f0 \fswiss Arial;}}\sectd\marglsxn1800\margrsxn1800\margtsxn1440\margbsxn1440\headery1440\footery1440\sbkpage\pgncont t6}
+MinRTF	{\rtf1\ansi{\fonttbl{\f0 \fswiss Arial;}}\sectd\marglsxn1800\margrsxn1800\margtsxn1440\margbsxn1440\headery1440\footery1440\sbkpage\pgncont 0}
+MaxRTF	{\rtf1\ansi{\fonttbl{\f0 \fswiss Arial;}}\sectd\marglsxn1800\margrsxn1800\margtsxn1440\margbsxn1440\headery1440\footery1440\sbkpage\pgncont 50}
+CommentRTF	{\rtf1\ansi{\fonttbl{\f0 \fswiss Arial;}}\sectd\marglsxn1800\margrsxn1800\margtsxn1440\margbsxn1440\headery1440\footery1440\sbkpage\pgncont Falling EXPCLK to EXPRDY hold}
+PROPS!
+!
+
+PARM	t7
+MIN	5
+MAX	NULL
+COMMENT	Rising nMWE to DATA invalid hold
+NameRTF	{\rtf1\ansi{\fonttbl{\f0 \fswiss Arial;}}\sectd\marglsxn1800\margrsxn1800\margtsxn1440\margbsxn1440\headery1440\footery1440\sbkpage\pgncont t7}
+MinRTF	{\rtf1\ansi{\fonttbl{\f0 \fswiss Arial;}}\sectd\marglsxn1800\margrsxn1800\margtsxn1440\margbsxn1440\headery1440\footery1440\sbkpage\pgncont 5}
+MaxRTF	{\rtf1\ansi{\fonttbl{\f0 \fswiss Arial;}}\sectd\marglsxn1800\margrsxn1800\margtsxn1440\margbsxn1440\headery1440\footery1440\sbkpage\pgncont}
+CommentRTF	{\rtf1\ansi{\fonttbl{\f0 \fswiss Arial;}}\sectd\marglsxn1800\margrsxn1800\margtsxn1440\margbsxn1440\headery1440\footery1440\sbkpage\pgncont Rising nMWE to DATA invalid hold}
+PROPS!
+!
+
+PARM	t8
+MIN	-10
+MAX	10
+COMMENT	Seq DATA valid to falling nMWE setup
+NameRTF	{\rtf1\ansi{\fonttbl{\f0 \fswiss Arial;}}\sectd\marglsxn1800\margrsxn1800\margtsxn1440\margbsxn1440\headery1440\footery1440\sbkpage\pgncont t8}
+MinRTF	{\rtf1\ansi{\fonttbl{\f0 \fswiss Arial;}}\sectd\marglsxn1800\margrsxn1800\margtsxn1440\margbsxn1440\headery1440\footery1440\sbkpage\pgncont -10}
+MaxRTF	{\rtf1\ansi{\fonttbl{\f0 \fswiss Arial;}}\sectd\marglsxn1800\margrsxn1800\margtsxn1440\margbsxn1440\headery1440\footery1440\sbkpage\pgncont 10}
+CommentRTF	{\rtf1\ansi{\fonttbl{\f0 \fswiss Arial;}}\sectd\marglsxn1800\margrsxn1800\margtsxn1440\margbsxn1440\headery1440\footery1440\sbkpage\pgncont Seq DATA valid to falling nMWE setup}
+PROPS!
+!
+
+PARM	t9
+MIN	5
+MAX	NULL
+COMMENT	Row ADDR to falling nRAS setup
+NameRTF	{\rtf1\ansi{\fonttbl{\f0 \fswiss Arial;}}\sectd\marglsxn1800\margrsxn1800\margtsxn1440\margbsxn1440\headery1440\footery1440\sbkpage\pgncont t9}
+MinRTF	{\rtf1\ansi{\fonttbl{\f0 \fswiss Arial;}}\sectd\marglsxn1800\margrsxn1800\margtsxn1440\margbsxn1440\headery1440\footery1440\sbkpage\pgncont 5}
+MaxRTF	{\rtf1\ansi{\fonttbl{\f0 \fswiss Arial;}}\sectd\marglsxn1800\margrsxn1800\margtsxn1440\margbsxn1440\headery1440\footery1440\sbkpage\pgncont}
+CommentRTF	{\rtf1\ansi{\fonttbl{\f0 \fswiss Arial;}}\sectd\marglsxn1800\margrsxn1800\margtsxn1440\margbsxn1440\headery1440\footery1440\sbkpage\pgncont Row ADDR to falling nRAS setup}
+PROPS!
+!
+
+PARM	t10
+MIN	25
+MAX	NULL
+COMMENT	Falling nRAS to row ADDR hold
+NameRTF	{\rtf1\ansi{\fonttbl{\f0 \fswiss Arial;}}\sectd\marglsxn1800\margrsxn1800\margtsxn1440\margbsxn1440\headery1440\footery1440\sbkpage\pgncont t10}
+MinRTF	{\rtf1\ansi{\fonttbl{\f0 \fswiss Arial;}}\sectd\marglsxn1800\margrsxn1800\margtsxn1440\margbsxn1440\headery1440\footery1440\sbkpage\pgncont 25}
+MaxRTF	{\rtf1\ansi{\fonttbl{\f0 \fswiss Arial;}}\sectd\marglsxn1800\margrsxn1800\margtsxn1440\margbsxn1440\headery1440\footery1440\sbkpage\pgncont}
+CommentRTF	{\rtf1\ansi{\fonttbl{\f0 \fswiss Arial;}}\sectd\marglsxn1800\margrsxn1800\margtsxn1440\margbsxn1440\headery1440\footery1440\sbkpage\pgncont Falling nRAS to row ADDR hold}
+PROPS!
+!
+
+PARM	t11
+MIN	2
+MAX	NULL
+COMMENT	Column ADDR to falling nCAS setup
+NameRTF	{\rtf1\ansi{\fonttbl{\f0 \fswiss Arial;}}\sectd\marglsxn1800\margrsxn1800\margtsxn1440\margbsxn1440\headery1440\footery1440\sbkpage\pgncont t11}
+MinRTF	{\rtf1\ansi{\fonttbl{\f0 \fswiss Arial;}}\sectd\marglsxn1800\margrsxn1800\margtsxn1440\margbsxn1440\headery1440\footery1440\sbkpage\pgncont 2}
+MaxRTF	{\rtf1\ansi{\fonttbl{\f0 \fswiss Arial;}}\sectd\marglsxn1800\margrsxn1800\margtsxn1440\margbsxn1440\headery1440\footery1440\sbkpage\pgncont}
+CommentRTF	{\rtf1\ansi{\fonttbl{\f0 \fswiss Arial;}}\sectd\marglsxn1800\margrsxn1800\margtsxn1440\margbsxn1440\headery1440\footery1440\sbkpage\pgncont Column ADDR to falling nCAS setup}
+PROPS!
+!
+
+PARM	t12
+MIN	25
+MAX	NULL
+COMMENT	Falling nCAS to column ADDR hold
+NameRTF	{\rtf1\ansi{\fonttbl{\f0 \fswiss Arial;}}\sectd\marglsxn1800\margrsxn1800\margtsxn1440\margbsxn1440\headery1440\footery1440\sbkpage\pgncont t12}
+MinRTF	{\rtf1\ansi{\fonttbl{\f0 \fswiss Arial;}}\sectd\marglsxn1800\margrsxn1800\margtsxn1440\margbsxn1440\headery1440\footery1440\sbkpage\pgncont 25}
+MaxRTF	{\rtf1\ansi{\fonttbl{\f0 \fswiss Arial;}}\sectd\marglsxn1800\margrsxn1800\margtsxn1440\margbsxn1440\headery1440\footery1440\sbkpage\pgncont}
+CommentRTF	{\rtf1\ansi{\fonttbl{\f0 \fswiss Arial;}}\sectd\marglsxn1800\margrsxn1800\margtsxn1440\margbsxn1440\headery1440\footery1440\sbkpage\pgncont Falling nCAS to column ADDR hold}
+PROPS!
+!
+
+PARM	t13
+MIN	2
+MAX	2
+COMMENT	Write DATA valid to falling nCAS setup
+NameRTF	{\rtf1\ansi{\fonttbl{\f0 \fswiss Arial;}}\sectd\marglsxn1800\margrsxn1800\margtsxn1440\margbsxn1440\headery1440\footery1440\sbkpage\pgncont t13}
+MinRTF	{\rtf1\ansi{\fonttbl{\f0 \fswiss Arial;}}\sectd\marglsxn1800\margrsxn1800\margtsxn1440\margbsxn1440\headery1440\footery1440\sbkpage\pgncont 2}
+MaxRTF	{\rtf1\ansi{\fonttbl{\f0 \fswiss Arial;}}\sectd\marglsxn1800\margrsxn1800\margtsxn1440\margbsxn1440\headery1440\footery1440\sbkpage\pgncont 2}
+CommentRTF	{\rtf1\ansi{\fonttbl{\f0 \fswiss Arial;}}\sectd\marglsxn1800\margrsxn1800\margtsxn1440\margbsxn1440\headery1440\footery1440\sbkpage\pgncont Write DATA valid to falling nCAS setup}
+PROPS!
+!
+
+PARM	t14
+MIN	50
+MAX	50
+COMMENT	Write DATA valid from falling nCAS hold
+NameRTF	{\rtf1\ansi{\fonttbl{\f0 \fswiss Arial;}}\sectd\marglsxn1800\margrsxn1800\margtsxn1440\margbsxn1440\headery1440\footery1440\sbkpage\pgncont t14}
+MinRTF	{\rtf1\ansi{\fonttbl{\f0 \fswiss Arial;}}\sectd\marglsxn1800\margrsxn1800\margtsxn1440\margbsxn1440\headery1440\footery1440\sbkpage\pgncont 50}
+MaxRTF	{\rtf1\ansi{\fonttbl{\f0 \fswiss Arial;}}\sectd\marglsxn1800\margrsxn1800\margtsxn1440\margbsxn1440\headery1440\footery1440\sbkpage\pgncont 50}
+CommentRTF	{\rtf1\ansi{\fonttbl{\f0 \fswiss Arial;}}\sectd\marglsxn1800\margrsxn1800\margtsxn1440\margbsxn1440\headery1440\footery1440\sbkpage\pgncont Write DATA valid from falling nCAS hold}
+PROPS!
+!
+
+PARM	t24
+MIN	0
+MAX	5
+COMMENT	Falling EXPCLK to ADDR valid
+NameRTF	{\rtf1\ansi{\fonttbl{\f0 \fswiss Arial;}}\sectd\marglsxn1800\margrsxn1800\margtsxn1440\margbsxn1440\headery1440\footery1440\sbkpage\pgncont t24}
+MinRTF	{\rtf1\ansi{\fonttbl{\f0 \fswiss Arial;}}\sectd\marglsxn1800\margrsxn1800\margtsxn1440\margbsxn1440\headery1440\footery1440\sbkpage\pgncont 0}
+MaxRTF	{\rtf1\ansi{\fonttbl{\f0 \fswiss Arial;}}\sectd\marglsxn1800\margrsxn1800\margtsxn1440\margbsxn1440\headery1440\footery1440\sbkpage\pgncont 5}
+CommentRTF	{\rtf1\ansi{\fonttbl{\f0 \fswiss Arial;}}\sectd\marglsxn1800\margrsxn1800\margtsxn1440\margbsxn1440\headery1440\footery1440\sbkpage\pgncont Falling EXPCLK to ADDR valid}
+PROPS!
+!
+
+PARM	t25
+MIN	5
+MAX	NULL
+COMMENT	DATA valid to falling nMWE
+NameRTF	{\rtf1\ansi{\fonttbl{\f0 \fswiss Arial;}}\sectd\marglsxn1800\margrsxn1800\margtsxn1440\margbsxn1440\headery1440\footery1440\sbkpage\pgncont t25}
+MinRTF	{\rtf1\ansi{\fonttbl{\f0 \fswiss Arial;}}\sectd\marglsxn1800\margrsxn1800\margtsxn1440\margbsxn1440\headery1440\footery1440\sbkpage\pgncont 5}
+MaxRTF	{\rtf1\ansi{\fonttbl{\f0 \fswiss Arial;}}\sectd\marglsxn1800\margrsxn1800\margtsxn1440\margbsxn1440\headery1440\footery1440\sbkpage\pgncont}
+CommentRTF	{\rtf1\ansi{\fonttbl{\f0 \fswiss Arial;}}\sectd\marglsxn1800\margrsxn1800\margtsxn1440\margbsxn1440\headery1440\footery1440\sbkpage\pgncont DATA valid to falling nMWE}
+PROPS!
+!
+
+PARM	F4
+MIN	NULL
+MAX	NULL
+COMMENT	
+NameRTF	{\rtf1\ansi{\fonttbl{\f0 \fswiss Arial;}}\sectd\marglsxn1800\margrsxn1800\margtsxn1440\margbsxn1440\headery1440\footery1440\sbkpage\pgncont F4}
+MinRTF	{\rtf1\ansi{\fonttbl{\f0 \fswiss Arial;}}\sectd\marglsxn1800\margrsxn1800\margtsxn1440\margbsxn1440\headery1440\footery1440\sbkpage\pgncont}
+MaxRTF	{\rtf1\ansi{\fonttbl{\f0 \fswiss Arial;}}\sectd\marglsxn1800\margrsxn1800\margtsxn1440\margbsxn1440\headery1440\footery1440\sbkpage\pgncont}
+CommentRTF	{\rtf1\ansi{\fonttbl{\f0 \fswiss Arial;}}\sectd\marglsxn1800\margrsxn1800\margtsxn1440\margbsxn1440\headery1440\footery1440\sbkpage\pgncont}
+PROPS!
+!
+
+PARM	F5
+MIN	NULL
+MAX	NULL
+COMMENT	
+NameRTF	{\rtf1\ansi{\fonttbl{\f0 \fswiss Arial;}}\sectd\marglsxn1800\margrsxn1800\margtsxn1440\margbsxn1440\headery1440\footery1440\sbkpage\pgncont F5}
+MinRTF	{\rtf1\ansi{\fonttbl{\f0 \fswiss Arial;}}\sectd\marglsxn1800\margrsxn1800\margtsxn1440\margbsxn1440\headery1440\footery1440\sbkpage\pgncont}
+MaxRTF	{\rtf1\ansi{\fonttbl{\f0 \fswiss Arial;}}\sectd\marglsxn1800\margrsxn1800\margtsxn1440\margbsxn1440\headery1440\footery1440\sbkpage\pgncont}
+CommentRTF	{\rtf1\ansi{\fonttbl{\f0 \fswiss Arial;}}\sectd\marglsxn1800\margrsxn1800\margtsxn1440\margbsxn1440\headery1440\footery1440\sbkpage\pgncont}
+PROPS!
+!
+
+PARM	F6
+MIN	NULL
+MAX	NULL
+COMMENT	
+NameRTF	{\rtf1\ansi{\fonttbl{\f0 \fswiss Arial;}}\sectd\marglsxn1800\margrsxn1800\margtsxn1440\margbsxn1440\headery1440\footery1440\sbkpage\pgncont F6}
+MinRTF	{\rtf1\ansi{\fonttbl{\f0 \fswiss Arial;}}\sectd\marglsxn1800\margrsxn1800\margtsxn1440\margbsxn1440\headery1440\footery1440\sbkpage\pgncont}
+MaxRTF	{\rtf1\ansi{\fonttbl{\f0 \fswiss Arial;}}\sectd\marglsxn1800\margrsxn1800\margtsxn1440\margbsxn1440\headery1440\footery1440\sbkpage\pgncont}
+CommentRTF	{\rtf1\ansi{\fonttbl{\f0 \fswiss Arial;}}\sectd\marglsxn1800\margrsxn1800\margtsxn1440\margbsxn1440\headery1440\footery1440\sbkpage\pgncont}
+PROPS!
+!
+
+PARM	F7
+MIN	NULL
+MAX	NULL
+COMMENT	
+NameRTF	{\rtf1\ansi{\fonttbl{\f0 \fswiss Arial;}}\sectd\marglsxn1800\margrsxn1800\margtsxn1440\margbsxn1440\headery1440\footery1440\sbkpage\pgncont F7}
+MinRTF	{\rtf1\ansi{\fonttbl{\f0 \fswiss Arial;}}\sectd\marglsxn1800\margrsxn1800\margtsxn1440\margbsxn1440\headery1440\footery1440\sbkpage\pgncont}
+MaxRTF	{\rtf1\ansi{\fonttbl{\f0 \fswiss Arial;}}\sectd\marglsxn1800\margrsxn1800\margtsxn1440\margbsxn1440\headery1440\footery1440\sbkpage\pgncont}
+CommentRTF	{\rtf1\ansi{\fonttbl{\f0 \fswiss Arial;}}\sectd\marglsxn1800\margrsxn1800\margtsxn1440\margbsxn1440\headery1440\footery1440\sbkpage\pgncont}
+PROPS!
+!
+
+PARM	F8
+MIN	NULL
+MAX	NULL
+COMMENT	
+NameRTF	{\rtf1\ansi{\fonttbl{\f0 \fswiss Arial;}}\sectd\marglsxn1800\margrsxn1800\margtsxn1440\margbsxn1440\headery1440\footery1440\sbkpage\pgncont F8}
+MinRTF	{\rtf1\ansi{\fonttbl{\f0 \fswiss Arial;}}\sectd\marglsxn1800\margrsxn1800\margtsxn1440\margbsxn1440\headery1440\footery1440\sbkpage\pgncont}
+MaxRTF	{\rtf1\ansi{\fonttbl{\f0 \fswiss Arial;}}\sectd\marglsxn1800\margrsxn1800\margtsxn1440\margbsxn1440\headery1440\footery1440\sbkpage\pgncont}
+CommentRTF	{\rtf1\ansi{\fonttbl{\f0 \fswiss Arial;}}\sectd\marglsxn1800\margrsxn1800\margtsxn1440\margbsxn1440\headery1440\footery1440\sbkpage\pgncont}
+PROPS!
+!
+
+PARM	F9
+MIN	NULL
+MAX	NULL
+COMMENT	
+NameRTF	{\rtf1\ansi{\fonttbl{\f0 \fswiss Arial;}}\sectd\marglsxn1800\margrsxn1800\margtsxn1440\margbsxn1440\headery1440\footery1440\sbkpage\pgncont F9}
+MinRTF	{\rtf1\ansi{\fonttbl{\f0 \fswiss Arial;}}\sectd\marglsxn1800\margrsxn1800\margtsxn1440\margbsxn1440\headery1440\footery1440\sbkpage\pgncont}
+MaxRTF	{\rtf1\ansi{\fonttbl{\f0 \fswiss Arial;}}\sectd\marglsxn1800\margrsxn1800\margtsxn1440\margbsxn1440\headery1440\footery1440\sbkpage\pgncont}
+CommentRTF	{\rtf1\ansi{\fonttbl{\f0 \fswiss Arial;}}\sectd\marglsxn1800\margrsxn1800\margtsxn1440\margbsxn1440\headery1440\footery1440\sbkpage\pgncont}
+PROPS!
+!
+
+PARM	F10
+MIN	NULL
+MAX	NULL
+COMMENT	
+NameRTF	{\rtf1\ansi{\fonttbl{\f0 \fswiss Arial;}}\sectd\marglsxn1800\margrsxn1800\margtsxn1440\margbsxn1440\headery1440\footery1440\sbkpage\pgncont F10}
+MinRTF	{\rtf1\ansi{\fonttbl{\f0 \fswiss Arial;}}\sectd\marglsxn1800\margrsxn1800\margtsxn1440\margbsxn1440\headery1440\footery1440\sbkpage\pgncont}
+MaxRTF	{\rtf1\ansi{\fonttbl{\f0 \fswiss Arial;}}\sectd\marglsxn1800\margrsxn1800\margtsxn1440\margbsxn1440\headery1440\footery1440\sbkpage\pgncont}
+CommentRTF	{\rtf1\ansi{\fonttbl{\f0 \fswiss Arial;}}\sectd\marglsxn1800\margrsxn1800\margtsxn1440\margbsxn1440\headery1440\footery1440\sbkpage\pgncont}
+PROPS!
+!
+
+PARM	F11
+MIN	NULL
+MAX	NULL
+COMMENT	
+NameRTF	{\rtf1\ansi{\fonttbl{\f0 \fswiss Arial;}}\sectd\marglsxn1800\margrsxn1800\margtsxn1440\margbsxn1440\headery1440\footery1440\sbkpage\pgncont F11}
+MinRTF	{\rtf1\ansi{\fonttbl{\f0 \fswiss Arial;}}\sectd\marglsxn1800\margrsxn1800\margtsxn1440\margbsxn1440\headery1440\footery1440\sbkpage\pgncont}
+MaxRTF	{\rtf1\ansi{\fonttbl{\f0 \fswiss Arial;}}\sectd\marglsxn1800\margrsxn1800\margtsxn1440\margbsxn1440\headery1440\footery1440\sbkpage\pgncont}
+CommentRTF	{\rtf1\ansi{\fonttbl{\f0 \fswiss Arial;}}\sectd\marglsxn1800\margrsxn1800\margtsxn1440\margbsxn1440\headery1440\footery1440\sbkpage\pgncont}
+PROPS!
+!
+
+PARM	F12
+MIN	NULL
+MAX	NULL
+COMMENT	
+NameRTF	{\rtf1\ansi{\fonttbl{\f0 \fswiss Arial;}}\sectd\marglsxn1800\margrsxn1800\margtsxn1440\margbsxn1440\headery1440\footery1440\sbkpage\pgncont F12}
+MinRTF	{\rtf1\ansi{\fonttbl{\f0 \fswiss Arial;}}\sectd\marglsxn1800\margrsxn1800\margtsxn1440\margbsxn1440\headery1440\footery1440\sbkpage\pgncont}
+MaxRTF	{\rtf1\ansi{\fonttbl{\f0 \fswiss Arial;}}\sectd\marglsxn1800\margrsxn1800\margtsxn1440\margbsxn1440\headery1440\footery1440\sbkpage\pgncont}
+CommentRTF	{\rtf1\ansi{\fonttbl{\f0 \fswiss Arial;}}\sectd\marglsxn1800\margrsxn1800\margtsxn1440\margbsxn1440\headery1440\footery1440\sbkpage\pgncont}
+PROPS!
+!
+
+PARM	tCSd
+MIN	0
+MAX	10
+COMMENT	
+NameRTF	{\rtf1\ansi{\fonttbl{\f0 \fswiss Arial;}}\sectd\marglsxn1800\margrsxn1800\margtsxn1440\margbsxn1440\headery1440\footery1440\sbkpage\pgncont tCSd}
+MinRTF	{\rtf1\ansi{\fonttbl{\f0 \fswiss Arial;}}\sectd\marglsxn1800\margrsxn1800\margtsxn1440\margbsxn1440\headery1440\footery1440\sbkpage\pgncont 0}
+MaxRTF	{\rtf1\ansi{\fonttbl{\f0 \fswiss Arial;}}\sectd\marglsxn1800\margrsxn1800\margtsxn1440\margbsxn1440\headery1440\footery1440\sbkpage\pgncont 10}
+CommentRTF	{\rtf1\ansi{\fonttbl{\f0 \fswiss Arial;}}\sectd\marglsxn1800\margrsxn1800\margtsxn1440\margbsxn1440\headery1440\footery1440\sbkpage\pgncont}
+PROPS!
+!
+
+PARM	tCSh
+MIN	0
+MAX	10
+COMMENT	
+NameRTF	{\rtf1\ansi{\fonttbl{\f0 \fswiss Arial;}}\sectd\marglsxn1800\margrsxn1800\margtsxn1440\margbsxn1440\headery1440\footery1440\sbkpage\pgncont tCSh}
+MinRTF	{\rtf1\ansi{\fonttbl{\f0 \fswiss Arial;}}\sectd\marglsxn1800\margrsxn1800\margtsxn1440\margbsxn1440\headery1440\footery1440\sbkpage\pgncont 0}
+MaxRTF	{\rtf1\ansi{\fonttbl{\f0 \fswiss Arial;}}\sectd\marglsxn1800\margrsxn1800\margtsxn1440\margbsxn1440\headery1440\footery1440\sbkpage\pgncont 10}
+CommentRTF	{\rtf1\ansi{\fonttbl{\f0 \fswiss Arial;}}\sectd\marglsxn1800\margrsxn1800\margtsxn1440\margbsxn1440\headery1440\footery1440\sbkpage\pgncont}
+PROPS!
+!
+
+PARM	tOE
+MIN	0
+MAX	135
+COMMENT	
+NameRTF	{\rtf1\ansi{\fonttbl{\f0 \fswiss Arial;}}\sectd\marglsxn1800\margrsxn1800\margtsxn1440\margbsxn1440\headery1440\footery1440\sbkpage\pgncont tOE}
+MinRTF	{\rtf1\ansi{\fonttbl{\f0 \fswiss Arial;}}\sectd\marglsxn1800\margrsxn1800\margtsxn1440\margbsxn1440\headery1440\footery1440\sbkpage\pgncont 0}
+MaxRTF	{\rtf1\ansi{\fonttbl{\f0 \fswiss Arial;}}\sectd\marglsxn1800\margrsxn1800\margtsxn1440\margbsxn1440\headery1440\footery1440\sbkpage\pgncont 135}
+CommentRTF	{\rtf1\ansi{\fonttbl{\f0 \fswiss Arial;}}\sectd\marglsxn1800\margrsxn1800\margtsxn1440\margbsxn1440\headery1440\footery1440\sbkpage\pgncont}
+PROPS!
+!
+
+PARM	tAd
+MIN	0
+MAX	10
+COMMENT	
+NameRTF	{\rtf1\ansi{\fonttbl{\f0 \fswiss Arial;}}\sectd\marglsxn1800\margrsxn1800\margtsxn1440\margbsxn1440\headery1440\footery1440\sbkpage\pgncont tAd}
+MinRTF	{\rtf1\ansi{\fonttbl{\f0 \fswiss Arial;}}\sectd\marglsxn1800\margrsxn1800\margtsxn1440\margbsxn1440\headery1440\footery1440\sbkpage\pgncont 0}
+MaxRTF	{\rtf1\ansi{\fonttbl{\f0 \fswiss Arial;}}\sectd\marglsxn1800\margrsxn1800\margtsxn1440\margbsxn1440\headery1440\footery1440\sbkpage\pgncont 10}
+CommentRTF	{\rtf1\ansi{\fonttbl{\f0 \fswiss Arial;}}\sectd\marglsxn1800\margrsxn1800\margtsxn1440\margbsxn1440\headery1440\footery1440\sbkpage\pgncont}
+PROPS!
+!
+
+PARM	tMOEd
+MIN	0
+MAX	10
+COMMENT	
+NameRTF	{\rtf1\ansi{\fonttbl{\f0 \fswiss Arial;}}\sectd\marglsxn1800\margrsxn1800\margtsxn1440\margbsxn1440\headery1440\footery1440\sbkpage\pgncont tMOEd}
+MinRTF	{\rtf1\ansi{\fonttbl{\f0 \fswiss Arial;}}\sectd\marglsxn1800\margrsxn1800\margtsxn1440\margbsxn1440\headery1440\footery1440\sbkpage\pgncont 0}
+MaxRTF	{\rtf1\ansi{\fonttbl{\f0 \fswiss Arial;}}\sectd\marglsxn1800\margrsxn1800\margtsxn1440\margbsxn1440\headery1440\footery1440\sbkpage\pgncont 10}
+CommentRTF	{\rtf1\ansi{\fonttbl{\f0 \fswiss Arial;}}\sectd\marglsxn1800\margrsxn1800\margtsxn1440\margbsxn1440\headery1440\footery1440\sbkpage\pgncont}
+PROPS!
+!
+
+PARM	tDh
+MIN	3
+MAX	NULL
+COMMENT	
+NameRTF	{\rtf1\ansi{\fonttbl{\f0 \fswiss Arial;}}\sectd\marglsxn1800\margrsxn1800\margtsxn1440\margbsxn1440\headery1440\footery1440\sbkpage\pgncont tDh}
+MinRTF	{\rtf1\ansi{\fonttbl{\f0 \fswiss Arial;}}\sectd\marglsxn1800\margrsxn1800\margtsxn1440\margbsxn1440\headery1440\footery1440\sbkpage\pgncont 3}
+MaxRTF	{\rtf1\ansi{\fonttbl{\f0 \fswiss Arial;}}\sectd\marglsxn1800\margrsxn1800\margtsxn1440\margbsxn1440\headery1440\footery1440\sbkpage\pgncont}
+CommentRTF	{\rtf1\ansi{\fonttbl{\f0 \fswiss Arial;}}\sectd\marglsxn1800\margrsxn1800\margtsxn1440\margbsxn1440\headery1440\footery1440\sbkpage\pgncont}
+PROPS!
+!
+
+PARM	tMOEh
+MIN	0
+MAX	10
+COMMENT	
+NameRTF	{\rtf1\ansi{\fonttbl{\f0 \fswiss Arial;}}\sectd\marglsxn1800\margrsxn1800\margtsxn1440\margbsxn1440\headery1440\footery1440\sbkpage\pgncont tMOEh}
+MinRTF	{\rtf1\ansi{\fonttbl{\f0 \fswiss Arial;}}\sectd\marglsxn1800\margrsxn1800\margtsxn1440\margbsxn1440\headery1440\footery1440\sbkpage\pgncont 0}
+MaxRTF	{\rtf1\ansi{\fonttbl{\f0 \fswiss Arial;}}\sectd\marglsxn1800\margrsxn1800\margtsxn1440\margbsxn1440\headery1440\footery1440\sbkpage\pgncont 10}
+CommentRTF	{\rtf1\ansi{\fonttbl{\f0 \fswiss Arial;}}\sectd\marglsxn1800\margrsxn1800\margtsxn1440\margbsxn1440\headery1440\footery1440\sbkpage\pgncont}
+PROPS!
+!
+
+PARM	tIOR2
+MIN	10
+MAX	NULL
+COMMENT	Address, CS active to IOR setup
+NameRTF	{\rtf1\ansi{\fonttbl{\f0 \fswiss Arial;}}\sectd\marglsxn1800\margrsxn1800\margtsxn1440\margbsxn1440\headery1440\footery1440\sbkpage\pgncont tIOR2}
+MinRTF	{\rtf1\ansi{\fonttbl{\f0 \fswiss Arial;}}\sectd\marglsxn1800\margrsxn1800\margtsxn1440\margbsxn1440\headery1440\footery1440\sbkpage\pgncont 10}
+MaxRTF	{\rtf1\ansi{\fonttbl{\f0 \fswiss Arial;}}\sectd\marglsxn1800\margrsxn1800\margtsxn1440\margbsxn1440\headery1440\footery1440\sbkpage\pgncont}
+CommentRTF	{\rtf1\ansi{\fonttbl{\f0 \fswiss Arial;}}\sectd\marglsxn1800\margrsxn1800\margtsxn1440\margbsxn1440\headery1440\footery1440\sbkpage\pgncont Address, CS active to IOR setup}
+PROPS!
+!
+
+PARM	tIOR4
+MIN	0
+MAX	NULL
+COMMENT	Address, CS hold after IOR inactive
+NameRTF	{\rtf1\ansi{\fonttbl{\f0 \fswiss Arial;}}\sectd\marglsxn1800\margrsxn1800\margtsxn1440\margbsxn1440\headery1440\footery1440\sbkpage\pgncont tIOR4}
+MinRTF	{\rtf1\ansi{\fonttbl{\f0 \fswiss Arial;}}\sectd\marglsxn1800\margrsxn1800\margtsxn1440\margbsxn1440\headery1440\footery1440\sbkpage\pgncont 0}
+MaxRTF	{\rtf1\ansi{\fonttbl{\f0 \fswiss Arial;}}\sectd\marglsxn1800\margrsxn1800\margtsxn1440\margbsxn1440\headery1440\footery1440\sbkpage\pgncont}
+CommentRTF	{\rtf1\ansi{\fonttbl{\f0 \fswiss Arial;}}\sectd\marglsxn1800\margrsxn1800\margtsxn1440\margbsxn1440\headery1440\footery1440\sbkpage\pgncont Address, CS hold after IOR inactive}
+PROPS!
+!
+
+PARM	tDs
+MIN	3
+MAX	NULL
+COMMENT	
+NameRTF	{\rtf1\ansi{\fonttbl{\f0 \fswiss Arial;}}\sectd\marglsxn1800\margrsxn1800\margtsxn1440\margbsxn1440\headery1440\footery1440\sbkpage\pgncont tDs}
+MinRTF	{\rtf1\ansi{\fonttbl{\f0 \fswiss Arial;}}\sectd\marglsxn1800\margrsxn1800\margtsxn1440\margbsxn1440\headery1440\footery1440\sbkpage\pgncont 3}
+MaxRTF	{\rtf1\ansi{\fonttbl{\f0 \fswiss Arial;}}\sectd\marglsxn1800\margrsxn1800\margtsxn1440\margbsxn1440\headery1440\footery1440\sbkpage\pgncont}
+CommentRTF	{\rtf1\ansi{\fonttbl{\f0 \fswiss Arial;}}\sectd\marglsxn1800\margrsxn1800\margtsxn1440\margbsxn1440\headery1440\footery1440\sbkpage\pgncont}
+PROPS!
+!
+
+DELAY	tCSd
+FROM	MEMCLK	E2
+TO	SA_CS3$BAR	E1
+USERPLACED	0
+DISPLAYAS	6
+CUSTDISPSTRING	%n v=%mv,%Mv f=%mf,%Mf m=%mm,%Mm d=%md,%Md %c 
+CustomDisplayStringRTF	{\rtf1\ansi{\fonttbl{\f0 \fswiss Arial;}{\f1 \fswiss MS Sans Serif;}}\sectd\marglsxn1800\margrsxn1800\margtsxn1440\margbsxn1440\headery1440\footery1440\sbkpage\pgncont\f1 %n v=%mv,%Mv f=%mf,%Mf m=%mm,%Mm d=%md,%Md %c }
+PROPS!
+!
+
+DELAY	tCSh
+FROM	MEMCLK	E40
+TO	SA_CS3$BAR	E2
+USERPLACED	0
+DISPLAYAS	6
+CUSTDISPSTRING	%n v=%mv,%Mv f=%mf,%Mf m=%mm,%Mm d=%md,%Md %c 
+CustomDisplayStringRTF	{\rtf1\ansi{\fonttbl{\f0 \fswiss Arial;}{\f1 \fswiss MS Sans Serif;}}\sectd\marglsxn1800\margrsxn1800\margtsxn1440\margbsxn1440\headery1440\footery1440\sbkpage\pgncont\f1 %n v=%mv,%Mv f=%mf,%Mf m=%mm,%Mm d=%md,%Md %c }
+PROPS!
+!
+
+DELAY	tOE
+FROM	SA_OE$BAR	E1
+TO	DATA	E1
+USERPLACED	0
+DISPLAYAS	6
+CUSTDISPSTRING	%n v=%mv,%Mv f=%mf,%Mf m=%mm,%Mm d=%md,%Md %c 
+CustomDisplayStringRTF	{\rtf1\ansi{\fonttbl{\f0 \fswiss Arial;}{\f1 \fswiss MS Sans Serif;}}\sectd\marglsxn1800\margrsxn1800\margtsxn1440\margbsxn1440\headery1440\footery1440\sbkpage\pgncont\f1 %n v=%mv,%Mv f=%mf,%Mf m=%mm,%Mm d=%md,%Md %c }
+PROPS!
+!
+
+DELAY	tAd
+FROM	MEMCLK	E1
+TO	ADDR	E1
+USERPLACED	0
+DISPLAYAS	6
+CUSTDISPSTRING	%n v=%mv,%Mv f=%mf,%Mf m=%mm,%Mm d=%md,%Md %c 
+CustomDisplayStringRTF	{\rtf1\ansi{\fonttbl{\f0 \fswiss Arial;}{\f1 \fswiss MS Sans Serif;}}\sectd\marglsxn1800\margrsxn1800\margtsxn1440\margbsxn1440\headery1440\footery1440\sbkpage\pgncont\f1 %n v=%mv,%Mv f=%mf,%Mf m=%mm,%Mm d=%md,%Md %c }
+PROPS!
+!
+
+DELAY	tMOEd
+FROM	MEMCLK	E6
+TO	SA_OE$BAR	E1
+USERPLACED	0
+DISPLAYAS	6
+CUSTDISPSTRING	%n v=%mv,%Mv f=%mf,%Mf m=%mm,%Mm d=%md,%Md %c 
+CustomDisplayStringRTF	{\rtf1\ansi{\fonttbl{\f0 \fswiss Arial;}{\f1 \fswiss MS Sans Serif;}}\sectd\marglsxn1800\margrsxn1800\margtsxn1440\margbsxn1440\headery1440\footery1440\sbkpage\pgncont\f1 %n v=%mv,%Mv f=%mf,%Mf m=%mm,%Mm d=%md,%Md %c }
+PROPS!
+!
+
+HOLD	tDh
+FROM	DATA	E2
+TO	MEMCLK	E37
+USERPLACED	1	2
+DISPLAYAS	6
+CUSTDISPSTRING	%n v=%mv,%Mv f=%mf,%Mf m=%mm,%Mm d=%md,%Md %c 
+CustomDisplayStringRTF	{\rtf1\ansi{\fonttbl{\f0 \fswiss Arial;}{\f1 \fswiss MS Sans Serif;}}\sectd\marglsxn1800\margrsxn1800\margtsxn1440\margbsxn1440\headery1440\footery1440\sbkpage\pgncont\f1 %n v=%mv,%Mv f=%mf,%Mf m=%mm,%Mm d=%md,%Md %c }
+ContainingSignal	SA_CS3$BAR
+PROPS!
+!
+
+DELAY	tMOEh
+FROM	MEMCLK	E38
+TO	SA_OE$BAR	E2
+USERPLACED	0
+DISPLAYAS	6
+CUSTDISPSTRING	%n v=%mv,%Mv f=%mf,%Mf m=%mm,%Mm d=%md,%Md %c 
+CustomDisplayStringRTF	{\rtf1\ansi{\fonttbl{\f0 \fswiss Arial;}{\f1 \fswiss MS Sans Serif;}}\sectd\marglsxn1800\margrsxn1800\margtsxn1440\margbsxn1440\headery1440\footery1440\sbkpage\pgncont\f1 %n v=%mv,%Mv f=%mf,%Mf m=%mm,%Mm d=%md,%Md %c }
+PROPS!
+!
+
+HIDDEN	SETUP	tIOR2
+FROM	SA_CS3$BAR	E1
+TO	SA_OE$BAR	E1
+USERPLACED	0
+DISPLAYAS	6
+CUSTDISPSTRING	%n v=%mv,%Mv f=%mf,%Mf m=%mm,%Mm d=%md,%Md %c 
+CustomDisplayStringRTF	{\rtf1\ansi{\fonttbl{\f0 \fswiss Arial;}{\f1 \fswiss MS Sans Serif;}}\sectd\marglsxn1800\margrsxn1800\margtsxn1440\margbsxn1440\headery1440\footery1440\sbkpage\pgncont\f1 %n v=%mv,%Mv f=%mf,%Mf m=%mm,%Mm d=%md,%Md %c }
+PROPS!
+!
+
+SETUP	tIOR2
+FROM	ADDR	E1
+TO	SA_OE$BAR	E1
+USERPLACED	0
+DISPLAYAS	6
+CUSTDISPSTRING	%n v=%mv,%Mv f=%mf,%Mf m=%mm,%Mm d=%md,%Md %c 
+CustomDisplayStringRTF	{\rtf1\ansi{\fonttbl{\f0 \fswiss Arial;}{\f1 \fswiss MS Sans Serif;}}\sectd\marglsxn1800\margrsxn1800\margtsxn1440\margbsxn1440\headery1440\footery1440\sbkpage\pgncont\f1 %n v=%mv,%Mv f=%mf,%Mf m=%mm,%Mm d=%md,%Md %c }
+PROPS!
+!
+
+HIDDEN	HOLD	tIOR4
+FROM	SA_CS3$BAR	E2
+TO	SA_OE$BAR	E2
+USERPLACED	0
+DISPLAYAS	6
+CUSTDISPSTRING	%n v=%mv,%Mv f=%mf,%Mf m=%mm,%Mm d=%md,%Md %c 
+CustomDisplayStringRTF	{\rtf1\ansi{\fonttbl{\f0 \fswiss Arial;}{\f1 \fswiss MS Sans Serif;}}\sectd\marglsxn1800\margrsxn1800\margtsxn1440\margbsxn1440\headery1440\footery1440\sbkpage\pgncont\f1 %n v=%mv,%Mv f=%mf,%Mf m=%mm,%Mm d=%md,%Md %c }
+PROPS!
+!
+
+SETUP	tDs
+FROM	DATA	E1
+TO	MEMCLK	E37
+USERPLACED	0
+DISPLAYAS	6
+CUSTDISPSTRING	%n v=%mv,%Mv f=%mf,%Mf m=%mm,%Mm d=%md,%Md %c 
+CustomDisplayStringRTF	{\rtf1\ansi{\fonttbl{\f0 \fswiss Arial;}{\f1 \fswiss MS Sans Serif;}}\sectd\marglsxn1800\margrsxn1800\margtsxn1440\margbsxn1440\headery1440\footery1440\sbkpage\pgncont\f1 %n v=%mv,%Mv f=%mf,%Mf m=%mm,%Mm d=%md,%Md %c }
+PROPS!
+!
+
+DELAY	tAd
+FROM	MEMCLK	E39
+TO	ADDR	E2
+USERPLACED	0
+DISPLAYAS	6
+CUSTDISPSTRING	%n v=%mv,%Mv f=%mf,%Mf m=%mm,%Mm d=%md,%Md %c 
+CustomDisplayStringRTF	{\rtf1\ansi{\fonttbl{\f0 \fswiss Arial;}{\f1 \fswiss MS Sans Serif;}}\sectd\marglsxn1800\margrsxn1800\margtsxn1440\margbsxn1440\headery1440\footery1440\sbkpage\pgncont\f1 %n v=%mv,%Mv f=%mf,%Mf m=%mm,%Mm d=%md,%Md %c }
+PROPS!
+!
+

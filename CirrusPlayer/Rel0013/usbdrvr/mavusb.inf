@@ -1,0 +1,68 @@
+;*****************************************************************************
+;
+; MAVUSB.INF - Installation INF file for the Maverick(tm) Internet Audio
+;              Player
+;
+; Copyright (c) 2000 Cirrus logic, Inc.
+;
+;*****************************************************************************
+
+[Version]
+Signature="$CHICAGO$"
+Class=USB
+ClassGUID={36FC9E60-C465-11CF-8056-444553540000}
+provider=%MfgName%
+;Cirrus Logic, Inc.
+DriverVer=06/06/2000
+
+[SourceDisksNames]
+1=%DiskName%,,,
+
+[SourceDisksFiles]
+mavusb.sys=1
+mavusb.inf=1
+
+[Manufacturer]
+%MfgName%=Cirrus
+
+[Cirrus]
+%USB\VID_0429&PID_1001.DeviceDesc%=MAVUSB.Dev, USB\VID_0429&PID_1001
+
+[DestinationDirs]
+MAVUSB.Files.Ext=10,System32\Drivers
+MAVUSB.Files.Inf=10,INF
+
+[MAVUSB.Dev]
+CopyFiles=MAVUSB.Files.Ext, MAVUSB.Files.Inf
+AddReg=MAVUSB.AddReg
+
+[MAVUSB.Dev.NT]
+CopyFiles=MAVUSB.Files.Ext, MAVUSB.Files.Inf
+AddReg=MAVUSB.AddReg
+
+[MAVUSB.Dev.NT.Services]
+Addservice=MAVUSB, 0x00000002, MAVUSB.AddService
+
+[MAVUSB.AddService]
+DisplayName=%MAVUSB.SvcDesc%
+ServiceType=1
+StartType=3
+ErrorControl=1
+ServiceBinary=%10%\System32\Drivers\mavusb.sys
+LoadOrderGroup=Base
+
+[MAVUSB.AddReg]
+HKR,,DevLoader,,*ntkern
+HKR,,NTMPDriver,,mavusb.sys
+
+[MAVUSB.Files.Ext]
+mavusb.sys
+
+[MAVUSB.Files.Inf]
+mavusb.Inf
+
+[Strings]
+DiskName="Cirrus Logic Maverick(tm) Installation Disk"
+MfgName="Cirrus Logic, Inc."
+USB\VID_0429&PID_1001.DeviceDesc="Cirrus Logic Maverick(tm) Internet Audio Player"
+MAVUSB.SvcDesc="Cirrus Logic Maverick(tm) Internet Audio Player"

@@ -1,0 +1,2066 @@
+# Microsoft eMbedded Visual Tools Project File - Name="Jukebox" - Package Owner=<4>
+# Microsoft eMbedded Visual Tools Generated Build File, Format Version 6.02
+# ** DO NOT EDIT **
+
+# TARGTYPE "Win32 (WCE MIPS) Static Library" 0x8204
+# TARGTYPE "Win32 (WCE x86em) Static Library" 0x7f04
+# TARGTYPE "Win32 (WCE ARM) Static Library" 0x8504
+# TARGTYPE "Win32 (WCE SH3) Static Library" 0x8104
+
+CFG=Jukebox - Win32 (WCE MIPS) Debug
+!MESSAGE This is not a valid makefile. To build this project using NMAKE,
+!MESSAGE use the Export Makefile command and run
+!MESSAGE 
+!MESSAGE NMAKE /f "Jukebox.vcn".
+!MESSAGE 
+!MESSAGE You can specify a configuration when running NMAKE
+!MESSAGE by defining the macro CFG on the command line. For example:
+!MESSAGE 
+!MESSAGE NMAKE /f "Jukebox.vcn" CFG="Jukebox - Win32 (WCE MIPS) Debug"
+!MESSAGE 
+!MESSAGE Possible choices for configuration are:
+!MESSAGE 
+!MESSAGE "Jukebox - Win32 (WCE MIPS) Release" (based on "Win32 (WCE MIPS) Static Library")
+!MESSAGE "Jukebox - Win32 (WCE MIPS) Debug" (based on "Win32 (WCE MIPS) Static Library")
+!MESSAGE "Jukebox - Win32 (WCE SH3) Release" (based on "Win32 (WCE SH3) Static Library")
+!MESSAGE "Jukebox - Win32 (WCE SH3) Debug" (based on "Win32 (WCE SH3) Static Library")
+!MESSAGE "Jukebox - Win32 (WCE ARM) Release" (based on "Win32 (WCE ARM) Static Library")
+!MESSAGE "Jukebox - Win32 (WCE ARM) Debug" (based on "Win32 (WCE ARM) Static Library")
+!MESSAGE "Jukebox - Win32 (WCE x86em) Release" (based on "Win32 (WCE x86em) Static Library")
+!MESSAGE "Jukebox - Win32 (WCE x86em) Debug" (based on "Win32 (WCE x86em) Static Library")
+!MESSAGE 
+
+# Begin Project
+# PROP AllowPerConfigDependencies 0
+# PROP Scc_ProjName ""$/IObjects/FullAudioCE/Jukebox", FBBBAAAA"
+# PROP Scc_LocalPath "."
+# PROP ATL_Project 2
+
+!IF  "$(CFG)" == "Jukebox - Win32 (WCE MIPS) Release"
+
+# PROP BASE Use_MFC 0
+# PROP BASE Use_Debug_Libraries 0
+# PROP BASE Output_Dir "MIPSRel"
+# PROP BASE Intermediate_Dir "MIPSRel"
+# PROP BASE CPU_ID "{D6519010-710F-11D3-99F2-00105A0DF099}"
+# PROP BASE Platform_ID "{8A9A2F80-6887-11D3-842E-005004848CBA}"
+# PROP BASE Target_Dir ""
+# PROP Use_MFC 0
+# PROP Use_Debug_Libraries 0
+# PROP Output_Dir "MIPSRel"
+# PROP Intermediate_Dir "MIPSRel"
+# PROP CPU_ID "{D6519010-710F-11D3-99F2-00105A0DF099}"
+# PROP Platform_ID "{8A9A2F80-6887-11D3-842E-005004848CBA}"
+# PROP Target_Dir ""
+CPP=clmips.exe
+# ADD BASE CPP /nologo /W3 /D _WIN32_WCE=$(CEVersion) /D "$(CePlatform)" /D "MIPS" /D "_MIPS_" /D UNDER_CE=$(CEVersion) /D "UNICODE" /D "_UNICODE" /D "NDEBUG" /D "_LIB" /YX /Oxs /M$(CECrtMT) /c
+# ADD CPP /nologo /W3 /D _WIN32_WCE=$(CEVersion) /D "$(CePlatform)" /D "MIPS" /D "_MIPS_" /D UNDER_CE=$(CEVersion) /D "UNICODE" /D "_UNICODE" /D "NDEBUG" /D "_LIB" /YX /Oxs /M$(CECrtMT) /c
+LIB32=link.exe -lib
+# ADD BASE LIB32 /nologo
+# ADD LIB32 /nologo
+BSC32=bscmake.exe
+# ADD BASE BSC32 /nologo
+# ADD BSC32 /nologo
+
+!ELSEIF  "$(CFG)" == "Jukebox - Win32 (WCE MIPS) Debug"
+
+# PROP BASE Use_MFC 0
+# PROP BASE Use_Debug_Libraries 1
+# PROP BASE Output_Dir "MIPSDbg"
+# PROP BASE Intermediate_Dir "MIPSDbg"
+# PROP BASE CPU_ID "{D6519010-710F-11D3-99F2-00105A0DF099}"
+# PROP BASE Platform_ID "{8A9A2F80-6887-11D3-842E-005004848CBA}"
+# PROP BASE Target_Dir ""
+# PROP Use_MFC 0
+# PROP Use_Debug_Libraries 1
+# PROP Output_Dir "MIPSDbg"
+# PROP Intermediate_Dir "MIPSDbg"
+# PROP CPU_ID "{D6519010-710F-11D3-99F2-00105A0DF099}"
+# PROP Platform_ID "{8A9A2F80-6887-11D3-842E-005004848CBA}"
+# PROP Target_Dir ""
+CPP=clmips.exe
+# ADD BASE CPP /nologo /W3 /Zi /Od /D "DEBUG" /D _WIN32_WCE=$(CEVersion) /D "$(CePlatform)" /D "MIPS" /D "_MIPS_" /D UNDER_CE=$(CEVersion) /D "UNICODE" /D "_UNICODE" /D "_LIB" /YX /M$(CECrtMTDebug) /c
+# ADD CPP /nologo /W3 /Zi /Od /D "DEBUG" /D _WIN32_WCE=$(CEVersion) /D "$(CePlatform)" /D "MIPS" /D "_MIPS_" /D UNDER_CE=$(CEVersion) /D "UNICODE" /D "_UNICODE" /D "_LIB" /YX /M$(CECrtMTDebug) /c
+LIB32=link.exe -lib
+# ADD BASE LIB32 /nologo
+# ADD LIB32 /nologo
+BSC32=bscmake.exe
+# ADD BASE BSC32 /nologo
+# ADD BSC32 /nologo
+
+!ELSEIF  "$(CFG)" == "Jukebox - Win32 (WCE SH3) Release"
+
+# PROP BASE Use_MFC 0
+# PROP BASE Use_Debug_Libraries 0
+# PROP BASE Output_Dir "SH3Rel"
+# PROP BASE Intermediate_Dir "SH3Rel"
+# PROP BASE CPU_ID "{D6519020-710F-11D3-99F2-00105A0DF099}"
+# PROP BASE Platform_ID "{8A9A2F80-6887-11D3-842E-005004848CBA}"
+# PROP BASE Target_Dir ""
+# PROP Use_MFC 0
+# PROP Use_Debug_Libraries 0
+# PROP Output_Dir "SH3Rel"
+# PROP Intermediate_Dir "SH3Rel"
+# PROP CPU_ID "{D6519020-710F-11D3-99F2-00105A0DF099}"
+# PROP Platform_ID "{8A9A2F80-6887-11D3-842E-005004848CBA}"
+# PROP Target_Dir ""
+CPP=shcl.exe
+# ADD BASE CPP /nologo /W3 /D _WIN32_WCE=$(CEVersion) /D "$(CePlatform)" /D "SHx" /D "SH3" /D "_SH3_" /D UNDER_CE=$(CEVersion) /D "UNICODE" /D "_UNICODE" /D "NDEBUG" /D "_LIB" /YX /Oxs /M$(CECrtMT) /c
+# ADD CPP /nologo /W3 /I "../metakit/include" /I "../metakit/src" /D _WIN32_WCE=$(CEVersion) /D "$(CePlatform)" /D "SHx" /D "SH3" /D "_SH3_" /D UNDER_CE=$(CEVersion) /D "UNICODE" /D "_UNICODE" /D "NDEBUG" /D "_LIB" /YX /Oxs /M$(CECrtMT) /c
+LIB32=link.exe -lib
+# ADD BASE LIB32 /nologo
+# ADD LIB32 /nologo
+BSC32=bscmake.exe
+# ADD BASE BSC32 /nologo
+# ADD BSC32 /nologo
+
+!ELSEIF  "$(CFG)" == "Jukebox - Win32 (WCE SH3) Debug"
+
+# PROP BASE Use_MFC 0
+# PROP BASE Use_Debug_Libraries 1
+# PROP BASE Output_Dir "SH3Dbg"
+# PROP BASE Intermediate_Dir "SH3Dbg"
+# PROP BASE CPU_ID "{D6519020-710F-11D3-99F2-00105A0DF099}"
+# PROP BASE Platform_ID "{8A9A2F80-6887-11D3-842E-005004848CBA}"
+# PROP BASE Target_Dir ""
+# PROP Use_MFC 0
+# PROP Use_Debug_Libraries 1
+# PROP Output_Dir "SH3Dbg"
+# PROP Intermediate_Dir "SH3Dbg"
+# PROP CPU_ID "{D6519020-710F-11D3-99F2-00105A0DF099}"
+# PROP Platform_ID "{8A9A2F80-6887-11D3-842E-005004848CBA}"
+# PROP Target_Dir ""
+CPP=shcl.exe
+# ADD BASE CPP /nologo /W3 /Zi /Od /D "DEBUG" /D _WIN32_WCE=$(CEVersion) /D "$(CePlatform)" /D "SHx" /D "SH3" /D "_SH3_" /D UNDER_CE=$(CEVersion) /D "UNICODE" /D "_UNICODE" /D "_LIB" /YX /M$(CECrtMTDebug) /c
+# ADD CPP /nologo /W3 /Zi /Od /I "../metakit/include" /I "../metakit/src" /D "DEBUG" /D _WIN32_WCE=$(CEVersion) /D "$(CePlatform)" /D "SHx" /D "SH3" /D "_SH3_" /D UNDER_CE=$(CEVersion) /D "UNICODE" /D "_UNICODE" /D "_LIB" /YX /M$(CECrtMTDebug) /c
+LIB32=link.exe -lib
+# ADD BASE LIB32 /nologo
+# ADD LIB32 /nologo
+BSC32=bscmake.exe
+# ADD BASE BSC32 /nologo
+# ADD BSC32 /nologo
+
+!ELSEIF  "$(CFG)" == "Jukebox - Win32 (WCE ARM) Release"
+
+# PROP BASE Use_MFC 0
+# PROP BASE Use_Debug_Libraries 0
+# PROP BASE Output_Dir "ARMRel"
+# PROP BASE Intermediate_Dir "ARMRel"
+# PROP BASE CPU_ID "{D6518FFC-710F-11D3-99F2-00105A0DF099}"
+# PROP BASE Platform_ID "{8A9A2F80-6887-11D3-842E-005004848CBA}"
+# PROP BASE Target_Dir ""
+# PROP Use_MFC 0
+# PROP Use_Debug_Libraries 0
+# PROP Output_Dir "ARMRel"
+# PROP Intermediate_Dir "ARMRel"
+# PROP CPU_ID "{D6518FFC-710F-11D3-99F2-00105A0DF099}"
+# PROP Platform_ID "{8A9A2F80-6887-11D3-842E-005004848CBA}"
+# PROP Target_Dir ""
+CPP=clarm.exe
+# ADD BASE CPP /nologo /W3 /D _WIN32_WCE=$(CEVersion) /D "$(CePlatform)" /D "NDEBUG" /D "ARM" /D "_ARM_" /D UNDER_CE=$(CEVersion) /D "UNICODE" /D "_UNICODE" /D "_LIB" /YX /Oxs /M$(CECrtMT) /c
+# ADD CPP /nologo /W3 /I "../metakit/include" /I "../metakit/src" /D _WIN32_WCE=$(CEVersion) /D "$(CePlatform)" /D "NDEBUG" /D "ARM" /D "_ARM_" /D UNDER_CE=$(CEVersion) /D "UNICODE" /D "_UNICODE" /D "_LIB" /YX /Oxs /M$(CECrtMT) /c
+LIB32=link.exe -lib
+# ADD BASE LIB32 /nologo
+# ADD LIB32 /nologo
+BSC32=bscmake.exe
+# ADD BASE BSC32 /nologo
+# ADD BSC32 /nologo
+
+!ELSEIF  "$(CFG)" == "Jukebox - Win32 (WCE ARM) Debug"
+
+# PROP BASE Use_MFC 0
+# PROP BASE Use_Debug_Libraries 1
+# PROP BASE Output_Dir "ARMDbg"
+# PROP BASE Intermediate_Dir "ARMDbg"
+# PROP BASE CPU_ID "{D6518FFC-710F-11D3-99F2-00105A0DF099}"
+# PROP BASE Platform_ID "{8A9A2F80-6887-11D3-842E-005004848CBA}"
+# PROP BASE Target_Dir ""
+# PROP Use_MFC 0
+# PROP Use_Debug_Libraries 1
+# PROP Output_Dir "ARMDbg"
+# PROP Intermediate_Dir "ARMDbg"
+# PROP CPU_ID "{D6518FFC-710F-11D3-99F2-00105A0DF099}"
+# PROP Platform_ID "{8A9A2F80-6887-11D3-842E-005004848CBA}"
+# PROP Target_Dir ""
+CPP=clarm.exe
+# ADD BASE CPP /nologo /W3 /Zi /Od /D "DEBUG" /D _WIN32_WCE=$(CEVersion) /D "$(CePlatform)" /D "ARM" /D "_ARM_" /D UNDER_CE=$(CEVersion) /D "UNICODE" /D "_UNICODE" /D "_LIB" /YX /M$(CECrtMTDebug) /c
+# ADD CPP /nologo /W3 /Zi /Od /I "../metakit/include" /I "../metakit/src" /D "DEBUG" /D _WIN32_WCE=$(CEVersion) /D "$(CePlatform)" /D "ARM" /D "_ARM_" /D UNDER_CE=$(CEVersion) /D "UNICODE" /D "_UNICODE" /D "_LIB" /YX /M$(CECrtMTDebug) /c
+LIB32=link.exe -lib
+# ADD BASE LIB32 /nologo
+# ADD LIB32 /nologo
+BSC32=bscmake.exe
+# ADD BASE BSC32 /nologo
+# ADD BSC32 /nologo
+
+!ELSEIF  "$(CFG)" == "Jukebox - Win32 (WCE x86em) Release"
+
+# PROP BASE Use_MFC 0
+# PROP BASE Use_Debug_Libraries 0
+# PROP BASE Output_Dir "X86EMRel"
+# PROP BASE Intermediate_Dir "X86EMRel"
+# PROP BASE CPU_ID "{D6518FF4-710F-11D3-99F2-00105A0DF099}"
+# PROP BASE Platform_ID "{8A9A2F80-6887-11D3-842E-005004848CBA}"
+# PROP BASE Target_Dir ""
+# PROP Use_MFC 0
+# PROP Use_Debug_Libraries 0
+# PROP Output_Dir "X86EMRel"
+# PROP Intermediate_Dir "X86EMRel"
+# PROP CPU_ID "{D6518FF4-710F-11D3-99F2-00105A0DF099}"
+# PROP Platform_ID "{8A9A2F80-6887-11D3-842E-005004848CBA}"
+# PROP Target_Dir ""
+CPP=cl.exe
+# ADD BASE CPP /nologo /W3 /D _WIN32_WCE=$(CEVersion) /D "WIN32" /D "STRICT" /D "_WIN32_WCE_EMULATION" /D "INTERNATIONAL" /D "USA" /D "INTLMSG_CODEPAGE" /D "$(CePlatform)" /D "i486" /D UNDER_CE=$(CEVersion) /D "UNICODE" /D "_UNICODE" /D "_X86_" /D "x86" /D "NDEBUG" /D "_LIB" /YX /Oxs /Gz /c
+# ADD CPP /nologo /W3 /D _WIN32_WCE=$(CEVersion) /D "WIN32" /D "STRICT" /D "_WIN32_WCE_EMULATION" /D "INTERNATIONAL" /D "USA" /D "INTLMSG_CODEPAGE" /D "$(CePlatform)" /D "i486" /D UNDER_CE=$(CEVersion) /D "UNICODE" /D "_UNICODE" /D "_X86_" /D "x86" /D "NDEBUG" /D "_LIB" /YX /Oxs /Gz /c
+LIB32=link.exe -lib
+# ADD BASE LIB32 /nologo
+# ADD LIB32 /nologo
+BSC32=bscmake.exe
+# ADD BASE BSC32 /nologo
+# ADD BSC32 /nologo
+
+!ELSEIF  "$(CFG)" == "Jukebox - Win32 (WCE x86em) Debug"
+
+# PROP BASE Use_MFC 0
+# PROP BASE Use_Debug_Libraries 1
+# PROP BASE Output_Dir "X86EMDbg"
+# PROP BASE Intermediate_Dir "X86EMDbg"
+# PROP BASE CPU_ID "{D6518FF4-710F-11D3-99F2-00105A0DF099}"
+# PROP BASE Platform_ID "{8A9A2F80-6887-11D3-842E-005004848CBA}"
+# PROP BASE Target_Dir ""
+# PROP Use_MFC 0
+# PROP Use_Debug_Libraries 1
+# PROP Output_Dir "X86EMDbg"
+# PROP Intermediate_Dir "X86EMDbg"
+# PROP CPU_ID "{D6518FF4-710F-11D3-99F2-00105A0DF099}"
+# PROP Platform_ID "{8A9A2F80-6887-11D3-842E-005004848CBA}"
+# PROP Target_Dir ""
+CPP=cl.exe
+# ADD BASE CPP /nologo /W3 /Zi /Od /D "DEBUG" /D _WIN32_WCE=$(CEVersion) /D "WIN32" /D "STRICT" /D "_WIN32_WCE_EMULATION" /D "INTERNATIONAL" /D "USA" /D "INTLMSG_CODEPAGE" /D "$(CePlatform)" /D "i486" /D UNDER_CE=$(CEVersion) /D "UNICODE" /D "_UNICODE" /D "_X86_" /D "x86" /D "_LIB" /YX /Gz /c
+# ADD CPP /nologo /W3 /Zi /Od /I "../metakit/src" /I "../metakit/include" /D "DEBUG" /D _WIN32_WCE=$(CEVersion) /D "WIN32" /D "STRICT" /D "_WIN32_WCE_EMULATION" /D "INTERNATIONAL" /D "USA" /D "INTLMSG_CODEPAGE" /D "$(CePlatform)" /D "i486" /D UNDER_CE=$(CEVersion) /D "UNICODE" /D "_UNICODE" /D "_X86_" /D "x86" /D "_LIB" /YX /Gz /c
+LIB32=link.exe -lib
+# ADD BASE LIB32 /nologo
+# ADD LIB32 /nologo
+BSC32=bscmake.exe
+# ADD BASE BSC32 /nologo
+# ADD BSC32 /nologo
+
+!ENDIF 
+
+# Begin Target
+
+# Name "Jukebox - Win32 (WCE MIPS) Release"
+# Name "Jukebox - Win32 (WCE MIPS) Debug"
+# Name "Jukebox - Win32 (WCE SH3) Release"
+# Name "Jukebox - Win32 (WCE SH3) Debug"
+# Name "Jukebox - Win32 (WCE ARM) Release"
+# Name "Jukebox - Win32 (WCE ARM) Debug"
+# Name "Jukebox - Win32 (WCE x86em) Release"
+# Name "Jukebox - Win32 (WCE x86em) Debug"
+# Begin Group "Source Files"
+
+# PROP Default_Filter "cpp;c;cxx;rc;def;r;odl;idl;hpj;bat"
+# Begin Source File
+
+SOURCE=.\JPlaylist.cpp
+
+!IF  "$(CFG)" == "Jukebox - Win32 (WCE MIPS) Release"
+
+DEP_CPP_JPLAY=\
+	".\JPlaylist.h"\
+	".\MetakitManager.h"\
+	
+NODEP_CPP_JPLAY=\
+	".\mk4.h"\
+	".\mk4str.h"\
+	
+
+!ELSEIF  "$(CFG)" == "Jukebox - Win32 (WCE MIPS) Debug"
+
+DEP_CPP_JPLAY=\
+	".\JPlaylist.h"\
+	".\MetakitManager.h"\
+	
+NODEP_CPP_JPLAY=\
+	".\mk4.h"\
+	".\mk4str.h"\
+	
+
+!ELSEIF  "$(CFG)" == "Jukebox - Win32 (WCE SH3) Release"
+
+DEP_CPP_JPLAY=\
+	"..\metakit\include\mk4.h"\
+	"..\metakit\include\mk4.inl"\
+	"..\metakit\include\mk4dll.h"\
+	"..\metakit\include\mk4str.h"\
+	"..\metakit\include\mk4str.inl"\
+	".\JPlaylist.h"\
+	".\MetakitManager.h"\
+	
+
+!ELSEIF  "$(CFG)" == "Jukebox - Win32 (WCE SH3) Debug"
+
+DEP_CPP_JPLAY=\
+	".\JPlaylist.h"\
+	".\MetakitManager.h"\
+	
+NODEP_CPP_JPLAY=\
+	".\mk4.h"\
+	".\mk4str.h"\
+	
+
+!ELSEIF  "$(CFG)" == "Jukebox - Win32 (WCE ARM) Release"
+
+DEP_CPP_JPLAY=\
+	"..\metakit\include\mk4.h"\
+	"..\metakit\include\mk4.inl"\
+	"..\metakit\include\mk4dll.h"\
+	"..\metakit\include\mk4str.h"\
+	"..\metakit\include\mk4str.inl"\
+	".\JPlaylist.h"\
+	".\MetakitManager.h"\
+	
+
+!ELSEIF  "$(CFG)" == "Jukebox - Win32 (WCE ARM) Debug"
+
+DEP_CPP_JPLAY=\
+	"..\metakit\include\mk4.h"\
+	"..\metakit\include\mk4.inl"\
+	"..\metakit\include\mk4dll.h"\
+	"..\metakit\include\mk4str.h"\
+	"..\metakit\include\mk4str.inl"\
+	".\JPlaylist.h"\
+	".\MetakitManager.h"\
+	
+
+!ELSEIF  "$(CFG)" == "Jukebox - Win32 (WCE x86em) Release"
+
+DEP_CPP_JPLAY=\
+	".\JPlaylist.h"\
+	".\MetakitManager.h"\
+	
+NODEP_CPP_JPLAY=\
+	".\mk4.h"\
+	".\mk4str.h"\
+	
+
+!ELSEIF  "$(CFG)" == "Jukebox - Win32 (WCE x86em) Debug"
+
+DEP_CPP_JPLAY=\
+	".\JPlaylist.h"\
+	".\MetakitManager.h"\
+	
+NODEP_CPP_JPLAY=\
+	".\mk4.h"\
+	".\mk4str.h"\
+	
+
+!ENDIF 
+
+# End Source File
+# Begin Source File
+
+SOURCE=.\Jukebox.cpp
+
+!IF  "$(CFG)" == "Jukebox - Win32 (WCE MIPS) Release"
+
+DEP_CPP_JUKEB=\
+	".\JPlaylist.h"\
+	".\Jukebox.h"\
+	".\MetakitManager.h"\
+	
+NODEP_CPP_JUKEB=\
+	".\mk4.h"\
+	".\mk4str.h"\
+	
+
+!ELSEIF  "$(CFG)" == "Jukebox - Win32 (WCE MIPS) Debug"
+
+DEP_CPP_JUKEB=\
+	".\JPlaylist.h"\
+	".\Jukebox.h"\
+	".\MetakitManager.h"\
+	
+NODEP_CPP_JUKEB=\
+	".\mk4.h"\
+	".\mk4str.h"\
+	
+
+!ELSEIF  "$(CFG)" == "Jukebox - Win32 (WCE SH3) Release"
+
+DEP_CPP_JUKEB=\
+	"..\metakit\include\mk4.h"\
+	"..\metakit\include\mk4.inl"\
+	"..\metakit\include\mk4dll.h"\
+	"..\metakit\include\mk4str.h"\
+	"..\metakit\include\mk4str.inl"\
+	".\JPlaylist.h"\
+	".\Jukebox.h"\
+	".\MetakitManager.h"\
+	
+
+!ELSEIF  "$(CFG)" == "Jukebox - Win32 (WCE SH3) Debug"
+
+DEP_CPP_JUKEB=\
+	".\JPlaylist.h"\
+	".\Jukebox.h"\
+	".\MetakitManager.h"\
+	
+NODEP_CPP_JUKEB=\
+	".\mk4.h"\
+	".\mk4str.h"\
+	
+
+!ELSEIF  "$(CFG)" == "Jukebox - Win32 (WCE ARM) Release"
+
+DEP_CPP_JUKEB=\
+	"..\metakit\include\mk4.h"\
+	"..\metakit\include\mk4.inl"\
+	"..\metakit\include\mk4dll.h"\
+	"..\metakit\include\mk4str.h"\
+	"..\metakit\include\mk4str.inl"\
+	".\JPlaylist.h"\
+	".\Jukebox.h"\
+	".\MetakitManager.h"\
+	
+
+!ELSEIF  "$(CFG)" == "Jukebox - Win32 (WCE ARM) Debug"
+
+DEP_CPP_JUKEB=\
+	"..\metakit\include\mk4.h"\
+	"..\metakit\include\mk4.inl"\
+	"..\metakit\include\mk4dll.h"\
+	"..\metakit\include\mk4str.h"\
+	"..\metakit\include\mk4str.inl"\
+	".\JPlaylist.h"\
+	".\Jukebox.h"\
+	".\MetakitManager.h"\
+	
+
+!ELSEIF  "$(CFG)" == "Jukebox - Win32 (WCE x86em) Release"
+
+DEP_CPP_JUKEB=\
+	".\JPlaylist.h"\
+	".\Jukebox.h"\
+	".\MetakitManager.h"\
+	
+NODEP_CPP_JUKEB=\
+	".\mk4.h"\
+	".\mk4str.h"\
+	
+
+!ELSEIF  "$(CFG)" == "Jukebox - Win32 (WCE x86em) Debug"
+
+DEP_CPP_JUKEB=\
+	".\JPlaylist.h"\
+	".\Jukebox.h"\
+	".\MetakitManager.h"\
+	
+NODEP_CPP_JUKEB=\
+	".\mk4.h"\
+	".\mk4str.h"\
+	
+
+!ENDIF 
+
+# End Source File
+# Begin Source File
+
+SOURCE=.\MetakitManager.cpp
+
+!IF  "$(CFG)" == "Jukebox - Win32 (WCE MIPS) Release"
+
+DEP_CPP_METAK=\
+	".\JPlaylist.h"\
+	".\MetakitManager.h"\
+	
+NODEP_CPP_METAK=\
+	".\mk4.h"\
+	".\mk4str.h"\
+	
+
+!ELSEIF  "$(CFG)" == "Jukebox - Win32 (WCE MIPS) Debug"
+
+DEP_CPP_METAK=\
+	".\JPlaylist.h"\
+	".\MetakitManager.h"\
+	
+NODEP_CPP_METAK=\
+	".\mk4.h"\
+	".\mk4str.h"\
+	
+
+!ELSEIF  "$(CFG)" == "Jukebox - Win32 (WCE SH3) Release"
+
+DEP_CPP_METAK=\
+	"..\metakit\include\mk4.h"\
+	"..\metakit\include\mk4.inl"\
+	"..\metakit\include\mk4dll.h"\
+	"..\metakit\include\mk4str.h"\
+	"..\metakit\include\mk4str.inl"\
+	".\JPlaylist.h"\
+	".\MetakitManager.h"\
+	
+
+!ELSEIF  "$(CFG)" == "Jukebox - Win32 (WCE SH3) Debug"
+
+DEP_CPP_METAK=\
+	".\JPlaylist.h"\
+	".\MetakitManager.h"\
+	
+NODEP_CPP_METAK=\
+	".\mk4.h"\
+	".\mk4str.h"\
+	
+
+!ELSEIF  "$(CFG)" == "Jukebox - Win32 (WCE ARM) Release"
+
+DEP_CPP_METAK=\
+	"..\metakit\include\mk4.h"\
+	"..\metakit\include\mk4.inl"\
+	"..\metakit\include\mk4dll.h"\
+	"..\metakit\include\mk4str.h"\
+	"..\metakit\include\mk4str.inl"\
+	".\JPlaylist.h"\
+	".\MetakitManager.h"\
+	
+
+!ELSEIF  "$(CFG)" == "Jukebox - Win32 (WCE ARM) Debug"
+
+DEP_CPP_METAK=\
+	"..\metakit\include\mk4.h"\
+	"..\metakit\include\mk4.inl"\
+	"..\metakit\include\mk4dll.h"\
+	"..\metakit\include\mk4str.h"\
+	"..\metakit\include\mk4str.inl"\
+	".\JPlaylist.h"\
+	".\MetakitManager.h"\
+	
+
+!ELSEIF  "$(CFG)" == "Jukebox - Win32 (WCE x86em) Release"
+
+DEP_CPP_METAK=\
+	".\JPlaylist.h"\
+	".\MetakitManager.h"\
+	
+NODEP_CPP_METAK=\
+	".\mk4.h"\
+	".\mk4str.h"\
+	
+
+!ELSEIF  "$(CFG)" == "Jukebox - Win32 (WCE x86em) Debug"
+
+DEP_CPP_METAK=\
+	"..\metakit\include\mk4.h"\
+	"..\metakit\include\mk4.inl"\
+	"..\metakit\include\mk4dll.h"\
+	"..\metakit\include\mk4str.h"\
+	"..\metakit\include\mk4str.inl"\
+	".\JPlaylist.h"\
+	".\MetakitManager.h"\
+	
+
+!ENDIF 
+
+# End Source File
+# End Group
+# Begin Group "Header Files"
+
+# PROP Default_Filter "h;hpp;hxx;hm;inl"
+# Begin Source File
+
+SOURCE=.\JPlaylist.h
+# End Source File
+# Begin Source File
+
+SOURCE=.\Jukebox.h
+# End Source File
+# Begin Source File
+
+SOURCE=.\MetakitManager.h
+# End Source File
+# End Group
+# Begin Group "metakit"
+
+# PROP Default_Filter ""
+# Begin Source File
+
+SOURCE=..\metakit\src\borc.h
+# End Source File
+# Begin Source File
+
+SOURCE=..\metakit\src\column.cpp
+
+!IF  "$(CFG)" == "Jukebox - Win32 (WCE MIPS) Release"
+
+DEP_CPP_COLUM=\
+	"..\metakit\src\column.h"\
+	"..\metakit\src\column.inl"\
+	
+
+!ELSEIF  "$(CFG)" == "Jukebox - Win32 (WCE MIPS) Debug"
+
+DEP_CPP_COLUM=\
+	"..\metakit\src\column.h"\
+	"..\metakit\src\column.inl"\
+	
+
+!ELSEIF  "$(CFG)" == "Jukebox - Win32 (WCE SH3) Release"
+
+DEP_CPP_COLUM=\
+	"..\metakit\src\column.h"\
+	"..\metakit\src\column.inl"\
+	
+
+!ELSEIF  "$(CFG)" == "Jukebox - Win32 (WCE SH3) Debug"
+
+DEP_CPP_COLUM=\
+	"..\metakit\src\column.h"\
+	"..\metakit\src\column.inl"\
+	
+
+!ELSEIF  "$(CFG)" == "Jukebox - Win32 (WCE ARM) Release"
+
+DEP_CPP_COLUM=\
+	"..\metakit\src\column.h"\
+	"..\metakit\src\column.inl"\
+	
+
+!ELSEIF  "$(CFG)" == "Jukebox - Win32 (WCE ARM) Debug"
+
+DEP_CPP_COLUM=\
+	"..\metakit\src\column.h"\
+	"..\metakit\src\column.inl"\
+	
+
+!ELSEIF  "$(CFG)" == "Jukebox - Win32 (WCE x86em) Release"
+
+DEP_CPP_COLUM=\
+	"..\metakit\src\column.h"\
+	"..\metakit\src\column.inl"\
+	
+
+!ELSEIF  "$(CFG)" == "Jukebox - Win32 (WCE x86em) Debug"
+
+DEP_CPP_COLUM=\
+	"..\metakit\src\column.h"\
+	"..\metakit\src\column.inl"\
+	
+
+!ENDIF 
+
+# End Source File
+# Begin Source File
+
+SOURCE=..\metakit\src\column.h
+# End Source File
+# Begin Source File
+
+SOURCE=..\metakit\src\column.inl
+# End Source File
+# Begin Source File
+
+SOURCE=..\metakit\src\custom.cpp
+
+!IF  "$(CFG)" == "Jukebox - Win32 (WCE MIPS) Release"
+
+DEP_CPP_CUSTO=\
+	"..\metakit\src\custom.h"\
+	"..\metakit\src\field.h"\
+	"..\metakit\src\field.inl"\
+	"..\metakit\src\format.h"\
+	"..\metakit\src\handler.h"\
+	"..\metakit\src\handler.inl"\
+	
+
+!ELSEIF  "$(CFG)" == "Jukebox - Win32 (WCE MIPS) Debug"
+
+DEP_CPP_CUSTO=\
+	"..\metakit\src\custom.h"\
+	"..\metakit\src\field.h"\
+	"..\metakit\src\field.inl"\
+	"..\metakit\src\format.h"\
+	"..\metakit\src\handler.h"\
+	"..\metakit\src\handler.inl"\
+	
+
+!ELSEIF  "$(CFG)" == "Jukebox - Win32 (WCE SH3) Release"
+
+DEP_CPP_CUSTO=\
+	"..\metakit\src\custom.h"\
+	"..\metakit\src\field.h"\
+	"..\metakit\src\field.inl"\
+	"..\metakit\src\format.h"\
+	"..\metakit\src\handler.h"\
+	"..\metakit\src\handler.inl"\
+	
+
+!ELSEIF  "$(CFG)" == "Jukebox - Win32 (WCE SH3) Debug"
+
+DEP_CPP_CUSTO=\
+	"..\metakit\src\custom.h"\
+	"..\metakit\src\field.h"\
+	"..\metakit\src\field.inl"\
+	"..\metakit\src\format.h"\
+	"..\metakit\src\handler.h"\
+	"..\metakit\src\handler.inl"\
+	
+
+!ELSEIF  "$(CFG)" == "Jukebox - Win32 (WCE ARM) Release"
+
+DEP_CPP_CUSTO=\
+	"..\metakit\src\custom.h"\
+	"..\metakit\src\field.h"\
+	"..\metakit\src\field.inl"\
+	"..\metakit\src\format.h"\
+	"..\metakit\src\handler.h"\
+	"..\metakit\src\handler.inl"\
+	
+
+!ELSEIF  "$(CFG)" == "Jukebox - Win32 (WCE ARM) Debug"
+
+DEP_CPP_CUSTO=\
+	"..\metakit\src\custom.h"\
+	"..\metakit\src\field.h"\
+	"..\metakit\src\field.inl"\
+	"..\metakit\src\format.h"\
+	"..\metakit\src\handler.h"\
+	"..\metakit\src\handler.inl"\
+	
+
+!ELSEIF  "$(CFG)" == "Jukebox - Win32 (WCE x86em) Release"
+
+DEP_CPP_CUSTO=\
+	"..\metakit\src\custom.h"\
+	"..\metakit\src\field.h"\
+	"..\metakit\src\field.inl"\
+	"..\metakit\src\format.h"\
+	"..\metakit\src\handler.h"\
+	"..\metakit\src\handler.inl"\
+	
+
+!ELSEIF  "$(CFG)" == "Jukebox - Win32 (WCE x86em) Debug"
+
+DEP_CPP_CUSTO=\
+	"..\metakit\src\custom.h"\
+	"..\metakit\src\field.h"\
+	"..\metakit\src\field.inl"\
+	"..\metakit\src\format.h"\
+	"..\metakit\src\handler.h"\
+	"..\metakit\src\handler.inl"\
+	
+
+!ENDIF 
+
+# End Source File
+# Begin Source File
+
+SOURCE=..\metakit\src\custom.h
+# End Source File
+# Begin Source File
+
+SOURCE=..\metakit\src\derived.cpp
+
+!IF  "$(CFG)" == "Jukebox - Win32 (WCE MIPS) Release"
+
+DEP_CPP_DERIV=\
+	"..\metakit\src\derived.h"\
+	"..\metakit\src\handler.h"\
+	"..\metakit\src\handler.inl"\
+	"..\metakit\src\store.h"\
+	"..\metakit\src\store.inl"\
+	
+
+!ELSEIF  "$(CFG)" == "Jukebox - Win32 (WCE MIPS) Debug"
+
+DEP_CPP_DERIV=\
+	"..\metakit\src\derived.h"\
+	"..\metakit\src\handler.h"\
+	"..\metakit\src\handler.inl"\
+	"..\metakit\src\store.h"\
+	"..\metakit\src\store.inl"\
+	
+
+!ELSEIF  "$(CFG)" == "Jukebox - Win32 (WCE SH3) Release"
+
+DEP_CPP_DERIV=\
+	"..\metakit\src\derived.h"\
+	"..\metakit\src\handler.h"\
+	"..\metakit\src\handler.inl"\
+	"..\metakit\src\store.h"\
+	"..\metakit\src\store.inl"\
+	
+
+!ELSEIF  "$(CFG)" == "Jukebox - Win32 (WCE SH3) Debug"
+
+DEP_CPP_DERIV=\
+	"..\metakit\src\derived.h"\
+	"..\metakit\src\handler.h"\
+	"..\metakit\src\handler.inl"\
+	"..\metakit\src\store.h"\
+	"..\metakit\src\store.inl"\
+	
+
+!ELSEIF  "$(CFG)" == "Jukebox - Win32 (WCE ARM) Release"
+
+DEP_CPP_DERIV=\
+	"..\metakit\src\derived.h"\
+	"..\metakit\src\handler.h"\
+	"..\metakit\src\handler.inl"\
+	"..\metakit\src\store.h"\
+	"..\metakit\src\store.inl"\
+	
+
+!ELSEIF  "$(CFG)" == "Jukebox - Win32 (WCE ARM) Debug"
+
+DEP_CPP_DERIV=\
+	"..\metakit\src\derived.h"\
+	"..\metakit\src\handler.h"\
+	"..\metakit\src\handler.inl"\
+	"..\metakit\src\store.h"\
+	"..\metakit\src\store.inl"\
+	
+
+!ELSEIF  "$(CFG)" == "Jukebox - Win32 (WCE x86em) Release"
+
+DEP_CPP_DERIV=\
+	"..\metakit\src\derived.h"\
+	"..\metakit\src\handler.h"\
+	"..\metakit\src\handler.inl"\
+	"..\metakit\src\store.h"\
+	"..\metakit\src\store.inl"\
+	
+
+!ELSEIF  "$(CFG)" == "Jukebox - Win32 (WCE x86em) Debug"
+
+DEP_CPP_DERIV=\
+	"..\metakit\src\derived.h"\
+	"..\metakit\src\handler.h"\
+	"..\metakit\src\handler.inl"\
+	"..\metakit\src\store.h"\
+	"..\metakit\src\store.inl"\
+	
+
+!ENDIF 
+
+# End Source File
+# Begin Source File
+
+SOURCE=..\metakit\src\derived.h
+# End Source File
+# Begin Source File
+
+SOURCE=..\metakit\src\field.cpp
+
+!IF  "$(CFG)" == "Jukebox - Win32 (WCE MIPS) Release"
+
+DEP_CPP_FIELD=\
+	"..\metakit\src\field.h"\
+	"..\metakit\src\field.inl"\
+	
+
+!ELSEIF  "$(CFG)" == "Jukebox - Win32 (WCE MIPS) Debug"
+
+DEP_CPP_FIELD=\
+	"..\metakit\src\field.h"\
+	"..\metakit\src\field.inl"\
+	
+
+!ELSEIF  "$(CFG)" == "Jukebox - Win32 (WCE SH3) Release"
+
+DEP_CPP_FIELD=\
+	"..\metakit\src\field.h"\
+	"..\metakit\src\field.inl"\
+	
+
+!ELSEIF  "$(CFG)" == "Jukebox - Win32 (WCE SH3) Debug"
+
+DEP_CPP_FIELD=\
+	"..\metakit\src\field.h"\
+	"..\metakit\src\field.inl"\
+	
+
+!ELSEIF  "$(CFG)" == "Jukebox - Win32 (WCE ARM) Release"
+
+DEP_CPP_FIELD=\
+	"..\metakit\src\field.h"\
+	"..\metakit\src\field.inl"\
+	
+
+!ELSEIF  "$(CFG)" == "Jukebox - Win32 (WCE ARM) Debug"
+
+DEP_CPP_FIELD=\
+	"..\metakit\src\field.h"\
+	"..\metakit\src\field.inl"\
+	
+
+!ELSEIF  "$(CFG)" == "Jukebox - Win32 (WCE x86em) Release"
+
+DEP_CPP_FIELD=\
+	"..\metakit\src\field.h"\
+	"..\metakit\src\field.inl"\
+	
+
+!ELSEIF  "$(CFG)" == "Jukebox - Win32 (WCE x86em) Debug"
+
+DEP_CPP_FIELD=\
+	"..\metakit\src\field.h"\
+	"..\metakit\src\field.inl"\
+	
+
+!ENDIF 
+
+# End Source File
+# Begin Source File
+
+SOURCE=..\metakit\src\field.h
+# End Source File
+# Begin Source File
+
+SOURCE=..\metakit\src\field.inl
+# End Source File
+# Begin Source File
+
+SOURCE=..\metakit\src\fileio.cpp
+
+!IF  "$(CFG)" == "Jukebox - Win32 (WCE MIPS) Release"
+
+NODEP_CPP_FILEI=\
+	"..\metakit\src\mk4io.h"\
+	
+
+!ELSEIF  "$(CFG)" == "Jukebox - Win32 (WCE MIPS) Debug"
+
+NODEP_CPP_FILEI=\
+	"..\metakit\src\mk4io.h"\
+	
+
+!ELSEIF  "$(CFG)" == "Jukebox - Win32 (WCE SH3) Release"
+
+DEP_CPP_FILEI=\
+	"..\metakit\include\mk4io.h"\
+	
+
+!ELSEIF  "$(CFG)" == "Jukebox - Win32 (WCE SH3) Debug"
+
+DEP_CPP_FILEI=\
+	"..\metakit\include\mk4io.h"\
+	
+
+!ELSEIF  "$(CFG)" == "Jukebox - Win32 (WCE ARM) Release"
+
+DEP_CPP_FILEI=\
+	"..\metakit\include\mk4io.h"\
+	
+
+!ELSEIF  "$(CFG)" == "Jukebox - Win32 (WCE ARM) Debug"
+
+DEP_CPP_FILEI=\
+	"..\metakit\include\mk4io.h"\
+	
+
+!ELSEIF  "$(CFG)" == "Jukebox - Win32 (WCE x86em) Release"
+
+NODEP_CPP_FILEI=\
+	"..\metakit\src\mk4io.h"\
+	
+
+!ELSEIF  "$(CFG)" == "Jukebox - Win32 (WCE x86em) Debug"
+
+DEP_CPP_FILEI=\
+	"..\metakit\include\mk4io.h"\
+	
+
+!ENDIF 
+
+# End Source File
+# Begin Source File
+
+SOURCE=..\metakit\src\format.cpp
+
+!IF  "$(CFG)" == "Jukebox - Win32 (WCE MIPS) Release"
+
+DEP_CPP_FORMA=\
+	"..\metakit\src\column.h"\
+	"..\metakit\src\column.inl"\
+	"..\metakit\src\format.h"\
+	"..\metakit\src\handler.h"\
+	"..\metakit\src\handler.inl"\
+	"..\metakit\src\persist.h"\
+	
+
+!ELSEIF  "$(CFG)" == "Jukebox - Win32 (WCE MIPS) Debug"
+
+DEP_CPP_FORMA=\
+	"..\metakit\src\column.h"\
+	"..\metakit\src\column.inl"\
+	"..\metakit\src\format.h"\
+	"..\metakit\src\handler.h"\
+	"..\metakit\src\handler.inl"\
+	"..\metakit\src\persist.h"\
+	
+
+!ELSEIF  "$(CFG)" == "Jukebox - Win32 (WCE SH3) Release"
+
+DEP_CPP_FORMA=\
+	"..\metakit\src\column.h"\
+	"..\metakit\src\column.inl"\
+	"..\metakit\src\format.h"\
+	"..\metakit\src\handler.h"\
+	"..\metakit\src\handler.inl"\
+	"..\metakit\src\persist.h"\
+	
+
+!ELSEIF  "$(CFG)" == "Jukebox - Win32 (WCE SH3) Debug"
+
+DEP_CPP_FORMA=\
+	"..\metakit\src\column.h"\
+	"..\metakit\src\column.inl"\
+	"..\metakit\src\format.h"\
+	"..\metakit\src\handler.h"\
+	"..\metakit\src\handler.inl"\
+	"..\metakit\src\persist.h"\
+	
+
+!ELSEIF  "$(CFG)" == "Jukebox - Win32 (WCE ARM) Release"
+
+DEP_CPP_FORMA=\
+	"..\metakit\src\column.h"\
+	"..\metakit\src\column.inl"\
+	"..\metakit\src\format.h"\
+	"..\metakit\src\handler.h"\
+	"..\metakit\src\handler.inl"\
+	"..\metakit\src\persist.h"\
+	
+
+!ELSEIF  "$(CFG)" == "Jukebox - Win32 (WCE ARM) Debug"
+
+DEP_CPP_FORMA=\
+	"..\metakit\src\column.h"\
+	"..\metakit\src\column.inl"\
+	"..\metakit\src\format.h"\
+	"..\metakit\src\handler.h"\
+	"..\metakit\src\handler.inl"\
+	"..\metakit\src\persist.h"\
+	
+
+!ELSEIF  "$(CFG)" == "Jukebox - Win32 (WCE x86em) Release"
+
+DEP_CPP_FORMA=\
+	"..\metakit\src\column.h"\
+	"..\metakit\src\column.inl"\
+	"..\metakit\src\format.h"\
+	"..\metakit\src\handler.h"\
+	"..\metakit\src\handler.inl"\
+	"..\metakit\src\persist.h"\
+	
+
+!ELSEIF  "$(CFG)" == "Jukebox - Win32 (WCE x86em) Debug"
+
+DEP_CPP_FORMA=\
+	"..\metakit\src\column.h"\
+	"..\metakit\src\column.inl"\
+	"..\metakit\src\format.h"\
+	"..\metakit\src\handler.h"\
+	"..\metakit\src\handler.inl"\
+	"..\metakit\src\persist.h"\
+	
+
+!ENDIF 
+
+# End Source File
+# Begin Source File
+
+SOURCE=..\metakit\src\format.h
+# End Source File
+# Begin Source File
+
+SOURCE=..\metakit\src\gnuc.h
+# End Source File
+# Begin Source File
+
+SOURCE=..\metakit\src\handler.cpp
+
+!IF  "$(CFG)" == "Jukebox - Win32 (WCE MIPS) Release"
+
+DEP_CPP_HANDL=\
+	"..\metakit\src\column.h"\
+	"..\metakit\src\column.inl"\
+	"..\metakit\src\field.h"\
+	"..\metakit\src\field.inl"\
+	"..\metakit\src\format.h"\
+	"..\metakit\src\handler.h"\
+	"..\metakit\src\handler.inl"\
+	"..\metakit\src\persist.h"\
+	
+
+!ELSEIF  "$(CFG)" == "Jukebox - Win32 (WCE MIPS) Debug"
+
+DEP_CPP_HANDL=\
+	"..\metakit\src\column.h"\
+	"..\metakit\src\column.inl"\
+	"..\metakit\src\field.h"\
+	"..\metakit\src\field.inl"\
+	"..\metakit\src\format.h"\
+	"..\metakit\src\handler.h"\
+	"..\metakit\src\handler.inl"\
+	"..\metakit\src\persist.h"\
+	
+
+!ELSEIF  "$(CFG)" == "Jukebox - Win32 (WCE SH3) Release"
+
+DEP_CPP_HANDL=\
+	"..\metakit\src\column.h"\
+	"..\metakit\src\column.inl"\
+	"..\metakit\src\field.h"\
+	"..\metakit\src\field.inl"\
+	"..\metakit\src\format.h"\
+	"..\metakit\src\handler.h"\
+	"..\metakit\src\handler.inl"\
+	"..\metakit\src\persist.h"\
+	
+
+!ELSEIF  "$(CFG)" == "Jukebox - Win32 (WCE SH3) Debug"
+
+DEP_CPP_HANDL=\
+	"..\metakit\src\column.h"\
+	"..\metakit\src\column.inl"\
+	"..\metakit\src\field.h"\
+	"..\metakit\src\field.inl"\
+	"..\metakit\src\format.h"\
+	"..\metakit\src\handler.h"\
+	"..\metakit\src\handler.inl"\
+	"..\metakit\src\persist.h"\
+	
+
+!ELSEIF  "$(CFG)" == "Jukebox - Win32 (WCE ARM) Release"
+
+DEP_CPP_HANDL=\
+	"..\metakit\src\column.h"\
+	"..\metakit\src\column.inl"\
+	"..\metakit\src\field.h"\
+	"..\metakit\src\field.inl"\
+	"..\metakit\src\format.h"\
+	"..\metakit\src\handler.h"\
+	"..\metakit\src\handler.inl"\
+	"..\metakit\src\persist.h"\
+	
+
+!ELSEIF  "$(CFG)" == "Jukebox - Win32 (WCE ARM) Debug"
+
+DEP_CPP_HANDL=\
+	"..\metakit\src\column.h"\
+	"..\metakit\src\column.inl"\
+	"..\metakit\src\field.h"\
+	"..\metakit\src\field.inl"\
+	"..\metakit\src\format.h"\
+	"..\metakit\src\handler.h"\
+	"..\metakit\src\handler.inl"\
+	"..\metakit\src\persist.h"\
+	
+
+!ELSEIF  "$(CFG)" == "Jukebox - Win32 (WCE x86em) Release"
+
+DEP_CPP_HANDL=\
+	"..\metakit\src\column.h"\
+	"..\metakit\src\column.inl"\
+	"..\metakit\src\field.h"\
+	"..\metakit\src\field.inl"\
+	"..\metakit\src\format.h"\
+	"..\metakit\src\handler.h"\
+	"..\metakit\src\handler.inl"\
+	"..\metakit\src\persist.h"\
+	
+
+!ELSEIF  "$(CFG)" == "Jukebox - Win32 (WCE x86em) Debug"
+
+DEP_CPP_HANDL=\
+	"..\metakit\src\column.h"\
+	"..\metakit\src\column.inl"\
+	"..\metakit\src\field.h"\
+	"..\metakit\src\field.inl"\
+	"..\metakit\src\format.h"\
+	"..\metakit\src\handler.h"\
+	"..\metakit\src\handler.inl"\
+	"..\metakit\src\persist.h"\
+	
+
+!ENDIF 
+
+# End Source File
+# Begin Source File
+
+SOURCE=..\metakit\src\handler.h
+# End Source File
+# Begin Source File
+
+SOURCE=..\metakit\src\handler.inl
+# End Source File
+# Begin Source File
+
+SOURCE=..\metakit\src\header.h
+# End Source File
+# Begin Source File
+
+SOURCE=..\metakit\src\mfc.h
+# End Source File
+# Begin Source File
+
+SOURCE=..\metakit\include\mk4.h
+# End Source File
+# Begin Source File
+
+SOURCE=..\metakit\include\mk4.inl
+# End Source File
+# Begin Source File
+
+SOURCE=..\metakit\include\mk4dll.h
+# End Source File
+# Begin Source File
+
+SOURCE=..\metakit\include\mk4io.h
+# End Source File
+# Begin Source File
+
+SOURCE=..\metakit\include\mk4str.h
+# End Source File
+# Begin Source File
+
+SOURCE=..\metakit\include\mk4str.inl
+# End Source File
+# Begin Source File
+
+SOURCE=..\metakit\src\msvc.h
+# End Source File
+# Begin Source File
+
+SOURCE=..\metakit\src\mwcw.h
+# End Source File
+# Begin Source File
+
+SOURCE=..\metakit\src\persist.cpp
+
+!IF  "$(CFG)" == "Jukebox - Win32 (WCE MIPS) Release"
+
+DEP_CPP_PERSI=\
+	"..\metakit\src\column.h"\
+	"..\metakit\src\column.inl"\
+	"..\metakit\src\handler.h"\
+	"..\metakit\src\handler.inl"\
+	"..\metakit\src\persist.h"\
+	"..\metakit\src\store.h"\
+	"..\metakit\src\store.inl"\
+	
+
+!ELSEIF  "$(CFG)" == "Jukebox - Win32 (WCE MIPS) Debug"
+
+DEP_CPP_PERSI=\
+	"..\metakit\src\column.h"\
+	"..\metakit\src\column.inl"\
+	"..\metakit\src\handler.h"\
+	"..\metakit\src\handler.inl"\
+	"..\metakit\src\persist.h"\
+	"..\metakit\src\store.h"\
+	"..\metakit\src\store.inl"\
+	
+
+!ELSEIF  "$(CFG)" == "Jukebox - Win32 (WCE SH3) Release"
+
+DEP_CPP_PERSI=\
+	"..\metakit\src\column.h"\
+	"..\metakit\src\column.inl"\
+	"..\metakit\src\handler.h"\
+	"..\metakit\src\handler.inl"\
+	"..\metakit\src\persist.h"\
+	"..\metakit\src\store.h"\
+	"..\metakit\src\store.inl"\
+	
+
+!ELSEIF  "$(CFG)" == "Jukebox - Win32 (WCE SH3) Debug"
+
+DEP_CPP_PERSI=\
+	"..\metakit\src\column.h"\
+	"..\metakit\src\column.inl"\
+	"..\metakit\src\handler.h"\
+	"..\metakit\src\handler.inl"\
+	"..\metakit\src\persist.h"\
+	"..\metakit\src\store.h"\
+	"..\metakit\src\store.inl"\
+	
+
+!ELSEIF  "$(CFG)" == "Jukebox - Win32 (WCE ARM) Release"
+
+DEP_CPP_PERSI=\
+	"..\metakit\src\column.h"\
+	"..\metakit\src\column.inl"\
+	"..\metakit\src\handler.h"\
+	"..\metakit\src\handler.inl"\
+	"..\metakit\src\persist.h"\
+	"..\metakit\src\store.h"\
+	"..\metakit\src\store.inl"\
+	
+
+!ELSEIF  "$(CFG)" == "Jukebox - Win32 (WCE ARM) Debug"
+
+DEP_CPP_PERSI=\
+	"..\metakit\src\column.h"\
+	"..\metakit\src\column.inl"\
+	"..\metakit\src\handler.h"\
+	"..\metakit\src\handler.inl"\
+	"..\metakit\src\persist.h"\
+	"..\metakit\src\store.h"\
+	"..\metakit\src\store.inl"\
+	
+
+!ELSEIF  "$(CFG)" == "Jukebox - Win32 (WCE x86em) Release"
+
+DEP_CPP_PERSI=\
+	"..\metakit\src\column.h"\
+	"..\metakit\src\column.inl"\
+	"..\metakit\src\handler.h"\
+	"..\metakit\src\handler.inl"\
+	"..\metakit\src\persist.h"\
+	"..\metakit\src\store.h"\
+	"..\metakit\src\store.inl"\
+	
+
+!ELSEIF  "$(CFG)" == "Jukebox - Win32 (WCE x86em) Debug"
+
+DEP_CPP_PERSI=\
+	"..\metakit\src\column.h"\
+	"..\metakit\src\column.inl"\
+	"..\metakit\src\handler.h"\
+	"..\metakit\src\handler.inl"\
+	"..\metakit\src\persist.h"\
+	"..\metakit\src\store.h"\
+	"..\metakit\src\store.inl"\
+	
+
+!ENDIF 
+
+# End Source File
+# Begin Source File
+
+SOURCE=..\metakit\src\persist.h
+# End Source File
+# Begin Source File
+
+SOURCE=..\metakit\src\std.cpp
+
+!IF  "$(CFG)" == "Jukebox - Win32 (WCE MIPS) Release"
+
+DEP_CPP_STD_C=\
+	"..\metakit\src\column.h"\
+	"..\metakit\src\column.inl"\
+	
+NODEP_CPP_STD_C=\
+	"..\metakit\src\mk4str.inl"\
+	
+
+!ELSEIF  "$(CFG)" == "Jukebox - Win32 (WCE MIPS) Debug"
+
+DEP_CPP_STD_C=\
+	"..\metakit\src\column.h"\
+	"..\metakit\src\column.inl"\
+	
+NODEP_CPP_STD_C=\
+	"..\metakit\src\mk4str.inl"\
+	
+
+!ELSEIF  "$(CFG)" == "Jukebox - Win32 (WCE SH3) Release"
+
+DEP_CPP_STD_C=\
+	"..\metakit\include\mk4str.inl"\
+	"..\metakit\src\column.h"\
+	"..\metakit\src\column.inl"\
+	
+
+!ELSEIF  "$(CFG)" == "Jukebox - Win32 (WCE SH3) Debug"
+
+DEP_CPP_STD_C=\
+	"..\metakit\src\column.h"\
+	"..\metakit\src\column.inl"\
+	
+NODEP_CPP_STD_C=\
+	"..\metakit\src\mk4str.inl"\
+	
+
+!ELSEIF  "$(CFG)" == "Jukebox - Win32 (WCE ARM) Release"
+
+DEP_CPP_STD_C=\
+	"..\metakit\include\mk4str.inl"\
+	"..\metakit\src\column.h"\
+	"..\metakit\src\column.inl"\
+	
+
+!ELSEIF  "$(CFG)" == "Jukebox - Win32 (WCE ARM) Debug"
+
+DEP_CPP_STD_C=\
+	"..\metakit\include\mk4str.inl"\
+	"..\metakit\src\column.h"\
+	"..\metakit\src\column.inl"\
+	
+
+!ELSEIF  "$(CFG)" == "Jukebox - Win32 (WCE x86em) Release"
+
+DEP_CPP_STD_C=\
+	"..\metakit\src\column.h"\
+	"..\metakit\src\column.inl"\
+	
+NODEP_CPP_STD_C=\
+	"..\metakit\src\mk4str.inl"\
+	
+
+!ELSEIF  "$(CFG)" == "Jukebox - Win32 (WCE x86em) Debug"
+
+DEP_CPP_STD_C=\
+	"..\metakit\src\column.h"\
+	"..\metakit\src\column.inl"\
+	
+NODEP_CPP_STD_C=\
+	"..\metakit\src\mk4str.inl"\
+	
+
+!ENDIF 
+
+# End Source File
+# Begin Source File
+
+SOURCE=..\metakit\src\std.h
+# End Source File
+# Begin Source File
+
+SOURCE=..\metakit\src\store.cpp
+
+!IF  "$(CFG)" == "Jukebox - Win32 (WCE MIPS) Release"
+
+DEP_CPP_STORE=\
+	"..\metakit\src\column.h"\
+	"..\metakit\src\column.inl"\
+	"..\metakit\src\field.h"\
+	"..\metakit\src\field.inl"\
+	"..\metakit\src\format.h"\
+	"..\metakit\src\handler.h"\
+	"..\metakit\src\handler.inl"\
+	"..\metakit\src\persist.h"\
+	"..\metakit\src\store.h"\
+	"..\metakit\src\store.inl"\
+	
+NODEP_CPP_STORE=\
+	"..\metakit\src\mk4io.h"\
+	
+
+!ELSEIF  "$(CFG)" == "Jukebox - Win32 (WCE MIPS) Debug"
+
+DEP_CPP_STORE=\
+	"..\metakit\src\column.h"\
+	"..\metakit\src\column.inl"\
+	"..\metakit\src\field.h"\
+	"..\metakit\src\field.inl"\
+	"..\metakit\src\format.h"\
+	"..\metakit\src\handler.h"\
+	"..\metakit\src\handler.inl"\
+	"..\metakit\src\persist.h"\
+	"..\metakit\src\store.h"\
+	"..\metakit\src\store.inl"\
+	
+NODEP_CPP_STORE=\
+	"..\metakit\src\mk4io.h"\
+	
+
+!ELSEIF  "$(CFG)" == "Jukebox - Win32 (WCE SH3) Release"
+
+DEP_CPP_STORE=\
+	"..\metakit\include\mk4io.h"\
+	"..\metakit\src\column.h"\
+	"..\metakit\src\column.inl"\
+	"..\metakit\src\field.h"\
+	"..\metakit\src\field.inl"\
+	"..\metakit\src\format.h"\
+	"..\metakit\src\handler.h"\
+	"..\metakit\src\handler.inl"\
+	"..\metakit\src\persist.h"\
+	"..\metakit\src\store.h"\
+	"..\metakit\src\store.inl"\
+	
+
+!ELSEIF  "$(CFG)" == "Jukebox - Win32 (WCE SH3) Debug"
+
+DEP_CPP_STORE=\
+	"..\metakit\src\column.h"\
+	"..\metakit\src\column.inl"\
+	"..\metakit\src\field.h"\
+	"..\metakit\src\field.inl"\
+	"..\metakit\src\format.h"\
+	"..\metakit\src\handler.h"\
+	"..\metakit\src\handler.inl"\
+	"..\metakit\src\persist.h"\
+	"..\metakit\src\store.h"\
+	"..\metakit\src\store.inl"\
+	
+NODEP_CPP_STORE=\
+	"..\metakit\src\mk4io.h"\
+	
+
+!ELSEIF  "$(CFG)" == "Jukebox - Win32 (WCE ARM) Release"
+
+DEP_CPP_STORE=\
+	"..\metakit\include\mk4io.h"\
+	"..\metakit\src\column.h"\
+	"..\metakit\src\column.inl"\
+	"..\metakit\src\field.h"\
+	"..\metakit\src\field.inl"\
+	"..\metakit\src\format.h"\
+	"..\metakit\src\handler.h"\
+	"..\metakit\src\handler.inl"\
+	"..\metakit\src\persist.h"\
+	"..\metakit\src\store.h"\
+	"..\metakit\src\store.inl"\
+	
+
+!ELSEIF  "$(CFG)" == "Jukebox - Win32 (WCE ARM) Debug"
+
+DEP_CPP_STORE=\
+	"..\metakit\include\mk4io.h"\
+	"..\metakit\src\column.h"\
+	"..\metakit\src\column.inl"\
+	"..\metakit\src\field.h"\
+	"..\metakit\src\field.inl"\
+	"..\metakit\src\format.h"\
+	"..\metakit\src\handler.h"\
+	"..\metakit\src\handler.inl"\
+	"..\metakit\src\persist.h"\
+	"..\metakit\src\store.h"\
+	"..\metakit\src\store.inl"\
+	
+
+!ELSEIF  "$(CFG)" == "Jukebox - Win32 (WCE x86em) Release"
+
+DEP_CPP_STORE=\
+	"..\metakit\src\column.h"\
+	"..\metakit\src\column.inl"\
+	"..\metakit\src\field.h"\
+	"..\metakit\src\field.inl"\
+	"..\metakit\src\format.h"\
+	"..\metakit\src\handler.h"\
+	"..\metakit\src\handler.inl"\
+	"..\metakit\src\persist.h"\
+	"..\metakit\src\store.h"\
+	"..\metakit\src\store.inl"\
+	
+NODEP_CPP_STORE=\
+	"..\metakit\src\mk4io.h"\
+	
+
+!ELSEIF  "$(CFG)" == "Jukebox - Win32 (WCE x86em) Debug"
+
+DEP_CPP_STORE=\
+	"..\metakit\src\column.h"\
+	"..\metakit\src\column.inl"\
+	"..\metakit\src\field.h"\
+	"..\metakit\src\field.inl"\
+	"..\metakit\src\format.h"\
+	"..\metakit\src\handler.h"\
+	"..\metakit\src\handler.inl"\
+	"..\metakit\src\persist.h"\
+	"..\metakit\src\store.h"\
+	"..\metakit\src\store.inl"\
+	
+NODEP_CPP_STORE=\
+	"..\metakit\src\mk4io.h"\
+	
+
+!ENDIF 
+
+# End Source File
+# Begin Source File
+
+SOURCE=..\metakit\src\store.h
+# End Source File
+# Begin Source File
+
+SOURCE=..\metakit\src\store.inl
+# End Source File
+# Begin Source File
+
+SOURCE=..\metakit\src\string.cpp
+
+!IF  "$(CFG)" == "Jukebox - Win32 (WCE MIPS) Release"
+
+NODEP_CPP_STRIN=\
+	"..\metakit\src\mk4str.h"\
+	"..\metakit\src\mk4str.inl"\
+	
+
+!ELSEIF  "$(CFG)" == "Jukebox - Win32 (WCE MIPS) Debug"
+
+NODEP_CPP_STRIN=\
+	"..\metakit\src\mk4str.h"\
+	"..\metakit\src\mk4str.inl"\
+	
+
+!ELSEIF  "$(CFG)" == "Jukebox - Win32 (WCE SH3) Release"
+
+DEP_CPP_STRIN=\
+	"..\metakit\include\mk4str.h"\
+	"..\metakit\include\mk4str.inl"\
+	
+
+!ELSEIF  "$(CFG)" == "Jukebox - Win32 (WCE SH3) Debug"
+
+DEP_CPP_STRIN=\
+	"..\metakit\include\mk4str.h"\
+	"..\metakit\include\mk4str.inl"\
+	
+
+!ELSEIF  "$(CFG)" == "Jukebox - Win32 (WCE ARM) Release"
+
+DEP_CPP_STRIN=\
+	"..\metakit\include\mk4str.h"\
+	"..\metakit\include\mk4str.inl"\
+	
+
+!ELSEIF  "$(CFG)" == "Jukebox - Win32 (WCE ARM) Debug"
+
+DEP_CPP_STRIN=\
+	"..\metakit\include\mk4str.h"\
+	"..\metakit\include\mk4str.inl"\
+	
+
+!ELSEIF  "$(CFG)" == "Jukebox - Win32 (WCE x86em) Release"
+
+NODEP_CPP_STRIN=\
+	"..\metakit\src\mk4str.h"\
+	"..\metakit\src\mk4str.inl"\
+	
+
+!ELSEIF  "$(CFG)" == "Jukebox - Win32 (WCE x86em) Debug"
+
+DEP_CPP_STRIN=\
+	"..\metakit\include\mk4str.h"\
+	"..\metakit\include\mk4str.inl"\
+	
+
+!ENDIF 
+
+# End Source File
+# Begin Source File
+
+SOURCE=..\metakit\src\table.cpp
+
+!IF  "$(CFG)" == "Jukebox - Win32 (WCE MIPS) Release"
+
+DEP_CPP_TABLE=\
+	"..\metakit\src\column.h"\
+	"..\metakit\src\column.inl"\
+	"..\metakit\src\field.h"\
+	"..\metakit\src\field.inl"\
+	"..\metakit\src\format.h"\
+	"..\metakit\src\handler.h"\
+	"..\metakit\src\handler.inl"\
+	"..\metakit\src\persist.h"\
+	"..\metakit\src\store.h"\
+	"..\metakit\src\store.inl"\
+	
+
+!ELSEIF  "$(CFG)" == "Jukebox - Win32 (WCE MIPS) Debug"
+
+DEP_CPP_TABLE=\
+	"..\metakit\src\column.h"\
+	"..\metakit\src\column.inl"\
+	"..\metakit\src\field.h"\
+	"..\metakit\src\field.inl"\
+	"..\metakit\src\format.h"\
+	"..\metakit\src\handler.h"\
+	"..\metakit\src\handler.inl"\
+	"..\metakit\src\persist.h"\
+	"..\metakit\src\store.h"\
+	"..\metakit\src\store.inl"\
+	
+
+!ELSEIF  "$(CFG)" == "Jukebox - Win32 (WCE SH3) Release"
+
+DEP_CPP_TABLE=\
+	"..\metakit\src\column.h"\
+	"..\metakit\src\column.inl"\
+	"..\metakit\src\field.h"\
+	"..\metakit\src\field.inl"\
+	"..\metakit\src\format.h"\
+	"..\metakit\src\handler.h"\
+	"..\metakit\src\handler.inl"\
+	"..\metakit\src\persist.h"\
+	"..\metakit\src\store.h"\
+	"..\metakit\src\store.inl"\
+	
+
+!ELSEIF  "$(CFG)" == "Jukebox - Win32 (WCE SH3) Debug"
+
+DEP_CPP_TABLE=\
+	"..\metakit\src\column.h"\
+	"..\metakit\src\column.inl"\
+	"..\metakit\src\field.h"\
+	"..\metakit\src\field.inl"\
+	"..\metakit\src\format.h"\
+	"..\metakit\src\handler.h"\
+	"..\metakit\src\handler.inl"\
+	"..\metakit\src\persist.h"\
+	"..\metakit\src\store.h"\
+	"..\metakit\src\store.inl"\
+	
+
+!ELSEIF  "$(CFG)" == "Jukebox - Win32 (WCE ARM) Release"
+
+DEP_CPP_TABLE=\
+	"..\metakit\src\column.h"\
+	"..\metakit\src\column.inl"\
+	"..\metakit\src\field.h"\
+	"..\metakit\src\field.inl"\
+	"..\metakit\src\format.h"\
+	"..\metakit\src\handler.h"\
+	"..\metakit\src\handler.inl"\
+	"..\metakit\src\persist.h"\
+	"..\metakit\src\store.h"\
+	"..\metakit\src\store.inl"\
+	
+
+!ELSEIF  "$(CFG)" == "Jukebox - Win32 (WCE ARM) Debug"
+
+DEP_CPP_TABLE=\
+	"..\metakit\src\column.h"\
+	"..\metakit\src\column.inl"\
+	"..\metakit\src\field.h"\
+	"..\metakit\src\field.inl"\
+	"..\metakit\src\format.h"\
+	"..\metakit\src\handler.h"\
+	"..\metakit\src\handler.inl"\
+	"..\metakit\src\persist.h"\
+	"..\metakit\src\store.h"\
+	"..\metakit\src\store.inl"\
+	
+
+!ELSEIF  "$(CFG)" == "Jukebox - Win32 (WCE x86em) Release"
+
+DEP_CPP_TABLE=\
+	"..\metakit\src\column.h"\
+	"..\metakit\src\column.inl"\
+	"..\metakit\src\field.h"\
+	"..\metakit\src\field.inl"\
+	"..\metakit\src\format.h"\
+	"..\metakit\src\handler.h"\
+	"..\metakit\src\handler.inl"\
+	"..\metakit\src\persist.h"\
+	"..\metakit\src\store.h"\
+	"..\metakit\src\store.inl"\
+	
+
+!ELSEIF  "$(CFG)" == "Jukebox - Win32 (WCE x86em) Debug"
+
+DEP_CPP_TABLE=\
+	"..\metakit\src\column.h"\
+	"..\metakit\src\column.inl"\
+	"..\metakit\src\field.h"\
+	"..\metakit\src\field.inl"\
+	"..\metakit\src\format.h"\
+	"..\metakit\src\handler.h"\
+	"..\metakit\src\handler.inl"\
+	"..\metakit\src\persist.h"\
+	"..\metakit\src\store.h"\
+	"..\metakit\src\store.inl"\
+	
+
+!ENDIF 
+
+# End Source File
+# Begin Source File
+
+SOURCE=..\metakit\src\univ.cpp
+
+!IF  "$(CFG)" == "Jukebox - Win32 (WCE MIPS) Release"
+
+DEP_CPP_UNIV_=\
+	"..\metakit\src\univ.inl"\
+	
+
+!ELSEIF  "$(CFG)" == "Jukebox - Win32 (WCE MIPS) Debug"
+
+DEP_CPP_UNIV_=\
+	"..\metakit\src\univ.inl"\
+	
+
+!ELSEIF  "$(CFG)" == "Jukebox - Win32 (WCE SH3) Release"
+
+DEP_CPP_UNIV_=\
+	"..\metakit\src\univ.inl"\
+	
+
+!ELSEIF  "$(CFG)" == "Jukebox - Win32 (WCE SH3) Debug"
+
+DEP_CPP_UNIV_=\
+	"..\metakit\src\univ.inl"\
+	
+
+!ELSEIF  "$(CFG)" == "Jukebox - Win32 (WCE ARM) Release"
+
+DEP_CPP_UNIV_=\
+	"..\metakit\src\univ.inl"\
+	
+
+!ELSEIF  "$(CFG)" == "Jukebox - Win32 (WCE ARM) Debug"
+
+DEP_CPP_UNIV_=\
+	"..\metakit\src\univ.inl"\
+	
+
+!ELSEIF  "$(CFG)" == "Jukebox - Win32 (WCE x86em) Release"
+
+DEP_CPP_UNIV_=\
+	"..\metakit\src\univ.inl"\
+	
+
+!ELSEIF  "$(CFG)" == "Jukebox - Win32 (WCE x86em) Debug"
+
+DEP_CPP_UNIV_=\
+	"..\metakit\src\univ.inl"\
+	
+
+!ENDIF 
+
+# End Source File
+# Begin Source File
+
+SOURCE=..\metakit\src\univ.h
+# End Source File
+# Begin Source File
+
+SOURCE=..\metakit\src\univ.inl
+# End Source File
+# Begin Source File
+
+SOURCE=..\metakit\src\view.cpp
+
+!IF  "$(CFG)" == "Jukebox - Win32 (WCE MIPS) Release"
+
+DEP_CPP_VIEW_=\
+	"..\metakit\src\custom.h"\
+	"..\metakit\src\derived.h"\
+	"..\metakit\src\field.h"\
+	"..\metakit\src\field.inl"\
+	"..\metakit\src\handler.h"\
+	"..\metakit\src\handler.inl"\
+	"..\metakit\src\store.h"\
+	"..\metakit\src\store.inl"\
+	
+NODEP_CPP_VIEW_=\
+	"..\metakit\src\mk4.inl"\
+	
+
+!ELSEIF  "$(CFG)" == "Jukebox - Win32 (WCE MIPS) Debug"
+
+DEP_CPP_VIEW_=\
+	"..\metakit\src\custom.h"\
+	"..\metakit\src\derived.h"\
+	"..\metakit\src\field.h"\
+	"..\metakit\src\field.inl"\
+	"..\metakit\src\handler.h"\
+	"..\metakit\src\handler.inl"\
+	"..\metakit\src\store.h"\
+	"..\metakit\src\store.inl"\
+	
+NODEP_CPP_VIEW_=\
+	"..\metakit\src\mk4.inl"\
+	
+
+!ELSEIF  "$(CFG)" == "Jukebox - Win32 (WCE SH3) Release"
+
+DEP_CPP_VIEW_=\
+	"..\metakit\include\mk4.inl"\
+	"..\metakit\src\custom.h"\
+	"..\metakit\src\derived.h"\
+	"..\metakit\src\field.h"\
+	"..\metakit\src\field.inl"\
+	"..\metakit\src\handler.h"\
+	"..\metakit\src\handler.inl"\
+	"..\metakit\src\store.h"\
+	"..\metakit\src\store.inl"\
+	
+
+!ELSEIF  "$(CFG)" == "Jukebox - Win32 (WCE SH3) Debug"
+
+DEP_CPP_VIEW_=\
+	"..\metakit\src\custom.h"\
+	"..\metakit\src\derived.h"\
+	"..\metakit\src\field.h"\
+	"..\metakit\src\field.inl"\
+	"..\metakit\src\handler.h"\
+	"..\metakit\src\handler.inl"\
+	"..\metakit\src\store.h"\
+	"..\metakit\src\store.inl"\
+	
+NODEP_CPP_VIEW_=\
+	"..\metakit\src\mk4.inl"\
+	
+
+!ELSEIF  "$(CFG)" == "Jukebox - Win32 (WCE ARM) Release"
+
+DEP_CPP_VIEW_=\
+	"..\metakit\include\mk4.inl"\
+	"..\metakit\src\custom.h"\
+	"..\metakit\src\derived.h"\
+	"..\metakit\src\field.h"\
+	"..\metakit\src\field.inl"\
+	"..\metakit\src\handler.h"\
+	"..\metakit\src\handler.inl"\
+	"..\metakit\src\store.h"\
+	"..\metakit\src\store.inl"\
+	
+
+!ELSEIF  "$(CFG)" == "Jukebox - Win32 (WCE ARM) Debug"
+
+DEP_CPP_VIEW_=\
+	"..\metakit\include\mk4.inl"\
+	"..\metakit\src\custom.h"\
+	"..\metakit\src\derived.h"\
+	"..\metakit\src\field.h"\
+	"..\metakit\src\field.inl"\
+	"..\metakit\src\handler.h"\
+	"..\metakit\src\handler.inl"\
+	"..\metakit\src\store.h"\
+	"..\metakit\src\store.inl"\
+	
+
+!ELSEIF  "$(CFG)" == "Jukebox - Win32 (WCE x86em) Release"
+
+DEP_CPP_VIEW_=\
+	"..\metakit\src\custom.h"\
+	"..\metakit\src\derived.h"\
+	"..\metakit\src\field.h"\
+	"..\metakit\src\field.inl"\
+	"..\metakit\src\handler.h"\
+	"..\metakit\src\handler.inl"\
+	"..\metakit\src\store.h"\
+	"..\metakit\src\store.inl"\
+	
+NODEP_CPP_VIEW_=\
+	"..\metakit\src\mk4.inl"\
+	
+
+!ELSEIF  "$(CFG)" == "Jukebox - Win32 (WCE x86em) Debug"
+
+DEP_CPP_VIEW_=\
+	"..\metakit\src\custom.h"\
+	"..\metakit\src\derived.h"\
+	"..\metakit\src\field.h"\
+	"..\metakit\src\field.inl"\
+	"..\metakit\src\handler.h"\
+	"..\metakit\src\handler.inl"\
+	"..\metakit\src\store.h"\
+	"..\metakit\src\store.inl"\
+	
+NODEP_CPP_VIEW_=\
+	"..\metakit\src\mk4.inl"\
+	
+
+!ENDIF 
+
+# End Source File
+# Begin Source File
+
+SOURCE=..\metakit\src\viewx.cpp
+
+!IF  "$(CFG)" == "Jukebox - Win32 (WCE MIPS) Release"
+
+DEP_CPP_VIEWX=\
+	"..\metakit\src\column.h"\
+	"..\metakit\src\column.inl"\
+	"..\metakit\src\handler.h"\
+	"..\metakit\src\handler.inl"\
+	"..\metakit\src\store.h"\
+	"..\metakit\src\store.inl"\
+	
+
+!ELSEIF  "$(CFG)" == "Jukebox - Win32 (WCE MIPS) Debug"
+
+DEP_CPP_VIEWX=\
+	"..\metakit\src\column.h"\
+	"..\metakit\src\column.inl"\
+	"..\metakit\src\handler.h"\
+	"..\metakit\src\handler.inl"\
+	"..\metakit\src\store.h"\
+	"..\metakit\src\store.inl"\
+	
+
+!ELSEIF  "$(CFG)" == "Jukebox - Win32 (WCE SH3) Release"
+
+DEP_CPP_VIEWX=\
+	"..\metakit\src\column.h"\
+	"..\metakit\src\column.inl"\
+	"..\metakit\src\handler.h"\
+	"..\metakit\src\handler.inl"\
+	"..\metakit\src\store.h"\
+	"..\metakit\src\store.inl"\
+	
+
+!ELSEIF  "$(CFG)" == "Jukebox - Win32 (WCE SH3) Debug"
+
+DEP_CPP_VIEWX=\
+	"..\metakit\src\column.h"\
+	"..\metakit\src\column.inl"\
+	"..\metakit\src\handler.h"\
+	"..\metakit\src\handler.inl"\
+	"..\metakit\src\store.h"\
+	"..\metakit\src\store.inl"\
+	
+
+!ELSEIF  "$(CFG)" == "Jukebox - Win32 (WCE ARM) Release"
+
+DEP_CPP_VIEWX=\
+	"..\metakit\src\column.h"\
+	"..\metakit\src\column.inl"\
+	"..\metakit\src\handler.h"\
+	"..\metakit\src\handler.inl"\
+	"..\metakit\src\store.h"\
+	"..\metakit\src\store.inl"\
+	
+
+!ELSEIF  "$(CFG)" == "Jukebox - Win32 (WCE ARM) Debug"
+
+DEP_CPP_VIEWX=\
+	"..\metakit\src\column.h"\
+	"..\metakit\src\column.inl"\
+	"..\metakit\src\handler.h"\
+	"..\metakit\src\handler.inl"\
+	"..\metakit\src\store.h"\
+	"..\metakit\src\store.inl"\
+	
+
+!ELSEIF  "$(CFG)" == "Jukebox - Win32 (WCE x86em) Release"
+
+DEP_CPP_VIEWX=\
+	"..\metakit\src\column.h"\
+	"..\metakit\src\column.inl"\
+	"..\metakit\src\handler.h"\
+	"..\metakit\src\handler.inl"\
+	"..\metakit\src\store.h"\
+	"..\metakit\src\store.inl"\
+	
+
+!ELSEIF  "$(CFG)" == "Jukebox - Win32 (WCE x86em) Debug"
+
+DEP_CPP_VIEWX=\
+	"..\metakit\src\column.h"\
+	"..\metakit\src\column.inl"\
+	"..\metakit\src\handler.h"\
+	"..\metakit\src\handler.inl"\
+	"..\metakit\src\store.h"\
+	"..\metakit\src\store.inl"\
+	
+
+!ENDIF 
+
+# End Source File
+# Begin Source File
+
+SOURCE=..\metakit\src\win.h
+# End Source File
+# End Group
+# End Target
+# End Project

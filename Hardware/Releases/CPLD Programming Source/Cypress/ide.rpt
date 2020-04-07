@@ -1,0 +1,1541 @@
+
+     | | | | | | |
+   _________________
+  -|               |-
+  -|               |-
+  -|               |-
+  -|    CYPRESS    |-
+  -|               |-
+  -|               |-   Warp Verilog Synthesis Compiler: Version 6.2 IR 28.4
+  -|               |-   Copyright (C) 1991-2001 Cypress Semiconductor
+   |_______________|
+     | | | | | | |
+
+======================================================================
+Compiling:  ide.v
+Options:    -verilog -m -yu -e10 -w100 -o2 -ygs -fO -fP -yi33 -v10 -yh -dc37032 -pcy37032p44-125ac -IC:\Program Files\Cypress\Warp\lib\common -b ide.v -u CypressIDE.hie -uch0000
+======================================================================
+
+vlogfe V6.2 IR 27:  Verilog parser
+Mon Sep 09 12:22:26 2002
+
+
+vpp V6.2 IR 27:  Verilog Pre-Processor
+Mon Sep 09 12:22:26 2002
+
+
+vpp:  No errors.
+
+Library 'work' => directory 'lc37032'
+Linking 'C:\Program Files\Cypress\Warp\bin\std.vhd'.
+Linking 'C:\Program Files\Cypress\Warp\lib\common\cypress.vhd'.
+Linking 'C:\Program Files\Cypress\Warp\lib\common\work\cypress.vif'.
+Linking 'C:\Program Files\Cypress\Warp\lib\ieee\work\stdlogic.vif'.
+Linking 'C:\Program Files\Cypress\Warp\lib\common\stdlogic\lpmpkg.vif'.
+Linking 'C:\Program Files\Cypress\Warp\lib\common\stdlogic\rtlpkg.vif'.
+Linking 'C:\Program Files\Cypress\Warp\lib\common\stdlogic\mod_cnst.vif'.
+Linking 'C:\Program Files\Cypress\Warp\lib\common\stdlogic\mod_mthv.vif'.
+Linking 'C:\Program Files\Cypress\Warp\lib\common\stdlogic\mod_genv.vif'.
+Using control file 'ide.ctl'.
+Note:  Using config. rule 'reset' to set fixedattribute 'pin_numbers' on 'reset'.
+Note:  Using config. rule 'cs5' to set fixedattribute 'pin_numbers' on 'cs5'.
+Note:  Using config. rule 'moe' to set fixedattribute 'pin_numbers' on 'moe'.
+Note:  Using config. rule 'mwe' to set fixedattribute 'pin_numbers' on 'mwe'.
+Note:  Using config. rule 'clk' to set fixedattribute 'pin_numbers' on 'clk'.
+Note:  Using config. rule 'intrq' to set fixedattribute 'pin_numbers' on 'intrq'.
+Note:  Using config. rule 'exprdy' to set fixedattribute 'pin_numbers' on 'exprdy'.
+Note:  Using config. rule 'cs0' to set fixedattribute 'pin_numbers' on 'cs0'.
+Note:  Using config. rule 'cs1' to set fixedattribute 'pin_numbers' on 'cs1'.
+Note:  Using config. rule 'eint' to set fixedattribute 'pin_numbers' on 'eint'.
+Note:  Using config. rule 'dior' to set fixedattribute 'pin_numbers' on 'dior'.
+Note:  Using config. rule 'diow' to set fixedattribute 'pin_numbers' on 'diow'.
+Note:  Using config. rule 'rw' to set fixedattribute 'pin_numbers' on 'rw'.
+Note:  Using config. rule 'oe' to set fixedattribute 'pin_numbers' on 'oe'.
+Note:  Using config. rule 'a0' to set fixedattribute 'pin_numbers' on 'a0'.
+Note:  Using config. rule 'a1' to set fixedattribute 'pin_numbers' on 'a1'.
+Note:  Using config. rule 'a2' to set fixedattribute 'pin_numbers' on 'a2'.
+Note:  Using config. rule 'a3' to set fixedattribute 'pin_numbers' on 'a3'.
+Note:  Using config. rule 'da0' to set fixedattribute 'pin_numbers' on 'da0'.
+Note:  Using config. rule 'da1' to set fixedattribute 'pin_numbers' on 'da1'.
+Note:  Using config. rule 'da2' to set fixedattribute 'pin_numbers' on 'da2'.
+Note:  Using config. rule 'iordy' to set fixedattribute 'pin_numbers' on 'iordy'.
+Note:  Using config. rule 'cs2' to set fixedattribute 'pin_numbers' on 'cs2'.
+Note:  Using config. rule 'ethernetsel' to set fixedattribute 'pin_numbers' on 'ethernetsel'.
+Note:  Using config. rule 'mweslow' to set fixedattribute 'pin_numbers' on 'mweslow'.
+Note:  Using config. rule 'moeslow' to set fixedattribute 'pin_numbers' on 'moeslow'.
+ide.v (line 148, col 24):  Note: Substituting module 'add_vi_vv' for '+'.
+ide.v (line 176, col 25):  Note: Substituting module 'add_vi_vv' for '+'.
+ide.v (line 193, col 25):  Note: Substituting module 'add_vi_vv' for '+'.
+ide.v (line 196, col 75):  Note: Substituting module 'cmp_vv_vv' for '>='.
+ide.v (line 227, col 24):  Note: Substituting module 'add_vi_vv' for '+'.
+ide.v (line 255, col 34):  Note: Substituting module 'add_vi_vv' for '+'.
+ide.v (line 271, col 25):  Note: Substituting module 'add_vi_vv' for '+'.
+ide.v (line 275, col 71):  Note: Substituting module 'cmp_vv_vv' for '>='.
+
+vlogfe:  No errors.
+
+
+tovif V6.2 IR 27:  High-level synthesis
+Mon Sep 09 12:22:26 2002
+
+Linking 'C:\Program Files\Cypress\Warp\bin\std.vhd'.
+Linking 'C:\Program Files\Cypress\Warp\lib\common\cypress.vhd'.
+Linking 'C:\Program Files\Cypress\Warp\lib\common\work\cypress.vif'.
+Linking 'C:\Program Files\Cypress\Warp\lib\ieee\work\stdlogic.vif'.
+Linking 'C:\Program Files\Cypress\Warp\lib\common\stdlogic\lpmpkg.vif'.
+Linking 'C:\Program Files\Cypress\Warp\lib\common\stdlogic\rtlpkg.vif'.
+Linking 'C:\Program Files\Cypress\Warp\lib\common\stdlogic\mod_cnst.vif'.
+Linking 'C:\Program Files\Cypress\Warp\lib\common\stdlogic\mod_mthv.vif'.
+Linking 'C:\Program Files\Cypress\Warp\lib\common\stdlogic\mod_genv.vif'.
+Linking 'C:\Documents and Settings\brucew\My Documents\Projects\DarwinJukebox\Cypress\100-0018-03-C\ide.ctl'.
+
+tovif:  No errors.
+
+
+topld V6.2 IR 27:  Synthesis and optimization
+Mon Sep 09 12:22:27 2002
+
+Linking 'C:\Program Files\Cypress\Warp\bin\std.vhd'.
+Linking 'C:\Program Files\Cypress\Warp\lib\common\cypress.vhd'.
+Linking 'C:\Program Files\Cypress\Warp\lib\common\work\cypress.vif'.
+Linking 'C:\Program Files\Cypress\Warp\lib\ieee\work\stdlogic.vif'.
+Linking 'C:\Program Files\Cypress\Warp\lib\common\stdlogic\lpmpkg.vif'.
+Linking 'C:\Program Files\Cypress\Warp\lib\common\stdlogic\rtlpkg.vif'.
+Linking 'C:\Program Files\Cypress\Warp\lib\common\stdlogic\mod_cnst.vif'.
+Linking 'C:\Program Files\Cypress\Warp\lib\common\stdlogic\mod_mthv.vif'.
+Linking 'C:\Program Files\Cypress\Warp\lib\common\stdlogic\mod_genv.vif'.
+Linking 'C:\Documents and Settings\brucew\My Documents\Projects\DarwinJukebox\Cypress\100-0018-03-C\ide.ctl'.
+topld:  ide.v:  Warning: (W4000) Top level entity/module generics/parameters are ignored in post-layout simulation
+Note:  Using config. rule 'reset' to set fixedattribute 'pin_numbers' on 'reset'.
+Note:  Using config. rule 'cs5' to set fixedattribute 'pin_numbers' on 'cs5'.
+Note:  Using config. rule 'moe' to set fixedattribute 'pin_numbers' on 'moe'.
+Note:  Using config. rule 'mwe' to set fixedattribute 'pin_numbers' on 'mwe'.
+Note:  Using config. rule 'clk' to set fixedattribute 'pin_numbers' on 'clk'.
+Note:  Using config. rule 'intrq' to set fixedattribute 'pin_numbers' on 'intrq'.
+Note:  Using config. rule 'exprdy' to set fixedattribute 'pin_numbers' on 'exprdy'.
+Note:  Using config. rule 'cs0' to set fixedattribute 'pin_numbers' on 'cs0'.
+Note:  Using config. rule 'cs1' to set fixedattribute 'pin_numbers' on 'cs1'.
+Note:  Using config. rule 'eint' to set fixedattribute 'pin_numbers' on 'eint'.
+Note:  Using config. rule 'dior' to set fixedattribute 'pin_numbers' on 'dior'.
+Note:  Using config. rule 'diow' to set fixedattribute 'pin_numbers' on 'diow'.
+Note:  Using config. rule 'rw' to set fixedattribute 'pin_numbers' on 'rw'.
+Note:  Using config. rule 'oe' to set fixedattribute 'pin_numbers' on 'oe'.
+Note:  Using config. rule 'a0' to set fixedattribute 'pin_numbers' on 'a0'.
+Note:  Using config. rule 'a1' to set fixedattribute 'pin_numbers' on 'a1'.
+Note:  Using config. rule 'a2' to set fixedattribute 'pin_numbers' on 'a2'.
+Note:  Using config. rule 'a3' to set fixedattribute 'pin_numbers' on 'a3'.
+Note:  Using config. rule 'da0' to set fixedattribute 'pin_numbers' on 'da0'.
+Note:  Using config. rule 'da1' to set fixedattribute 'pin_numbers' on 'da1'.
+Note:  Using config. rule 'da2' to set fixedattribute 'pin_numbers' on 'da2'.
+Note:  Using config. rule 'iordy' to set fixedattribute 'pin_numbers' on 'iordy'.
+Note:  Using config. rule 'cs2' to set fixedattribute 'pin_numbers' on 'cs2'.
+Note:  Using config. rule 'ethernetsel' to set fixedattribute 'pin_numbers' on 'ethernetsel'.
+Note:  Using config. rule 'mweslow' to set fixedattribute 'pin_numbers' on 'mweslow'.
+Note:  Using config. rule 'moeslow' to set fixedattribute 'pin_numbers' on 'moeslow'.
+Linking 'C:\Program Files\Cypress\Warp\lib\lc370\stdlogic\c370.vif'.
+Note:  Using config. rule 'clk' to set fixedattribute 'pin_numbers' on 'clk'.
+
+----------------------------------------------------------
+Detecting unused logic.
+----------------------------------------------------------
+
+
+Deleted 0 User equations/components.
+Deleted 79 Synthesized equations/components.
+
+------------------------------------------------------
+Alias Detection
+------------------------------------------------------
+
+------------------------------------------------------
+Aliased 0 equations, 71 wires.
+------------------------------------------------------
+
+----------------------------------------------------------
+Circuit simplification
+----------------------------------------------------------
+
+----------------------------------------------------------
+Circuit simplification results:
+
+	Expanded 27 signals.
+	Turned 0 signals into soft nodes.
+	Maximum default expansion cost was set at 10.
+----------------------------------------------------------
+
+------------------------------------------------------
+Alias Detection
+------------------------------------------------------
+
+------------------------------------------------------
+Aliased 0 equations, 0 wires.
+------------------------------------------------------
+Created 231 PLD nodes.
+
+topld:  No errors.  1 warning.
+
+----------------------------------------------------------------------------
+PLD Optimizer Software:       DSGNOPT.EXE    31/03/2000  [v4.02 ] 6.2 IR 27
+
+DESIGN HEADER INFORMATION  (12:22:28)
+
+Input File(s): ide.pla
+Device       : cy37032p44
+Package      : cy37032p44-125ac
+ReportFile   : ide.rpt
+
+Program Controls:
+    COMMAND LANGUAGE_VHDL 
+    COMMAND UserCode 0000000000000000 
+    COMMAND PROPERTY VCCO 33 
+    COMMAND PROPERTY BUS_HOLD DISABLE 
+
+Signal Requests:
+    GROUP DT-OPT ALL
+    GROUP USEPOL ALL
+    GROUP FAST_SLEW ALL
+
+Completed Successfully  
+----------------------------------------------------------------------------
+PLD Optimizer Software:       DSGNOPT.EXE    31/03/2000  [v4.02 ] 6.2 IR 27
+
+OPTIMIZATION OPTIONS       (12:22:28)
+
+Messages:
+  Information: Process virtual 'count_0D'count_0D ... expanded.
+  Information: Process virtual 'count_1D'count_1D ... expanded.
+  Information: Process virtual 'count_2D'count_2D ... expanded.
+  Information: Process virtual 'count_3D'count_3D ... expanded.
+  Information: Process virtual 'count_4D'count_4D ... expanded.
+  Information: Process virtual 'count_5D'count_5D ... expanded.
+  Information: Process virtual 'state_0D'state_0D ... expanded.
+  Information: Process virtual 'state_1D'state_1D ... expanded.
+  Information: Process virtual 'state_2D'state_2D ... expanded.
+  Information: Process virtual 'tmp_moeD'tmp_moeD ... expanded.
+  Information: Process virtual 'tmp_mweD'tmp_mweD ... expanded.
+  Information: Process virtual 'tmp_cs2D'tmp_cs2D ... expanded.
+  Information: Process virtual 'tmp_diowD'tmp_diowD ... expanded.
+  Information: Process virtual 'tmp_diorD'tmp_diorD ... expanded.
+  Information: Process virtual 'tmp_exprdyD'tmp_exprdyD ... expanded.
+  Information: Process virtual 'tmp_cs1D'tmp_cs1D ... expanded.
+  Information: Process virtual 'tmp_cs0D'tmp_cs0D ... expanded.
+  Information: Process virtual 'tmp_rwD'tmp_rwD ... expanded.
+  Information: Process virtual 'count_0' ... converted to NODE.
+  Information: Process virtual 'count_1' ... converted to NODE.
+  Information: Process virtual 'count_2' ... converted to NODE.
+  Information: Process virtual 'count_3' ... converted to NODE.
+  Information: Process virtual 'count_4' ... converted to NODE.
+  Information: Process virtual 'count_5' ... converted to NODE.
+  Information: Process virtual 'state_0' ... converted to NODE.
+  Information: Process virtual 'state_1' ... converted to NODE.
+  Information: Process virtual 'state_2' ... converted to NODE.
+  Information: Process virtual 'tmp_moe' ... converted to NODE.
+  Information: Process virtual 'tmp_mwe' ... converted to NODE.
+  Information: Process virtual 'tmp_cs2'tmp_cs2 ... expanded.
+  Information: Process virtual 'tmp_diow'tmp_diow ... expanded.
+  Information: Process virtual 'tmp_dior'tmp_dior ... expanded.
+  Information: Process virtual 'tmp_exprdy'tmp_exprdy ... expanded.
+  Information: Process virtual 'tmp_cs1'tmp_cs1 ... expanded.
+  Information: Process virtual 'tmp_cs0'tmp_cs0 ... expanded.
+  Information: Process virtual 'tmp_rw'tmp_rw ... expanded.
+  Information: Generating both D & T register equations for signal rw.D[44]
+  Information: Expanding XOR equation found on signal rw.T[44]
+  Information: Generating both D & T register equations for signal ethernetsel.D[12]
+  Information: Expanding XOR equation found on signal ethernetsel.T[12]
+  Information: Generating both D & T register equations for signal exprdy.D[18]
+  Information: Expanding XOR equation found on signal exprdy.T[18]
+  Information: Generating both D & T register equations for signal cs1.D[20]
+  Information: Expanding XOR equation found on signal cs1.T[20]
+  Information: Generating both D & T register equations for signal cs0.D[22]
+  Information: Expanding XOR equation found on signal cs0.T[22]
+  Information: Generating both D & T register equations for signal dior.D[31]
+  Information: Expanding XOR equation found on signal dior.T[31]
+  Information: Generating both D & T register equations for signal diow.D[32]
+  Information: Expanding XOR equation found on signal diow.T[32]
+  Information: Generating both D & T register equations for signal count_0.D
+  Information: Expanding XOR equation found on signal count_0.T
+  Information: Generating both D & T register equations for signal count_1.D
+  Information: Expanding XOR equation found on signal count_1.T
+  Information: Generating both D & T register equations for signal count_2.D
+  Information: Expanding XOR equation found on signal count_2.T
+  Information: Generating both D & T register equations for signal count_3.D
+  Information: Expanding XOR equation found on signal count_3.T
+  Information: Generating both D & T register equations for signal count_4.D
+  Information: Expanding XOR equation found on signal count_4.T
+  Information: Generating both D & T register equations for signal count_5.D
+  Information: Expanding XOR equation found on signal count_5.T
+  Information: Generating both D & T register equations for signal state_0.D
+  Information: Expanding XOR equation found on signal state_0.T
+  Information: Generating both D & T register equations for signal state_1.D
+  Information: Expanding XOR equation found on signal state_1.T
+  Information: Generating both D & T register equations for signal state_2.D
+  Information: Expanding XOR equation found on signal state_2.T
+  Information: Generating both D & T register equations for signal tmp_moe.D
+  Information: Expanding XOR equation found on signal tmp_moe.T
+  Information: Generating both D & T register equations for signal tmp_mwe.D
+  Information: Expanding XOR equation found on signal tmp_mwe.T
+  Information: Optimizing logic without changing polarity for signals:
+         count_0.T count_1.T count_2.T count_3.T count_4.T count_5.T cs0.T
+         cs1.T dior.T diow.T ethernetsel.T exprdy.T rw.T state_0.T state_1.T
+         state_2.T tmp_moe.T tmp_mwe.T
+
+  Information: Optimizing logic using best output polarity for signals:
+         count_0.D count_1.D count_2.D count_3.D count_4.D count_5.D cs0.D
+         cs1.D dior.D diow.D ethernetsel.D exprdy.D moeslow mweslow rw.D
+         state_0.D state_1.D state_2.D tmp_moe.D tmp_mwe.D
+
+  Information: Selected logic optimization OFF for signals:
+         count_0.AR count_0.C count_1.AR count_1.C count_2.AR count_2.C
+         count_3.AR count_3.C count_4.AR count_4.C count_5.AR count_5.C cs0.AP
+         cs0.C cs1.AP cs1.C da0 da1 da2 dior.AP dior.C diow.AP diow.C eint
+         ethernetsel.AP ethernetsel.C exprdy.AP exprdy.C oe rw.AP rw.C
+         state_0.AR state_0.C state_1.AR state_1.C state_2.AR state_2.C
+         tmp_moe.AP tmp_moe.C tmp_mwe.AP tmp_mwe.C
+
+
+
+Summary:
+                 Error Count = 0      Warning Count = 0
+
+Completed Successfully  
+----------------------------------------------------------------------------
+PLD Optimizer Software:       MINOPT.EXE     01/NOV/1999  [v4.02 ] 6.2 IR 27
+
+LOGIC MINIMIZATION         ()
+
+Messages:
+
+
+Summary:
+                 Error Count = 0      Warning Count = 0
+
+Completed Successfully
+----------------------------------------------------------------------------
+PLD Optimizer Software:       DSGNOPT.EXE    31/03/2000  [v4.02 ] 6.2 IR 27
+
+OPTIMIZATION OPTIONS       (12:22:28)
+
+Messages:
+  Information: Optimizing Banked Preset/Reset requirements.
+  Information: Selecting D register equation as minimal for signal count_0
+  Information: Selecting D register equation as minimal for signal count_1
+  Information: Selecting D register equation as minimal for signal count_2
+  Information: Selecting D register equation as minimal for signal count_3
+  Information: Selecting T register equation as minimal for signal count_4
+  Information: Selecting T register equation as minimal for signal count_5
+  Information: Selecting T register equation as minimal for signal state_0
+  Information: Selecting T register equation as minimal for signal state_1
+  Information: Selecting T register equation as minimal for signal dior
+  Information: Selecting T register equation as minimal for signal cs0
+  Information: Selecting T register equation as minimal for signal cs1
+  Information: Selecting T register equation as minimal for signal exprdy
+  Information: Selecting T register equation as minimal for signal rw
+  Information: Inverting Preset/Reset & output logic polarity for state_2.
+  Information: Selecting T register equation as minimal for signal state_2
+  Information: Inverting Preset/Reset & output logic polarity for tmp_moe.
+  Information: Selecting D register equation as minimal for signal tmp_moe
+  Information: Inverting Preset/Reset & output logic polarity for tmp_mwe.
+  Information: Selecting D register equation as minimal for signal tmp_mwe
+  Information: Inverting Preset/Reset & output logic polarity for diow.
+  Information: Selecting T register equation as minimal for signal diow
+  Information: Inverting Preset/Reset & output logic polarity for ethernetsel.
+  Information: Selecting D register equation as minimal for signal ethernetsel
+  Information: Optimizing logic without changing polarity for signals:
+         count_0.D count_1.D count_2.D count_3.D count_4.T count_5.T cs0.T
+         cs1.T dior.T diow.T ethernetsel.D exprdy.T rw.T state_0.T state_1.T
+         state_2.T tmp_moe.D tmp_mwe.D
+
+  Information: Selected logic optimization OFF for signals:
+         count_0.AP count_0.AR count_0.C count_1.AP count_1.AR count_1.C
+         count_2.AP count_2.AR count_2.C count_3.AP count_3.AR count_3.C
+         count_4.AP count_4.AR count_4.C count_5.AP count_5.AR count_5.C
+         cs0.AP cs0.AR cs0.C cs1.AP cs1.AR cs1.C da0 da1 da2 dior.AP dior.AR
+         dior.C diow.AP diow.AR diow.C eint ethernetsel.AP ethernetsel.AR
+         ethernetsel.C exprdy.AP exprdy.AR exprdy.C moeslow mweslow oe rw.AP
+         rw.AR rw.C state_0.AP state_0.AR state_0.C state_1.AP state_1.AR
+         state_1.C state_2.AP state_2.AR state_2.C tmp_moe.AP tmp_moe.AR
+         tmp_moe.C tmp_mwe.AP tmp_mwe.AR tmp_mwe.C
+
+
+
+Summary:
+                 Error Count = 0      Warning Count = 0
+
+Completed Successfully  
+----------------------------------------------------------------------------
+PLD Optimizer Software:       MINOPT.EXE     01/NOV/1999  [v4.02 ] 6.2 IR 27
+
+LOGIC MINIMIZATION         ()
+
+Messages:
+
+
+Summary:
+                 Error Count = 0      Warning Count = 0
+
+Completed Successfully
+----------------------------------------------------------------------------
+PLD Optimizer Software:       DSGNOPT.EXE    31/03/2000  [v4.02 ] 6.2 IR 27
+
+OPTIMIZATION OPTIONS       (12:22:29)
+
+Messages:
+
+
+Summary:
+                 Error Count = 0      Warning Count = 0
+
+Completed Successfully  
+----------------------------------------------------------------------------
+PLD Compiler Software:        C37KFIT.EXE    22/DEC/2000  [v4.02 ] 6.2 IR 27
+
+DESIGN EQUATIONS           (12:22:29)
+
+
+    /count_0.D =
+          count_1.Q * /count_2.Q * /count_3.Q * /count_4.Q * /count_5.Q * 
+          exprdy.Q * /state_0.Q * /state_1.Q * state_2.Q 
+        + count_2.Q * count_3.Q * count_4.Q * count_5.Q * /diow.Q * 
+          state_0.Q * state_1.Q * state_2.Q 
+        + count_1.Q * count_3.Q * count_4.Q * count_5.Q * /diow.Q * 
+          state_0.Q * state_1.Q * state_2.Q 
+        + count_2.Q * count_3.Q * count_4.Q * count_5.Q * /exprdy.Q * 
+          /state_0.Q * /state_1.Q * state_2.Q 
+        + count_1.Q * count_3.Q * count_4.Q * count_5.Q * /exprdy.Q * 
+          /state_0.Q * /state_1.Q * state_2.Q 
+        + count_1.Q * count_2.Q * /count_3.Q * /count_4.Q * /count_5.Q * 
+          state_0.Q * state_1.Q * /state_2.Q 
+        + /diow.Q * iordy * state_0.Q * state_1.Q * state_2.Q 
+        + /exprdy.Q * iordy * /state_0.Q * /state_1.Q * state_2.Q 
+        + /count_0.Q * /state_1.Q * /state_2.Q 
+        + count_0.Q * state_2.Q 
+        + count_0.Q * state_1.Q 
+
+    count_0.AP =
+          /reset 
+
+    count_0.AR =
+          GND
+
+    count_0.C =
+          clk 
+
+    /count_1.D =
+          /count_1.Q * /count_2.Q * /count_3.Q * /count_4.Q * /count_5.Q * 
+          diow.Q * state_0.Q * state_1.Q * state_2.Q 
+        + count_1.Q * /count_2.Q * /count_3.Q * /count_4.Q * /count_5.Q * 
+          exprdy.Q * /state_0.Q * /state_1.Q * state_2.Q 
+        + /count_1.Q * count_2.Q * /count_3.Q * /count_4.Q * /count_5.Q * 
+          /state_0.Q * state_1.Q * state_2.Q 
+        + count_1.Q * count_2.Q * /count_3.Q * /count_4.Q * /count_5.Q * 
+          state_0.Q * state_1.Q * /state_2.Q 
+        + count_3.Q * count_4.Q * count_5.Q * /diow.Q * state_0.Q * 
+          state_1.Q * state_2.Q 
+        + count_3.Q * count_4.Q * count_5.Q * /exprdy.Q * /state_0.Q * 
+          /state_1.Q * state_2.Q 
+        + /diow.Q * iordy * state_0.Q * state_1.Q * state_2.Q 
+        + /exprdy.Q * iordy * /state_0.Q * /state_1.Q * state_2.Q 
+        + count_0.Q * count_1.Q * state_2.Q 
+        + count_0.Q * count_1.Q * state_1.Q 
+        + /count_1.Q * /state_1.Q * /state_2.Q 
+        + /count_0.Q * /count_1.Q 
+
+    count_1.AP =
+          /reset 
+
+    count_1.AR =
+          GND
+
+    count_1.C =
+          clk 
+
+    /count_2.D =
+          count_0.Q * count_2.Q * /count_3.Q * /count_4.Q * /count_5.Q * 
+          /state_0.Q * state_1.Q * state_2.Q 
+        + count_1.Q * count_2.Q * /count_3.Q * /count_4.Q * /count_5.Q * 
+          state_0.Q * state_1.Q * /state_2.Q 
+        + count_3.Q * count_4.Q * count_5.Q * /diow.Q * state_0.Q * 
+          state_1.Q * state_2.Q 
+        + count_3.Q * count_4.Q * count_5.Q * /exprdy.Q * /state_0.Q * 
+          /state_1.Q * state_2.Q 
+        + /diow.Q * iordy * state_0.Q * state_1.Q * state_2.Q 
+        + /exprdy.Q * iordy * /state_0.Q * /state_1.Q * state_2.Q 
+        + count_0.Q * count_1.Q * count_2.Q * state_2.Q 
+        + count_0.Q * count_1.Q * count_2.Q * state_1.Q 
+        + /count_2.Q * /state_1.Q * /state_2.Q 
+        + /count_0.Q * /count_2.Q 
+        + /count_1.Q * /count_2.Q 
+
+    count_2.AP =
+          /reset 
+
+    count_2.AR =
+          GND
+
+    count_2.C =
+          clk 
+
+    /count_3.D =
+          count_2.Q * count_3.Q * count_4.Q * count_5.Q * /diow.Q * 
+          state_0.Q * state_1.Q * state_2.Q 
+        + count_1.Q * count_3.Q * count_4.Q * count_5.Q * /diow.Q * 
+          state_0.Q * state_1.Q * state_2.Q 
+        + count_0.Q * count_3.Q * count_4.Q * count_5.Q * /diow.Q * 
+          state_0.Q * state_1.Q * state_2.Q 
+        + count_2.Q * count_3.Q * count_4.Q * count_5.Q * /exprdy.Q * 
+          /state_0.Q * /state_1.Q * state_2.Q 
+        + count_1.Q * count_3.Q * count_4.Q * count_5.Q * /exprdy.Q * 
+          /state_0.Q * /state_1.Q * state_2.Q 
+        + count_0.Q * count_3.Q * count_4.Q * count_5.Q * /exprdy.Q * 
+          /state_0.Q * /state_1.Q * state_2.Q 
+        + count_0.Q * count_1.Q * count_2.Q * count_3.Q * state_2.Q 
+        + count_0.Q * count_1.Q * count_2.Q * count_3.Q * state_1.Q 
+        + /diow.Q * iordy * state_0.Q * state_1.Q * state_2.Q 
+        + /exprdy.Q * iordy * /state_0.Q * /state_1.Q * state_2.Q 
+        + /count_3.Q * /state_1.Q * /state_2.Q 
+        + /count_0.Q * /count_3.Q 
+        + /count_1.Q * /count_3.Q 
+        + /count_2.Q * /count_3.Q 
+
+    count_3.AP =
+          /reset 
+
+    count_3.AR =
+          GND
+
+    count_3.C =
+          clk 
+
+    /count_4.T =
+          count_2.Q * count_3.Q * count_4.Q * count_5.Q * /diow.Q * 
+          state_0.Q * state_1.Q * state_2.Q 
+        + count_1.Q * count_3.Q * count_4.Q * count_5.Q * /diow.Q * 
+          state_0.Q * state_1.Q * state_2.Q 
+        + count_0.Q * count_3.Q * count_4.Q * count_5.Q * /diow.Q * 
+          state_0.Q * state_1.Q * state_2.Q 
+        + count_2.Q * count_3.Q * count_4.Q * count_5.Q * /exprdy.Q * 
+          /state_0.Q * /state_1.Q * state_2.Q 
+        + count_1.Q * count_3.Q * count_4.Q * count_5.Q * /exprdy.Q * 
+          /state_0.Q * /state_1.Q * state_2.Q 
+        + count_0.Q * count_3.Q * count_4.Q * count_5.Q * /exprdy.Q * 
+          /state_0.Q * /state_1.Q * state_2.Q 
+        + count_0.Q * count_1.Q * count_2.Q * count_3.Q * state_0.Q * 
+          /state_1.Q * state_2.Q 
+        + count_0.Q * count_1.Q * count_2.Q * count_3.Q * exprdy.Q * 
+          /state_1.Q * state_2.Q 
+        + count_0.Q * count_1.Q * count_2.Q * count_3.Q * diow.Q * 
+          state_1.Q 
+        + count_4.Q * /diow.Q * iordy * state_0.Q * state_1.Q * state_2.Q 
+        + count_0.Q * count_1.Q * count_2.Q * count_3.Q * /iordy * 
+          state_2.Q 
+        + count_0.Q * count_1.Q * count_2.Q * count_3.Q * /state_0.Q * 
+          state_1.Q 
+        + count_4.Q * /exprdy.Q * iordy * /state_0.Q * /state_1.Q * 
+          state_2.Q 
+        + count_0.Q * count_1.Q * count_2.Q * count_3.Q * state_1.Q * 
+          /state_2.Q 
+
+    count_4.AP =
+          /reset 
+
+    count_4.AR =
+          GND
+
+    count_4.C =
+          clk 
+
+    /count_5.T =
+          count_2.Q * count_3.Q * count_4.Q * count_5.Q * /diow.Q * 
+          state_0.Q * state_1.Q * state_2.Q 
+        + count_1.Q * count_3.Q * count_4.Q * count_5.Q * /diow.Q * 
+          state_0.Q * state_1.Q * state_2.Q 
+        + count_0.Q * count_3.Q * count_4.Q * count_5.Q * /diow.Q * 
+          state_0.Q * state_1.Q * state_2.Q 
+        + count_0.Q * count_1.Q * count_2.Q * count_3.Q * count_4.Q * 
+          state_0.Q * /state_1.Q * state_2.Q 
+        + count_0.Q * count_1.Q * count_2.Q * count_3.Q * count_4.Q * 
+          exprdy.Q * /state_1.Q * state_2.Q 
+        + count_2.Q * count_3.Q * count_4.Q * count_5.Q * /exprdy.Q * 
+          /state_0.Q * /state_1.Q * state_2.Q 
+        + count_1.Q * count_3.Q * count_4.Q * count_5.Q * /exprdy.Q * 
+          /state_0.Q * /state_1.Q * state_2.Q 
+        + count_0.Q * count_3.Q * count_4.Q * count_5.Q * /exprdy.Q * 
+          /state_0.Q * /state_1.Q * state_2.Q 
+        + count_0.Q * count_1.Q * count_2.Q * count_3.Q * count_4.Q * 
+          diow.Q * state_1.Q 
+        + count_0.Q * count_1.Q * count_2.Q * count_3.Q * count_4.Q * 
+          /iordy * state_2.Q 
+        + count_0.Q * count_1.Q * count_2.Q * count_3.Q * count_4.Q * 
+          /state_0.Q * state_1.Q 
+        + count_0.Q * count_1.Q * count_2.Q * count_3.Q * count_4.Q * 
+          state_1.Q * /state_2.Q 
+        + count_5.Q * /diow.Q * iordy * state_0.Q * state_1.Q * state_2.Q 
+        + count_5.Q * /exprdy.Q * iordy * /state_0.Q * /state_1.Q * 
+          state_2.Q 
+
+    count_5.AP =
+          /reset 
+
+    count_5.AR =
+          GND
+
+    count_5.C =
+          clk 
+
+    cs0.T =
+          count_0.Q * /count_1.Q * /count_2.Q * /count_3.Q * /count_4.Q * 
+          /count_5.Q * /cs0.Q * diow.Q * state_0.Q * state_1.Q * state_2.Q 
+        + /count_0.Q * count_1.Q * /count_2.Q * /count_3.Q * /count_4.Q * 
+          /count_5.Q * /cs0.Q * exprdy.Q * /state_0.Q * /state_1.Q * 
+          state_2.Q 
+        + count_0.Q * /count_1.Q * count_2.Q * /count_3.Q * /count_4.Q * 
+          /count_5.Q * /cs0.Q * /state_0.Q * state_1.Q * state_2.Q 
+        + /count_0.Q * count_1.Q * count_2.Q * /count_3.Q * /count_4.Q * 
+          /count_5.Q * /cs0.Q * state_0.Q * state_1.Q * /state_2.Q 
+        + /a3 * cs0.Q * /cs5 * /state_0.Q * /state_1.Q * /state_2.Q 
+
+    cs0.AP =
+          /reset 
+
+    cs0.AR =
+          GND
+
+    cs0.C =
+          clk 
+
+    cs1.T =
+          count_0.Q * /count_1.Q * /count_2.Q * /count_3.Q * /count_4.Q * 
+          /count_5.Q * /cs1.Q * diow.Q * state_0.Q * state_1.Q * state_2.Q 
+        + /count_0.Q * count_1.Q * /count_2.Q * /count_3.Q * /count_4.Q * 
+          /count_5.Q * /cs1.Q * exprdy.Q * /state_0.Q * /state_1.Q * 
+          state_2.Q 
+        + count_0.Q * /count_1.Q * count_2.Q * /count_3.Q * /count_4.Q * 
+          /count_5.Q * /cs1.Q * /state_0.Q * state_1.Q * state_2.Q 
+        + /count_0.Q * count_1.Q * count_2.Q * /count_3.Q * /count_4.Q * 
+          /count_5.Q * /cs1.Q * state_0.Q * state_1.Q * /state_2.Q 
+        + a3 * cs1.Q * /cs5 * /state_0.Q * /state_1.Q * /state_2.Q 
+
+    cs1.AP =
+          /reset 
+
+    cs1.AR =
+          GND
+
+    cs1.C =
+          clk 
+
+    da0 =
+          a0 
+
+    da1 =
+          a1 
+
+    da2 =
+          a2 
+
+    dior.T =
+          count_0.Q * /count_1.Q * /count_2.Q * /count_3.Q * /count_4.Q * 
+          /count_5.Q * /dior.Q * exprdy.Q * /state_0.Q * /state_1.Q * 
+          state_2.Q 
+        + count_0.Q * /count_1.Q * count_2.Q * /count_3.Q * /count_4.Q * 
+          /count_5.Q * /dior.Q * state_0.Q * state_1.Q * /state_2.Q 
+        + /count_0.Q * /count_1.Q * /count_2.Q * /count_3.Q * /count_4.Q * 
+          /count_5.Q * dior.Q * /state_0.Q * state_1.Q * /state_2.Q 
+
+    dior.AP =
+          /reset 
+
+    dior.AR =
+          GND
+
+    dior.C =
+          clk 
+
+    diow.T =
+          /count_0.Q * /count_1.Q * count_2.Q * /count_3.Q * /count_4.Q * 
+          /count_5.Q * /diow.Q * /state_0.Q * state_1.Q * state_2.Q 
+        + /count_0.Q * /count_1.Q * /count_2.Q * /count_3.Q * /count_4.Q * 
+          /count_5.Q * diow.Q * state_0.Q * /state_1.Q * state_2.Q 
+        + count_2.Q * count_3.Q * count_4.Q * count_5.Q * /diow.Q * 
+          state_0.Q * state_1.Q * state_2.Q 
+        + count_1.Q * count_3.Q * count_4.Q * count_5.Q * /diow.Q * 
+          state_0.Q * state_1.Q * state_2.Q 
+        + count_0.Q * count_3.Q * count_4.Q * count_5.Q * /diow.Q * 
+          state_0.Q * state_1.Q * state_2.Q 
+        + /diow.Q * iordy * state_0.Q * state_1.Q * state_2.Q 
+
+    diow.AP =
+          /reset 
+
+    diow.AR =
+          GND
+
+    diow.C =
+          clk 
+
+    eint =
+          /intrq 
+
+    ethernetsel.D =
+          cs2 * tmp_moe.Q * tmp_mwe.Q 
+        + cs2 * mwe * tmp_moe.Q 
+        + cs2 * moe * tmp_mwe.Q 
+        + cs2 * moe * mwe 
+
+    ethernetsel.AP =
+          /reset 
+
+    ethernetsel.AR =
+          GND
+
+    ethernetsel.C =
+          clk 
+
+    exprdy.T =
+          count_0.Q * count_1.Q * /count_2.Q * /count_3.Q * /count_4.Q * 
+          /count_5.Q * /exprdy.Q * iordy * /state_0.Q * state_1.Q * 
+          /state_2.Q 
+        + count_0.Q * count_1.Q * /count_2.Q * /count_3.Q * /count_4.Q * 
+          /count_5.Q * /exprdy.Q * iordy * /state_1.Q * state_2.Q 
+        + count_2.Q * count_3.Q * count_4.Q * count_5.Q * /diow.Q * 
+          /exprdy.Q * state_0.Q * state_1.Q * state_2.Q 
+        + count_1.Q * count_3.Q * count_4.Q * count_5.Q * /diow.Q * 
+          /exprdy.Q * state_0.Q * state_1.Q * state_2.Q 
+        + count_0.Q * count_3.Q * count_4.Q * count_5.Q * /diow.Q * 
+          /exprdy.Q * state_0.Q * state_1.Q * state_2.Q 
+        + count_2.Q * count_3.Q * count_4.Q * count_5.Q * /exprdy.Q * 
+          /state_0.Q * /state_1.Q * state_2.Q 
+        + count_1.Q * count_3.Q * count_4.Q * count_5.Q * /exprdy.Q * 
+          /state_0.Q * /state_1.Q * state_2.Q 
+        + count_0.Q * count_3.Q * count_4.Q * count_5.Q * /exprdy.Q * 
+          /state_0.Q * /state_1.Q * state_2.Q 
+        + /diow.Q * /exprdy.Q * iordy * state_0.Q * state_1.Q * state_2.Q 
+        + /exprdy.Q * iordy * /state_0.Q * /state_1.Q * state_2.Q 
+        + /cs5 * exprdy.Q * /state_0.Q * /state_1.Q * /state_2.Q 
+
+    exprdy.AP =
+          /reset 
+
+    exprdy.AR =
+          GND
+
+    exprdy.C =
+          clk 
+
+    /moeslow =
+          /moe * /tmp_moe.Q 
+
+    /mweslow =
+          /mwe * /tmp_mwe.Q 
+
+    oe =
+          cs0.Q * cs1.Q 
+
+    rw.T =
+          /count_0.Q * count_1.Q * /count_2.Q * /count_3.Q * /count_4.Q * 
+          /count_5.Q * exprdy.Q * /rw.Q * /state_0.Q * /state_1.Q * 
+          state_2.Q 
+        + /count_0.Q * count_1.Q * count_2.Q * /count_3.Q * /count_4.Q * 
+          /count_5.Q * /rw.Q * state_0.Q * state_1.Q * /state_2.Q 
+        + /moe * mwe * rw.Q * state_0.Q * /state_1.Q * /state_2.Q 
+        + /mwe * /rw.Q * state_0.Q * /state_1.Q * /state_2.Q 
+
+    rw.AP =
+          /reset 
+
+    rw.AR =
+          GND
+
+    rw.C =
+          clk 
+
+    /state_0.T =
+          count_0.Q * /count_1.Q * /count_2.Q * /count_3.Q * /count_4.Q * 
+          /count_5.Q * diow.Q * state_0.Q * state_1.Q * state_2.Q 
+        + count_0.Q * count_1.Q * /count_2.Q * /count_3.Q * /count_4.Q * 
+          /count_5.Q * iordy * state_0.Q * /state_1.Q * state_2.Q 
+        + count_0.Q * count_1.Q * /count_2.Q * /count_3.Q * /count_4.Q * 
+          /count_5.Q * iordy * /state_0.Q * state_1.Q * /state_2.Q 
+        + /count_0.Q * count_1.Q * count_2.Q * /count_3.Q * /count_4.Q * 
+          /count_5.Q * state_0.Q * state_1.Q * /state_2.Q 
+        + /moe * mwe * state_0.Q * /state_1.Q * /state_2.Q 
+        + /cs5 * /state_0.Q * /state_1.Q * /state_2.Q 
+
+    state_0.AP =
+          /reset 
+
+    state_0.AR =
+          GND
+
+    state_0.C =
+          clk 
+
+    /state_1.T =
+          count_0.Q * /count_1.Q * /count_2.Q * /count_3.Q * /count_4.Q * 
+          /count_5.Q * diow.Q * state_0.Q * state_1.Q * state_2.Q 
+        + count_0.Q * count_1.Q * /count_2.Q * /count_3.Q * /count_4.Q * 
+          /count_5.Q * /iordy * /state_0.Q * state_1.Q * /state_2.Q 
+        + count_0.Q * /count_1.Q * count_2.Q * /count_3.Q * /count_4.Q * 
+          /count_5.Q * /state_0.Q * state_1.Q * state_2.Q 
+        + count_0.Q * count_1.Q * /count_2.Q * /count_3.Q * /count_4.Q * 
+          /count_5.Q * state_0.Q * /state_1.Q * state_2.Q 
+        + /count_0.Q * count_1.Q * count_2.Q * /count_3.Q * /count_4.Q * 
+          /count_5.Q * state_0.Q * state_1.Q * /state_2.Q 
+        + /moe * mwe * state_0.Q * /state_1.Q * /state_2.Q 
+
+    state_1.AP =
+          /reset 
+
+    state_1.AR =
+          GND
+
+    state_1.C =
+          clk 
+
+    /state_2.T =
+          count_0.Q * /count_1.Q * /count_2.Q * /count_3.Q * /count_4.Q * 
+          /count_5.Q * diow.Q * state_0.Q * state_1.Q * state_2.Q 
+        + count_0.Q * count_1.Q * /count_2.Q * /count_3.Q * /count_4.Q * 
+          /count_5.Q * /iordy * /state_0.Q * state_1.Q * /state_2.Q 
+        + /count_0.Q * count_1.Q * /count_2.Q * /count_3.Q * /count_4.Q * 
+          /count_5.Q * exprdy.Q * /state_0.Q * /state_1.Q * state_2.Q 
+        + count_0.Q * /count_1.Q * count_2.Q * /count_3.Q * /count_4.Q * 
+          /count_5.Q * /state_0.Q * state_1.Q * state_2.Q 
+        + /mwe * state_0.Q * /state_1.Q * /state_2.Q 
+
+    state_2.AP =
+          /reset 
+
+    state_2.AR =
+          GND
+
+    state_2.C =
+          clk 
+
+    tmp_moe.D =
+          moe 
+        + ethernetsel.Q 
+
+    tmp_moe.AP =
+          /reset 
+
+    tmp_moe.AR =
+          GND
+
+    tmp_moe.C =
+          clk 
+
+    tmp_mwe.D =
+          ethernetsel.Q 
+        + mwe 
+
+    tmp_mwe.AP =
+          /reset 
+
+    tmp_mwe.AR =
+          GND
+
+    tmp_mwe.C =
+          clk 
+
+
+Completed Successfully  
+----------------------------------------------------------------------------
+PLD Compiler Software:        C37KFIT.EXE    22/DEC/2000  [v4.02 ] 6.2 IR 27
+
+DESIGN RULE CHECK          (12:22:29)
+
+Messages:
+                 None.
+
+
+Summary:
+                 Error Count = 0      Warning Count = 0
+
+Completed Successfully  
+----------------------------------------------------------------------------
+PLD Compiler Software:        C37KFIT.EXE    22/DEC/2000  [v4.02 ] 6.2 IR 27
+
+PARTITION LOGIC            (12:22:29)
+
+Messages:
+  Information: Initializing Logic Block structures.
+  Information: Forming input seeds.
+  Information: Checking for duplicate NODE logic.
+  Information: Forming input seeds.
+  Information: Assigning fixed logic to Logic Blocks.
+  Information: Processing banked global preset, reset and output enable.
+  Information: Separating output logic set to GND/VCC.
+  Information: Validating Logic Block's with pre-placed signals.
+  Information: Separating input register logic.
+  Information: Assigning initializing equations to empty Logic Blocks.
+  Information: Separating output combinatorial logic.
+  Information: Separating disjoint output logic.
+  Information: Assigning floating outputs to Logic Blocks.
+  Information: Compacting Logic Block interconnect.
+  .............................
+
+
+Summary:
+                 Error Count = 0      Warning Count = 0
+
+Completed Successfully  
+----------------------------------------------------------------------------
+PLD Compiler Software:        C37KFIT.EXE    22/DEC/2000  [v4.02 ] 6.2 IR 27
+
+DESIGN SIGNAL PLACEMENT    (12:22:29)
+
+Messages:
+  Information: Fitting signals to Logic Block A.
+  Information: Assigning Signals to Macrocells.
+  Information: Improving Macrocell Assignment
+  .+.+.+..............+.+.+.............................
+  Information: Assigning Product Terms to Allocator
+  Information: Combining 'count_4' definition with input pin 'cs5'.
+  Information: Fitting signals to Logic Block B.
+  Information: Assigning Signals to Macrocells.
+  Information: Improving Macrocell Assignment
+  ..+.......+.......................
+  Information: Assigning Product Terms to Allocator
+  Information: Combining 'count_1' definition with input pin 'a0'.
+  Information: Combining 'state_0' definition with input pin 'a3'.
+  Information: Combining 'state_1' definition with input pin 'a2'.
+  Information: Combining 'state_2' definition with input pin 'a1'.
+  Information: Combining 'tmp_moe' definition with input pin 'iordy'.
+  Information: Routing signals to Logic Blocks.
+
+
+Summary:
+                 Error Count = 0      Warning Count = 0
+
+Completed Successfully  
+----------------------------------------------------------------------------
+PLD Compiler Software:        C37KFIT.EXE    22/DEC/2000  [v4.02 ] 6.2 IR 27
+
+LOGIC BLOCK A PLACEMENT   (12:22:29)
+
+Messages:
+
+
+________________________________________________________________________________
+          1111111111222222222233333333334444444444555555555566666666667777777777
+01234567890123456789012345678901234567890123456789012345678901234567890123456789
+________________________________________________________________________________
+| 0 |[i/p]
+++++++++++++++++................................................................
+| 1 |[i/p]
+......++++++++++++++++..........................................................
+| 2 |[i/p]
+..........++++++++++++++++......................................................
+| 3>|oe
+..............X+++++++++++++++..................................................
+| 4>|rw
+..................XXXX++++++++++++..............................................
+| 5 |UNUSED
+......................++++++++++++++++..........................................
+| 6 |(count_4)cs5
+..........................XXXXXXXX+XXX+XXX......................................
+| 7 |UNUSED
+..............................++++++++++++++++..................................
+| 8>|eint
+..................................X+++++++++++++++..............................
+| 9>|mweslow
+......................................X+++++++++++++++..........................
+|10>|moeslow
+..........................................X+++++++++++++++......................
+|11 |[i/p]
+..............................................++++++++++++++++..................
+|12>|ethernetsel
+..................................................XXXX++++++++++++..............
+|13 |(count_5)
+......................................................XXXXXXXXXX++XXXX..........
+|14 |UNUSED
+..........................................................++++++++++++++++......
+|15 |(count_3)
+................................................................XXXXXXXXXXXX++XX
+________________________________________________________________________________
+
+Total count of outputs placed        =  9 
+Total count of unique Product Terms  =  42 
+Total Product Terms to be assigned   =  54 
+Max Product Terms used / available   =  50 /  80   = 62.51 %
+
+
+Control Signals for Logic Block A
+---------------------------------
+CLK pin4: clk
+CLK pin7: <not used>
+CLK pin26: <not used>
+CLK pin29: <not used>
+CLK PT      : AH : <not used>
+PRESET      : AH : /reset 
+RESET       : AH : GND
+OE 0        : AH : <not used>
+OE 1        : AH : <not used>
+OE 2        : AH : <not used>
+OE 3        : AH : <not used>
+
+
+
+                              Logic Block A
+                 ____________________________________________
+                 |   |= >iordy                          |   |                 
+                 |   |= >state_0.Q                      |   |                 
+                 |   |= >cs1.Q                          |   |                 
+                 |   |= >state_1.Q                      |   |                 
+                 |   |= >intrq                          | 40|= reset          
+                 |   |= >count_4.Q                      |   |                 
+                 |   |= >diow.Q                         | 41|= moe            
+                 |   |= >count_1.Q                      |   |                 
+                 |   |= >count_0.Q                      | 42|= mwe            
+                 |   |> not used:47                     |   |                 
+                 |   |= >cs0.Q                          | 43|= oe             
+                 |   |= >tmp_mwe.Q                      |   |                 
+                 |   |> not used:50                     | 44|= rw             
+                 |   |= >mwe                            |   |                 
+                 |   |= >count_5.Q                      |  1|* not used       
+                 |   |= >cs2                            |   |                 
+                 |   |= >state_2.Q                      |  2|= (count_4)cs5   
+                 |   |= >exprdy.Q                       |   |                 
+                 |   |> not used:56                     |  3|* not used       
+                 |   |= >tmp_moe.Q                      |   |                 
+                 |   |> not used:58                     |  8|= eint           
+                 |   |= >moe                            |   |                 
+                 |   |> not used:60                     |  9|= mweslow        
+                 |   |= >reset                          |   |                 
+                 |   |= >count_2.Q                      | 10|= moeslow        
+                 |   |= >rw.Q                           |   |                 
+                 |   |> not used:64                     | 11|= cs2            
+                 |   |> not used:65                     |   |                 
+                 |   |= >count_3.Q                      | 12|= ethernetsel    
+                 |   |> not used:67                     |   |                 
+                 |   |> not used:68                     | 13|= (count_5)      
+                 |   |> not used:69                     |   |                 
+                 |   |> not used:70                     | 14|* not used       
+                 |   |> not used:71                     |   |                 
+                 |   |> not used:72                     | 15|= (count_3)      
+                 |   |> not used:73                     |   |                 
+                 |   |> not used:74                     |   |                 
+                 |   |> not used:75                     |   |                 
+                 |   |> not used:76                     |   |                 
+                 ____________________________________________
+
+
+  Information: Macrocell Utilization.
+
+                     Description        Used     Max
+                 ______________________________________
+                 | I/O Macrocells     |   13  |   16  |
+                 | PIM Input Connects |   22  |   36  |
+                 ______________________________________
+                                          35  /   52   = 67  %
+
+
+----------------------------------------------------------------------------
+PLD Compiler Software:        C37KFIT.EXE    22/DEC/2000  [v4.02 ] 6.2 IR 27
+
+LOGIC BLOCK B PLACEMENT   (12:22:29)
+
+Messages:
+
+
+________________________________________________________________________________
+          1111111111222222222233333333334444444444555555555566666666667777777777
+01234567890123456789012345678901234567890123456789012345678901234567890123456789
+________________________________________________________________________________
+| 0>|exprdy
+XXXXXXX+XX++XX++................................................................
+| 1 |(count_2)
+......XX++XX++XXXXX+XX..........................................................
+| 2>|cs1
+..........+++++++++X++XXXX......................................................
+| 3 |(tmp_mwe)
+..............++++++++++++++XX..................................................
+| 4>|cs0
+..................++++++++XX++X+XX..............................................
+| 5>|da2
+......................+++++++++X++++++..........................................
+| 6>|da0
+..........................++++++++X+++++++......................................
+| 7>|da1
+..............................+++++X++++++++++..................................
+| 8 |(tmp_moe)iordy
+..................................++XX++++++++++++..............................
+| 9>|dior
+......................................XXX+++++++++++++..........................
+|10>|diow
+..........................................XXX+X+XX++++++++......................
+|11 |(count_0)
+..............................................XXXXX+XX++XX++XX..................
+|12 |(state_0)a3
+..................................................+X++XX++XX++X+++..............
+|13 |(state_1)a2
+......................................................XX++X++++XXX++++..........
+|14 |(state_2)a1
+..........................................................X+++++XX++XX++++......
+|15 |(count_1)a0
+................................................................++XX++XXXXXXXXXX
+________________________________________________________________________________
+
+Total count of outputs placed        =  16 
+Total count of unique Product Terms  =  66 
+Total Product Terms to be assigned   =  88 
+Max Product Terms used / available   =  78 /  80   = 97.51 %
+
+
+Control Signals for Logic Block B
+---------------------------------
+CLK pin4: clk
+CLK pin7: <not used>
+CLK pin26: <not used>
+CLK pin29: <not used>
+CLK PT      : AH : <not used>
+PRESET      : AH : /reset 
+RESET       : AH : GND
+OE 0        : AH : <not used>
+OE 1        : AH : <not used>
+OE 2        : AH : <not used>
+OE 3        : AH : <not used>
+
+
+
+                              Logic Block B
+                 ____________________________________________
+                 |   |= >iordy                          |   |                 
+                 |   |= >reset                          |   |                 
+                 |   |= >cs1.Q                          |   |                 
+                 |   |= >moe                            |   |                 
+                 |   |= >count_2.Q                      | 18|= exprdy         
+                 |   |= >count_4.Q                      |   |                 
+                 |   |= >diow.Q                         | 19|= (count_2)      
+                 |   |= >ethernetsel.Q                  |   |                 
+                 |   |= >state_0.Q                      | 20|= cs1            
+                 |   |= >count_1.Q                      |   |                 
+                 |   |= >cs0.Q                          | 21|= (tmp_mwe)      
+                 |   |= >a0                             |   |                 
+                 |   |= >cs5                            | 22|= cs0            
+                 |   |= >mwe                            |   |                 
+                 |   |= >state_1.Q                      | 23|= da2            
+                 |   |= >a2                             |   |                 
+                 |   |= >state_2.Q                      | 24|= da0            
+                 |   |= >exprdy.Q                       |   |                 
+                 |   |= >count_5.Q                      | 25|= da1            
+                 |   |> not used:96                     |   |                 
+                 |   |> not used:97                     | 30|= (tmp_moe)iordy 
+                 |   |= >a3                             |   |                 
+                 |   |> not used:99                     | 31|= dior           
+                 |   |> not used:100                    |   |                 
+                 |   |> not used:101                    | 32|= diow           
+                 |   |= >a1                             |   |                 
+                 |   |= >dior.Q                         | 33|= (count_0)      
+                 |   |> not used:104                    |   |                 
+                 |   |= >count_3.Q                      | 34|= (state_0)a3    
+                 |   |> not used:106                    |   |                 
+                 |   |> not used:107                    | 35|= (state_1)a2    
+                 |   |> not used:108                    |   |                 
+                 |   |> not used:109                    | 36|= (state_2)a1    
+                 |   |> not used:110                    |   |                 
+                 |   |> not used:111                    | 37|= (count_1)a0    
+                 |   |> not used:112                    |   |                 
+                 |   |> not used:113                    |   |                 
+                 |   |> not used:114                    |   |                 
+                 |   |= >count_0.Q                      |   |                 
+                 ____________________________________________
+
+
+  Information: Macrocell Utilization.
+
+                     Description        Used     Max
+                 ______________________________________
+                 | I/O Macrocells     |   16  |   16  |
+                 | PIM Input Connects |   24  |   36  |
+                 ______________________________________
+                                          40  /   52   = 76  %
+
+
+----------------------------------------------------------------------------
+PLD Compiler Software:        C37KFIT.EXE    22/DEC/2000  [v4.02 ] 6.2 IR 27
+
+PINOUT INFORMATION   (12:22:29)
+
+
+Device:  cy37032p44
+Package: cy37032p44-125ac
+
+                    1  :  Not Used
+                >   2  :  (count_4)cs5
+                    3  :  Not Used
+                >   4  :  clk
+                    5  :  Not Used
+                    6  :  GND
+                    7  :  Not Used
+                >   8  :  eint
+                >   9  :  mweslow
+                >  10  :  moeslow
+                >  11  :  cs2
+                >  12  :  ethernetsel
+                   13  :  (count_5)
+                   14  :  Not Used
+                   15  :  (count_3)
+                   16  :  VCC
+                   17  :  GND
+                >  18  :  exprdy
+                   19  :  (count_2)
+                >  20  :  cs1
+                   21  :  (tmp_mwe)
+                >  22  :  cs0
+                >  23  :  da2
+                >  24  :  da0
+                >  25  :  da1
+                   26  :  Not Used
+                   27  :  Not Used
+                   28  :  GND
+                >  29  :  intrq
+                >  30  :  (tmp_moe)iordy
+                >  31  :  dior
+                >  32  :  diow
+                   33  :  (count_0)
+                >  34  :  (state_0)a3
+                >  35  :  (state_1)a2
+                >  36  :  (state_2)a1
+                >  37  :  (count_1)a0
+                   38  :  VCC
+                   39  :  GND
+                >  40  :  reset
+                >  41  :  moe
+                >  42  :  mwe
+                >  43  :  oe
+                >  44  :  rw
+
+----------------------------------------------------------------------------
+PLD Compiler Software:        C37KFIT.EXE    22/DEC/2000  [v4.02 ] 6.2 IR 27
+
+RESOURCE UTILIZATION (12:22:29)
+
+
+
+  Information: Macrocell Utilization.
+
+                     Description        Used     Max
+                 ______________________________________
+                 | Dedicated Inputs   |    0  |    1  |
+                 | Clock/Inputs       |    2  |    4  |
+                 | I/O Macrocells     |   29  |   32  |
+                 | PIM Input Connects |   46  |   78  |
+                 ______________________________________
+                                          77  /  115   = 66  %
+
+
+
+                                      Required     Max (Available)
+          CLOCK/LATCH ENABLE signals     1            6
+          Input REG/LATCH signals        0            5
+          Input PIN signals              2            5
+          Input PINs using I/O cells     4            4
+          Output PIN signals            20           28
+
+
+          Total PIN signals             26           37
+          Macrocells Used               25           32
+          Unique Product Terms         100          160
+
+
+
+----------------------------------------------------------------------------
+PLD Compiler Software:        C37KFIT.EXE    22/DEC/2000  [v4.02 ] 6.2 IR 27
+
+PRESET/RESET AND OUTPUT ENABLE COMBINATIONS
+
+PRESET: NONE-COMBINATORIAL
+RESET : NONE-COMBINATORIAL
+CLOCK PT : NULL
+Total unique inputs =  10 
+count of output equations =  7 
+==>OE: GND or VCC
+   count of OE equations =  7 
+
+
+PRESET: /reset 
+RESET : GND
+CLOCK PT : NULL
+Used by Logic Blocks: AB
+Total unique inputs =  25 
+count of output equations =  18 
+==>OE: GND or VCC
+   count of OE equations =  18 
+
+----------------------------------------------------------------------------
+PLD Compiler Software:        C37KFIT.EXE    22/DEC/2000  [v4.02 ] 6.2 IR 27
+
+JEDEC ASSEMBLE             (12:22:29)
+
+Messages:
+  Information: Processing JEDEC for Logic Block 1.
+  Information: Processing JEDEC for Logic Block 2.
+  Information: JEDEC output file 'ide.pin' created.
+  Information: JEDEC output file 'ide.jed' created.
+
+
+Summary:
+                 Error Count = 0      Warning Count = 0
+
+Completed Successfully at 12:22:29
+----------------------------------------------------------------------------
+PLD Compiler Software:        C37KFIT.EXE    22/DEC/2000  [v4.02 ] 6.2 IR 27
+
+TIMING PATH ANALYSIS       (12:22:29) using Package: cy37032p44-125ac
+
+Messages:
+
+----------------------------------------------------------------------------
+Signal Name | Delay Type  |   tmax   | Path Description
+----------------------------------------------------------------------------
+cmb::oe[43]
+inp::cs0.Q
+              tCO             13.5 ns    1 pass
+----------------------------------------------------------------------------
+reg::rw[44]
+inp::moe
+              tS              4.0 ns     1 pass
+inp::count_0.Q
+              tSCS            8.0 ns     1 pass
+inp::reset
+              tPO             14.5 ns    1 pass
+out::rw
+              tCO             7.5 ns   
+----------------------------------------------------------------------------
+reg::(count_4)cs5[2]
+inp::iordy
+---->iordy
+              tS              4.0 ns     1 pass
+inp::count_2.Q
+              tSCS            8.0 ns     1 pass
+inp::reset
+              tPO             14.5 ns    1 pass
+out::count_4
+              tCO             7.5 ns   
+----------------------------------------------------------------------------
+cmb::eint[8]
+inp::intrq
+              tPD             11.0 ns    1 pass
+----------------------------------------------------------------------------
+cmb::mweslow[9]
+inp::mwe
+              tPD             9.5 ns     1 pass
+inp::tmp_mwe.Q
+              tCO             13.5 ns    1 pass
+----------------------------------------------------------------------------
+cmb::moeslow[10]
+inp::moe
+              tPD             9.5 ns     1 pass
+inp::tmp_moe.Q
+              tCO             13.5 ns    1 pass
+----------------------------------------------------------------------------
+reg::ethernetsel[12]
+inp::cs2
+              tS              4.0 ns     1 pass
+inp::tmp_moe.Q
+              tSCS            8.0 ns     1 pass
+inp::reset
+              tPO             14.5 ns    1 pass
+out::ethernetsel
+              tCO             7.5 ns   
+----------------------------------------------------------------------------
+reg::(count_5)[13]
+inp::iordy
+---->iordy
+              tS              4.0 ns     1 pass
+inp::count_2.Q
+              tSCS            8.0 ns     1 pass
+inp::reset
+              tPO             14.5 ns    1 pass
+out::count_5
+              tCO             7.5 ns   
+----------------------------------------------------------------------------
+reg::(count_3)[15]
+inp::iordy
+---->iordy
+              tS              4.0 ns     1 pass
+inp::count_2.Q
+              tSCS            8.0 ns     1 pass
+inp::reset
+              tPO             14.5 ns    1 pass
+out::count_3
+              tCO             7.5 ns   
+----------------------------------------------------------------------------
+reg::exprdy[18]
+inp::iordy
+---->iordy
+              tS              4.0 ns     1 pass
+inp::count_0.Q
+              tSCS            8.0 ns     1 pass
+inp::reset
+              tPO             14.5 ns    1 pass
+out::exprdy
+              tCO             7.5 ns   
+----------------------------------------------------------------------------
+reg::(count_2)[19]
+inp::iordy
+---->iordy
+              tS              4.0 ns     1 pass
+inp::count_0.Q
+              tSCS            8.0 ns     1 pass
+inp::reset
+              tPO             14.5 ns    1 pass
+out::count_2
+              tCO             7.5 ns   
+----------------------------------------------------------------------------
+reg::cs1[20]
+inp::a3
+---->a3
+              tS              4.0 ns     1 pass
+inp::count_0.Q
+              tSCS            8.0 ns     1 pass
+inp::reset
+              tPO             14.5 ns    1 pass
+out::oe
+              tCO             13.5 ns    1 pass
+----------------------------------------------------------------------------
+reg::(tmp_mwe)[21]
+inp::mwe
+              tS              4.0 ns     1 pass
+inp::ethernetsel.Q
+              tSCS            8.0 ns     1 pass
+inp::reset
+              tPO             14.5 ns    1 pass
+out::mweslow
+              tCO             13.5 ns    1 pass
+----------------------------------------------------------------------------
+reg::cs0[22]
+inp::a3
+---->a3
+              tS              4.0 ns     1 pass
+inp::count_0.Q
+              tSCS            8.0 ns     1 pass
+inp::reset
+              tPO             14.5 ns    1 pass
+out::oe
+              tCO             13.5 ns    1 pass
+----------------------------------------------------------------------------
+cmb::da2[23]
+inp::a2
+---->a2
+              tPD             9.5 ns     1 pass
+----------------------------------------------------------------------------
+cmb::da0[24]
+inp::a0
+---->a0
+              tPD             9.5 ns     1 pass
+----------------------------------------------------------------------------
+cmb::da1[25]
+inp::a1
+---->a1
+              tPD             9.5 ns     1 pass
+----------------------------------------------------------------------------
+reg::(tmp_moe)iordy[30]
+inp::moe
+              tS              4.0 ns     1 pass
+inp::ethernetsel.Q
+              tSCS            8.0 ns     1 pass
+inp::reset
+              tPO             14.5 ns    1 pass
+out::moeslow
+              tCO             13.5 ns    1 pass
+----------------------------------------------------------------------------
+reg::dior[31]
+inp::count_0.Q
+              tSCS            8.0 ns     1 pass
+inp::reset
+              tPO             14.5 ns    1 pass
+out::dior
+              tCO             7.5 ns   
+----------------------------------------------------------------------------
+reg::diow[32]
+inp::iordy
+---->iordy
+              tS              4.0 ns     1 pass
+inp::count_0.Q
+              tSCS            8.0 ns     1 pass
+inp::reset
+              tPO             14.5 ns    1 pass
+out::diow
+              tCO             7.5 ns   
+----------------------------------------------------------------------------
+reg::(count_0)[33]
+inp::iordy
+---->iordy
+              tS              4.0 ns     1 pass
+inp::count_1.Q
+              tSCS            8.0 ns     1 pass
+inp::reset
+              tPO             14.5 ns    1 pass
+out::count_0
+              tCO             7.5 ns   
+----------------------------------------------------------------------------
+reg::(state_0)a3[34]
+inp::iordy
+---->iordy
+              tS              4.0 ns     1 pass
+inp::count_0.Q
+              tSCS            8.0 ns     1 pass
+inp::reset
+              tPO             14.5 ns    1 pass
+out::state_0
+              tCO             7.5 ns   
+----------------------------------------------------------------------------
+reg::(state_1)a2[35]
+inp::iordy
+---->iordy
+              tS              4.0 ns     1 pass
+inp::count_0.Q
+              tSCS            8.0 ns     1 pass
+inp::reset
+              tPO             14.5 ns    1 pass
+out::state_1
+              tCO             7.5 ns   
+----------------------------------------------------------------------------
+reg::(state_2)a1[36]
+inp::iordy
+---->iordy
+              tS              4.0 ns     1 pass
+inp::count_0.Q
+              tSCS            8.0 ns     1 pass
+inp::reset
+              tPO             14.5 ns    1 pass
+out::state_2
+              tCO             7.5 ns   
+----------------------------------------------------------------------------
+reg::(count_1)a0[37]
+inp::iordy
+---->iordy
+              tS              4.0 ns     1 pass
+inp::count_1.Q
+              tSCS            8.0 ns     1 pass
+inp::reset
+              tPO             14.5 ns    1 pass
+out::count_1
+              tCO             7.5 ns   
+----------------------------------------------------------------------------
+
+Worst Case Path Summary
+-----------------------
+
+                    tPD = 11.0 ns for eint 
+                     tS = 4.0 ns for rw.T 
+                   tSCS = 8.0 ns for rw.T  using clock signal clk
+                    tCO = 13.5 ns for oe 
+                    tPO = 14.5 ns for rw.AP 
+
+
+
+Summary:
+                 Error Count = 0      Warning Count = 0
+
+Completed Successfully  
+
+vpp V6.2 IR 27:  Verilog Pre-Processor
+Mon Sep 09 12:28:51 2002
+
+
+vpp:  No errors.
+

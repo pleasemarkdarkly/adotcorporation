@@ -1,0 +1,63 @@
+buffer from 255 to 2048 chars
+- -x fixed
+- -noh2 fixed (-noh or -noh2 was messing up headers)
+- single quotes in email addresses used to mean 'comment'.  Removed.
+- Replaced "|" in if statement with "||" inside of ConvertToQuotedPrintable(). 99.9.20
+- Added -enriched and -html options (Courtesy of James Greene)
+- Enhanced support for paths in -attach files (Bergamini Angelo <Angelo.Bergamini@sangiorgio.it>)
+- Added df/cf/bf command line options to support using email addresses from a file
+  (Kenneth Massey <kmassey@mratings.com>)
+- Added header when mail is sent using cgi.
+
+1.8.4d
+- Added "-body" parameter (requires argv[1]=="-")
+- Fixed problem with missing To/CC headers
+
+1.8.4e
+- -body translates '|' into CRLF
+
+1.8.5 2000.02.08
+  - RFC compliant options added by Skough Axel IT-S <axel.skough@scb.se>
+    -mailfrom <addr>   The RFC 821 MAIL From: statement
+    -from <addr>       The RFC 822 From: statement
+    -replyto <addr>    The RFC 822 Reply-To: statement
+    -returnpath <addr> The RFC 822 Return-Path: statement
+    -sender <addr>     The RFC 822 Sender: statement
+
+1.8.5b 2000.03.13
+  - Fixed -body
+
+1.8.5c 2000.05.10
+  - Fixed POST for CGI feature
+
+1.8.5d 2000.07.02
+  - Supress temporary file for console input
+  - fix crash with -debug option
+
+1.8.5e 2000.07.04
+  - Add -u and -pw option for AUTH LOGIN
+
+1.8.5f 2000.07.05
+  - -s @subject.txt : Reads the first line of the file @subject.txt 
+       for the subject line of the message. Change from Craig Morrison
+  - -t johndoe<john@doe.com> Now works correctly and just sends 
+       'john@doe.com' . Change from Craig Morrison <craig@2cah.com>
+
+1.8.5g 2000.08.22
+  - -sf fix from Craig Morrison <craig@2cah.com>. If the file does 
+       not exist the filename itself is copied
+  - when '-' is used for console input, a temp file is not created
+
+1.8.5h 2000.08.23
+  - Optimize the "-" with console input (slow in 1.8.5g)
+
+Version 1.8.5i 2000.08.23
+  - Add the -log option. Change from Craig Morrison
+
+1.8.5j 2000.10.19
+  - Fixed the 'fixup' routine, which caused problems when recipient name had accented characters
+  - Fixed conversion of non-std characters in the subject line (no line breaks) "Biebricher, Peter" <pbiebric@debis.com>
+
+1.8.6 2000.10.20
+  - Fixed the 'fixup()' fix.   It would only work for accented character fields.  :(
+

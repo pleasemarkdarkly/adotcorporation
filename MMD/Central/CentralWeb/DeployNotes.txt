@@ -1,0 +1,12 @@
+This web site use Windows NT Authentication Challenge/Response.
+
+This can be configured by setting appropriate privileges on each of the subdirectories of this application.  
+A better way with .NET, however, is to set up the authorization tag in web.config in each of the directories.
+
+Advertisment/Idleloop content providers.
+
+Make sure that those uploading content to the staging areas have appropriate access to the staging and deployment
+directories.  Right now, I'm giving everyone modify access to those directories....maybe there's a more fine-tuned
+approach that I'm not aware of.  I need to learn what account privileges are being used when calling HttpPostedFile.SaveAs
+method.
+

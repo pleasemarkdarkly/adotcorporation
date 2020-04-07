@@ -1,0 +1,75 @@
+# ====================================================================
+#
+#      dac_arm_dadio.cdl
+#
+#      eCos dac layer for iobjects dadio
+#
+# ====================================================================
+# ====================================================================
+######DESCRIPTIONBEGIN####
+#
+# Author(s):      toddm
+# Original data:  toddm
+# Contributors:
+# Date:           2000-12-09
+#
+#####DESCRIPTIONEND####
+#
+# ====================================================================
+
+cdl_package DDOPKG_IO_DAC_ARM_DADIO_CS4341 {
+    display       "Dadio CS4341 DAC driver"
+    parent 	  DDOPKG_IO_AUDIO_ARM_DADIO
+    include_dir	  dadio/io
+    include_files dac.h
+    description   "
+	This option enables the driver necessary for the CS4341 DAC."
+#    doc           redirect/ecos-device-drivers.html
+
+    compile       -library=libextras.a   dac.c
+
+    cdl_option DDODAT_IO_DAC_NAME {
+	display		"DAC device name"
+	flavor		data
+	default_value	{ "\"/dev/mixer\"" }
+	description	"
+	    The name of the DAC device."
+    }    
+
+    cdl_component DDOPKG_IO_DAC_ARM_DADIO_CS4341_OPTIONS {
+        display "DAC build options"
+        flavor  none
+        description   "
+	    Package specific build options including control over
+	    compiler flags used only in building this package,
+	    and details of which tests are built."
+
+
+        cdl_option DDOPKG_IO_DAC_ARM_DADIO_CS4341_CFLAGS_ADD {
+            display "Additional compiler flags"
+            flavor  data
+            no_define
+            default_value { "" }
+            description   "
+                This option modifies the set of compiler flags for
+                building these serial device drivers. These flags are used in addition
+                to the set of global flags."
+        }
+
+        cdl_option DDOPKG_IO_DAC_ARM_DADIO_CS4341_CFLAGS_REMOVE {
+            display "Suppressed compiler flags"
+            flavor  data
+            no_define
+            default_value { "" }
+            description   "
+                This option modifies the set of compiler flags for
+                building these serial device drivers. These flags are removed from
+                the set of global flags if present."
+        }
+    }
+}
+
+# EOF dac_arm_dadio.cdl
+
+
+

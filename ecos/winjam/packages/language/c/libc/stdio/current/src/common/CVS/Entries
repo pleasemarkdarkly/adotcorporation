@@ -1,0 +1,22 @@
+/fclose.cxx/1.1/Fri Aug 25 17:33:40 2000//
+/feof.cxx/1.1/Fri Apr 06 17:20:42 2001//
+/fflush.cxx/1.1/Fri Aug 25 17:33:40 2000//
+/fopen.cxx/1.2/Fri Nov 03 21:17:50 2000//
+/freopen.cxx/1.1/Fri Aug 25 17:33:40 2000//
+/fseek.cxx/1.1/Fri Aug 25 17:33:40 2000//
+/setvbuf.cxx/1.1/Fri Aug 25 17:33:40 2000//
+/snprintf.cxx/1.1/Fri Aug 25 17:33:40 2000//
+/sprintf.cxx/1.1/Fri Aug 25 17:33:40 2000//
+/sscanf.cxx/1.1/Fri Aug 25 17:33:40 2000//
+/stderr.cxx/1.2/Fri Nov 03 21:17:50 2000//
+/stdin.cxx/1.2/Fri Nov 03 21:17:50 2000//
+/stdiofiles.cxx/1.1/Fri Aug 25 17:33:40 2000//
+/stdioinlines.cxx/1.1/Fri Aug 25 17:33:40 2000//
+/stdiosupp.cxx/1.1/Fri Aug 25 17:33:40 2000//
+/stdout.cxx/1.2/Fri Nov 03 21:17:50 2000//
+/stream.cxx/1.2/Fri Apr 06 17:20:42 2001//
+/streambuf.cxx/1.1/Fri Aug 25 17:33:40 2000//
+/ungetc.cxx/1.1/Fri Aug 25 17:33:40 2000//
+/vsnprintf.cxx/1.1/Fri Aug 25 17:33:40 2000//
+/vsscanf.cxx/1.1/Fri Aug 25 17:33:40 2000//
+D

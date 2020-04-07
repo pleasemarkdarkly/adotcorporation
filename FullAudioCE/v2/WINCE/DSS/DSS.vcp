@@ -1,0 +1,4421 @@
+# Microsoft eMbedded Visual Tools Project File - Name="DSS" - Package Owner=<4>
+# Microsoft eMbedded Visual Tools Generated Build File, Format Version 6.02
+# ** DO NOT EDIT **
+
+# TARGTYPE "Win32 (WCE x86em) Dynamic-Link Library" 0x7f02
+# TARGTYPE "Win32 (WCE SH3) Dynamic-Link Library" 0x8102
+# TARGTYPE "Win32 (WCE PPC) Dynamic-Link Library" 0x8402
+# TARGTYPE "Win32 (WCE x86) Dynamic-Link Library" 0x8302
+# TARGTYPE "Win32 (WCE MIPSFP) Dynamic-Link Library" 0x8702
+# TARGTYPE "Win32 (WCE ARM) Dynamic-Link Library" 0x8502
+# TARGTYPE "Win32 (WCE SH4) Dynamic-Link Library" 0x8602
+# TARGTYPE "Win32 (WCE MIPS) Dynamic-Link Library" 0x8202
+
+CFG=DSS - Win32 (WCE MIPS) Debug
+!MESSAGE This is not a valid makefile. To build this project using NMAKE,
+!MESSAGE use the Export Makefile command and run
+!MESSAGE 
+!MESSAGE NMAKE /f "DSS.vcn".
+!MESSAGE 
+!MESSAGE You can specify a configuration when running NMAKE
+!MESSAGE by defining the macro CFG on the command line. For example:
+!MESSAGE 
+!MESSAGE NMAKE /f "DSS.vcn" CFG="DSS - Win32 (WCE MIPS) Debug"
+!MESSAGE 
+!MESSAGE Possible choices for configuration are:
+!MESSAGE 
+!MESSAGE "DSS - Win32 (WCE MIPS) Release" (based on "Win32 (WCE MIPS) Dynamic-Link Library")
+!MESSAGE "DSS - Win32 (WCE MIPS) Debug" (based on "Win32 (WCE MIPS) Dynamic-Link Library")
+!MESSAGE "DSS - Win32 (WCE SH4) Release" (based on "Win32 (WCE SH4) Dynamic-Link Library")
+!MESSAGE "DSS - Win32 (WCE SH4) Debug" (based on "Win32 (WCE SH4) Dynamic-Link Library")
+!MESSAGE "DSS - Win32 (WCE SH3) Release" (based on "Win32 (WCE SH3) Dynamic-Link Library")
+!MESSAGE "DSS - Win32 (WCE SH3) Debug" (based on "Win32 (WCE SH3) Dynamic-Link Library")
+!MESSAGE "DSS - Win32 (WCE ARM) Release" (based on "Win32 (WCE ARM) Dynamic-Link Library")
+!MESSAGE "DSS - Win32 (WCE ARM) Debug" (based on "Win32 (WCE ARM) Dynamic-Link Library")
+!MESSAGE "DSS - Win32 (WCE MIPSFP) Release" (based on "Win32 (WCE MIPSFP) Dynamic-Link Library")
+!MESSAGE "DSS - Win32 (WCE MIPSFP) Debug" (based on "Win32 (WCE MIPSFP) Dynamic-Link Library")
+!MESSAGE "DSS - Win32 (WCE x86) Release" (based on "Win32 (WCE x86) Dynamic-Link Library")
+!MESSAGE "DSS - Win32 (WCE x86) Debug" (based on "Win32 (WCE x86) Dynamic-Link Library")
+!MESSAGE "DSS - Win32 (WCE x86em) Release" (based on "Win32 (WCE x86em) Dynamic-Link Library")
+!MESSAGE "DSS - Win32 (WCE x86em) Debug" (based on "Win32 (WCE x86em) Dynamic-Link Library")
+!MESSAGE "DSS - Win32 (WCE PPC) Release" (based on "Win32 (WCE PPC) Dynamic-Link Library")
+!MESSAGE "DSS - Win32 (WCE PPC) Debug" (based on "Win32 (WCE PPC) Dynamic-Link Library")
+!MESSAGE 
+
+# Begin Project
+# PROP AllowPerConfigDependencies 0
+# PROP Scc_ProjName ""$/v2/WinCE/DSS", FIAAAAAA"
+# PROP Scc_LocalPath "."
+# PROP ATL_Project 0
+
+!IF  "$(CFG)" == "DSS - Win32 (WCE MIPS) Release"
+
+# PROP BASE Use_MFC 0
+# PROP BASE Use_Debug_Libraries 0
+# PROP BASE Output_Dir "WMIPSRel"
+# PROP BASE Intermediate_Dir "WMIPSRel"
+# PROP BASE Target_Dir ""
+# PROP Use_MFC 0
+# PROP Use_Debug_Libraries 0
+# PROP Output_Dir "WMIPSRel"
+# PROP Intermediate_Dir "WMIPSRel"
+# PROP Ignore_Export_Lib 0
+# PROP Target_Dir ""
+RSC=rc.exe
+# ADD BASE RSC /l 0x409 /d "MIPS" /d "_MIPS_" /d UNDER_CE=$(CEVersion) /d _WIN32_WCE=$(CEVersion) /d "UNICODE" /d "NDEBUG" /r
+# ADD RSC /l 0x409 /d "MIPS" /d "_MIPS_" /d UNDER_CE=$(CEVersion) /d _WIN32_WCE=$(CEVersion) /d "UNICODE" /d "NDEBUG" /r
+CPP=clmips.exe
+# ADD BASE CPP /nologo /W3 /O2 /D _WIN32_WCE=$(CEVersion) /D "NDEBUG" /D "MIPS" /D "_MIPS_" /D UNDER_CE=$(CEVersion) /D "UNICODE" /D "_USRDLL" /D "DSS_EXPORTS" /D WCE_PLATFORM=$(CEPlatform) /D "$(CePlatform)" /D "_UNICODE" /YX /M$(CECrtMT) /c
+# ADD CPP /nologo /W3 /O2 /I "..\..\Common" /I "..\..\Dss" /I "../../common" /D "NDEBUG" /D "MIPS" /D "_MIPS_" /D "DSSDLL_EXPORTS" /D _WIN32_WCE=$(CEVersion) /D UNDER_CE=$(CEVersion) /D "UNICODE" /D "_USRDLL" /D WCE_PLATFORM=$(CEPlatform) /D "$(CePlatform)" /D "_UNICODE" /YX /M$(CECrtMT) /c
+MTL=midl.exe
+# ADD BASE MTL /nologo /D "NDEBUG" /mktyplib203 /o "NUL" /win32
+# ADD MTL /nologo /D "NDEBUG" /mktyplib203 /o "NUL" /win32
+BSC32=bscmake.exe
+# ADD BASE BSC32 /nologo
+# ADD BSC32 /nologo
+LINK32=link.exe
+# ADD BASE LINK32 commctrl.lib coredll.lib /nologo /stack:0x10000,0x1000 /dll /nodefaultlib:"$(CENoDefaultLib)" /machine:MIPS /subsystem:$(CESubsystem)
+# SUBTRACT BASE LINK32 /pdb:none /nodefaultlib
+# ADD LINK32 commctrl.lib coredll.lib /nologo /stack:0x10000,0x1000 /dll /nodefaultlib:"$(CENoDefaultLib)" /machine:MIPS /subsystem:$(CESubsystem)
+# SUBTRACT LINK32 /pdb:none /nodefaultlib
+
+!ELSEIF  "$(CFG)" == "DSS - Win32 (WCE MIPS) Debug"
+
+# PROP BASE Use_MFC 0
+# PROP BASE Use_Debug_Libraries 1
+# PROP BASE Output_Dir "WMIPSDbg"
+# PROP BASE Intermediate_Dir "WMIPSDbg"
+# PROP BASE Target_Dir ""
+# PROP Use_MFC 0
+# PROP Use_Debug_Libraries 1
+# PROP Output_Dir "WMIPSDbg"
+# PROP Intermediate_Dir "WMIPSDbg"
+# PROP Ignore_Export_Lib 0
+# PROP Target_Dir ""
+RSC=rc.exe
+# ADD BASE RSC /l 0x409 /d "MIPS" /d "_MIPS_" /d UNDER_CE=$(CEVersion) /d _WIN32_WCE=$(CEVersion) /d "UNICODE" /d "DEBUG" /r
+# ADD RSC /l 0x409 /d "MIPS" /d "_MIPS_" /d UNDER_CE=$(CEVersion) /d _WIN32_WCE=$(CEVersion) /d "UNICODE" /d "DEBUG" /r
+CPP=clmips.exe
+# ADD BASE CPP /nologo /W3 /Zi /Od /D _WIN32_WCE=$(CEVersion) /D "DEBUG" /D "MIPS" /D "_MIPS_" /D UNDER_CE=$(CEVersion) /D "UNICODE" /D "_USRDLL" /D "DSS_EXPORTS" /D WCE_PLATFORM=$(CEPlatform) /D "$(CePlatform)" /D "_UNICODE" /YX /M$(CECrtMTDebug) /c
+# ADD CPP /nologo /W3 /Zi /Od /I "..\..\Common" /I "..\..\Dss" /I "../../common" /D "DEBUG" /D "MIPS" /D "_MIPS_" /D "DSSDLL_EXPORTS" /D _WIN32_WCE=$(CEVersion) /D UNDER_CE=$(CEVersion) /D "UNICODE" /D "_USRDLL" /D WCE_PLATFORM=$(CEPlatform) /D "$(CePlatform)" /D "_UNICODE" /YX /M$(CECrtMTDebug) /c
+MTL=midl.exe
+# ADD BASE MTL /nologo /D "_DEBUG" /mktyplib203 /o "NUL" /win32
+# ADD MTL /nologo /D "_DEBUG" /mktyplib203 /o "NUL" /win32
+BSC32=bscmake.exe
+# ADD BASE BSC32 /nologo
+# ADD BSC32 /nologo
+LINK32=link.exe
+# ADD BASE LINK32 commctrl.lib coredll.lib /nologo /stack:0x10000,0x1000 /dll /debug /nodefaultlib:"$(CENoDefaultLib)" /machine:MIPS /subsystem:$(CESubsystem)
+# SUBTRACT BASE LINK32 /pdb:none /nodefaultlib
+# ADD LINK32 commctrl.lib coredll.lib /nologo /stack:0x10000,0x1000 /dll /debug /nodefaultlib:"$(CENoDefaultLib)" /machine:MIPS /subsystem:$(CESubsystem)
+# SUBTRACT LINK32 /pdb:none /nodefaultlib
+
+!ELSEIF  "$(CFG)" == "DSS - Win32 (WCE SH4) Release"
+
+# PROP BASE Use_MFC 0
+# PROP BASE Use_Debug_Libraries 0
+# PROP BASE Output_Dir "WCESH4Rel"
+# PROP BASE Intermediate_Dir "WCESH4Rel"
+# PROP BASE Target_Dir ""
+# PROP Use_MFC 0
+# PROP Use_Debug_Libraries 0
+# PROP Output_Dir "WCESH4Rel"
+# PROP Intermediate_Dir "WCESH4Rel"
+# PROP Ignore_Export_Lib 0
+# PROP Target_Dir ""
+RSC=rc.exe
+# ADD BASE RSC /l 0x409 /d "SHx" /d "SH4" /d "_SH4_" /d UNDER_CE=$(CEVersion) /d _WIN32_WCE=$(CEVersion) /d "UNICODE" /d "NDEBUG" /r
+# ADD RSC /l 0x409 /d "SHx" /d "SH4" /d "_SH4_" /d UNDER_CE=$(CEVersion) /d _WIN32_WCE=$(CEVersion) /d "UNICODE" /d "NDEBUG" /r
+CPP=shcl.exe
+# ADD BASE CPP /nologo /W3 /O2 /D _WIN32_WCE=$(CEVersion) /D "NDEBUG" /D "SHx" /D "SH4" /D "_SH4_" /D UNDER_CE=$(CEVersion) /D "UNICODE" /D "_USRDLL" /D "DSS_EXPORTS" /D WCE_PLATFORM=$(CEPlatform) /D "$(CePlatform)" /D "_UNICODE" /YX /Qsh4 /c
+# ADD CPP /nologo /W3 /O2 /D _WIN32_WCE=$(CEVersion) /D "NDEBUG" /D "SHx" /D "SH4" /D "_SH4_" /D UNDER_CE=$(CEVersion) /D "UNICODE" /D "_USRDLL" /D "DSS_EXPORTS" /D WCE_PLATFORM=$(CEPlatform) /D "$(CePlatform)" /D "_UNICODE" /YX /Qsh4 /c
+MTL=midl.exe
+# ADD BASE MTL /nologo /D "NDEBUG" /mktyplib203 /o "NUL" /win32
+# ADD MTL /nologo /D "NDEBUG" /mktyplib203 /o "NUL" /win32
+BSC32=bscmake.exe
+# ADD BASE BSC32 /nologo
+# ADD BSC32 /nologo
+LINK32=link.exe
+# ADD BASE LINK32 commctrl.lib coredll.lib /nologo /stack:0x10000,0x1000 /dll /nodefaultlib:"$(CENoDefaultLib)" /machine:SH4 /subsystem:$(CESubsystem)
+# SUBTRACT BASE LINK32 /pdb:none /nodefaultlib
+# ADD LINK32 commctrl.lib coredll.lib /nologo /stack:0x10000,0x1000 /dll /nodefaultlib:"$(CENoDefaultLib)" /machine:SH4 /subsystem:$(CESubsystem)
+# SUBTRACT LINK32 /pdb:none /nodefaultlib
+
+!ELSEIF  "$(CFG)" == "DSS - Win32 (WCE SH4) Debug"
+
+# PROP BASE Use_MFC 0
+# PROP BASE Use_Debug_Libraries 1
+# PROP BASE Output_Dir "WCESH4Dbg"
+# PROP BASE Intermediate_Dir "WCESH4Dbg"
+# PROP BASE Target_Dir ""
+# PROP Use_MFC 0
+# PROP Use_Debug_Libraries 1
+# PROP Output_Dir "WCESH4Dbg"
+# PROP Intermediate_Dir "WCESH4Dbg"
+# PROP Ignore_Export_Lib 0
+# PROP Target_Dir ""
+RSC=rc.exe
+# ADD BASE RSC /l 0x409 /d "SHx" /d "SH4" /d "_SH4_" /d UNDER_CE=$(CEVersion) /d _WIN32_WCE=$(CEVersion) /d "UNICODE" /d "DEBUG" /r
+# ADD RSC /l 0x409 /d "SHx" /d "SH4" /d "_SH4_" /d UNDER_CE=$(CEVersion) /d _WIN32_WCE=$(CEVersion) /d "UNICODE" /d "DEBUG" /r
+CPP=shcl.exe
+# ADD BASE CPP /nologo /W3 /Zi /Od /D _WIN32_WCE=$(CEVersion) /D "DEBUG" /D "SHx" /D "SH4" /D "_SH4_" /D UNDER_CE=$(CEVersion) /D "UNICODE" /D "_USRDLL" /D "DSS_EXPORTS" /D WCE_PLATFORM=$(CEPlatform) /D "$(CePlatform)" /D "_UNICODE" /YX /Qsh4 /c
+# ADD CPP /nologo /W3 /Zi /Od /D _WIN32_WCE=$(CEVersion) /D "DEBUG" /D "SHx" /D "SH4" /D "_SH4_" /D UNDER_CE=$(CEVersion) /D "UNICODE" /D "_USRDLL" /D "DSS_EXPORTS" /D WCE_PLATFORM=$(CEPlatform) /D "$(CePlatform)" /D "_UNICODE" /YX /Qsh4 /c
+MTL=midl.exe
+# ADD BASE MTL /nologo /D "_DEBUG" /mktyplib203 /o "NUL" /win32
+# ADD MTL /nologo /D "_DEBUG" /mktyplib203 /o "NUL" /win32
+BSC32=bscmake.exe
+# ADD BASE BSC32 /nologo
+# ADD BSC32 /nologo
+LINK32=link.exe
+# ADD BASE LINK32 commctrl.lib coredll.lib /nologo /stack:0x10000,0x1000 /dll /debug /nodefaultlib:"$(CENoDefaultLib)" /machine:SH4 /subsystem:$(CESubsystem)
+# SUBTRACT BASE LINK32 /pdb:none /nodefaultlib
+# ADD LINK32 commctrl.lib coredll.lib /nologo /stack:0x10000,0x1000 /dll /debug /nodefaultlib:"$(CENoDefaultLib)" /machine:SH4 /subsystem:$(CESubsystem)
+# SUBTRACT LINK32 /pdb:none /nodefaultlib
+
+!ELSEIF  "$(CFG)" == "DSS - Win32 (WCE SH3) Release"
+
+# PROP BASE Use_MFC 0
+# PROP BASE Use_Debug_Libraries 0
+# PROP BASE Output_Dir "WCESH3Rel"
+# PROP BASE Intermediate_Dir "WCESH3Rel"
+# PROP BASE Target_Dir ""
+# PROP Use_MFC 0
+# PROP Use_Debug_Libraries 0
+# PROP Output_Dir "WCESH3Rel"
+# PROP Intermediate_Dir "WCESH3Rel"
+# PROP Ignore_Export_Lib 0
+# PROP Target_Dir ""
+RSC=rc.exe
+# ADD BASE RSC /l 0x409 /d "SHx" /d "SH3" /d "_SH3_" /d UNDER_CE=$(CEVersion) /d _WIN32_WCE=$(CEVersion) /d "UNICODE" /d "NDEBUG" /r
+# ADD RSC /l 0x409 /d "SHx" /d "SH3" /d "_SH3_" /d UNDER_CE=$(CEVersion) /d _WIN32_WCE=$(CEVersion) /d "UNICODE" /d "NDEBUG" /r
+CPP=shcl.exe
+# ADD BASE CPP /nologo /W3 /O2 /D _WIN32_WCE=$(CEVersion) /D "NDEBUG" /D "SHx" /D "SH3" /D "_SH3_" /D UNDER_CE=$(CEVersion) /D "UNICODE" /D "_USRDLL" /D "DSS_EXPORTS" /D WCE_PLATFORM=$(CEPlatform) /D "$(CePlatform)" /D "_UNICODE" /YX /M$(CECrtMT) /c
+# ADD CPP /nologo /W3 /O2 /I "../../common" /D "DSSDLL_EXPORTS" /D "NDEBUG" /D "SHx" /D "SH3" /D "_SH3_" /D "DSS_EXPORTS" /D _WIN32_WCE=$(CEVersion) /D UNDER_CE=$(CEVersion) /D "UNICODE" /D "_USRDLL" /D WCE_PLATFORM=$(CEPlatform) /D "$(CePlatform)" /D "_UNICODE" /YX /M$(CECrtMT) /c
+MTL=midl.exe
+# ADD BASE MTL /nologo /D "NDEBUG" /mktyplib203 /o "NUL" /win32
+# ADD MTL /nologo /D "NDEBUG" /mktyplib203 /o "NUL" /win32
+BSC32=bscmake.exe
+# ADD BASE BSC32 /nologo
+# ADD BSC32 /nologo
+LINK32=link.exe
+# ADD BASE LINK32 commctrl.lib coredll.lib /nologo /stack:0x10000,0x1000 /dll /nodefaultlib:"$(CENoDefaultLib)" /machine:SH3 /subsystem:$(CESubsystem)
+# SUBTRACT BASE LINK32 /pdb:none /nodefaultlib
+# ADD LINK32 commctrl.lib coredll.lib /nologo /stack:0x10000,0x1000 /dll /nodefaultlib:"$(CENoDefaultLib)" /out:"../Builds/SH3/Release/DSS.dll" /machine:SH3 /subsystem:$(CESubsystem)
+# SUBTRACT LINK32 /pdb:none /nodefaultlib
+
+!ELSEIF  "$(CFG)" == "DSS - Win32 (WCE SH3) Debug"
+
+# PROP BASE Use_MFC 0
+# PROP BASE Use_Debug_Libraries 1
+# PROP BASE Output_Dir "WCESH3Dbg"
+# PROP BASE Intermediate_Dir "WCESH3Dbg"
+# PROP BASE Target_Dir ""
+# PROP Use_MFC 0
+# PROP Use_Debug_Libraries 1
+# PROP Output_Dir "WCESH3Dbg"
+# PROP Intermediate_Dir "WCESH3Dbg"
+# PROP Ignore_Export_Lib 0
+# PROP Target_Dir ""
+RSC=rc.exe
+# ADD BASE RSC /l 0x409 /d "SHx" /d "SH3" /d "_SH3_" /d UNDER_CE=$(CEVersion) /d _WIN32_WCE=$(CEVersion) /d "UNICODE" /d "DEBUG" /r
+# ADD RSC /l 0x409 /d "SHx" /d "SH3" /d "_SH3_" /d UNDER_CE=$(CEVersion) /d _WIN32_WCE=$(CEVersion) /d "UNICODE" /d "DEBUG" /r
+CPP=shcl.exe
+# ADD BASE CPP /nologo /W3 /Zi /Od /D _WIN32_WCE=$(CEVersion) /D "DEBUG" /D "SHx" /D "SH3" /D "_SH3_" /D UNDER_CE=$(CEVersion) /D "UNICODE" /D "_USRDLL" /D "DSS_EXPORTS" /D WCE_PLATFORM=$(CEPlatform) /D "$(CePlatform)" /D "_UNICODE" /YX /M$(CECrtMTDebug) /c
+# ADD CPP /nologo /W3 /Zi /Od /I "../../common" /D "DSSDLL_EXPORTS" /D "DEBUG" /D "SHx" /D "SH3" /D "_SH3_" /D "DSS_EXPORTS" /D _WIN32_WCE=$(CEVersion) /D UNDER_CE=$(CEVersion) /D "UNICODE" /D "_USRDLL" /D WCE_PLATFORM=$(CEPlatform) /D "$(CePlatform)" /D "_UNICODE" /YX /M$(CECrtMTDebug) /c
+MTL=midl.exe
+# ADD BASE MTL /nologo /D "_DEBUG" /mktyplib203 /o "NUL" /win32
+# ADD MTL /nologo /D "_DEBUG" /mktyplib203 /o "NUL" /win32
+BSC32=bscmake.exe
+# ADD BASE BSC32 /nologo
+# ADD BSC32 /nologo
+LINK32=link.exe
+# ADD BASE LINK32 commctrl.lib coredll.lib /nologo /stack:0x10000,0x1000 /dll /debug /nodefaultlib:"$(CENoDefaultLib)" /machine:SH3 /subsystem:$(CESubsystem)
+# SUBTRACT BASE LINK32 /pdb:none /nodefaultlib
+# ADD LINK32 commctrl.lib coredll.lib /nologo /stack:0x10000,0x1000 /dll /debug /nodefaultlib:"$(CENoDefaultLib)" /out:"../Builds/SH3/Debug/DSS.dll" /machine:SH3 /subsystem:$(CESubsystem)
+# SUBTRACT LINK32 /pdb:none /nodefaultlib
+
+!ELSEIF  "$(CFG)" == "DSS - Win32 (WCE ARM) Release"
+
+# PROP BASE Use_MFC 0
+# PROP BASE Use_Debug_Libraries 0
+# PROP BASE Output_Dir "WCEARMRel"
+# PROP BASE Intermediate_Dir "WCEARMRel"
+# PROP BASE Target_Dir ""
+# PROP Use_MFC 0
+# PROP Use_Debug_Libraries 0
+# PROP Output_Dir "WCEARMRel"
+# PROP Intermediate_Dir "WCEARMRel"
+# PROP Ignore_Export_Lib 0
+# PROP Target_Dir ""
+RSC=rc.exe
+# ADD BASE RSC /l 0x409 /d "ARM" /d "_ARM_" /d UNDER_CE=$(CEVersion) /d _WIN32_WCE=$(CEVersion) /d "UNICODE" /d "NDEBUG" /r
+# ADD RSC /l 0x409 /d "ARM" /d "_ARM_" /d UNDER_CE=$(CEVersion) /d _WIN32_WCE=$(CEVersion) /d "UNICODE" /d "NDEBUG" /r
+CPP=clarm.exe
+# ADD BASE CPP /nologo /W3 /O2 /D _WIN32_WCE=$(CEVersion) /D "NDEBUG" /D "ARM" /D "_ARM_" /D UNDER_CE=$(CEVersion) /D "UNICODE" /D "_USRDLL" /D "DSS_EXPORTS" /D WCE_PLATFORM=$(CEPlatform) /D "$(CePlatform)" /D "_UNICODE" /YX /c
+# ADD CPP /nologo /W3 /O2 /I "../../common" /D "NDEBUG" /D "ARM" /D "_ARM_" /D "DSS_EXPORTS" /D _WIN32_WCE=$(CEVersion) /D UNDER_CE=$(CEVersion) /D "UNICODE" /D "_USRDLL" /D WCE_PLATFORM=$(CEPlatform) /D "$(CePlatform)" /D "_UNICODE" /D "DSSDLL_EXPORTS" /YX /c
+MTL=midl.exe
+# ADD BASE MTL /nologo /D "NDEBUG" /mktyplib203 /o "NUL" /win32
+# ADD MTL /nologo /D "NDEBUG" /mktyplib203 /o "NUL" /win32
+BSC32=bscmake.exe
+# ADD BASE BSC32 /nologo
+# ADD BSC32 /nologo
+LINK32=link.exe
+# ADD BASE LINK32 coredll.lib commctrl.lib /nologo /stack:0x10000,0x1000 /dll /nodefaultlib:"$(CENoDefaultLib)" /machine:ARM /subsystem:$(CESubsystem)
+# SUBTRACT BASE LINK32 /pdb:none /nodefaultlib
+# ADD LINK32 coredll.lib commctrl.lib /nologo /stack:0x10000,0x1000 /dll /nodefaultlib:"$(CENoDefaultLib)" /out:"../Builds/ARM/Release/DSS.dll" /machine:ARM /subsystem:$(CESubsystem)
+# SUBTRACT LINK32 /pdb:none /nodefaultlib
+
+!ELSEIF  "$(CFG)" == "DSS - Win32 (WCE ARM) Debug"
+
+# PROP BASE Use_MFC 0
+# PROP BASE Use_Debug_Libraries 1
+# PROP BASE Output_Dir "WCEARMDbg"
+# PROP BASE Intermediate_Dir "WCEARMDbg"
+# PROP BASE Target_Dir ""
+# PROP Use_MFC 0
+# PROP Use_Debug_Libraries 1
+# PROP Output_Dir "WCEARMDbg"
+# PROP Intermediate_Dir "WCEARMDbg"
+# PROP Ignore_Export_Lib 0
+# PROP Target_Dir ""
+RSC=rc.exe
+# ADD BASE RSC /l 0x409 /d "ARM" /d "_ARM_" /d UNDER_CE=$(CEVersion) /d _WIN32_WCE=$(CEVersion) /d "UNICODE" /d "DEBUG" /r
+# ADD RSC /l 0x409 /d "ARM" /d "_ARM_" /d UNDER_CE=$(CEVersion) /d _WIN32_WCE=$(CEVersion) /d "UNICODE" /d "DEBUG" /r
+CPP=clarm.exe
+# ADD BASE CPP /nologo /W3 /Zi /Od /D _WIN32_WCE=$(CEVersion) /D "DEBUG" /D "ARM" /D "_ARM_" /D UNDER_CE=$(CEVersion) /D "UNICODE" /D "_USRDLL" /D "DSS_EXPORTS" /D WCE_PLATFORM=$(CEPlatform) /D "$(CePlatform)" /D "_UNICODE" /YX /c
+# ADD CPP /nologo /W3 /Zi /Od /I "../../common" /D "DEBUG" /D "ARM" /D "_ARM_" /D "DSS_EXPORTS" /D "DSSDLL_EXPORTS" /D _WIN32_WCE=$(CEVersion) /D UNDER_CE=$(CEVersion) /D "UNICODE" /D "_USRDLL" /D WCE_PLATFORM=$(CEPlatform) /D "$(CePlatform)" /D "_UNICODE" /YX /c
+MTL=midl.exe
+# ADD BASE MTL /nologo /D "_DEBUG" /mktyplib203 /o "NUL" /win32
+# ADD MTL /nologo /D "_DEBUG" /mktyplib203 /o "NUL" /win32
+BSC32=bscmake.exe
+# ADD BASE BSC32 /nologo
+# ADD BSC32 /nologo
+LINK32=link.exe
+# ADD BASE LINK32 coredll.lib commctrl.lib /nologo /stack:0x10000,0x1000 /dll /debug /nodefaultlib:"$(CENoDefaultLib)" /machine:ARM /subsystem:$(CESubsystem)
+# SUBTRACT BASE LINK32 /pdb:none /nodefaultlib
+# ADD LINK32 coredll.lib commctrl.lib /nologo /stack:0x10000,0x1000 /dll /debug /nodefaultlib:"$(CENoDefaultLib)" /machine:ARM /subsystem:$(CESubsystem)
+# SUBTRACT LINK32 /pdb:none /nodefaultlib
+
+!ELSEIF  "$(CFG)" == "DSS - Win32 (WCE MIPSFP) Release"
+
+# PROP BASE Use_MFC 0
+# PROP BASE Use_Debug_Libraries 0
+# PROP BASE Output_Dir "WMIPSFPRel"
+# PROP BASE Intermediate_Dir "WMIPSFPRel"
+# PROP BASE Target_Dir ""
+# PROP Use_MFC 0
+# PROP Use_Debug_Libraries 0
+# PROP Output_Dir "WMIPSFPRel"
+# PROP Intermediate_Dir "WMIPSFPRel"
+# PROP Ignore_Export_Lib 0
+# PROP Target_Dir ""
+RSC=rc.exe
+# ADD BASE RSC /l 0x409 /d "MIPS" /d "_MIPS_" /d UNDER_CE=$(CEVersion) /d _WIN32_WCE=$(CEVersion) /d "UNICODE" /d "NDEBUG" /r
+# ADD RSC /l 0x409 /d "MIPS" /d "_MIPS_" /d UNDER_CE=$(CEVersion) /d _WIN32_WCE=$(CEVersion) /d "UNICODE" /d "NDEBUG" /r
+CPP=clmips.exe
+# ADD BASE CPP /nologo /W3 /O2 /D _WIN32_WCE=$(CEVersion) /D "NDEBUG" /D "MIPS" /D "_MIPS_" /D UNDER_CE=$(CEVersion) /D "UNICODE" /D "_USRDLL" /D "DSS_EXPORTS" /D WCE_PLATFORM=$(CEPlatform) /D "$(CePlatform)" /D "_UNICODE" /YX /QMFWCE /c
+# ADD CPP /nologo /W3 /O2 /D _WIN32_WCE=$(CEVersion) /D "NDEBUG" /D "MIPS" /D "_MIPS_" /D UNDER_CE=$(CEVersion) /D "UNICODE" /D "_USRDLL" /D "DSS_EXPORTS" /D WCE_PLATFORM=$(CEPlatform) /D "$(CePlatform)" /D "_UNICODE" /YX /QMFWCE /c
+MTL=midl.exe
+# ADD BASE MTL /nologo /D "NDEBUG" /mktyplib203 /o "NUL" /win32
+# ADD MTL /nologo /D "NDEBUG" /mktyplib203 /o "NUL" /win32
+BSC32=bscmake.exe
+# ADD BASE BSC32 /nologo
+# ADD BSC32 /nologo
+LINK32=link.exe
+# ADD BASE LINK32 commctrl.lib coredll.lib /nologo /stack:0x10000,0x1000 /dll /nodefaultlib:"$(CENoDefaultLib)" /machine:MIPS /subsystem:$(CESubsystem)
+# SUBTRACT BASE LINK32 /pdb:none /nodefaultlib
+# ADD LINK32 commctrl.lib coredll.lib /nologo /stack:0x10000,0x1000 /dll /nodefaultlib:"$(CENoDefaultLib)" /machine:MIPS /subsystem:$(CESubsystem)
+# SUBTRACT LINK32 /pdb:none /nodefaultlib
+
+!ELSEIF  "$(CFG)" == "DSS - Win32 (WCE MIPSFP) Debug"
+
+# PROP BASE Use_MFC 0
+# PROP BASE Use_Debug_Libraries 1
+# PROP BASE Output_Dir "WMIPSFPDbg"
+# PROP BASE Intermediate_Dir "WMIPSFPDbg"
+# PROP BASE Target_Dir ""
+# PROP Use_MFC 0
+# PROP Use_Debug_Libraries 1
+# PROP Output_Dir "WMIPSFPDbg"
+# PROP Intermediate_Dir "WMIPSFPDbg"
+# PROP Ignore_Export_Lib 0
+# PROP Target_Dir ""
+RSC=rc.exe
+# ADD BASE RSC /l 0x409 /d "MIPS" /d "_MIPS_" /d UNDER_CE=$(CEVersion) /d _WIN32_WCE=$(CEVersion) /d "UNICODE" /d "DEBUG" /r
+# ADD RSC /l 0x409 /d "MIPS" /d "_MIPS_" /d UNDER_CE=$(CEVersion) /d _WIN32_WCE=$(CEVersion) /d "UNICODE" /d "DEBUG" /r
+CPP=clmips.exe
+# ADD BASE CPP /nologo /W3 /Zi /Od /D _WIN32_WCE=$(CEVersion) /D "DEBUG" /D "MIPS" /D "_MIPS_" /D UNDER_CE=$(CEVersion) /D "UNICODE" /D "_USRDLL" /D "DSS_EXPORTS" /D WCE_PLATFORM=$(CEPlatform) /D "$(CePlatform)" /D "_UNICODE" /YX /QMFWCE /c
+# ADD CPP /nologo /W3 /Zi /Od /D _WIN32_WCE=$(CEVersion) /D "DEBUG" /D "MIPS" /D "_MIPS_" /D UNDER_CE=$(CEVersion) /D "UNICODE" /D "_USRDLL" /D "DSS_EXPORTS" /D WCE_PLATFORM=$(CEPlatform) /D "$(CePlatform)" /D "_UNICODE" /YX /QMFWCE /c
+MTL=midl.exe
+# ADD BASE MTL /nologo /D "_DEBUG" /mktyplib203 /o "NUL" /win32
+# ADD MTL /nologo /D "_DEBUG" /mktyplib203 /o "NUL" /win32
+BSC32=bscmake.exe
+# ADD BASE BSC32 /nologo
+# ADD BSC32 /nologo
+LINK32=link.exe
+# ADD BASE LINK32 commctrl.lib coredll.lib /nologo /stack:0x10000,0x1000 /dll /debug /nodefaultlib:"$(CENoDefaultLib)" /machine:MIPS /subsystem:$(CESubsystem)
+# SUBTRACT BASE LINK32 /pdb:none /nodefaultlib
+# ADD LINK32 commctrl.lib coredll.lib /nologo /stack:0x10000,0x1000 /dll /debug /nodefaultlib:"$(CENoDefaultLib)" /machine:MIPS /subsystem:$(CESubsystem)
+# SUBTRACT LINK32 /pdb:none /nodefaultlib
+
+!ELSEIF  "$(CFG)" == "DSS - Win32 (WCE x86) Release"
+
+# PROP BASE Use_MFC 0
+# PROP BASE Use_Debug_Libraries 0
+# PROP BASE Output_Dir "WCEX86Rel"
+# PROP BASE Intermediate_Dir "WCEX86Rel"
+# PROP BASE Target_Dir ""
+# PROP Use_MFC 0
+# PROP Use_Debug_Libraries 0
+# PROP Output_Dir "WCEX86Rel"
+# PROP Intermediate_Dir "WCEX86Rel"
+# PROP Ignore_Export_Lib 0
+# PROP Target_Dir ""
+RSC=rc.exe
+# ADD BASE RSC /l 0x409 /d "x86" /d "_i386_" /d "_X86_" /d _WIN32_WCE=$(CEVersion) /d UNDER_CE=$(CEVersion) /d "UNICODE" /d "NDEBUG" /r
+# ADD RSC /l 0x409 /d "x86" /d "_i386_" /d "_X86_" /d _WIN32_WCE=$(CEVersion) /d UNDER_CE=$(CEVersion) /d "UNICODE" /d "NDEBUG" /r
+CPP=cl.exe
+# ADD BASE CPP /nologo /W3 /O2 /D "x86" /D "_i386_" /D "_X86_" /D _WIN32_WCE=$(CEVersion) /D UNDER_CE=$(CEVersion) /D "UNICODE" /D "NDEBUG" /D "i_386_" /D "_USRDLL" /D "DSS_EXPORTS" /D WCE_PLATFORM=$(CEPlatform) /D "$(CePlatform)" /D "_UNICODE" /Gs8192 /GF /c
+# ADD CPP /nologo /W3 /O2 /D "x86" /D "_i386_" /D "_X86_" /D _WIN32_WCE=$(CEVersion) /D UNDER_CE=$(CEVersion) /D "UNICODE" /D "NDEBUG" /D "i_386_" /D "_USRDLL" /D "DSS_EXPORTS" /D WCE_PLATFORM=$(CEPlatform) /D "$(CePlatform)" /D "_UNICODE" /Gs8192 /GF /c
+MTL=midl.exe
+# ADD BASE MTL /nologo /D "NDEBUG" /mktyplib203 /o "NUL" /win32
+# ADD MTL /nologo /D "NDEBUG" /mktyplib203 /o "NUL" /win32
+BSC32=bscmake.exe
+# ADD BASE BSC32 /nologo
+# ADD BSC32 /nologo
+LINK32=link.exe
+# ADD BASE LINK32 $(CEx86Corelibc) commctrl.lib coredll.lib /nologo /base:"0x00010000" /stack:0x10000,0x1000 /dll /nodefaultlib:$(CENoDefaultLib) /machine:IX86 /subsystem:$(CESubsystem)
+# SUBTRACT BASE LINK32 /pdb:none /nodefaultlib
+# ADD LINK32 $(CEx86Corelibc) commctrl.lib coredll.lib /nologo /base:"0x00010000" /stack:0x10000,0x1000 /dll /nodefaultlib:$(CENoDefaultLib) /machine:IX86 /subsystem:$(CESubsystem)
+# SUBTRACT LINK32 /pdb:none /nodefaultlib
+
+!ELSEIF  "$(CFG)" == "DSS - Win32 (WCE x86) Debug"
+
+# PROP BASE Use_MFC 0
+# PROP BASE Use_Debug_Libraries 1
+# PROP BASE Output_Dir "WCEX86Dbg"
+# PROP BASE Intermediate_Dir "WCEX86Dbg"
+# PROP BASE Target_Dir ""
+# PROP Use_MFC 0
+# PROP Use_Debug_Libraries 1
+# PROP Output_Dir "WCEX86Dbg"
+# PROP Intermediate_Dir "WCEX86Dbg"
+# PROP Ignore_Export_Lib 0
+# PROP Target_Dir ""
+RSC=rc.exe
+# ADD BASE RSC /l 0x409 /d "x86" /d "_i386_" /d "_X86_" /d _WIN32_WCE=$(CEVersion) /d UNDER_CE=$(CEVersion) /d "UNICODE" /d "DEBUG" /r
+# ADD RSC /l 0x409 /d "x86" /d "_i386_" /d "_X86_" /d _WIN32_WCE=$(CEVersion) /d UNDER_CE=$(CEVersion) /d "UNICODE" /d "DEBUG" /r
+CPP=cl.exe
+# ADD BASE CPP /nologo /W3 /Zi /Od /D "x86" /D "_i386_" /D "_X86_" /D _WIN32_WCE=$(CEVersion) /D UNDER_CE=$(CEVersion) /D "UNICODE" /D "DEBUG" /D "i_386_" /D "_USRDLL" /D "DSS_EXPORTS" /D WCE_PLATFORM=$(CEPlatform) /D "$(CePlatform)" /D "_UNICODE" /Gs8192 /GF /c
+# ADD CPP /nologo /W3 /Zi /Od /D "x86" /D "_i386_" /D "_X86_" /D _WIN32_WCE=$(CEVersion) /D UNDER_CE=$(CEVersion) /D "UNICODE" /D "DEBUG" /D "i_386_" /D "_USRDLL" /D "DSS_EXPORTS" /D WCE_PLATFORM=$(CEPlatform) /D "$(CePlatform)" /D "_UNICODE" /Gs8192 /GF /c
+MTL=midl.exe
+# ADD BASE MTL /nologo /D "_DEBUG" /mktyplib203 /o "NUL" /win32
+# ADD MTL /nologo /D "_DEBUG" /mktyplib203 /o "NUL" /win32
+BSC32=bscmake.exe
+# ADD BASE BSC32 /nologo
+# ADD BSC32 /nologo
+LINK32=link.exe
+# ADD BASE LINK32 $(CEx86Corelibc) commctrl.lib coredll.lib /nologo /base:"0x00010000" /stack:0x10000,0x1000 /dll /debug /nodefaultlib:$(CENoDefaultLib) /machine:IX86 /subsystem:$(CESubsystem)
+# SUBTRACT BASE LINK32 /pdb:none /nodefaultlib
+# ADD LINK32 $(CEx86Corelibc) commctrl.lib coredll.lib /nologo /base:"0x00010000" /stack:0x10000,0x1000 /dll /debug /nodefaultlib:$(CENoDefaultLib) /machine:IX86 /subsystem:$(CESubsystem)
+# SUBTRACT LINK32 /pdb:none /nodefaultlib
+
+!ELSEIF  "$(CFG)" == "DSS - Win32 (WCE x86em) Release"
+
+# PROP BASE Use_MFC 0
+# PROP BASE Use_Debug_Libraries 0
+# PROP BASE Output_Dir "x86emRel"
+# PROP BASE Intermediate_Dir "x86emRel"
+# PROP BASE Target_Dir ""
+# PROP Use_MFC 0
+# PROP Use_Debug_Libraries 0
+# PROP Output_Dir "x86emRel"
+# PROP Intermediate_Dir "x86emRel"
+# PROP Ignore_Export_Lib 0
+# PROP Target_Dir ""
+RSC=rc.exe
+# ADD BASE RSC /l 0x409 /d UNDER_CE=$(CEVersion) /d "UNICODE" /d "_UNICODE" /d "WIN32" /d "STRICT" /d _WIN32_WCE=$(CEVersion) /d "_WIN32_WCE_EMULATION" /d "INTERNATIONAL" /d "USA" /d "INTLMSG_CODEPAGE" /d "NDEBUG"
+# ADD RSC /l 0x409 /d UNDER_CE=$(CEVersion) /d "UNICODE" /d "_UNICODE" /d "WIN32" /d "STRICT" /d _WIN32_WCE=$(CEVersion) /d "_WIN32_WCE_EMULATION" /d "INTERNATIONAL" /d "USA" /d "INTLMSG_CODEPAGE" /d "NDEBUG"
+CPP=cl.exe
+# ADD BASE CPP /nologo /W3 /O2 /D UNDER_CE=$(CEVersion) /D "UNICODE" /D "_UNICODE" /D "WIN32" /D "STRICT" /D _WIN32_WCE=$(CEVersion) /D "_WIN32_WCE_EMULATION" /D "INTERNATIONAL" /D "USA" /D "INTLMSG_CODEPAGE" /D "NDEBUG" /D "x86" /D "i486" /D "_X86_" /D "_USRDLL" /D "DSS_EXPORTS" /D WCE_PLATFORM=$(CEPlatform) /D "$(CePlatform)" /YX /Gz /c
+# ADD CPP /nologo /W3 /O2 /D UNDER_CE=$(CEVersion) /D "UNICODE" /D "_UNICODE" /D "WIN32" /D "STRICT" /D _WIN32_WCE=$(CEVersion) /D "_WIN32_WCE_EMULATION" /D "INTERNATIONAL" /D "USA" /D "INTLMSG_CODEPAGE" /D "NDEBUG" /D "x86" /D "i486" /D "_X86_" /D "_USRDLL" /D "DSS_EXPORTS" /D WCE_PLATFORM=$(CEPlatform) /D "$(CePlatform)" /YX /Gz /c
+MTL=midl.exe
+# ADD BASE MTL /nologo /D "NDEBUG" /mktyplib203 /o "NUL" /win32
+# ADD MTL /nologo /D "NDEBUG" /mktyplib203 /o "NUL" /win32
+BSC32=bscmake.exe
+# ADD BASE BSC32 /nologo
+# ADD BSC32 /nologo
+LINK32=link.exe
+# ADD BASE LINK32 $(CEx86Corelibc) commctrl.lib coredll.lib /nologo /stack:0x10000,0x1000 /dll /nodefaultlib:$(CENoDefaultLib) /machine:I386 /windowsce:emulation
+# ADD LINK32 $(CEx86Corelibc) commctrl.lib coredll.lib /nologo /stack:0x10000,0x1000 /dll /nodefaultlib:$(CENoDefaultLib) /machine:I386 /windowsce:emulation
+
+!ELSEIF  "$(CFG)" == "DSS - Win32 (WCE x86em) Debug"
+
+# PROP BASE Use_MFC 0
+# PROP BASE Use_Debug_Libraries 1
+# PROP BASE Output_Dir "x86emDbg"
+# PROP BASE Intermediate_Dir "x86emDbg"
+# PROP BASE Target_Dir ""
+# PROP Use_MFC 0
+# PROP Use_Debug_Libraries 1
+# PROP Output_Dir "x86emDbg"
+# PROP Intermediate_Dir "x86emDbg"
+# PROP Ignore_Export_Lib 0
+# PROP Target_Dir ""
+RSC=rc.exe
+# ADD BASE RSC /l 0x409 /d UNDER_CE=$(CEVersion) /d "UNICODE" /d "_UNICODE" /d "WIN32" /d "STRICT" /d _WIN32_WCE=$(CEVersion) /d "_WIN32_WCE_EMULATION" /d "INTERNATIONAL" /d "USA" /d "INTLMSG_CODEPAGE" /d "_DEBUG" /d "x86" /d "i486" /d "_X86_"
+# ADD RSC /l 0x409 /d UNDER_CE=$(CEVersion) /d "UNICODE" /d "_UNICODE" /d "WIN32" /d "STRICT" /d _WIN32_WCE=$(CEVersion) /d "_WIN32_WCE_EMULATION" /d "INTERNATIONAL" /d "USA" /d "INTLMSG_CODEPAGE" /d "_DEBUG" /d "x86" /d "i486" /d "_X86_"
+CPP=cl.exe
+# ADD BASE CPP /nologo /W3 /Zi /Od /D UNDER_CE=$(CEVersion) /D "UNICODE" /D "_UNICODE" /D "WIN32" /D "STRICT" /D _WIN32_WCE=$(CEVersion) /D "_WIN32_WCE_EMULATION" /D "INTERNATIONAL" /D "USA" /D "INTLMSG_CODEPAGE" /D "_DEBUG" /D "x86" /D "i486" /D "_X86_" /D "_USRDLL" /D "DSS_EXPORTS" /D WCE_PLATFORM=$(CEPlatform) /D "$(CePlatform)" /YX /Gz /c
+# ADD CPP /nologo /W3 /Zi /Od /D UNDER_CE=$(CEVersion) /D "UNICODE" /D "_UNICODE" /D "WIN32" /D "STRICT" /D _WIN32_WCE=$(CEVersion) /D "_WIN32_WCE_EMULATION" /D "INTERNATIONAL" /D "USA" /D "INTLMSG_CODEPAGE" /D "_DEBUG" /D "x86" /D "i486" /D "_X86_" /D "_USRDLL" /D "DSS_EXPORTS" /D WCE_PLATFORM=$(CEPlatform) /D "$(CePlatform)" /YX /Gz /c
+MTL=midl.exe
+# ADD BASE MTL /nologo /D "_DEBUG" /mktyplib203 /o "NUL" /win32
+# ADD MTL /nologo /D "_DEBUG" /mktyplib203 /o "NUL" /win32
+BSC32=bscmake.exe
+# ADD BASE BSC32 /nologo
+# ADD BSC32 /nologo
+LINK32=link.exe
+# ADD BASE LINK32 $(CEx86Corelibc) commctrl.lib coredll.lib /nologo /stack:0x10000,0x1000 /dll /debug /nodefaultlib:$(CENoDefaultLib) /machine:I386 /windowsce:emulation
+# ADD LINK32 $(CEx86Corelibc) commctrl.lib coredll.lib /nologo /stack:0x10000,0x1000 /dll /debug /nodefaultlib:$(CENoDefaultLib) /machine:I386 /windowsce:emulation
+
+!ELSEIF  "$(CFG)" == "DSS - Win32 (WCE PPC) Release"
+
+# PROP BASE Use_MFC 0
+# PROP BASE Use_Debug_Libraries 0
+# PROP BASE Output_Dir "WCEPPCRel"
+# PROP BASE Intermediate_Dir "WCEPPCRel"
+# PROP BASE Target_Dir ""
+# PROP Use_MFC 0
+# PROP Use_Debug_Libraries 0
+# PROP Output_Dir "WCEPPCRel"
+# PROP Intermediate_Dir "WCEPPCRel"
+# PROP Ignore_Export_Lib 0
+# PROP Target_Dir ""
+RSC=rc.exe
+# ADD BASE RSC /l 0x409 /d "ppc" /d "_ppc_" /d _WIN32_WCE=$(CEVersion) /d UNDER_CE=$(CEVersion) /d "UNICODE" /d "NDEBUG" /r
+# ADD RSC /l 0x409 /d "ppc" /d "_ppc_" /d _WIN32_WCE=$(CEVersion) /d UNDER_CE=$(CEVersion) /d "UNICODE" /d "NDEBUG" /r
+CPP=clppc.exe
+# ADD BASE CPP /nologo /W3 /O2 /D _WIN32_WCE=$(CEVersion) /D "NDEBUG" /D "PPC" /D "_PPC_" /D UNDER_CE=$(CEVersion) /D "UNICODE" /D "_USRDLL" /D "DSS_EXPORTS" /D WCE_PLATFORM=$(CEPlatform) /D "$(CePlatform)" /D "_UNICODE" /YX /M$(CECrtMT) /c
+# ADD CPP /nologo /W3 /O2 /D _WIN32_WCE=$(CEVersion) /D "NDEBUG" /D "PPC" /D "_PPC_" /D UNDER_CE=$(CEVersion) /D "UNICODE" /D "_USRDLL" /D "DSS_EXPORTS" /D WCE_PLATFORM=$(CEPlatform) /D "$(CePlatform)" /D "_UNICODE" /YX /M$(CECrtMT) /c
+MTL=midl.exe
+# ADD BASE MTL /nologo /D "NDEBUG" /mktyplib203 /o "NUL" /win32
+# ADD MTL /nologo /D "NDEBUG" /mktyplib203 /o "NUL" /win32
+BSC32=bscmake.exe
+# ADD BASE BSC32 /nologo
+# ADD BSC32 /nologo
+LINK32=link.exe
+# ADD BASE LINK32 commctrl.lib coredll.lib /nologo /stack:0x10000,0x1000 /dll /nodefaultlib:"$(CENoDefaultLib)" /machine:PPC /subsystem:$(CESubsystem)
+# SUBTRACT BASE LINK32 /pdb:none /nodefaultlib
+# ADD LINK32 commctrl.lib coredll.lib /nologo /stack:0x10000,0x1000 /dll /nodefaultlib:"$(CENoDefaultLib)" /machine:PPC /subsystem:$(CESubsystem)
+# SUBTRACT LINK32 /pdb:none /nodefaultlib
+
+!ELSEIF  "$(CFG)" == "DSS - Win32 (WCE PPC) Debug"
+
+# PROP BASE Use_MFC 0
+# PROP BASE Use_Debug_Libraries 1
+# PROP BASE Output_Dir "WCEPPCDbg"
+# PROP BASE Intermediate_Dir "WCEPPCDbg"
+# PROP BASE Target_Dir ""
+# PROP Use_MFC 0
+# PROP Use_Debug_Libraries 1
+# PROP Output_Dir "WCEPPCDbg"
+# PROP Intermediate_Dir "WCEPPCDbg"
+# PROP Ignore_Export_Lib 0
+# PROP Target_Dir ""
+RSC=rc.exe
+# ADD BASE RSC /l 0x409 /d "ppc" /d "_ppc_" /d _WIN32_WCE=$(CEVersion) /d UNDER_CE=$(CEVersion) /d "UNICODE" /d "DEBUG" /r
+# ADD RSC /l 0x409 /d "ppc" /d "_ppc_" /d _WIN32_WCE=$(CEVersion) /d UNDER_CE=$(CEVersion) /d "UNICODE" /d "DEBUG" /r
+CPP=clppc.exe
+# ADD BASE CPP /nologo /W3 /Zi /Od /D _WIN32_WCE=$(CEVersion) /D "DEBUG" /D "PPC" /D "_PPC_" /D UNDER_CE=$(CEVersion) /D "UNICODE" /D "_USRDLL" /D "DSS_EXPORTS" /D WCE_PLATFORM=$(CEPlatform) /D "$(CePlatform)" /D "_UNICODE" /YX /M$(CECrtMTDebug) /c
+# ADD CPP /nologo /W3 /Zi /Od /D _WIN32_WCE=$(CEVersion) /D "DEBUG" /D "PPC" /D "_PPC_" /D UNDER_CE=$(CEVersion) /D "UNICODE" /D "_USRDLL" /D "DSS_EXPORTS" /D WCE_PLATFORM=$(CEPlatform) /D "$(CePlatform)" /D "_UNICODE" /YX /M$(CECrtMTDebug) /c
+MTL=midl.exe
+# ADD BASE MTL /nologo /D "_DEBUG" /mktyplib203 /o "NUL" /win32
+# ADD MTL /nologo /D "_DEBUG" /mktyplib203 /o "NUL" /win32
+BSC32=bscmake.exe
+# ADD BASE BSC32 /nologo
+# ADD BSC32 /nologo
+LINK32=link.exe
+# ADD BASE LINK32 commctrl.lib coredll.lib /nologo /stack:0x10000,0x1000 /dll /debug /nodefaultlib:"$(CENoDefaultLib)" /machine:PPC /subsystem:$(CESubsystem)
+# SUBTRACT BASE LINK32 /pdb:none /nodefaultlib
+# ADD LINK32 commctrl.lib coredll.lib /nologo /stack:0x10000,0x1000 /dll /debug /nodefaultlib:"$(CENoDefaultLib)" /machine:PPC /subsystem:$(CESubsystem)
+# SUBTRACT LINK32 /pdb:none /nodefaultlib
+
+!ENDIF 
+
+# Begin Target
+
+# Name "DSS - Win32 (WCE MIPS) Release"
+# Name "DSS - Win32 (WCE MIPS) Debug"
+# Name "DSS - Win32 (WCE SH4) Release"
+# Name "DSS - Win32 (WCE SH4) Debug"
+# Name "DSS - Win32 (WCE SH3) Release"
+# Name "DSS - Win32 (WCE SH3) Debug"
+# Name "DSS - Win32 (WCE ARM) Release"
+# Name "DSS - Win32 (WCE ARM) Debug"
+# Name "DSS - Win32 (WCE MIPSFP) Release"
+# Name "DSS - Win32 (WCE MIPSFP) Debug"
+# Name "DSS - Win32 (WCE x86) Release"
+# Name "DSS - Win32 (WCE x86) Debug"
+# Name "DSS - Win32 (WCE x86em) Release"
+# Name "DSS - Win32 (WCE x86em) Debug"
+# Name "DSS - Win32 (WCE PPC) Release"
+# Name "DSS - Win32 (WCE PPC) Debug"
+# Begin Group "Source Files"
+
+# PROP Default_Filter "cpp;c;cxx;rc;def;r;odl;idl;hpj;bat"
+# Begin Source File
+
+SOURCE=..\..\DSS\CodecManager.cpp
+
+!IF  "$(CFG)" == "DSS - Win32 (WCE MIPS) Release"
+
+DEP_CPP_CODEC=\
+	"..\..\Common\Dss.h"\
+	"..\..\DSS\CodecManager.h"\
+	"..\..\DSS\CriticalSection.h"\
+	"..\..\DSS\cwavebuffer.h"\
+	"..\..\DSS\cwaveoutce.h"\
+	"..\..\DSS\Driver.h"\
+	"..\..\DSS\Drivers.h"\
+	"..\..\DSS\DssString.h"\
+	"..\..\DSS\FileInputStream.h"\
+	"..\..\DSS\FileOutputStream.h"\
+	"..\..\DSS\MediaPlayer.h"\
+	"..\..\DSS\middleman.h"\
+	"..\..\DSS\regkey.h"\
+	"..\..\DSS\regproperty.h"\
+	"..\..\DSS\regpropertybag.h"\
+	"..\..\DSS\StdAfx.h"\
+	"..\..\DSS\StreamFormat.h"\
+	"..\..\DSS\StructHelper.h"\
+	"..\..\DSS\taskqueue.h"\
+	"..\..\DSS\TQueue.h"\
+	"..\..\DSS\WaveOutStream.h"\
+	
+
+!ELSEIF  "$(CFG)" == "DSS - Win32 (WCE MIPS) Debug"
+
+DEP_CPP_CODEC=\
+	"..\..\Common\Dss.h"\
+	"..\..\DSS\CodecManager.h"\
+	"..\..\DSS\CriticalSection.h"\
+	"..\..\DSS\cwavebuffer.h"\
+	"..\..\DSS\cwaveoutce.h"\
+	"..\..\DSS\Driver.h"\
+	"..\..\DSS\Drivers.h"\
+	"..\..\DSS\DssString.h"\
+	"..\..\DSS\FileInputStream.h"\
+	"..\..\DSS\FileOutputStream.h"\
+	"..\..\DSS\MediaPlayer.h"\
+	"..\..\DSS\middleman.h"\
+	"..\..\DSS\regkey.h"\
+	"..\..\DSS\regproperty.h"\
+	"..\..\DSS\regpropertybag.h"\
+	"..\..\DSS\StdAfx.h"\
+	"..\..\DSS\StreamFormat.h"\
+	"..\..\DSS\StructHelper.h"\
+	"..\..\DSS\taskqueue.h"\
+	"..\..\DSS\TQueue.h"\
+	"..\..\DSS\WaveOutStream.h"\
+	
+
+!ELSEIF  "$(CFG)" == "DSS - Win32 (WCE SH4) Release"
+
+DEP_CPP_CODEC=\
+	"..\..\DSS\CodecManager.h"\
+	"..\..\DSS\CriticalSection.h"\
+	"..\..\DSS\cwavebuffer.h"\
+	"..\..\DSS\cwaveoutce.h"\
+	"..\..\DSS\Driver.h"\
+	"..\..\DSS\Drivers.h"\
+	"..\..\DSS\DssString.h"\
+	"..\..\DSS\FileInputStream.h"\
+	"..\..\DSS\FileOutputStream.h"\
+	"..\..\DSS\MediaPlayer.h"\
+	"..\..\DSS\middleman.h"\
+	"..\..\DSS\regkey.h"\
+	"..\..\DSS\regproperty.h"\
+	"..\..\DSS\regpropertybag.h"\
+	"..\..\DSS\StdAfx.h"\
+	"..\..\DSS\StreamFormat.h"\
+	"..\..\DSS\StructHelper.h"\
+	"..\..\DSS\taskqueue.h"\
+	"..\..\DSS\TQueue.h"\
+	"..\..\DSS\WaveOutStream.h"\
+	
+NODEP_CPP_CODEC=\
+	"..\..\DSS\ComObjectBase.h"\
+	"..\..\DSS\DssCodecMgr.h"\
+	"..\..\DSS\DssCodecStructs.h"\
+	"..\..\DSS\DssCodecTypes.h"\
+	
+
+!ELSEIF  "$(CFG)" == "DSS - Win32 (WCE SH4) Debug"
+
+DEP_CPP_CODEC=\
+	"..\..\DSS\CodecManager.h"\
+	"..\..\DSS\CriticalSection.h"\
+	"..\..\DSS\cwavebuffer.h"\
+	"..\..\DSS\cwaveoutce.h"\
+	"..\..\DSS\Driver.h"\
+	"..\..\DSS\Drivers.h"\
+	"..\..\DSS\DssString.h"\
+	"..\..\DSS\FileInputStream.h"\
+	"..\..\DSS\FileOutputStream.h"\
+	"..\..\DSS\MediaPlayer.h"\
+	"..\..\DSS\middleman.h"\
+	"..\..\DSS\regkey.h"\
+	"..\..\DSS\regproperty.h"\
+	"..\..\DSS\regpropertybag.h"\
+	"..\..\DSS\StdAfx.h"\
+	"..\..\DSS\StreamFormat.h"\
+	"..\..\DSS\StructHelper.h"\
+	"..\..\DSS\taskqueue.h"\
+	"..\..\DSS\TQueue.h"\
+	"..\..\DSS\WaveOutStream.h"\
+	
+NODEP_CPP_CODEC=\
+	"..\..\DSS\ComObjectBase.h"\
+	"..\..\DSS\DssCodecMgr.h"\
+	"..\..\DSS\DssCodecStructs.h"\
+	"..\..\DSS\DssCodecTypes.h"\
+	
+
+!ELSEIF  "$(CFG)" == "DSS - Win32 (WCE SH3) Release"
+
+DEP_CPP_CODEC=\
+	"..\..\Common\Dss.h"\
+	"..\..\DSS\CodecManager.h"\
+	"..\..\DSS\CriticalSection.h"\
+	"..\..\DSS\cwavebuffer.h"\
+	"..\..\DSS\cwaveoutce.h"\
+	"..\..\DSS\Driver.h"\
+	"..\..\DSS\Drivers.h"\
+	"..\..\DSS\DssString.h"\
+	"..\..\DSS\FileInputStream.h"\
+	"..\..\DSS\FileOutputStream.h"\
+	"..\..\DSS\MediaPlayer.h"\
+	"..\..\DSS\middleman.h"\
+	"..\..\DSS\regkey.h"\
+	"..\..\DSS\regproperty.h"\
+	"..\..\DSS\regpropertybag.h"\
+	"..\..\DSS\StdAfx.h"\
+	"..\..\DSS\StreamFormat.h"\
+	"..\..\DSS\StructHelper.h"\
+	"..\..\DSS\taskqueue.h"\
+	"..\..\DSS\TQueue.h"\
+	"..\..\DSS\VideoOutputStream.h"\
+	"..\..\DSS\WaveOutStream.h"\
+	
+
+!ELSEIF  "$(CFG)" == "DSS - Win32 (WCE SH3) Debug"
+
+DEP_CPP_CODEC=\
+	"..\..\DSS\CodecManager.h"\
+	"..\..\DSS\CriticalSection.h"\
+	"..\..\DSS\cwavebuffer.h"\
+	"..\..\DSS\cwaveoutce.h"\
+	"..\..\DSS\Driver.h"\
+	"..\..\DSS\Drivers.h"\
+	"..\..\DSS\DssString.h"\
+	"..\..\DSS\FileInputStream.h"\
+	"..\..\DSS\FileOutputStream.h"\
+	"..\..\DSS\MediaPlayer.h"\
+	"..\..\DSS\middleman.h"\
+	"..\..\DSS\regkey.h"\
+	"..\..\DSS\regproperty.h"\
+	"..\..\DSS\regpropertybag.h"\
+	"..\..\DSS\StdAfx.h"\
+	"..\..\DSS\StreamFormat.h"\
+	"..\..\DSS\StructHelper.h"\
+	"..\..\DSS\taskqueue.h"\
+	"..\..\DSS\TQueue.h"\
+	"..\..\DSS\WaveOutStream.h"\
+	
+NODEP_CPP_CODEC=\
+	"..\..\DSS\ComObjectBase.h"\
+	"..\..\DSS\DssCodecMgr.h"\
+	"..\..\DSS\DssCodecStructs.h"\
+	"..\..\DSS\DssCodecTypes.h"\
+	
+
+!ELSEIF  "$(CFG)" == "DSS - Win32 (WCE ARM) Release"
+
+DEP_CPP_CODEC=\
+	"..\..\Common\Dss.h"\
+	"..\..\DSS\CodecManager.h"\
+	"..\..\DSS\CriticalSection.h"\
+	"..\..\DSS\cwavebuffer.h"\
+	"..\..\DSS\cwaveoutce.h"\
+	"..\..\DSS\Driver.h"\
+	"..\..\DSS\Drivers.h"\
+	"..\..\DSS\DssString.h"\
+	"..\..\DSS\FileInputStream.h"\
+	"..\..\DSS\FileOutputStream.h"\
+	"..\..\DSS\MediaPlayer.h"\
+	"..\..\DSS\middleman.h"\
+	"..\..\DSS\regkey.h"\
+	"..\..\DSS\regproperty.h"\
+	"..\..\DSS\regpropertybag.h"\
+	"..\..\DSS\StdAfx.h"\
+	"..\..\DSS\StreamFormat.h"\
+	"..\..\DSS\StructHelper.h"\
+	"..\..\DSS\taskqueue.h"\
+	"..\..\DSS\TQueue.h"\
+	"..\..\DSS\VideoOutputStream.h"\
+	"..\..\DSS\WaveOutStream.h"\
+	
+
+!ELSEIF  "$(CFG)" == "DSS - Win32 (WCE ARM) Debug"
+
+DEP_CPP_CODEC=\
+	"..\..\Common\Dss.h"\
+	"..\..\DSS\CodecManager.h"\
+	"..\..\DSS\CriticalSection.h"\
+	"..\..\DSS\cwavebuffer.h"\
+	"..\..\DSS\cwaveoutce.h"\
+	"..\..\DSS\Driver.h"\
+	"..\..\DSS\Drivers.h"\
+	"..\..\DSS\DssString.h"\
+	"..\..\DSS\FileInputStream.h"\
+	"..\..\DSS\FileOutputStream.h"\
+	"..\..\DSS\MediaPlayer.h"\
+	"..\..\DSS\middleman.h"\
+	"..\..\DSS\regkey.h"\
+	"..\..\DSS\regproperty.h"\
+	"..\..\DSS\regpropertybag.h"\
+	"..\..\DSS\StdAfx.h"\
+	"..\..\DSS\StreamFormat.h"\
+	"..\..\DSS\StructHelper.h"\
+	"..\..\DSS\taskqueue.h"\
+	"..\..\DSS\TQueue.h"\
+	"..\..\DSS\VideoOutputStream.h"\
+	"..\..\DSS\WaveOutStream.h"\
+	
+
+!ELSEIF  "$(CFG)" == "DSS - Win32 (WCE MIPSFP) Release"
+
+DEP_CPP_CODEC=\
+	"..\..\DSS\CodecManager.h"\
+	"..\..\DSS\CriticalSection.h"\
+	"..\..\DSS\cwavebuffer.h"\
+	"..\..\DSS\cwaveoutce.h"\
+	"..\..\DSS\Driver.h"\
+	"..\..\DSS\Drivers.h"\
+	"..\..\DSS\DssString.h"\
+	"..\..\DSS\FileInputStream.h"\
+	"..\..\DSS\FileOutputStream.h"\
+	"..\..\DSS\MediaPlayer.h"\
+	"..\..\DSS\middleman.h"\
+	"..\..\DSS\regkey.h"\
+	"..\..\DSS\regproperty.h"\
+	"..\..\DSS\regpropertybag.h"\
+	"..\..\DSS\StdAfx.h"\
+	"..\..\DSS\StreamFormat.h"\
+	"..\..\DSS\StructHelper.h"\
+	"..\..\DSS\taskqueue.h"\
+	"..\..\DSS\TQueue.h"\
+	"..\..\DSS\WaveOutStream.h"\
+	
+NODEP_CPP_CODEC=\
+	"..\..\DSS\ComObjectBase.h"\
+	"..\..\DSS\DssCodecMgr.h"\
+	"..\..\DSS\DssCodecStructs.h"\
+	"..\..\DSS\DssCodecTypes.h"\
+	
+
+!ELSEIF  "$(CFG)" == "DSS - Win32 (WCE MIPSFP) Debug"
+
+DEP_CPP_CODEC=\
+	"..\..\DSS\CodecManager.h"\
+	"..\..\DSS\CriticalSection.h"\
+	"..\..\DSS\cwavebuffer.h"\
+	"..\..\DSS\cwaveoutce.h"\
+	"..\..\DSS\Driver.h"\
+	"..\..\DSS\Drivers.h"\
+	"..\..\DSS\DssString.h"\
+	"..\..\DSS\FileInputStream.h"\
+	"..\..\DSS\FileOutputStream.h"\
+	"..\..\DSS\MediaPlayer.h"\
+	"..\..\DSS\middleman.h"\
+	"..\..\DSS\regkey.h"\
+	"..\..\DSS\regproperty.h"\
+	"..\..\DSS\regpropertybag.h"\
+	"..\..\DSS\StdAfx.h"\
+	"..\..\DSS\StreamFormat.h"\
+	"..\..\DSS\StructHelper.h"\
+	"..\..\DSS\taskqueue.h"\
+	"..\..\DSS\TQueue.h"\
+	"..\..\DSS\WaveOutStream.h"\
+	
+NODEP_CPP_CODEC=\
+	"..\..\DSS\ComObjectBase.h"\
+	"..\..\DSS\DssCodecMgr.h"\
+	"..\..\DSS\DssCodecStructs.h"\
+	"..\..\DSS\DssCodecTypes.h"\
+	
+
+!ELSEIF  "$(CFG)" == "DSS - Win32 (WCE x86) Release"
+
+DEP_CPP_CODEC=\
+	"..\..\DSS\CodecManager.h"\
+	"..\..\DSS\CriticalSection.h"\
+	"..\..\DSS\cwavebuffer.h"\
+	"..\..\DSS\cwaveoutce.h"\
+	"..\..\DSS\Driver.h"\
+	"..\..\DSS\Drivers.h"\
+	"..\..\DSS\DssString.h"\
+	"..\..\DSS\FileInputStream.h"\
+	"..\..\DSS\FileOutputStream.h"\
+	"..\..\DSS\MediaPlayer.h"\
+	"..\..\DSS\middleman.h"\
+	"..\..\DSS\regkey.h"\
+	"..\..\DSS\regproperty.h"\
+	"..\..\DSS\regpropertybag.h"\
+	"..\..\DSS\StdAfx.h"\
+	"..\..\DSS\StreamFormat.h"\
+	"..\..\DSS\StructHelper.h"\
+	"..\..\DSS\taskqueue.h"\
+	"..\..\DSS\TQueue.h"\
+	"..\..\DSS\WaveOutStream.h"\
+	
+NODEP_CPP_CODEC=\
+	"..\..\DSS\ComObjectBase.h"\
+	"..\..\DSS\DssCodecMgr.h"\
+	"..\..\DSS\DssCodecStructs.h"\
+	"..\..\DSS\DssCodecTypes.h"\
+	
+
+!ELSEIF  "$(CFG)" == "DSS - Win32 (WCE x86) Debug"
+
+DEP_CPP_CODEC=\
+	"..\..\DSS\CodecManager.h"\
+	"..\..\DSS\CriticalSection.h"\
+	"..\..\DSS\cwavebuffer.h"\
+	"..\..\DSS\cwaveoutce.h"\
+	"..\..\DSS\Driver.h"\
+	"..\..\DSS\Drivers.h"\
+	"..\..\DSS\DssString.h"\
+	"..\..\DSS\FileInputStream.h"\
+	"..\..\DSS\FileOutputStream.h"\
+	"..\..\DSS\MediaPlayer.h"\
+	"..\..\DSS\middleman.h"\
+	"..\..\DSS\regkey.h"\
+	"..\..\DSS\regproperty.h"\
+	"..\..\DSS\regpropertybag.h"\
+	"..\..\DSS\StdAfx.h"\
+	"..\..\DSS\StreamFormat.h"\
+	"..\..\DSS\StructHelper.h"\
+	"..\..\DSS\taskqueue.h"\
+	"..\..\DSS\TQueue.h"\
+	"..\..\DSS\WaveOutStream.h"\
+	
+NODEP_CPP_CODEC=\
+	"..\..\DSS\ComObjectBase.h"\
+	"..\..\DSS\DssCodecMgr.h"\
+	"..\..\DSS\DssCodecStructs.h"\
+	"..\..\DSS\DssCodecTypes.h"\
+	
+
+!ELSEIF  "$(CFG)" == "DSS - Win32 (WCE x86em) Release"
+
+DEP_CPP_CODEC=\
+	"..\..\DSS\CodecManager.h"\
+	"..\..\DSS\CriticalSection.h"\
+	"..\..\DSS\cwavebuffer.h"\
+	"..\..\DSS\cwaveoutce.h"\
+	"..\..\DSS\Driver.h"\
+	"..\..\DSS\Drivers.h"\
+	"..\..\DSS\DssString.h"\
+	"..\..\DSS\FileInputStream.h"\
+	"..\..\DSS\FileOutputStream.h"\
+	"..\..\DSS\MediaPlayer.h"\
+	"..\..\DSS\middleman.h"\
+	"..\..\DSS\regkey.h"\
+	"..\..\DSS\regproperty.h"\
+	"..\..\DSS\regpropertybag.h"\
+	"..\..\DSS\StdAfx.h"\
+	"..\..\DSS\StreamFormat.h"\
+	"..\..\DSS\StructHelper.h"\
+	"..\..\DSS\taskqueue.h"\
+	"..\..\DSS\TQueue.h"\
+	"..\..\DSS\WaveOutStream.h"\
+	
+NODEP_CPP_CODEC=\
+	"..\..\DSS\ComObjectBase.h"\
+	"..\..\DSS\DssCodecMgr.h"\
+	"..\..\DSS\DssCodecStructs.h"\
+	"..\..\DSS\DssCodecTypes.h"\
+	
+
+!ELSEIF  "$(CFG)" == "DSS - Win32 (WCE x86em) Debug"
+
+DEP_CPP_CODEC=\
+	"..\..\DSS\CodecManager.h"\
+	"..\..\DSS\CriticalSection.h"\
+	"..\..\DSS\cwavebuffer.h"\
+	"..\..\DSS\cwaveoutce.h"\
+	"..\..\DSS\Driver.h"\
+	"..\..\DSS\Drivers.h"\
+	"..\..\DSS\DssString.h"\
+	"..\..\DSS\FileInputStream.h"\
+	"..\..\DSS\FileOutputStream.h"\
+	"..\..\DSS\MediaPlayer.h"\
+	"..\..\DSS\middleman.h"\
+	"..\..\DSS\regkey.h"\
+	"..\..\DSS\regproperty.h"\
+	"..\..\DSS\regpropertybag.h"\
+	"..\..\DSS\StdAfx.h"\
+	"..\..\DSS\StreamFormat.h"\
+	"..\..\DSS\StructHelper.h"\
+	"..\..\DSS\taskqueue.h"\
+	"..\..\DSS\TQueue.h"\
+	"..\..\DSS\WaveOutStream.h"\
+	
+NODEP_CPP_CODEC=\
+	"..\..\DSS\ComObjectBase.h"\
+	"..\..\DSS\DssCodecMgr.h"\
+	"..\..\DSS\DssCodecStructs.h"\
+	"..\..\DSS\DssCodecTypes.h"\
+	
+
+!ELSEIF  "$(CFG)" == "DSS - Win32 (WCE PPC) Release"
+
+DEP_CPP_CODEC=\
+	"..\..\DSS\CodecManager.h"\
+	"..\..\DSS\CriticalSection.h"\
+	"..\..\DSS\cwavebuffer.h"\
+	"..\..\DSS\cwaveoutce.h"\
+	"..\..\DSS\Driver.h"\
+	"..\..\DSS\Drivers.h"\
+	"..\..\DSS\DssString.h"\
+	"..\..\DSS\FileInputStream.h"\
+	"..\..\DSS\FileOutputStream.h"\
+	"..\..\DSS\MediaPlayer.h"\
+	"..\..\DSS\middleman.h"\
+	"..\..\DSS\regkey.h"\
+	"..\..\DSS\regproperty.h"\
+	"..\..\DSS\regpropertybag.h"\
+	"..\..\DSS\StdAfx.h"\
+	"..\..\DSS\StreamFormat.h"\
+	"..\..\DSS\StructHelper.h"\
+	"..\..\DSS\taskqueue.h"\
+	"..\..\DSS\TQueue.h"\
+	"..\..\DSS\WaveOutStream.h"\
+	
+NODEP_CPP_CODEC=\
+	"..\..\DSS\ComObjectBase.h"\
+	"..\..\DSS\DssCodecMgr.h"\
+	"..\..\DSS\DssCodecStructs.h"\
+	"..\..\DSS\DssCodecTypes.h"\
+	
+
+!ELSEIF  "$(CFG)" == "DSS - Win32 (WCE PPC) Debug"
+
+DEP_CPP_CODEC=\
+	"..\..\DSS\CodecManager.h"\
+	"..\..\DSS\CriticalSection.h"\
+	"..\..\DSS\cwavebuffer.h"\
+	"..\..\DSS\cwaveoutce.h"\
+	"..\..\DSS\Driver.h"\
+	"..\..\DSS\Drivers.h"\
+	"..\..\DSS\DssString.h"\
+	"..\..\DSS\FileInputStream.h"\
+	"..\..\DSS\FileOutputStream.h"\
+	"..\..\DSS\MediaPlayer.h"\
+	"..\..\DSS\middleman.h"\
+	"..\..\DSS\regkey.h"\
+	"..\..\DSS\regproperty.h"\
+	"..\..\DSS\regpropertybag.h"\
+	"..\..\DSS\StdAfx.h"\
+	"..\..\DSS\StreamFormat.h"\
+	"..\..\DSS\StructHelper.h"\
+	"..\..\DSS\taskqueue.h"\
+	"..\..\DSS\TQueue.h"\
+	"..\..\DSS\WaveOutStream.h"\
+	
+NODEP_CPP_CODEC=\
+	"..\..\DSS\ComObjectBase.h"\
+	"..\..\DSS\DssCodecMgr.h"\
+	"..\..\DSS\DssCodecStructs.h"\
+	"..\..\DSS\DssCodecTypes.h"\
+	
+
+!ENDIF 
+
+# End Source File
+# Begin Source File
+
+SOURCE=..\..\DSS\cwavebuffer.cpp
+
+!IF  "$(CFG)" == "DSS - Win32 (WCE MIPS) Release"
+
+DEP_CPP_CWAVE=\
+	"..\..\DSS\cwavebuffer.h"\
+	"..\..\DSS\StdAfx.h"\
+	
+
+!ELSEIF  "$(CFG)" == "DSS - Win32 (WCE MIPS) Debug"
+
+DEP_CPP_CWAVE=\
+	"..\..\DSS\cwavebuffer.h"\
+	"..\..\DSS\StdAfx.h"\
+	
+
+!ELSEIF  "$(CFG)" == "DSS - Win32 (WCE SH4) Release"
+
+DEP_CPP_CWAVE=\
+	"..\..\DSS\cwavebuffer.h"\
+	"..\..\DSS\StdAfx.h"\
+	
+
+!ELSEIF  "$(CFG)" == "DSS - Win32 (WCE SH4) Debug"
+
+DEP_CPP_CWAVE=\
+	"..\..\DSS\cwavebuffer.h"\
+	"..\..\DSS\StdAfx.h"\
+	
+
+!ELSEIF  "$(CFG)" == "DSS - Win32 (WCE SH3) Release"
+
+DEP_CPP_CWAVE=\
+	"..\..\DSS\cwavebuffer.h"\
+	"..\..\DSS\StdAfx.h"\
+	
+
+!ELSEIF  "$(CFG)" == "DSS - Win32 (WCE SH3) Debug"
+
+DEP_CPP_CWAVE=\
+	"..\..\DSS\cwavebuffer.h"\
+	"..\..\DSS\StdAfx.h"\
+	
+
+!ELSEIF  "$(CFG)" == "DSS - Win32 (WCE ARM) Release"
+
+DEP_CPP_CWAVE=\
+	"..\..\DSS\cwavebuffer.h"\
+	"..\..\DSS\StdAfx.h"\
+	
+
+!ELSEIF  "$(CFG)" == "DSS - Win32 (WCE ARM) Debug"
+
+DEP_CPP_CWAVE=\
+	"..\..\DSS\cwavebuffer.h"\
+	"..\..\DSS\StdAfx.h"\
+	
+
+!ELSEIF  "$(CFG)" == "DSS - Win32 (WCE MIPSFP) Release"
+
+DEP_CPP_CWAVE=\
+	"..\..\DSS\cwavebuffer.h"\
+	"..\..\DSS\StdAfx.h"\
+	
+
+!ELSEIF  "$(CFG)" == "DSS - Win32 (WCE MIPSFP) Debug"
+
+DEP_CPP_CWAVE=\
+	"..\..\DSS\cwavebuffer.h"\
+	"..\..\DSS\StdAfx.h"\
+	
+
+!ELSEIF  "$(CFG)" == "DSS - Win32 (WCE x86) Release"
+
+DEP_CPP_CWAVE=\
+	"..\..\DSS\cwavebuffer.h"\
+	"..\..\DSS\StdAfx.h"\
+	
+
+!ELSEIF  "$(CFG)" == "DSS - Win32 (WCE x86) Debug"
+
+DEP_CPP_CWAVE=\
+	"..\..\DSS\cwavebuffer.h"\
+	"..\..\DSS\StdAfx.h"\
+	
+
+!ELSEIF  "$(CFG)" == "DSS - Win32 (WCE x86em) Release"
+
+DEP_CPP_CWAVE=\
+	"..\..\DSS\cwavebuffer.h"\
+	"..\..\DSS\StdAfx.h"\
+	
+
+!ELSEIF  "$(CFG)" == "DSS - Win32 (WCE x86em) Debug"
+
+DEP_CPP_CWAVE=\
+	"..\..\DSS\cwavebuffer.h"\
+	"..\..\DSS\StdAfx.h"\
+	
+
+!ELSEIF  "$(CFG)" == "DSS - Win32 (WCE PPC) Release"
+
+DEP_CPP_CWAVE=\
+	"..\..\DSS\cwavebuffer.h"\
+	"..\..\DSS\StdAfx.h"\
+	
+
+!ELSEIF  "$(CFG)" == "DSS - Win32 (WCE PPC) Debug"
+
+DEP_CPP_CWAVE=\
+	"..\..\DSS\cwavebuffer.h"\
+	"..\..\DSS\StdAfx.h"\
+	
+
+!ENDIF 
+
+# End Source File
+# Begin Source File
+
+SOURCE=..\..\DSS\cwaveoutce.cpp
+
+!IF  "$(CFG)" == "DSS - Win32 (WCE MIPS) Release"
+
+DEP_CPP_CWAVEO=\
+	"..\..\Common\Dss.h"\
+	"..\..\DSS\CodecManager.h"\
+	"..\..\DSS\cwavebuffer.h"\
+	"..\..\DSS\cwaveoutce.h"\
+	"..\..\DSS\debugfile.h"\
+	"..\..\DSS\StdAfx.h"\
+	"..\..\DSS\StructHelper.h"\
+	
+
+!ELSEIF  "$(CFG)" == "DSS - Win32 (WCE MIPS) Debug"
+
+DEP_CPP_CWAVEO=\
+	"..\..\Common\Dss.h"\
+	"..\..\DSS\CodecManager.h"\
+	"..\..\DSS\cwavebuffer.h"\
+	"..\..\DSS\cwaveoutce.h"\
+	"..\..\DSS\debugfile.h"\
+	"..\..\DSS\StdAfx.h"\
+	"..\..\DSS\StructHelper.h"\
+	
+
+!ELSEIF  "$(CFG)" == "DSS - Win32 (WCE SH4) Release"
+
+DEP_CPP_CWAVEO=\
+	"..\..\DSS\CodecManager.h"\
+	"..\..\DSS\cwavebuffer.h"\
+	"..\..\DSS\cwaveoutce.h"\
+	"..\..\DSS\debugfile.h"\
+	"..\..\DSS\StdAfx.h"\
+	"..\..\DSS\StructHelper.h"\
+	
+NODEP_CPP_CWAVEO=\
+	"..\..\DSS\ComObjectBase.h"\
+	"..\..\DSS\DssCodecMgr.h"\
+	"..\..\DSS\DssCodecStructs.h"\
+	
+
+!ELSEIF  "$(CFG)" == "DSS - Win32 (WCE SH4) Debug"
+
+DEP_CPP_CWAVEO=\
+	"..\..\DSS\CodecManager.h"\
+	"..\..\DSS\cwavebuffer.h"\
+	"..\..\DSS\cwaveoutce.h"\
+	"..\..\DSS\debugfile.h"\
+	"..\..\DSS\StdAfx.h"\
+	"..\..\DSS\StructHelper.h"\
+	
+NODEP_CPP_CWAVEO=\
+	"..\..\DSS\ComObjectBase.h"\
+	"..\..\DSS\DssCodecMgr.h"\
+	"..\..\DSS\DssCodecStructs.h"\
+	
+
+!ELSEIF  "$(CFG)" == "DSS - Win32 (WCE SH3) Release"
+
+DEP_CPP_CWAVEO=\
+	"..\..\Common\Dss.h"\
+	"..\..\DSS\CodecManager.h"\
+	"..\..\DSS\cwavebuffer.h"\
+	"..\..\DSS\cwaveoutce.h"\
+	"..\..\DSS\debugfile.h"\
+	"..\..\DSS\StdAfx.h"\
+	"..\..\DSS\StructHelper.h"\
+	
+
+!ELSEIF  "$(CFG)" == "DSS - Win32 (WCE SH3) Debug"
+
+DEP_CPP_CWAVEO=\
+	"..\..\DSS\CodecManager.h"\
+	"..\..\DSS\cwavebuffer.h"\
+	"..\..\DSS\cwaveoutce.h"\
+	"..\..\DSS\debugfile.h"\
+	"..\..\DSS\StdAfx.h"\
+	"..\..\DSS\StructHelper.h"\
+	
+NODEP_CPP_CWAVEO=\
+	"..\..\DSS\ComObjectBase.h"\
+	"..\..\DSS\DssCodecMgr.h"\
+	"..\..\DSS\DssCodecStructs.h"\
+	
+
+!ELSEIF  "$(CFG)" == "DSS - Win32 (WCE ARM) Release"
+
+DEP_CPP_CWAVEO=\
+	"..\..\Common\Dss.h"\
+	"..\..\DSS\CodecManager.h"\
+	"..\..\DSS\cwavebuffer.h"\
+	"..\..\DSS\cwaveoutce.h"\
+	"..\..\DSS\debugfile.h"\
+	"..\..\DSS\StdAfx.h"\
+	"..\..\DSS\StructHelper.h"\
+	
+
+!ELSEIF  "$(CFG)" == "DSS - Win32 (WCE ARM) Debug"
+
+DEP_CPP_CWAVEO=\
+	"..\..\Common\Dss.h"\
+	"..\..\DSS\CodecManager.h"\
+	"..\..\DSS\cwavebuffer.h"\
+	"..\..\DSS\cwaveoutce.h"\
+	"..\..\DSS\debugfile.h"\
+	"..\..\DSS\StdAfx.h"\
+	"..\..\DSS\StructHelper.h"\
+	
+
+!ELSEIF  "$(CFG)" == "DSS - Win32 (WCE MIPSFP) Release"
+
+DEP_CPP_CWAVEO=\
+	"..\..\DSS\CodecManager.h"\
+	"..\..\DSS\cwavebuffer.h"\
+	"..\..\DSS\cwaveoutce.h"\
+	"..\..\DSS\debugfile.h"\
+	"..\..\DSS\StdAfx.h"\
+	"..\..\DSS\StructHelper.h"\
+	
+NODEP_CPP_CWAVEO=\
+	"..\..\DSS\ComObjectBase.h"\
+	"..\..\DSS\DssCodecMgr.h"\
+	"..\..\DSS\DssCodecStructs.h"\
+	
+
+!ELSEIF  "$(CFG)" == "DSS - Win32 (WCE MIPSFP) Debug"
+
+DEP_CPP_CWAVEO=\
+	"..\..\DSS\CodecManager.h"\
+	"..\..\DSS\cwavebuffer.h"\
+	"..\..\DSS\cwaveoutce.h"\
+	"..\..\DSS\debugfile.h"\
+	"..\..\DSS\StdAfx.h"\
+	"..\..\DSS\StructHelper.h"\
+	
+NODEP_CPP_CWAVEO=\
+	"..\..\DSS\ComObjectBase.h"\
+	"..\..\DSS\DssCodecMgr.h"\
+	"..\..\DSS\DssCodecStructs.h"\
+	
+
+!ELSEIF  "$(CFG)" == "DSS - Win32 (WCE x86) Release"
+
+DEP_CPP_CWAVEO=\
+	"..\..\DSS\CodecManager.h"\
+	"..\..\DSS\cwavebuffer.h"\
+	"..\..\DSS\cwaveoutce.h"\
+	"..\..\DSS\debugfile.h"\
+	"..\..\DSS\StdAfx.h"\
+	"..\..\DSS\StructHelper.h"\
+	
+NODEP_CPP_CWAVEO=\
+	"..\..\DSS\ComObjectBase.h"\
+	"..\..\DSS\DssCodecMgr.h"\
+	"..\..\DSS\DssCodecStructs.h"\
+	
+
+!ELSEIF  "$(CFG)" == "DSS - Win32 (WCE x86) Debug"
+
+DEP_CPP_CWAVEO=\
+	"..\..\DSS\CodecManager.h"\
+	"..\..\DSS\cwavebuffer.h"\
+	"..\..\DSS\cwaveoutce.h"\
+	"..\..\DSS\debugfile.h"\
+	"..\..\DSS\StdAfx.h"\
+	"..\..\DSS\StructHelper.h"\
+	
+NODEP_CPP_CWAVEO=\
+	"..\..\DSS\ComObjectBase.h"\
+	"..\..\DSS\DssCodecMgr.h"\
+	"..\..\DSS\DssCodecStructs.h"\
+	
+
+!ELSEIF  "$(CFG)" == "DSS - Win32 (WCE x86em) Release"
+
+DEP_CPP_CWAVEO=\
+	"..\..\DSS\CodecManager.h"\
+	"..\..\DSS\cwavebuffer.h"\
+	"..\..\DSS\cwaveoutce.h"\
+	"..\..\DSS\debugfile.h"\
+	"..\..\DSS\StdAfx.h"\
+	"..\..\DSS\StructHelper.h"\
+	
+NODEP_CPP_CWAVEO=\
+	"..\..\DSS\ComObjectBase.h"\
+	"..\..\DSS\DssCodecMgr.h"\
+	"..\..\DSS\DssCodecStructs.h"\
+	
+
+!ELSEIF  "$(CFG)" == "DSS - Win32 (WCE x86em) Debug"
+
+DEP_CPP_CWAVEO=\
+	"..\..\DSS\CodecManager.h"\
+	"..\..\DSS\cwavebuffer.h"\
+	"..\..\DSS\cwaveoutce.h"\
+	"..\..\DSS\debugfile.h"\
+	"..\..\DSS\StdAfx.h"\
+	"..\..\DSS\StructHelper.h"\
+	
+NODEP_CPP_CWAVEO=\
+	"..\..\DSS\ComObjectBase.h"\
+	"..\..\DSS\DssCodecMgr.h"\
+	"..\..\DSS\DssCodecStructs.h"\
+	
+
+!ELSEIF  "$(CFG)" == "DSS - Win32 (WCE PPC) Release"
+
+DEP_CPP_CWAVEO=\
+	"..\..\DSS\CodecManager.h"\
+	"..\..\DSS\cwavebuffer.h"\
+	"..\..\DSS\cwaveoutce.h"\
+	"..\..\DSS\debugfile.h"\
+	"..\..\DSS\StdAfx.h"\
+	"..\..\DSS\StructHelper.h"\
+	
+NODEP_CPP_CWAVEO=\
+	"..\..\DSS\ComObjectBase.h"\
+	"..\..\DSS\DssCodecMgr.h"\
+	"..\..\DSS\DssCodecStructs.h"\
+	
+
+!ELSEIF  "$(CFG)" == "DSS - Win32 (WCE PPC) Debug"
+
+DEP_CPP_CWAVEO=\
+	"..\..\DSS\CodecManager.h"\
+	"..\..\DSS\cwavebuffer.h"\
+	"..\..\DSS\cwaveoutce.h"\
+	"..\..\DSS\debugfile.h"\
+	"..\..\DSS\StdAfx.h"\
+	"..\..\DSS\StructHelper.h"\
+	
+NODEP_CPP_CWAVEO=\
+	"..\..\DSS\ComObjectBase.h"\
+	"..\..\DSS\DssCodecMgr.h"\
+	"..\..\DSS\DssCodecStructs.h"\
+	
+
+!ENDIF 
+
+# End Source File
+# Begin Source File
+
+SOURCE=..\..\DSS\debugfile.cpp
+
+!IF  "$(CFG)" == "DSS - Win32 (WCE MIPS) Release"
+
+DEP_CPP_DEBUG=\
+	"..\..\DSS\debugfile.h"\
+	"..\..\DSS\StdAfx.h"\
+	
+
+!ELSEIF  "$(CFG)" == "DSS - Win32 (WCE MIPS) Debug"
+
+DEP_CPP_DEBUG=\
+	"..\..\DSS\debugfile.h"\
+	"..\..\DSS\StdAfx.h"\
+	
+
+!ELSEIF  "$(CFG)" == "DSS - Win32 (WCE SH4) Release"
+
+DEP_CPP_DEBUG=\
+	"..\..\DSS\debugfile.h"\
+	"..\..\DSS\StdAfx.h"\
+	
+
+!ELSEIF  "$(CFG)" == "DSS - Win32 (WCE SH4) Debug"
+
+DEP_CPP_DEBUG=\
+	"..\..\DSS\debugfile.h"\
+	"..\..\DSS\StdAfx.h"\
+	
+
+!ELSEIF  "$(CFG)" == "DSS - Win32 (WCE SH3) Release"
+
+DEP_CPP_DEBUG=\
+	"..\..\DSS\debugfile.h"\
+	"..\..\DSS\StdAfx.h"\
+	
+
+!ELSEIF  "$(CFG)" == "DSS - Win32 (WCE SH3) Debug"
+
+DEP_CPP_DEBUG=\
+	"..\..\DSS\debugfile.h"\
+	"..\..\DSS\StdAfx.h"\
+	
+
+!ELSEIF  "$(CFG)" == "DSS - Win32 (WCE ARM) Release"
+
+DEP_CPP_DEBUG=\
+	"..\..\DSS\debugfile.h"\
+	"..\..\DSS\StdAfx.h"\
+	
+
+!ELSEIF  "$(CFG)" == "DSS - Win32 (WCE ARM) Debug"
+
+DEP_CPP_DEBUG=\
+	"..\..\DSS\debugfile.h"\
+	"..\..\DSS\StdAfx.h"\
+	
+
+!ELSEIF  "$(CFG)" == "DSS - Win32 (WCE MIPSFP) Release"
+
+DEP_CPP_DEBUG=\
+	"..\..\DSS\debugfile.h"\
+	"..\..\DSS\StdAfx.h"\
+	
+
+!ELSEIF  "$(CFG)" == "DSS - Win32 (WCE MIPSFP) Debug"
+
+DEP_CPP_DEBUG=\
+	"..\..\DSS\debugfile.h"\
+	"..\..\DSS\StdAfx.h"\
+	
+
+!ELSEIF  "$(CFG)" == "DSS - Win32 (WCE x86) Release"
+
+DEP_CPP_DEBUG=\
+	"..\..\DSS\debugfile.h"\
+	"..\..\DSS\StdAfx.h"\
+	
+
+!ELSEIF  "$(CFG)" == "DSS - Win32 (WCE x86) Debug"
+
+DEP_CPP_DEBUG=\
+	"..\..\DSS\debugfile.h"\
+	"..\..\DSS\StdAfx.h"\
+	
+
+!ELSEIF  "$(CFG)" == "DSS - Win32 (WCE x86em) Release"
+
+DEP_CPP_DEBUG=\
+	"..\..\DSS\debugfile.h"\
+	"..\..\DSS\StdAfx.h"\
+	
+
+!ELSEIF  "$(CFG)" == "DSS - Win32 (WCE x86em) Debug"
+
+DEP_CPP_DEBUG=\
+	"..\..\DSS\debugfile.h"\
+	"..\..\DSS\StdAfx.h"\
+	
+
+!ELSEIF  "$(CFG)" == "DSS - Win32 (WCE PPC) Release"
+
+DEP_CPP_DEBUG=\
+	"..\..\DSS\debugfile.h"\
+	"..\..\DSS\StdAfx.h"\
+	
+
+!ELSEIF  "$(CFG)" == "DSS - Win32 (WCE PPC) Debug"
+
+DEP_CPP_DEBUG=\
+	"..\..\DSS\debugfile.h"\
+	"..\..\DSS\StdAfx.h"\
+	
+
+!ENDIF 
+
+# End Source File
+# Begin Source File
+
+SOURCE=..\..\DSS\Dictionary.cpp
+
+!IF  "$(CFG)" == "DSS - Win32 (WCE MIPS) Release"
+
+DEP_CPP_DICTI=\
+	"..\..\Common\Dss.h"\
+	"..\..\DSS\Dictionary.h"\
+	"..\..\DSS\DssString.h"\
+	"..\..\DSS\StdAfx.h"\
+	
+
+!ELSEIF  "$(CFG)" == "DSS - Win32 (WCE MIPS) Debug"
+
+DEP_CPP_DICTI=\
+	"..\..\Common\Dss.h"\
+	"..\..\DSS\Dictionary.h"\
+	"..\..\DSS\DssString.h"\
+	"..\..\DSS\StdAfx.h"\
+	
+
+!ELSEIF  "$(CFG)" == "DSS - Win32 (WCE SH4) Release"
+
+DEP_CPP_DICTI=\
+	"..\..\DSS\Dictionary.h"\
+	"..\..\DSS\DssString.h"\
+	"..\..\DSS\StdAfx.h"\
+	
+NODEP_CPP_DICTI=\
+	"..\..\DSS\ComObjectBase.h"\
+	"..\..\DSS\DssCodecMgr.h"\
+	"..\..\DSS\DssCodecTypes.h"\
+	
+
+!ELSEIF  "$(CFG)" == "DSS - Win32 (WCE SH4) Debug"
+
+DEP_CPP_DICTI=\
+	"..\..\DSS\Dictionary.h"\
+	"..\..\DSS\DssString.h"\
+	"..\..\DSS\StdAfx.h"\
+	
+NODEP_CPP_DICTI=\
+	"..\..\DSS\ComObjectBase.h"\
+	"..\..\DSS\DssCodecMgr.h"\
+	"..\..\DSS\DssCodecTypes.h"\
+	
+
+!ELSEIF  "$(CFG)" == "DSS - Win32 (WCE SH3) Release"
+
+DEP_CPP_DICTI=\
+	"..\..\Common\Dss.h"\
+	"..\..\DSS\Dictionary.h"\
+	"..\..\DSS\DssString.h"\
+	"..\..\DSS\StdAfx.h"\
+	
+
+!ELSEIF  "$(CFG)" == "DSS - Win32 (WCE SH3) Debug"
+
+DEP_CPP_DICTI=\
+	"..\..\DSS\Dictionary.h"\
+	"..\..\DSS\DssString.h"\
+	"..\..\DSS\StdAfx.h"\
+	
+NODEP_CPP_DICTI=\
+	"..\..\DSS\ComObjectBase.h"\
+	"..\..\DSS\DssCodecMgr.h"\
+	"..\..\DSS\DssCodecTypes.h"\
+	
+
+!ELSEIF  "$(CFG)" == "DSS - Win32 (WCE ARM) Release"
+
+DEP_CPP_DICTI=\
+	"..\..\Common\Dss.h"\
+	"..\..\DSS\Dictionary.h"\
+	"..\..\DSS\DssString.h"\
+	"..\..\DSS\StdAfx.h"\
+	
+
+!ELSEIF  "$(CFG)" == "DSS - Win32 (WCE ARM) Debug"
+
+DEP_CPP_DICTI=\
+	"..\..\Common\Dss.h"\
+	"..\..\DSS\Dictionary.h"\
+	"..\..\DSS\DssString.h"\
+	"..\..\DSS\StdAfx.h"\
+	
+
+!ELSEIF  "$(CFG)" == "DSS - Win32 (WCE MIPSFP) Release"
+
+DEP_CPP_DICTI=\
+	"..\..\DSS\Dictionary.h"\
+	"..\..\DSS\DssString.h"\
+	"..\..\DSS\StdAfx.h"\
+	
+NODEP_CPP_DICTI=\
+	"..\..\DSS\ComObjectBase.h"\
+	"..\..\DSS\DssCodecMgr.h"\
+	"..\..\DSS\DssCodecTypes.h"\
+	
+
+!ELSEIF  "$(CFG)" == "DSS - Win32 (WCE MIPSFP) Debug"
+
+DEP_CPP_DICTI=\
+	"..\..\DSS\Dictionary.h"\
+	"..\..\DSS\DssString.h"\
+	"..\..\DSS\StdAfx.h"\
+	
+NODEP_CPP_DICTI=\
+	"..\..\DSS\ComObjectBase.h"\
+	"..\..\DSS\DssCodecMgr.h"\
+	"..\..\DSS\DssCodecTypes.h"\
+	
+
+!ELSEIF  "$(CFG)" == "DSS - Win32 (WCE x86) Release"
+
+DEP_CPP_DICTI=\
+	"..\..\DSS\Dictionary.h"\
+	"..\..\DSS\DssString.h"\
+	"..\..\DSS\StdAfx.h"\
+	
+NODEP_CPP_DICTI=\
+	"..\..\DSS\ComObjectBase.h"\
+	"..\..\DSS\DssCodecMgr.h"\
+	"..\..\DSS\DssCodecTypes.h"\
+	
+
+!ELSEIF  "$(CFG)" == "DSS - Win32 (WCE x86) Debug"
+
+DEP_CPP_DICTI=\
+	"..\..\DSS\Dictionary.h"\
+	"..\..\DSS\DssString.h"\
+	"..\..\DSS\StdAfx.h"\
+	
+NODEP_CPP_DICTI=\
+	"..\..\DSS\ComObjectBase.h"\
+	"..\..\DSS\DssCodecMgr.h"\
+	"..\..\DSS\DssCodecTypes.h"\
+	
+
+!ELSEIF  "$(CFG)" == "DSS - Win32 (WCE x86em) Release"
+
+DEP_CPP_DICTI=\
+	"..\..\DSS\Dictionary.h"\
+	"..\..\DSS\DssString.h"\
+	"..\..\DSS\StdAfx.h"\
+	
+NODEP_CPP_DICTI=\
+	"..\..\DSS\ComObjectBase.h"\
+	"..\..\DSS\DssCodecMgr.h"\
+	"..\..\DSS\DssCodecTypes.h"\
+	
+
+!ELSEIF  "$(CFG)" == "DSS - Win32 (WCE x86em) Debug"
+
+DEP_CPP_DICTI=\
+	"..\..\DSS\Dictionary.h"\
+	"..\..\DSS\DssString.h"\
+	"..\..\DSS\StdAfx.h"\
+	
+NODEP_CPP_DICTI=\
+	"..\..\DSS\ComObjectBase.h"\
+	"..\..\DSS\DssCodecMgr.h"\
+	"..\..\DSS\DssCodecTypes.h"\
+	
+
+!ELSEIF  "$(CFG)" == "DSS - Win32 (WCE PPC) Release"
+
+DEP_CPP_DICTI=\
+	"..\..\DSS\Dictionary.h"\
+	"..\..\DSS\DssString.h"\
+	"..\..\DSS\StdAfx.h"\
+	
+NODEP_CPP_DICTI=\
+	"..\..\DSS\ComObjectBase.h"\
+	"..\..\DSS\DssCodecMgr.h"\
+	"..\..\DSS\DssCodecTypes.h"\
+	
+
+!ELSEIF  "$(CFG)" == "DSS - Win32 (WCE PPC) Debug"
+
+DEP_CPP_DICTI=\
+	"..\..\DSS\Dictionary.h"\
+	"..\..\DSS\DssString.h"\
+	"..\..\DSS\StdAfx.h"\
+	
+NODEP_CPP_DICTI=\
+	"..\..\DSS\ComObjectBase.h"\
+	"..\..\DSS\DssCodecMgr.h"\
+	"..\..\DSS\DssCodecTypes.h"\
+	
+
+!ENDIF 
+
+# End Source File
+# Begin Source File
+
+SOURCE=..\..\DSS\Driver.cpp
+
+!IF  "$(CFG)" == "DSS - Win32 (WCE MIPS) Release"
+
+DEP_CPP_DRIVE=\
+	"..\..\Common\Dss.h"\
+	"..\..\DSS\Driver.h"\
+	"..\..\DSS\Drivers.h"\
+	"..\..\DSS\DssString.h"\
+	"..\..\DSS\regkey.h"\
+	"..\..\DSS\regproperty.h"\
+	"..\..\DSS\regpropertybag.h"\
+	"..\..\DSS\StdAfx.h"\
+	
+
+!ELSEIF  "$(CFG)" == "DSS - Win32 (WCE MIPS) Debug"
+
+DEP_CPP_DRIVE=\
+	"..\..\Common\Dss.h"\
+	"..\..\DSS\Driver.h"\
+	"..\..\DSS\Drivers.h"\
+	"..\..\DSS\DssString.h"\
+	"..\..\DSS\regkey.h"\
+	"..\..\DSS\regproperty.h"\
+	"..\..\DSS\regpropertybag.h"\
+	"..\..\DSS\StdAfx.h"\
+	
+
+!ELSEIF  "$(CFG)" == "DSS - Win32 (WCE SH4) Release"
+
+DEP_CPP_DRIVE=\
+	"..\..\DSS\Driver.h"\
+	"..\..\DSS\Drivers.h"\
+	"..\..\DSS\DssString.h"\
+	"..\..\DSS\regkey.h"\
+	"..\..\DSS\regproperty.h"\
+	"..\..\DSS\regpropertybag.h"\
+	"..\..\DSS\StdAfx.h"\
+	
+NODEP_CPP_DRIVE=\
+	"..\..\DSS\ComObjectBase.h"\
+	"..\..\DSS\DssCodecMgr.h"\
+	"..\..\DSS\DssCodecTypes.h"\
+	
+
+!ELSEIF  "$(CFG)" == "DSS - Win32 (WCE SH4) Debug"
+
+DEP_CPP_DRIVE=\
+	"..\..\DSS\Driver.h"\
+	"..\..\DSS\Drivers.h"\
+	"..\..\DSS\DssString.h"\
+	"..\..\DSS\regkey.h"\
+	"..\..\DSS\regproperty.h"\
+	"..\..\DSS\regpropertybag.h"\
+	"..\..\DSS\StdAfx.h"\
+	
+NODEP_CPP_DRIVE=\
+	"..\..\DSS\ComObjectBase.h"\
+	"..\..\DSS\DssCodecMgr.h"\
+	"..\..\DSS\DssCodecTypes.h"\
+	
+
+!ELSEIF  "$(CFG)" == "DSS - Win32 (WCE SH3) Release"
+
+DEP_CPP_DRIVE=\
+	"..\..\Common\Dss.h"\
+	"..\..\DSS\Driver.h"\
+	"..\..\DSS\Drivers.h"\
+	"..\..\DSS\DssString.h"\
+	"..\..\DSS\regkey.h"\
+	"..\..\DSS\regproperty.h"\
+	"..\..\DSS\regpropertybag.h"\
+	"..\..\DSS\StdAfx.h"\
+	
+
+!ELSEIF  "$(CFG)" == "DSS - Win32 (WCE SH3) Debug"
+
+DEP_CPP_DRIVE=\
+	"..\..\DSS\Driver.h"\
+	"..\..\DSS\Drivers.h"\
+	"..\..\DSS\DssString.h"\
+	"..\..\DSS\regkey.h"\
+	"..\..\DSS\regproperty.h"\
+	"..\..\DSS\regpropertybag.h"\
+	"..\..\DSS\StdAfx.h"\
+	
+NODEP_CPP_DRIVE=\
+	"..\..\DSS\ComObjectBase.h"\
+	"..\..\DSS\DssCodecMgr.h"\
+	"..\..\DSS\DssCodecTypes.h"\
+	
+
+!ELSEIF  "$(CFG)" == "DSS - Win32 (WCE ARM) Release"
+
+DEP_CPP_DRIVE=\
+	"..\..\Common\Dss.h"\
+	"..\..\DSS\Driver.h"\
+	"..\..\DSS\Drivers.h"\
+	"..\..\DSS\DssString.h"\
+	"..\..\DSS\regkey.h"\
+	"..\..\DSS\regproperty.h"\
+	"..\..\DSS\regpropertybag.h"\
+	"..\..\DSS\StdAfx.h"\
+	
+
+!ELSEIF  "$(CFG)" == "DSS - Win32 (WCE ARM) Debug"
+
+DEP_CPP_DRIVE=\
+	"..\..\Common\Dss.h"\
+	"..\..\DSS\Driver.h"\
+	"..\..\DSS\Drivers.h"\
+	"..\..\DSS\DssString.h"\
+	"..\..\DSS\regkey.h"\
+	"..\..\DSS\regproperty.h"\
+	"..\..\DSS\regpropertybag.h"\
+	"..\..\DSS\StdAfx.h"\
+	
+
+!ELSEIF  "$(CFG)" == "DSS - Win32 (WCE MIPSFP) Release"
+
+DEP_CPP_DRIVE=\
+	"..\..\DSS\Driver.h"\
+	"..\..\DSS\Drivers.h"\
+	"..\..\DSS\DssString.h"\
+	"..\..\DSS\regkey.h"\
+	"..\..\DSS\regproperty.h"\
+	"..\..\DSS\regpropertybag.h"\
+	"..\..\DSS\StdAfx.h"\
+	
+NODEP_CPP_DRIVE=\
+	"..\..\DSS\ComObjectBase.h"\
+	"..\..\DSS\DssCodecMgr.h"\
+	"..\..\DSS\DssCodecTypes.h"\
+	
+
+!ELSEIF  "$(CFG)" == "DSS - Win32 (WCE MIPSFP) Debug"
+
+DEP_CPP_DRIVE=\
+	"..\..\DSS\Driver.h"\
+	"..\..\DSS\Drivers.h"\
+	"..\..\DSS\DssString.h"\
+	"..\..\DSS\regkey.h"\
+	"..\..\DSS\regproperty.h"\
+	"..\..\DSS\regpropertybag.h"\
+	"..\..\DSS\StdAfx.h"\
+	
+NODEP_CPP_DRIVE=\
+	"..\..\DSS\ComObjectBase.h"\
+	"..\..\DSS\DssCodecMgr.h"\
+	"..\..\DSS\DssCodecTypes.h"\
+	
+
+!ELSEIF  "$(CFG)" == "DSS - Win32 (WCE x86) Release"
+
+DEP_CPP_DRIVE=\
+	"..\..\DSS\Driver.h"\
+	"..\..\DSS\Drivers.h"\
+	"..\..\DSS\DssString.h"\
+	"..\..\DSS\regkey.h"\
+	"..\..\DSS\regproperty.h"\
+	"..\..\DSS\regpropertybag.h"\
+	"..\..\DSS\StdAfx.h"\
+	
+NODEP_CPP_DRIVE=\
+	"..\..\DSS\ComObjectBase.h"\
+	"..\..\DSS\DssCodecMgr.h"\
+	"..\..\DSS\DssCodecTypes.h"\
+	
+
+!ELSEIF  "$(CFG)" == "DSS - Win32 (WCE x86) Debug"
+
+DEP_CPP_DRIVE=\
+	"..\..\DSS\Driver.h"\
+	"..\..\DSS\Drivers.h"\
+	"..\..\DSS\DssString.h"\
+	"..\..\DSS\regkey.h"\
+	"..\..\DSS\regproperty.h"\
+	"..\..\DSS\regpropertybag.h"\
+	"..\..\DSS\StdAfx.h"\
+	
+NODEP_CPP_DRIVE=\
+	"..\..\DSS\ComObjectBase.h"\
+	"..\..\DSS\DssCodecMgr.h"\
+	"..\..\DSS\DssCodecTypes.h"\
+	
+
+!ELSEIF  "$(CFG)" == "DSS - Win32 (WCE x86em) Release"
+
+DEP_CPP_DRIVE=\
+	"..\..\DSS\Driver.h"\
+	"..\..\DSS\Drivers.h"\
+	"..\..\DSS\DssString.h"\
+	"..\..\DSS\regkey.h"\
+	"..\..\DSS\regproperty.h"\
+	"..\..\DSS\regpropertybag.h"\
+	"..\..\DSS\StdAfx.h"\
+	
+NODEP_CPP_DRIVE=\
+	"..\..\DSS\ComObjectBase.h"\
+	"..\..\DSS\DssCodecMgr.h"\
+	"..\..\DSS\DssCodecTypes.h"\
+	
+
+!ELSEIF  "$(CFG)" == "DSS - Win32 (WCE x86em) Debug"
+
+DEP_CPP_DRIVE=\
+	"..\..\DSS\Driver.h"\
+	"..\..\DSS\Drivers.h"\
+	"..\..\DSS\DssString.h"\
+	"..\..\DSS\regkey.h"\
+	"..\..\DSS\regproperty.h"\
+	"..\..\DSS\regpropertybag.h"\
+	"..\..\DSS\StdAfx.h"\
+	
+NODEP_CPP_DRIVE=\
+	"..\..\DSS\ComObjectBase.h"\
+	"..\..\DSS\DssCodecMgr.h"\
+	"..\..\DSS\DssCodecTypes.h"\
+	
+
+!ELSEIF  "$(CFG)" == "DSS - Win32 (WCE PPC) Release"
+
+DEP_CPP_DRIVE=\
+	"..\..\DSS\Driver.h"\
+	"..\..\DSS\Drivers.h"\
+	"..\..\DSS\DssString.h"\
+	"..\..\DSS\regkey.h"\
+	"..\..\DSS\regproperty.h"\
+	"..\..\DSS\regpropertybag.h"\
+	"..\..\DSS\StdAfx.h"\
+	
+NODEP_CPP_DRIVE=\
+	"..\..\DSS\ComObjectBase.h"\
+	"..\..\DSS\DssCodecMgr.h"\
+	"..\..\DSS\DssCodecTypes.h"\
+	
+
+!ELSEIF  "$(CFG)" == "DSS - Win32 (WCE PPC) Debug"
+
+DEP_CPP_DRIVE=\
+	"..\..\DSS\Driver.h"\
+	"..\..\DSS\Drivers.h"\
+	"..\..\DSS\DssString.h"\
+	"..\..\DSS\regkey.h"\
+	"..\..\DSS\regproperty.h"\
+	"..\..\DSS\regpropertybag.h"\
+	"..\..\DSS\StdAfx.h"\
+	
+NODEP_CPP_DRIVE=\
+	"..\..\DSS\ComObjectBase.h"\
+	"..\..\DSS\DssCodecMgr.h"\
+	"..\..\DSS\DssCodecTypes.h"\
+	
+
+!ENDIF 
+
+# End Source File
+# Begin Source File
+
+SOURCE=..\..\DSS\Drivers.cpp
+
+!IF  "$(CFG)" == "DSS - Win32 (WCE MIPS) Release"
+
+DEP_CPP_DRIVER=\
+	"..\..\Common\Dss.h"\
+	"..\..\DSS\Driver.h"\
+	"..\..\DSS\Drivers.h"\
+	"..\..\DSS\DssString.h"\
+	"..\..\DSS\regkey.h"\
+	"..\..\DSS\regproperty.h"\
+	"..\..\DSS\regpropertybag.h"\
+	"..\..\DSS\StdAfx.h"\
+	
+
+!ELSEIF  "$(CFG)" == "DSS - Win32 (WCE MIPS) Debug"
+
+DEP_CPP_DRIVER=\
+	"..\..\Common\Dss.h"\
+	"..\..\DSS\Driver.h"\
+	"..\..\DSS\Drivers.h"\
+	"..\..\DSS\DssString.h"\
+	"..\..\DSS\regkey.h"\
+	"..\..\DSS\regproperty.h"\
+	"..\..\DSS\regpropertybag.h"\
+	"..\..\DSS\StdAfx.h"\
+	
+
+!ELSEIF  "$(CFG)" == "DSS - Win32 (WCE SH4) Release"
+
+DEP_CPP_DRIVER=\
+	"..\..\DSS\Driver.h"\
+	"..\..\DSS\Drivers.h"\
+	"..\..\DSS\DssString.h"\
+	"..\..\DSS\regkey.h"\
+	"..\..\DSS\regproperty.h"\
+	"..\..\DSS\regpropertybag.h"\
+	"..\..\DSS\StdAfx.h"\
+	
+NODEP_CPP_DRIVER=\
+	"..\..\DSS\ComObjectBase.h"\
+	"..\..\DSS\DssCodecMgr.h"\
+	"..\..\DSS\DssCodecTypes.h"\
+	
+
+!ELSEIF  "$(CFG)" == "DSS - Win32 (WCE SH4) Debug"
+
+DEP_CPP_DRIVER=\
+	"..\..\DSS\Driver.h"\
+	"..\..\DSS\Drivers.h"\
+	"..\..\DSS\DssString.h"\
+	"..\..\DSS\regkey.h"\
+	"..\..\DSS\regproperty.h"\
+	"..\..\DSS\regpropertybag.h"\
+	"..\..\DSS\StdAfx.h"\
+	
+NODEP_CPP_DRIVER=\
+	"..\..\DSS\ComObjectBase.h"\
+	"..\..\DSS\DssCodecMgr.h"\
+	"..\..\DSS\DssCodecTypes.h"\
+	
+
+!ELSEIF  "$(CFG)" == "DSS - Win32 (WCE SH3) Release"
+
+DEP_CPP_DRIVER=\
+	"..\..\Common\Dss.h"\
+	"..\..\DSS\Driver.h"\
+	"..\..\DSS\Drivers.h"\
+	"..\..\DSS\DssString.h"\
+	"..\..\DSS\regkey.h"\
+	"..\..\DSS\regproperty.h"\
+	"..\..\DSS\regpropertybag.h"\
+	"..\..\DSS\StdAfx.h"\
+	
+
+!ELSEIF  "$(CFG)" == "DSS - Win32 (WCE SH3) Debug"
+
+DEP_CPP_DRIVER=\
+	"..\..\DSS\Driver.h"\
+	"..\..\DSS\Drivers.h"\
+	"..\..\DSS\DssString.h"\
+	"..\..\DSS\regkey.h"\
+	"..\..\DSS\regproperty.h"\
+	"..\..\DSS\regpropertybag.h"\
+	"..\..\DSS\StdAfx.h"\
+	
+NODEP_CPP_DRIVER=\
+	"..\..\DSS\ComObjectBase.h"\
+	"..\..\DSS\DssCodecMgr.h"\
+	"..\..\DSS\DssCodecTypes.h"\
+	
+
+!ELSEIF  "$(CFG)" == "DSS - Win32 (WCE ARM) Release"
+
+DEP_CPP_DRIVER=\
+	"..\..\Common\Dss.h"\
+	"..\..\DSS\Driver.h"\
+	"..\..\DSS\Drivers.h"\
+	"..\..\DSS\DssString.h"\
+	"..\..\DSS\regkey.h"\
+	"..\..\DSS\regproperty.h"\
+	"..\..\DSS\regpropertybag.h"\
+	"..\..\DSS\StdAfx.h"\
+	
+
+!ELSEIF  "$(CFG)" == "DSS - Win32 (WCE ARM) Debug"
+
+DEP_CPP_DRIVER=\
+	"..\..\Common\Dss.h"\
+	"..\..\DSS\Driver.h"\
+	"..\..\DSS\Drivers.h"\
+	"..\..\DSS\DssString.h"\
+	"..\..\DSS\regkey.h"\
+	"..\..\DSS\regproperty.h"\
+	"..\..\DSS\regpropertybag.h"\
+	"..\..\DSS\StdAfx.h"\
+	
+
+!ELSEIF  "$(CFG)" == "DSS - Win32 (WCE MIPSFP) Release"
+
+DEP_CPP_DRIVER=\
+	"..\..\DSS\Driver.h"\
+	"..\..\DSS\Drivers.h"\
+	"..\..\DSS\DssString.h"\
+	"..\..\DSS\regkey.h"\
+	"..\..\DSS\regproperty.h"\
+	"..\..\DSS\regpropertybag.h"\
+	"..\..\DSS\StdAfx.h"\
+	
+NODEP_CPP_DRIVER=\
+	"..\..\DSS\ComObjectBase.h"\
+	"..\..\DSS\DssCodecMgr.h"\
+	"..\..\DSS\DssCodecTypes.h"\
+	
+
+!ELSEIF  "$(CFG)" == "DSS - Win32 (WCE MIPSFP) Debug"
+
+DEP_CPP_DRIVER=\
+	"..\..\DSS\Driver.h"\
+	"..\..\DSS\Drivers.h"\
+	"..\..\DSS\DssString.h"\
+	"..\..\DSS\regkey.h"\
+	"..\..\DSS\regproperty.h"\
+	"..\..\DSS\regpropertybag.h"\
+	"..\..\DSS\StdAfx.h"\
+	
+NODEP_CPP_DRIVER=\
+	"..\..\DSS\ComObjectBase.h"\
+	"..\..\DSS\DssCodecMgr.h"\
+	"..\..\DSS\DssCodecTypes.h"\
+	
+
+!ELSEIF  "$(CFG)" == "DSS - Win32 (WCE x86) Release"
+
+DEP_CPP_DRIVER=\
+	"..\..\DSS\Driver.h"\
+	"..\..\DSS\Drivers.h"\
+	"..\..\DSS\DssString.h"\
+	"..\..\DSS\regkey.h"\
+	"..\..\DSS\regproperty.h"\
+	"..\..\DSS\regpropertybag.h"\
+	"..\..\DSS\StdAfx.h"\
+	
+NODEP_CPP_DRIVER=\
+	"..\..\DSS\ComObjectBase.h"\
+	"..\..\DSS\DssCodecMgr.h"\
+	"..\..\DSS\DssCodecTypes.h"\
+	
+
+!ELSEIF  "$(CFG)" == "DSS - Win32 (WCE x86) Debug"
+
+DEP_CPP_DRIVER=\
+	"..\..\DSS\Driver.h"\
+	"..\..\DSS\Drivers.h"\
+	"..\..\DSS\DssString.h"\
+	"..\..\DSS\regkey.h"\
+	"..\..\DSS\regproperty.h"\
+	"..\..\DSS\regpropertybag.h"\
+	"..\..\DSS\StdAfx.h"\
+	
+NODEP_CPP_DRIVER=\
+	"..\..\DSS\ComObjectBase.h"\
+	"..\..\DSS\DssCodecMgr.h"\
+	"..\..\DSS\DssCodecTypes.h"\
+	
+
+!ELSEIF  "$(CFG)" == "DSS - Win32 (WCE x86em) Release"
+
+DEP_CPP_DRIVER=\
+	"..\..\DSS\Driver.h"\
+	"..\..\DSS\Drivers.h"\
+	"..\..\DSS\DssString.h"\
+	"..\..\DSS\regkey.h"\
+	"..\..\DSS\regproperty.h"\
+	"..\..\DSS\regpropertybag.h"\
+	"..\..\DSS\StdAfx.h"\
+	
+NODEP_CPP_DRIVER=\
+	"..\..\DSS\ComObjectBase.h"\
+	"..\..\DSS\DssCodecMgr.h"\
+	"..\..\DSS\DssCodecTypes.h"\
+	
+
+!ELSEIF  "$(CFG)" == "DSS - Win32 (WCE x86em) Debug"
+
+DEP_CPP_DRIVER=\
+	"..\..\DSS\Driver.h"\
+	"..\..\DSS\Drivers.h"\
+	"..\..\DSS\DssString.h"\
+	"..\..\DSS\regkey.h"\
+	"..\..\DSS\regproperty.h"\
+	"..\..\DSS\regpropertybag.h"\
+	"..\..\DSS\StdAfx.h"\
+	
+NODEP_CPP_DRIVER=\
+	"..\..\DSS\ComObjectBase.h"\
+	"..\..\DSS\DssCodecMgr.h"\
+	"..\..\DSS\DssCodecTypes.h"\
+	
+
+!ELSEIF  "$(CFG)" == "DSS - Win32 (WCE PPC) Release"
+
+DEP_CPP_DRIVER=\
+	"..\..\DSS\Driver.h"\
+	"..\..\DSS\Drivers.h"\
+	"..\..\DSS\DssString.h"\
+	"..\..\DSS\regkey.h"\
+	"..\..\DSS\regproperty.h"\
+	"..\..\DSS\regpropertybag.h"\
+	"..\..\DSS\StdAfx.h"\
+	
+NODEP_CPP_DRIVER=\
+	"..\..\DSS\ComObjectBase.h"\
+	"..\..\DSS\DssCodecMgr.h"\
+	"..\..\DSS\DssCodecTypes.h"\
+	
+
+!ELSEIF  "$(CFG)" == "DSS - Win32 (WCE PPC) Debug"
+
+DEP_CPP_DRIVER=\
+	"..\..\DSS\Driver.h"\
+	"..\..\DSS\Drivers.h"\
+	"..\..\DSS\DssString.h"\
+	"..\..\DSS\regkey.h"\
+	"..\..\DSS\regproperty.h"\
+	"..\..\DSS\regpropertybag.h"\
+	"..\..\DSS\StdAfx.h"\
+	
+NODEP_CPP_DRIVER=\
+	"..\..\DSS\ComObjectBase.h"\
+	"..\..\DSS\DssCodecMgr.h"\
+	"..\..\DSS\DssCodecTypes.h"\
+	
+
+!ENDIF 
+
+# End Source File
+# Begin Source File
+
+SOURCE=..\..\DSS\Dsscodecmgr.cpp
+
+!IF  "$(CFG)" == "DSS - Win32 (WCE MIPS) Release"
+
+DEP_CPP_DSSCO=\
+	"..\..\Common\Dss.h"\
+	"..\..\DSS\CodecManager.h"\
+	"..\..\DSS\cwavebuffer.h"\
+	"..\..\DSS\cwaveoutce.h"\
+	"..\..\DSS\Dictionary.h"\
+	"..\..\DSS\DssString.h"\
+	"..\..\DSS\FileInputStream.h"\
+	"..\..\DSS\FileOutputStream.h"\
+	"..\..\DSS\StdAfx.h"\
+	"..\..\DSS\StreamFormat.h"\
+	"..\..\DSS\StructHelper.h"\
+	
+
+!ELSEIF  "$(CFG)" == "DSS - Win32 (WCE MIPS) Debug"
+
+DEP_CPP_DSSCO=\
+	"..\..\Common\Dss.h"\
+	"..\..\DSS\CodecManager.h"\
+	"..\..\DSS\cwavebuffer.h"\
+	"..\..\DSS\cwaveoutce.h"\
+	"..\..\DSS\Dictionary.h"\
+	"..\..\DSS\DssString.h"\
+	"..\..\DSS\FileInputStream.h"\
+	"..\..\DSS\FileOutputStream.h"\
+	"..\..\DSS\StdAfx.h"\
+	"..\..\DSS\StreamFormat.h"\
+	"..\..\DSS\StructHelper.h"\
+	
+
+!ELSEIF  "$(CFG)" == "DSS - Win32 (WCE SH4) Release"
+
+DEP_CPP_DSSCO=\
+	"..\..\DSS\CodecManager.h"\
+	"..\..\DSS\cwavebuffer.h"\
+	"..\..\DSS\cwaveoutce.h"\
+	"..\..\DSS\Dictionary.h"\
+	"..\..\DSS\DssString.h"\
+	"..\..\DSS\FileInputStream.h"\
+	"..\..\DSS\FileOutputStream.h"\
+	"..\..\DSS\StdAfx.h"\
+	"..\..\DSS\StreamFormat.h"\
+	"..\..\DSS\StructHelper.h"\
+	
+NODEP_CPP_DSSCO=\
+	"..\..\DSS\ComObjectBase.h"\
+	"..\..\DSS\DssCodecMgr.h"\
+	"..\..\DSS\DssCodecStructs.h"\
+	"..\..\DSS\DssCodecTypes.h"\
+	
+
+!ELSEIF  "$(CFG)" == "DSS - Win32 (WCE SH4) Debug"
+
+DEP_CPP_DSSCO=\
+	"..\..\DSS\CodecManager.h"\
+	"..\..\DSS\cwavebuffer.h"\
+	"..\..\DSS\cwaveoutce.h"\
+	"..\..\DSS\Dictionary.h"\
+	"..\..\DSS\DssString.h"\
+	"..\..\DSS\FileInputStream.h"\
+	"..\..\DSS\FileOutputStream.h"\
+	"..\..\DSS\StdAfx.h"\
+	"..\..\DSS\StreamFormat.h"\
+	"..\..\DSS\StructHelper.h"\
+	
+NODEP_CPP_DSSCO=\
+	"..\..\DSS\ComObjectBase.h"\
+	"..\..\DSS\DssCodecMgr.h"\
+	"..\..\DSS\DssCodecStructs.h"\
+	"..\..\DSS\DssCodecTypes.h"\
+	
+
+!ELSEIF  "$(CFG)" == "DSS - Win32 (WCE SH3) Release"
+
+DEP_CPP_DSSCO=\
+	"..\..\Common\Dss.h"\
+	"..\..\DSS\CodecManager.h"\
+	"..\..\DSS\cwavebuffer.h"\
+	"..\..\DSS\cwaveoutce.h"\
+	"..\..\DSS\Dictionary.h"\
+	"..\..\DSS\DssString.h"\
+	"..\..\DSS\FileInputStream.h"\
+	"..\..\DSS\FileOutputStream.h"\
+	"..\..\DSS\StdAfx.h"\
+	"..\..\DSS\StreamFormat.h"\
+	"..\..\DSS\StructHelper.h"\
+	
+
+!ELSEIF  "$(CFG)" == "DSS - Win32 (WCE SH3) Debug"
+
+DEP_CPP_DSSCO=\
+	"..\..\DSS\CodecManager.h"\
+	"..\..\DSS\cwavebuffer.h"\
+	"..\..\DSS\cwaveoutce.h"\
+	"..\..\DSS\Dictionary.h"\
+	"..\..\DSS\DssString.h"\
+	"..\..\DSS\FileInputStream.h"\
+	"..\..\DSS\FileOutputStream.h"\
+	"..\..\DSS\StdAfx.h"\
+	"..\..\DSS\StreamFormat.h"\
+	"..\..\DSS\StructHelper.h"\
+	
+NODEP_CPP_DSSCO=\
+	"..\..\DSS\ComObjectBase.h"\
+	"..\..\DSS\DssCodecMgr.h"\
+	"..\..\DSS\DssCodecStructs.h"\
+	"..\..\DSS\DssCodecTypes.h"\
+	
+
+!ELSEIF  "$(CFG)" == "DSS - Win32 (WCE ARM) Release"
+
+DEP_CPP_DSSCO=\
+	"..\..\Common\Dss.h"\
+	"..\..\DSS\CodecManager.h"\
+	"..\..\DSS\cwavebuffer.h"\
+	"..\..\DSS\cwaveoutce.h"\
+	"..\..\DSS\Dictionary.h"\
+	"..\..\DSS\DssString.h"\
+	"..\..\DSS\FileInputStream.h"\
+	"..\..\DSS\FileOutputStream.h"\
+	"..\..\DSS\StdAfx.h"\
+	"..\..\DSS\StreamFormat.h"\
+	"..\..\DSS\StructHelper.h"\
+	
+
+!ELSEIF  "$(CFG)" == "DSS - Win32 (WCE ARM) Debug"
+
+DEP_CPP_DSSCO=\
+	"..\..\Common\Dss.h"\
+	"..\..\DSS\CodecManager.h"\
+	"..\..\DSS\cwavebuffer.h"\
+	"..\..\DSS\cwaveoutce.h"\
+	"..\..\DSS\Dictionary.h"\
+	"..\..\DSS\DssString.h"\
+	"..\..\DSS\FileInputStream.h"\
+	"..\..\DSS\FileOutputStream.h"\
+	"..\..\DSS\StdAfx.h"\
+	"..\..\DSS\StreamFormat.h"\
+	"..\..\DSS\StructHelper.h"\
+	
+
+!ELSEIF  "$(CFG)" == "DSS - Win32 (WCE MIPSFP) Release"
+
+DEP_CPP_DSSCO=\
+	"..\..\DSS\CodecManager.h"\
+	"..\..\DSS\cwavebuffer.h"\
+	"..\..\DSS\cwaveoutce.h"\
+	"..\..\DSS\Dictionary.h"\
+	"..\..\DSS\DssString.h"\
+	"..\..\DSS\FileInputStream.h"\
+	"..\..\DSS\FileOutputStream.h"\
+	"..\..\DSS\StdAfx.h"\
+	"..\..\DSS\StreamFormat.h"\
+	"..\..\DSS\StructHelper.h"\
+	
+NODEP_CPP_DSSCO=\
+	"..\..\DSS\ComObjectBase.h"\
+	"..\..\DSS\DssCodecMgr.h"\
+	"..\..\DSS\DssCodecStructs.h"\
+	"..\..\DSS\DssCodecTypes.h"\
+	
+
+!ELSEIF  "$(CFG)" == "DSS - Win32 (WCE MIPSFP) Debug"
+
+DEP_CPP_DSSCO=\
+	"..\..\DSS\CodecManager.h"\
+	"..\..\DSS\cwavebuffer.h"\
+	"..\..\DSS\cwaveoutce.h"\
+	"..\..\DSS\Dictionary.h"\
+	"..\..\DSS\DssString.h"\
+	"..\..\DSS\FileInputStream.h"\
+	"..\..\DSS\FileOutputStream.h"\
+	"..\..\DSS\StdAfx.h"\
+	"..\..\DSS\StreamFormat.h"\
+	"..\..\DSS\StructHelper.h"\
+	
+NODEP_CPP_DSSCO=\
+	"..\..\DSS\ComObjectBase.h"\
+	"..\..\DSS\DssCodecMgr.h"\
+	"..\..\DSS\DssCodecStructs.h"\
+	"..\..\DSS\DssCodecTypes.h"\
+	
+
+!ELSEIF  "$(CFG)" == "DSS - Win32 (WCE x86) Release"
+
+DEP_CPP_DSSCO=\
+	"..\..\DSS\CodecManager.h"\
+	"..\..\DSS\cwavebuffer.h"\
+	"..\..\DSS\cwaveoutce.h"\
+	"..\..\DSS\Dictionary.h"\
+	"..\..\DSS\DssString.h"\
+	"..\..\DSS\FileInputStream.h"\
+	"..\..\DSS\FileOutputStream.h"\
+	"..\..\DSS\StdAfx.h"\
+	"..\..\DSS\StreamFormat.h"\
+	"..\..\DSS\StructHelper.h"\
+	
+NODEP_CPP_DSSCO=\
+	"..\..\DSS\ComObjectBase.h"\
+	"..\..\DSS\DssCodecMgr.h"\
+	"..\..\DSS\DssCodecStructs.h"\
+	"..\..\DSS\DssCodecTypes.h"\
+	
+
+!ELSEIF  "$(CFG)" == "DSS - Win32 (WCE x86) Debug"
+
+DEP_CPP_DSSCO=\
+	"..\..\DSS\CodecManager.h"\
+	"..\..\DSS\cwavebuffer.h"\
+	"..\..\DSS\cwaveoutce.h"\
+	"..\..\DSS\Dictionary.h"\
+	"..\..\DSS\DssString.h"\
+	"..\..\DSS\FileInputStream.h"\
+	"..\..\DSS\FileOutputStream.h"\
+	"..\..\DSS\StdAfx.h"\
+	"..\..\DSS\StreamFormat.h"\
+	"..\..\DSS\StructHelper.h"\
+	
+NODEP_CPP_DSSCO=\
+	"..\..\DSS\ComObjectBase.h"\
+	"..\..\DSS\DssCodecMgr.h"\
+	"..\..\DSS\DssCodecStructs.h"\
+	"..\..\DSS\DssCodecTypes.h"\
+	
+
+!ELSEIF  "$(CFG)" == "DSS - Win32 (WCE x86em) Release"
+
+DEP_CPP_DSSCO=\
+	"..\..\DSS\CodecManager.h"\
+	"..\..\DSS\cwavebuffer.h"\
+	"..\..\DSS\cwaveoutce.h"\
+	"..\..\DSS\Dictionary.h"\
+	"..\..\DSS\DssString.h"\
+	"..\..\DSS\FileInputStream.h"\
+	"..\..\DSS\FileOutputStream.h"\
+	"..\..\DSS\StdAfx.h"\
+	"..\..\DSS\StreamFormat.h"\
+	"..\..\DSS\StructHelper.h"\
+	
+NODEP_CPP_DSSCO=\
+	"..\..\DSS\ComObjectBase.h"\
+	"..\..\DSS\DssCodecMgr.h"\
+	"..\..\DSS\DssCodecStructs.h"\
+	"..\..\DSS\DssCodecTypes.h"\
+	
+
+!ELSEIF  "$(CFG)" == "DSS - Win32 (WCE x86em) Debug"
+
+DEP_CPP_DSSCO=\
+	"..\..\DSS\CodecManager.h"\
+	"..\..\DSS\cwavebuffer.h"\
+	"..\..\DSS\cwaveoutce.h"\
+	"..\..\DSS\Dictionary.h"\
+	"..\..\DSS\DssString.h"\
+	"..\..\DSS\FileInputStream.h"\
+	"..\..\DSS\FileOutputStream.h"\
+	"..\..\DSS\StdAfx.h"\
+	"..\..\DSS\StreamFormat.h"\
+	"..\..\DSS\StructHelper.h"\
+	
+NODEP_CPP_DSSCO=\
+	"..\..\DSS\ComObjectBase.h"\
+	"..\..\DSS\DssCodecMgr.h"\
+	"..\..\DSS\DssCodecStructs.h"\
+	"..\..\DSS\DssCodecTypes.h"\
+	
+
+!ELSEIF  "$(CFG)" == "DSS - Win32 (WCE PPC) Release"
+
+DEP_CPP_DSSCO=\
+	"..\..\DSS\CodecManager.h"\
+	"..\..\DSS\cwavebuffer.h"\
+	"..\..\DSS\cwaveoutce.h"\
+	"..\..\DSS\Dictionary.h"\
+	"..\..\DSS\DssString.h"\
+	"..\..\DSS\FileInputStream.h"\
+	"..\..\DSS\FileOutputStream.h"\
+	"..\..\DSS\StdAfx.h"\
+	"..\..\DSS\StreamFormat.h"\
+	"..\..\DSS\StructHelper.h"\
+	
+NODEP_CPP_DSSCO=\
+	"..\..\DSS\ComObjectBase.h"\
+	"..\..\DSS\DssCodecMgr.h"\
+	"..\..\DSS\DssCodecStructs.h"\
+	"..\..\DSS\DssCodecTypes.h"\
+	
+
+!ELSEIF  "$(CFG)" == "DSS - Win32 (WCE PPC) Debug"
+
+DEP_CPP_DSSCO=\
+	"..\..\DSS\CodecManager.h"\
+	"..\..\DSS\cwavebuffer.h"\
+	"..\..\DSS\cwaveoutce.h"\
+	"..\..\DSS\Dictionary.h"\
+	"..\..\DSS\DssString.h"\
+	"..\..\DSS\FileInputStream.h"\
+	"..\..\DSS\FileOutputStream.h"\
+	"..\..\DSS\StdAfx.h"\
+	"..\..\DSS\StreamFormat.h"\
+	"..\..\DSS\StructHelper.h"\
+	
+NODEP_CPP_DSSCO=\
+	"..\..\DSS\ComObjectBase.h"\
+	"..\..\DSS\DssCodecMgr.h"\
+	"..\..\DSS\DssCodecStructs.h"\
+	"..\..\DSS\DssCodecTypes.h"\
+	
+
+!ENDIF 
+
+# End Source File
+# Begin Source File
+
+SOURCE=..\..\DSS\DssString.cpp
+
+!IF  "$(CFG)" == "DSS - Win32 (WCE MIPS) Release"
+
+DEP_CPP_DSSST=\
+	"..\..\Common\Dss.h"\
+	"..\..\DSS\DssString.h"\
+	"..\..\DSS\StdAfx.h"\
+	
+
+!ELSEIF  "$(CFG)" == "DSS - Win32 (WCE MIPS) Debug"
+
+DEP_CPP_DSSST=\
+	"..\..\Common\Dss.h"\
+	"..\..\DSS\DssString.h"\
+	"..\..\DSS\StdAfx.h"\
+	
+
+!ELSEIF  "$(CFG)" == "DSS - Win32 (WCE SH4) Release"
+
+DEP_CPP_DSSST=\
+	"..\..\DSS\DssString.h"\
+	"..\..\DSS\StdAfx.h"\
+	
+NODEP_CPP_DSSST=\
+	"..\..\DSS\DssCodecTypes.h"\
+	
+
+!ELSEIF  "$(CFG)" == "DSS - Win32 (WCE SH4) Debug"
+
+DEP_CPP_DSSST=\
+	"..\..\DSS\DssString.h"\
+	"..\..\DSS\StdAfx.h"\
+	
+NODEP_CPP_DSSST=\
+	"..\..\DSS\DssCodecTypes.h"\
+	
+
+!ELSEIF  "$(CFG)" == "DSS - Win32 (WCE SH3) Release"
+
+DEP_CPP_DSSST=\
+	"..\..\Common\Dss.h"\
+	"..\..\DSS\DssString.h"\
+	"..\..\DSS\StdAfx.h"\
+	
+
+!ELSEIF  "$(CFG)" == "DSS - Win32 (WCE SH3) Debug"
+
+DEP_CPP_DSSST=\
+	"..\..\DSS\DssString.h"\
+	"..\..\DSS\StdAfx.h"\
+	
+NODEP_CPP_DSSST=\
+	"..\..\DSS\DssCodecTypes.h"\
+	
+
+!ELSEIF  "$(CFG)" == "DSS - Win32 (WCE ARM) Release"
+
+DEP_CPP_DSSST=\
+	"..\..\Common\Dss.h"\
+	"..\..\DSS\DssString.h"\
+	"..\..\DSS\StdAfx.h"\
+	
+
+!ELSEIF  "$(CFG)" == "DSS - Win32 (WCE ARM) Debug"
+
+DEP_CPP_DSSST=\
+	"..\..\Common\Dss.h"\
+	"..\..\DSS\DssString.h"\
+	"..\..\DSS\StdAfx.h"\
+	
+
+!ELSEIF  "$(CFG)" == "DSS - Win32 (WCE MIPSFP) Release"
+
+DEP_CPP_DSSST=\
+	"..\..\DSS\DssString.h"\
+	"..\..\DSS\StdAfx.h"\
+	
+NODEP_CPP_DSSST=\
+	"..\..\DSS\DssCodecTypes.h"\
+	
+
+!ELSEIF  "$(CFG)" == "DSS - Win32 (WCE MIPSFP) Debug"
+
+DEP_CPP_DSSST=\
+	"..\..\DSS\DssString.h"\
+	"..\..\DSS\StdAfx.h"\
+	
+NODEP_CPP_DSSST=\
+	"..\..\DSS\DssCodecTypes.h"\
+	
+
+!ELSEIF  "$(CFG)" == "DSS - Win32 (WCE x86) Release"
+
+DEP_CPP_DSSST=\
+	"..\..\DSS\DssString.h"\
+	"..\..\DSS\StdAfx.h"\
+	
+NODEP_CPP_DSSST=\
+	"..\..\DSS\DssCodecTypes.h"\
+	
+
+!ELSEIF  "$(CFG)" == "DSS - Win32 (WCE x86) Debug"
+
+DEP_CPP_DSSST=\
+	"..\..\DSS\DssString.h"\
+	"..\..\DSS\StdAfx.h"\
+	
+NODEP_CPP_DSSST=\
+	"..\..\DSS\DssCodecTypes.h"\
+	
+
+!ELSEIF  "$(CFG)" == "DSS - Win32 (WCE x86em) Release"
+
+DEP_CPP_DSSST=\
+	"..\..\DSS\DssString.h"\
+	"..\..\DSS\StdAfx.h"\
+	
+NODEP_CPP_DSSST=\
+	"..\..\DSS\DssCodecTypes.h"\
+	
+
+!ELSEIF  "$(CFG)" == "DSS - Win32 (WCE x86em) Debug"
+
+DEP_CPP_DSSST=\
+	"..\..\DSS\DssString.h"\
+	"..\..\DSS\StdAfx.h"\
+	
+NODEP_CPP_DSSST=\
+	"..\..\DSS\DssCodecTypes.h"\
+	
+
+!ELSEIF  "$(CFG)" == "DSS - Win32 (WCE PPC) Release"
+
+DEP_CPP_DSSST=\
+	"..\..\DSS\DssString.h"\
+	"..\..\DSS\StdAfx.h"\
+	
+NODEP_CPP_DSSST=\
+	"..\..\DSS\DssCodecTypes.h"\
+	
+
+!ELSEIF  "$(CFG)" == "DSS - Win32 (WCE PPC) Debug"
+
+DEP_CPP_DSSST=\
+	"..\..\DSS\DssString.h"\
+	"..\..\DSS\StdAfx.h"\
+	
+NODEP_CPP_DSSST=\
+	"..\..\DSS\DssCodecTypes.h"\
+	
+
+!ENDIF 
+
+# End Source File
+# Begin Source File
+
+SOURCE=..\..\DSS\FileInputStream.cpp
+
+!IF  "$(CFG)" == "DSS - Win32 (WCE MIPS) Release"
+
+DEP_CPP_FILEI=\
+	"..\..\Common\Dss.h"\
+	"..\..\DSS\FileInputStream.h"\
+	"..\..\DSS\StdAfx.h"\
+	"..\..\DSS\StreamFormat.h"\
+	
+
+!ELSEIF  "$(CFG)" == "DSS - Win32 (WCE MIPS) Debug"
+
+DEP_CPP_FILEI=\
+	"..\..\Common\Dss.h"\
+	"..\..\DSS\FileInputStream.h"\
+	"..\..\DSS\StdAfx.h"\
+	"..\..\DSS\StreamFormat.h"\
+	
+
+!ELSEIF  "$(CFG)" == "DSS - Win32 (WCE SH4) Release"
+
+DEP_CPP_FILEI=\
+	"..\..\DSS\FileInputStream.h"\
+	"..\..\DSS\StdAfx.h"\
+	"..\..\DSS\StreamFormat.h"\
+	
+NODEP_CPP_FILEI=\
+	"..\..\DSS\ComObjectBase.h"\
+	"..\..\DSS\DssCodecMgr.h"\
+	
+
+!ELSEIF  "$(CFG)" == "DSS - Win32 (WCE SH4) Debug"
+
+DEP_CPP_FILEI=\
+	"..\..\DSS\FileInputStream.h"\
+	"..\..\DSS\StdAfx.h"\
+	"..\..\DSS\StreamFormat.h"\
+	
+NODEP_CPP_FILEI=\
+	"..\..\DSS\ComObjectBase.h"\
+	"..\..\DSS\DssCodecMgr.h"\
+	
+
+!ELSEIF  "$(CFG)" == "DSS - Win32 (WCE SH3) Release"
+
+DEP_CPP_FILEI=\
+	"..\..\Common\Dss.h"\
+	"..\..\DSS\FileInputStream.h"\
+	"..\..\DSS\StdAfx.h"\
+	"..\..\DSS\StreamFormat.h"\
+	
+
+!ELSEIF  "$(CFG)" == "DSS - Win32 (WCE SH3) Debug"
+
+DEP_CPP_FILEI=\
+	"..\..\DSS\FileInputStream.h"\
+	"..\..\DSS\StdAfx.h"\
+	"..\..\DSS\StreamFormat.h"\
+	
+NODEP_CPP_FILEI=\
+	"..\..\DSS\ComObjectBase.h"\
+	"..\..\DSS\DssCodecMgr.h"\
+	
+
+!ELSEIF  "$(CFG)" == "DSS - Win32 (WCE ARM) Release"
+
+DEP_CPP_FILEI=\
+	"..\..\Common\Dss.h"\
+	"..\..\DSS\FileInputStream.h"\
+	"..\..\DSS\StdAfx.h"\
+	"..\..\DSS\StreamFormat.h"\
+	
+
+!ELSEIF  "$(CFG)" == "DSS - Win32 (WCE ARM) Debug"
+
+DEP_CPP_FILEI=\
+	"..\..\Common\Dss.h"\
+	"..\..\DSS\FileInputStream.h"\
+	"..\..\DSS\StdAfx.h"\
+	"..\..\DSS\StreamFormat.h"\
+	
+
+!ELSEIF  "$(CFG)" == "DSS - Win32 (WCE MIPSFP) Release"
+
+DEP_CPP_FILEI=\
+	"..\..\DSS\FileInputStream.h"\
+	"..\..\DSS\StdAfx.h"\
+	"..\..\DSS\StreamFormat.h"\
+	
+NODEP_CPP_FILEI=\
+	"..\..\DSS\ComObjectBase.h"\
+	"..\..\DSS\DssCodecMgr.h"\
+	
+
+!ELSEIF  "$(CFG)" == "DSS - Win32 (WCE MIPSFP) Debug"
+
+DEP_CPP_FILEI=\
+	"..\..\DSS\FileInputStream.h"\
+	"..\..\DSS\StdAfx.h"\
+	"..\..\DSS\StreamFormat.h"\
+	
+NODEP_CPP_FILEI=\
+	"..\..\DSS\ComObjectBase.h"\
+	"..\..\DSS\DssCodecMgr.h"\
+	
+
+!ELSEIF  "$(CFG)" == "DSS - Win32 (WCE x86) Release"
+
+DEP_CPP_FILEI=\
+	"..\..\DSS\FileInputStream.h"\
+	"..\..\DSS\StdAfx.h"\
+	"..\..\DSS\StreamFormat.h"\
+	
+NODEP_CPP_FILEI=\
+	"..\..\DSS\ComObjectBase.h"\
+	"..\..\DSS\DssCodecMgr.h"\
+	
+
+!ELSEIF  "$(CFG)" == "DSS - Win32 (WCE x86) Debug"
+
+DEP_CPP_FILEI=\
+	"..\..\DSS\FileInputStream.h"\
+	"..\..\DSS\StdAfx.h"\
+	"..\..\DSS\StreamFormat.h"\
+	
+NODEP_CPP_FILEI=\
+	"..\..\DSS\ComObjectBase.h"\
+	"..\..\DSS\DssCodecMgr.h"\
+	
+
+!ELSEIF  "$(CFG)" == "DSS - Win32 (WCE x86em) Release"
+
+DEP_CPP_FILEI=\
+	"..\..\DSS\FileInputStream.h"\
+	"..\..\DSS\StdAfx.h"\
+	"..\..\DSS\StreamFormat.h"\
+	
+NODEP_CPP_FILEI=\
+	"..\..\DSS\ComObjectBase.h"\
+	"..\..\DSS\DssCodecMgr.h"\
+	
+
+!ELSEIF  "$(CFG)" == "DSS - Win32 (WCE x86em) Debug"
+
+DEP_CPP_FILEI=\
+	"..\..\DSS\FileInputStream.h"\
+	"..\..\DSS\StdAfx.h"\
+	"..\..\DSS\StreamFormat.h"\
+	
+NODEP_CPP_FILEI=\
+	"..\..\DSS\ComObjectBase.h"\
+	"..\..\DSS\DssCodecMgr.h"\
+	
+
+!ELSEIF  "$(CFG)" == "DSS - Win32 (WCE PPC) Release"
+
+DEP_CPP_FILEI=\
+	"..\..\DSS\FileInputStream.h"\
+	"..\..\DSS\StdAfx.h"\
+	"..\..\DSS\StreamFormat.h"\
+	
+NODEP_CPP_FILEI=\
+	"..\..\DSS\ComObjectBase.h"\
+	"..\..\DSS\DssCodecMgr.h"\
+	
+
+!ELSEIF  "$(CFG)" == "DSS - Win32 (WCE PPC) Debug"
+
+DEP_CPP_FILEI=\
+	"..\..\DSS\FileInputStream.h"\
+	"..\..\DSS\StdAfx.h"\
+	"..\..\DSS\StreamFormat.h"\
+	
+NODEP_CPP_FILEI=\
+	"..\..\DSS\ComObjectBase.h"\
+	"..\..\DSS\DssCodecMgr.h"\
+	
+
+!ENDIF 
+
+# End Source File
+# Begin Source File
+
+SOURCE=..\..\DSS\FileOutputStream.cpp
+
+!IF  "$(CFG)" == "DSS - Win32 (WCE MIPS) Release"
+
+DEP_CPP_FILEO=\
+	"..\..\Common\Dss.h"\
+	"..\..\DSS\FileOutputStream.h"\
+	"..\..\DSS\StdAfx.h"\
+	"..\..\DSS\StreamFormat.h"\
+	"..\..\DSS\StructHelper.h"\
+	
+
+!ELSEIF  "$(CFG)" == "DSS - Win32 (WCE MIPS) Debug"
+
+DEP_CPP_FILEO=\
+	"..\..\Common\Dss.h"\
+	"..\..\DSS\FileOutputStream.h"\
+	"..\..\DSS\StdAfx.h"\
+	"..\..\DSS\StreamFormat.h"\
+	"..\..\DSS\StructHelper.h"\
+	
+
+!ELSEIF  "$(CFG)" == "DSS - Win32 (WCE SH4) Release"
+
+DEP_CPP_FILEO=\
+	"..\..\DSS\FileOutputStream.h"\
+	"..\..\DSS\StdAfx.h"\
+	"..\..\DSS\StructHelper.h"\
+	
+NODEP_CPP_FILEO=\
+	"..\..\DSS\ComObjectBase.h"\
+	"..\..\DSS\DssCodecMgr.h"\
+	"..\..\DSS\DssCodecStructs.h"\
+	
+
+!ELSEIF  "$(CFG)" == "DSS - Win32 (WCE SH4) Debug"
+
+DEP_CPP_FILEO=\
+	"..\..\DSS\FileOutputStream.h"\
+	"..\..\DSS\StdAfx.h"\
+	"..\..\DSS\StructHelper.h"\
+	
+NODEP_CPP_FILEO=\
+	"..\..\DSS\ComObjectBase.h"\
+	"..\..\DSS\DssCodecMgr.h"\
+	"..\..\DSS\DssCodecStructs.h"\
+	
+
+!ELSEIF  "$(CFG)" == "DSS - Win32 (WCE SH3) Release"
+
+DEP_CPP_FILEO=\
+	"..\..\Common\Dss.h"\
+	"..\..\DSS\FileOutputStream.h"\
+	"..\..\DSS\StdAfx.h"\
+	"..\..\DSS\StreamFormat.h"\
+	"..\..\DSS\StructHelper.h"\
+	
+
+!ELSEIF  "$(CFG)" == "DSS - Win32 (WCE SH3) Debug"
+
+DEP_CPP_FILEO=\
+	"..\..\DSS\FileOutputStream.h"\
+	"..\..\DSS\StdAfx.h"\
+	"..\..\DSS\StructHelper.h"\
+	
+NODEP_CPP_FILEO=\
+	"..\..\DSS\ComObjectBase.h"\
+	"..\..\DSS\DssCodecMgr.h"\
+	"..\..\DSS\DssCodecStructs.h"\
+	
+
+!ELSEIF  "$(CFG)" == "DSS - Win32 (WCE ARM) Release"
+
+DEP_CPP_FILEO=\
+	"..\..\Common\Dss.h"\
+	"..\..\DSS\FileOutputStream.h"\
+	"..\..\DSS\StdAfx.h"\
+	"..\..\DSS\StreamFormat.h"\
+	"..\..\DSS\StructHelper.h"\
+	
+
+!ELSEIF  "$(CFG)" == "DSS - Win32 (WCE ARM) Debug"
+
+DEP_CPP_FILEO=\
+	"..\..\Common\Dss.h"\
+	"..\..\DSS\FileOutputStream.h"\
+	"..\..\DSS\StdAfx.h"\
+	"..\..\DSS\StreamFormat.h"\
+	"..\..\DSS\StructHelper.h"\
+	
+
+!ELSEIF  "$(CFG)" == "DSS - Win32 (WCE MIPSFP) Release"
+
+DEP_CPP_FILEO=\
+	"..\..\DSS\FileOutputStream.h"\
+	"..\..\DSS\StdAfx.h"\
+	"..\..\DSS\StructHelper.h"\
+	
+NODEP_CPP_FILEO=\
+	"..\..\DSS\ComObjectBase.h"\
+	"..\..\DSS\DssCodecMgr.h"\
+	"..\..\DSS\DssCodecStructs.h"\
+	
+
+!ELSEIF  "$(CFG)" == "DSS - Win32 (WCE MIPSFP) Debug"
+
+DEP_CPP_FILEO=\
+	"..\..\DSS\FileOutputStream.h"\
+	"..\..\DSS\StdAfx.h"\
+	"..\..\DSS\StructHelper.h"\
+	
+NODEP_CPP_FILEO=\
+	"..\..\DSS\ComObjectBase.h"\
+	"..\..\DSS\DssCodecMgr.h"\
+	"..\..\DSS\DssCodecStructs.h"\
+	
+
+!ELSEIF  "$(CFG)" == "DSS - Win32 (WCE x86) Release"
+
+DEP_CPP_FILEO=\
+	"..\..\DSS\FileOutputStream.h"\
+	"..\..\DSS\StdAfx.h"\
+	"..\..\DSS\StructHelper.h"\
+	
+NODEP_CPP_FILEO=\
+	"..\..\DSS\ComObjectBase.h"\
+	"..\..\DSS\DssCodecMgr.h"\
+	"..\..\DSS\DssCodecStructs.h"\
+	
+
+!ELSEIF  "$(CFG)" == "DSS - Win32 (WCE x86) Debug"
+
+DEP_CPP_FILEO=\
+	"..\..\DSS\FileOutputStream.h"\
+	"..\..\DSS\StdAfx.h"\
+	"..\..\DSS\StructHelper.h"\
+	
+NODEP_CPP_FILEO=\
+	"..\..\DSS\ComObjectBase.h"\
+	"..\..\DSS\DssCodecMgr.h"\
+	"..\..\DSS\DssCodecStructs.h"\
+	
+
+!ELSEIF  "$(CFG)" == "DSS - Win32 (WCE x86em) Release"
+
+DEP_CPP_FILEO=\
+	"..\..\DSS\FileOutputStream.h"\
+	"..\..\DSS\StdAfx.h"\
+	"..\..\DSS\StructHelper.h"\
+	
+NODEP_CPP_FILEO=\
+	"..\..\DSS\ComObjectBase.h"\
+	"..\..\DSS\DssCodecMgr.h"\
+	"..\..\DSS\DssCodecStructs.h"\
+	
+
+!ELSEIF  "$(CFG)" == "DSS - Win32 (WCE x86em) Debug"
+
+DEP_CPP_FILEO=\
+	"..\..\DSS\FileOutputStream.h"\
+	"..\..\DSS\StdAfx.h"\
+	"..\..\DSS\StructHelper.h"\
+	
+NODEP_CPP_FILEO=\
+	"..\..\DSS\ComObjectBase.h"\
+	"..\..\DSS\DssCodecMgr.h"\
+	"..\..\DSS\DssCodecStructs.h"\
+	
+
+!ELSEIF  "$(CFG)" == "DSS - Win32 (WCE PPC) Release"
+
+DEP_CPP_FILEO=\
+	"..\..\DSS\FileOutputStream.h"\
+	"..\..\DSS\StdAfx.h"\
+	"..\..\DSS\StructHelper.h"\
+	
+NODEP_CPP_FILEO=\
+	"..\..\DSS\ComObjectBase.h"\
+	"..\..\DSS\DssCodecMgr.h"\
+	"..\..\DSS\DssCodecStructs.h"\
+	
+
+!ELSEIF  "$(CFG)" == "DSS - Win32 (WCE PPC) Debug"
+
+DEP_CPP_FILEO=\
+	"..\..\DSS\FileOutputStream.h"\
+	"..\..\DSS\StdAfx.h"\
+	"..\..\DSS\StructHelper.h"\
+	
+NODEP_CPP_FILEO=\
+	"..\..\DSS\ComObjectBase.h"\
+	"..\..\DSS\DssCodecMgr.h"\
+	"..\..\DSS\DssCodecStructs.h"\
+	
+
+!ENDIF 
+
+# End Source File
+# Begin Source File
+
+SOURCE=..\..\DSS\MediaPlayer.cpp
+
+!IF  "$(CFG)" == "DSS - Win32 (WCE MIPS) Release"
+
+DEP_CPP_MEDIA=\
+	"..\..\Common\Dss.h"\
+	"..\..\DSS\CriticalSection.h"\
+	"..\..\DSS\MediaPlayer.h"\
+	"..\..\DSS\middleman.h"\
+	"..\..\DSS\taskqueue.h"\
+	"..\..\DSS\TQueue.h"\
+	
+
+!ELSEIF  "$(CFG)" == "DSS - Win32 (WCE MIPS) Debug"
+
+DEP_CPP_MEDIA=\
+	"..\..\Common\Dss.h"\
+	"..\..\DSS\CriticalSection.h"\
+	"..\..\DSS\MediaPlayer.h"\
+	"..\..\DSS\middleman.h"\
+	"..\..\DSS\taskqueue.h"\
+	"..\..\DSS\TQueue.h"\
+	
+
+!ELSEIF  "$(CFG)" == "DSS - Win32 (WCE SH4) Release"
+
+DEP_CPP_MEDIA=\
+	"..\..\DSS\CriticalSection.h"\
+	"..\..\DSS\MediaPlayer.h"\
+	"..\..\DSS\middleman.h"\
+	"..\..\DSS\taskqueue.h"\
+	"..\..\DSS\TQueue.h"\
+	
+NODEP_CPP_MEDIA=\
+	"..\..\DSS\ComObjectBase.h"\
+	"..\..\DSS\DssCodecMgr.h"\
+	"..\..\DSS\DssCodecTypes.h"\
+	
+
+!ELSEIF  "$(CFG)" == "DSS - Win32 (WCE SH4) Debug"
+
+DEP_CPP_MEDIA=\
+	"..\..\DSS\CriticalSection.h"\
+	"..\..\DSS\MediaPlayer.h"\
+	"..\..\DSS\middleman.h"\
+	"..\..\DSS\taskqueue.h"\
+	"..\..\DSS\TQueue.h"\
+	
+NODEP_CPP_MEDIA=\
+	"..\..\DSS\ComObjectBase.h"\
+	"..\..\DSS\DssCodecMgr.h"\
+	"..\..\DSS\DssCodecTypes.h"\
+	
+
+!ELSEIF  "$(CFG)" == "DSS - Win32 (WCE SH3) Release"
+
+DEP_CPP_MEDIA=\
+	"..\..\Common\Dss.h"\
+	"..\..\DSS\CriticalSection.h"\
+	"..\..\DSS\MediaPlayer.h"\
+	"..\..\DSS\middleman.h"\
+	"..\..\DSS\taskqueue.h"\
+	"..\..\DSS\TQueue.h"\
+	
+
+!ELSEIF  "$(CFG)" == "DSS - Win32 (WCE SH3) Debug"
+
+DEP_CPP_MEDIA=\
+	"..\..\DSS\CriticalSection.h"\
+	"..\..\DSS\MediaPlayer.h"\
+	"..\..\DSS\middleman.h"\
+	"..\..\DSS\taskqueue.h"\
+	"..\..\DSS\TQueue.h"\
+	
+NODEP_CPP_MEDIA=\
+	"..\..\DSS\ComObjectBase.h"\
+	"..\..\DSS\DssCodecMgr.h"\
+	"..\..\DSS\DssCodecTypes.h"\
+	
+
+!ELSEIF  "$(CFG)" == "DSS - Win32 (WCE ARM) Release"
+
+DEP_CPP_MEDIA=\
+	"..\..\Common\Dss.h"\
+	"..\..\DSS\CriticalSection.h"\
+	"..\..\DSS\MediaPlayer.h"\
+	"..\..\DSS\middleman.h"\
+	"..\..\DSS\taskqueue.h"\
+	"..\..\DSS\TQueue.h"\
+	
+
+!ELSEIF  "$(CFG)" == "DSS - Win32 (WCE ARM) Debug"
+
+DEP_CPP_MEDIA=\
+	"..\..\Common\Dss.h"\
+	"..\..\DSS\CriticalSection.h"\
+	"..\..\DSS\MediaPlayer.h"\
+	"..\..\DSS\middleman.h"\
+	"..\..\DSS\taskqueue.h"\
+	"..\..\DSS\TQueue.h"\
+	
+
+!ELSEIF  "$(CFG)" == "DSS - Win32 (WCE MIPSFP) Release"
+
+DEP_CPP_MEDIA=\
+	"..\..\DSS\CriticalSection.h"\
+	"..\..\DSS\MediaPlayer.h"\
+	"..\..\DSS\middleman.h"\
+	"..\..\DSS\taskqueue.h"\
+	"..\..\DSS\TQueue.h"\
+	
+NODEP_CPP_MEDIA=\
+	"..\..\DSS\ComObjectBase.h"\
+	"..\..\DSS\DssCodecMgr.h"\
+	"..\..\DSS\DssCodecTypes.h"\
+	
+
+!ELSEIF  "$(CFG)" == "DSS - Win32 (WCE MIPSFP) Debug"
+
+DEP_CPP_MEDIA=\
+	"..\..\DSS\CriticalSection.h"\
+	"..\..\DSS\MediaPlayer.h"\
+	"..\..\DSS\middleman.h"\
+	"..\..\DSS\taskqueue.h"\
+	"..\..\DSS\TQueue.h"\
+	
+NODEP_CPP_MEDIA=\
+	"..\..\DSS\ComObjectBase.h"\
+	"..\..\DSS\DssCodecMgr.h"\
+	"..\..\DSS\DssCodecTypes.h"\
+	
+
+!ELSEIF  "$(CFG)" == "DSS - Win32 (WCE x86) Release"
+
+DEP_CPP_MEDIA=\
+	"..\..\DSS\CriticalSection.h"\
+	"..\..\DSS\MediaPlayer.h"\
+	"..\..\DSS\middleman.h"\
+	"..\..\DSS\taskqueue.h"\
+	"..\..\DSS\TQueue.h"\
+	
+NODEP_CPP_MEDIA=\
+	"..\..\DSS\ComObjectBase.h"\
+	"..\..\DSS\DssCodecMgr.h"\
+	"..\..\DSS\DssCodecTypes.h"\
+	
+
+!ELSEIF  "$(CFG)" == "DSS - Win32 (WCE x86) Debug"
+
+DEP_CPP_MEDIA=\
+	"..\..\DSS\CriticalSection.h"\
+	"..\..\DSS\MediaPlayer.h"\
+	"..\..\DSS\middleman.h"\
+	"..\..\DSS\taskqueue.h"\
+	"..\..\DSS\TQueue.h"\
+	
+NODEP_CPP_MEDIA=\
+	"..\..\DSS\ComObjectBase.h"\
+	"..\..\DSS\DssCodecMgr.h"\
+	"..\..\DSS\DssCodecTypes.h"\
+	
+
+!ELSEIF  "$(CFG)" == "DSS - Win32 (WCE x86em) Release"
+
+DEP_CPP_MEDIA=\
+	"..\..\DSS\CriticalSection.h"\
+	"..\..\DSS\MediaPlayer.h"\
+	"..\..\DSS\middleman.h"\
+	"..\..\DSS\taskqueue.h"\
+	"..\..\DSS\TQueue.h"\
+	
+NODEP_CPP_MEDIA=\
+	"..\..\DSS\ComObjectBase.h"\
+	"..\..\DSS\DssCodecMgr.h"\
+	"..\..\DSS\DssCodecTypes.h"\
+	
+
+!ELSEIF  "$(CFG)" == "DSS - Win32 (WCE x86em) Debug"
+
+DEP_CPP_MEDIA=\
+	"..\..\DSS\CriticalSection.h"\
+	"..\..\DSS\MediaPlayer.h"\
+	"..\..\DSS\middleman.h"\
+	"..\..\DSS\taskqueue.h"\
+	"..\..\DSS\TQueue.h"\
+	
+NODEP_CPP_MEDIA=\
+	"..\..\DSS\ComObjectBase.h"\
+	"..\..\DSS\DssCodecMgr.h"\
+	"..\..\DSS\DssCodecTypes.h"\
+	
+
+!ELSEIF  "$(CFG)" == "DSS - Win32 (WCE PPC) Release"
+
+DEP_CPP_MEDIA=\
+	"..\..\DSS\CriticalSection.h"\
+	"..\..\DSS\MediaPlayer.h"\
+	"..\..\DSS\middleman.h"\
+	"..\..\DSS\taskqueue.h"\
+	"..\..\DSS\TQueue.h"\
+	
+NODEP_CPP_MEDIA=\
+	"..\..\DSS\ComObjectBase.h"\
+	"..\..\DSS\DssCodecMgr.h"\
+	"..\..\DSS\DssCodecTypes.h"\
+	
+
+!ELSEIF  "$(CFG)" == "DSS - Win32 (WCE PPC) Debug"
+
+DEP_CPP_MEDIA=\
+	"..\..\DSS\CriticalSection.h"\
+	"..\..\DSS\MediaPlayer.h"\
+	"..\..\DSS\middleman.h"\
+	"..\..\DSS\taskqueue.h"\
+	"..\..\DSS\TQueue.h"\
+	
+NODEP_CPP_MEDIA=\
+	"..\..\DSS\ComObjectBase.h"\
+	"..\..\DSS\DssCodecMgr.h"\
+	"..\..\DSS\DssCodecTypes.h"\
+	
+
+!ENDIF 
+
+# End Source File
+# Begin Source File
+
+SOURCE=..\..\DSS\regkey.cpp
+
+!IF  "$(CFG)" == "DSS - Win32 (WCE MIPS) Release"
+
+DEP_CPP_REGKE=\
+	"..\..\DSS\regkey.h"\
+	
+
+!ELSEIF  "$(CFG)" == "DSS - Win32 (WCE MIPS) Debug"
+
+DEP_CPP_REGKE=\
+	"..\..\DSS\regkey.h"\
+	
+
+!ELSEIF  "$(CFG)" == "DSS - Win32 (WCE SH4) Release"
+
+DEP_CPP_REGKE=\
+	"..\..\DSS\regkey.h"\
+	
+
+!ELSEIF  "$(CFG)" == "DSS - Win32 (WCE SH4) Debug"
+
+DEP_CPP_REGKE=\
+	"..\..\DSS\regkey.h"\
+	
+
+!ELSEIF  "$(CFG)" == "DSS - Win32 (WCE SH3) Release"
+
+DEP_CPP_REGKE=\
+	"..\..\DSS\regkey.h"\
+	
+
+!ELSEIF  "$(CFG)" == "DSS - Win32 (WCE SH3) Debug"
+
+DEP_CPP_REGKE=\
+	"..\..\DSS\regkey.h"\
+	
+
+!ELSEIF  "$(CFG)" == "DSS - Win32 (WCE ARM) Release"
+
+DEP_CPP_REGKE=\
+	"..\..\DSS\regkey.h"\
+	
+
+!ELSEIF  "$(CFG)" == "DSS - Win32 (WCE ARM) Debug"
+
+DEP_CPP_REGKE=\
+	"..\..\DSS\regkey.h"\
+	
+
+!ELSEIF  "$(CFG)" == "DSS - Win32 (WCE MIPSFP) Release"
+
+DEP_CPP_REGKE=\
+	"..\..\DSS\regkey.h"\
+	
+
+!ELSEIF  "$(CFG)" == "DSS - Win32 (WCE MIPSFP) Debug"
+
+DEP_CPP_REGKE=\
+	"..\..\DSS\regkey.h"\
+	
+
+!ELSEIF  "$(CFG)" == "DSS - Win32 (WCE x86) Release"
+
+DEP_CPP_REGKE=\
+	"..\..\DSS\regkey.h"\
+	
+
+!ELSEIF  "$(CFG)" == "DSS - Win32 (WCE x86) Debug"
+
+DEP_CPP_REGKE=\
+	"..\..\DSS\regkey.h"\
+	
+
+!ELSEIF  "$(CFG)" == "DSS - Win32 (WCE x86em) Release"
+
+DEP_CPP_REGKE=\
+	"..\..\DSS\regkey.h"\
+	
+
+!ELSEIF  "$(CFG)" == "DSS - Win32 (WCE x86em) Debug"
+
+DEP_CPP_REGKE=\
+	"..\..\DSS\regkey.h"\
+	
+
+!ELSEIF  "$(CFG)" == "DSS - Win32 (WCE PPC) Release"
+
+DEP_CPP_REGKE=\
+	"..\..\DSS\regkey.h"\
+	
+
+!ELSEIF  "$(CFG)" == "DSS - Win32 (WCE PPC) Debug"
+
+DEP_CPP_REGKE=\
+	"..\..\DSS\regkey.h"\
+	
+
+!ENDIF 
+
+# End Source File
+# Begin Source File
+
+SOURCE=..\..\DSS\regproperty.cpp
+
+!IF  "$(CFG)" == "DSS - Win32 (WCE MIPS) Release"
+
+DEP_CPP_REGPR=\
+	"..\..\DSS\regproperty.h"\
+	
+
+!ELSEIF  "$(CFG)" == "DSS - Win32 (WCE MIPS) Debug"
+
+DEP_CPP_REGPR=\
+	"..\..\DSS\regproperty.h"\
+	
+
+!ELSEIF  "$(CFG)" == "DSS - Win32 (WCE SH4) Release"
+
+DEP_CPP_REGPR=\
+	"..\..\DSS\regproperty.h"\
+	
+
+!ELSEIF  "$(CFG)" == "DSS - Win32 (WCE SH4) Debug"
+
+DEP_CPP_REGPR=\
+	"..\..\DSS\regproperty.h"\
+	
+
+!ELSEIF  "$(CFG)" == "DSS - Win32 (WCE SH3) Release"
+
+DEP_CPP_REGPR=\
+	"..\..\DSS\regproperty.h"\
+	
+
+!ELSEIF  "$(CFG)" == "DSS - Win32 (WCE SH3) Debug"
+
+DEP_CPP_REGPR=\
+	"..\..\DSS\regproperty.h"\
+	
+
+!ELSEIF  "$(CFG)" == "DSS - Win32 (WCE ARM) Release"
+
+DEP_CPP_REGPR=\
+	"..\..\DSS\regproperty.h"\
+	
+
+!ELSEIF  "$(CFG)" == "DSS - Win32 (WCE ARM) Debug"
+
+DEP_CPP_REGPR=\
+	"..\..\DSS\regproperty.h"\
+	
+
+!ELSEIF  "$(CFG)" == "DSS - Win32 (WCE MIPSFP) Release"
+
+DEP_CPP_REGPR=\
+	"..\..\DSS\regproperty.h"\
+	
+
+!ELSEIF  "$(CFG)" == "DSS - Win32 (WCE MIPSFP) Debug"
+
+DEP_CPP_REGPR=\
+	"..\..\DSS\regproperty.h"\
+	
+
+!ELSEIF  "$(CFG)" == "DSS - Win32 (WCE x86) Release"
+
+DEP_CPP_REGPR=\
+	"..\..\DSS\regproperty.h"\
+	
+
+!ELSEIF  "$(CFG)" == "DSS - Win32 (WCE x86) Debug"
+
+DEP_CPP_REGPR=\
+	"..\..\DSS\regproperty.h"\
+	
+
+!ELSEIF  "$(CFG)" == "DSS - Win32 (WCE x86em) Release"
+
+DEP_CPP_REGPR=\
+	"..\..\DSS\regproperty.h"\
+	
+
+!ELSEIF  "$(CFG)" == "DSS - Win32 (WCE x86em) Debug"
+
+DEP_CPP_REGPR=\
+	"..\..\DSS\regproperty.h"\
+	
+
+!ELSEIF  "$(CFG)" == "DSS - Win32 (WCE PPC) Release"
+
+DEP_CPP_REGPR=\
+	"..\..\DSS\regproperty.h"\
+	
+
+!ELSEIF  "$(CFG)" == "DSS - Win32 (WCE PPC) Debug"
+
+DEP_CPP_REGPR=\
+	"..\..\DSS\regproperty.h"\
+	
+
+!ENDIF 
+
+# End Source File
+# Begin Source File
+
+SOURCE=..\..\DSS\regpropertybag.cpp
+
+!IF  "$(CFG)" == "DSS - Win32 (WCE MIPS) Release"
+
+DEP_CPP_REGPRO=\
+	"..\..\DSS\regkey.h"\
+	"..\..\DSS\regproperty.h"\
+	"..\..\DSS\regpropertybag.h"\
+	
+
+!ELSEIF  "$(CFG)" == "DSS - Win32 (WCE MIPS) Debug"
+
+DEP_CPP_REGPRO=\
+	"..\..\DSS\regkey.h"\
+	"..\..\DSS\regproperty.h"\
+	"..\..\DSS\regpropertybag.h"\
+	
+
+!ELSEIF  "$(CFG)" == "DSS - Win32 (WCE SH4) Release"
+
+DEP_CPP_REGPRO=\
+	"..\..\DSS\regkey.h"\
+	"..\..\DSS\regproperty.h"\
+	"..\..\DSS\regpropertybag.h"\
+	
+
+!ELSEIF  "$(CFG)" == "DSS - Win32 (WCE SH4) Debug"
+
+DEP_CPP_REGPRO=\
+	"..\..\DSS\regkey.h"\
+	"..\..\DSS\regproperty.h"\
+	"..\..\DSS\regpropertybag.h"\
+	
+
+!ELSEIF  "$(CFG)" == "DSS - Win32 (WCE SH3) Release"
+
+DEP_CPP_REGPRO=\
+	"..\..\DSS\regkey.h"\
+	"..\..\DSS\regproperty.h"\
+	"..\..\DSS\regpropertybag.h"\
+	
+
+!ELSEIF  "$(CFG)" == "DSS - Win32 (WCE SH3) Debug"
+
+DEP_CPP_REGPRO=\
+	"..\..\DSS\regkey.h"\
+	"..\..\DSS\regproperty.h"\
+	"..\..\DSS\regpropertybag.h"\
+	
+
+!ELSEIF  "$(CFG)" == "DSS - Win32 (WCE ARM) Release"
+
+DEP_CPP_REGPRO=\
+	"..\..\DSS\regkey.h"\
+	"..\..\DSS\regproperty.h"\
+	"..\..\DSS\regpropertybag.h"\
+	
+
+!ELSEIF  "$(CFG)" == "DSS - Win32 (WCE ARM) Debug"
+
+DEP_CPP_REGPRO=\
+	"..\..\DSS\regkey.h"\
+	"..\..\DSS\regproperty.h"\
+	"..\..\DSS\regpropertybag.h"\
+	
+
+!ELSEIF  "$(CFG)" == "DSS - Win32 (WCE MIPSFP) Release"
+
+DEP_CPP_REGPRO=\
+	"..\..\DSS\regkey.h"\
+	"..\..\DSS\regproperty.h"\
+	"..\..\DSS\regpropertybag.h"\
+	
+
+!ELSEIF  "$(CFG)" == "DSS - Win32 (WCE MIPSFP) Debug"
+
+DEP_CPP_REGPRO=\
+	"..\..\DSS\regkey.h"\
+	"..\..\DSS\regproperty.h"\
+	"..\..\DSS\regpropertybag.h"\
+	
+
+!ELSEIF  "$(CFG)" == "DSS - Win32 (WCE x86) Release"
+
+DEP_CPP_REGPRO=\
+	"..\..\DSS\regkey.h"\
+	"..\..\DSS\regproperty.h"\
+	"..\..\DSS\regpropertybag.h"\
+	
+
+!ELSEIF  "$(CFG)" == "DSS - Win32 (WCE x86) Debug"
+
+DEP_CPP_REGPRO=\
+	"..\..\DSS\regkey.h"\
+	"..\..\DSS\regproperty.h"\
+	"..\..\DSS\regpropertybag.h"\
+	
+
+!ELSEIF  "$(CFG)" == "DSS - Win32 (WCE x86em) Release"
+
+DEP_CPP_REGPRO=\
+	"..\..\DSS\regkey.h"\
+	"..\..\DSS\regproperty.h"\
+	"..\..\DSS\regpropertybag.h"\
+	
+
+!ELSEIF  "$(CFG)" == "DSS - Win32 (WCE x86em) Debug"
+
+DEP_CPP_REGPRO=\
+	"..\..\DSS\regkey.h"\
+	"..\..\DSS\regproperty.h"\
+	"..\..\DSS\regpropertybag.h"\
+	
+
+!ELSEIF  "$(CFG)" == "DSS - Win32 (WCE PPC) Release"
+
+DEP_CPP_REGPRO=\
+	"..\..\DSS\regkey.h"\
+	"..\..\DSS\regproperty.h"\
+	"..\..\DSS\regpropertybag.h"\
+	
+
+!ELSEIF  "$(CFG)" == "DSS - Win32 (WCE PPC) Debug"
+
+DEP_CPP_REGPRO=\
+	"..\..\DSS\regkey.h"\
+	"..\..\DSS\regproperty.h"\
+	"..\..\DSS\regpropertybag.h"\
+	
+
+!ENDIF 
+
+# End Source File
+# Begin Source File
+
+SOURCE=..\..\DSS\StdAfx.cpp
+
+!IF  "$(CFG)" == "DSS - Win32 (WCE MIPS) Release"
+
+DEP_CPP_STDAF=\
+	"..\..\DSS\StdAfx.h"\
+	
+
+!ELSEIF  "$(CFG)" == "DSS - Win32 (WCE MIPS) Debug"
+
+DEP_CPP_STDAF=\
+	"..\..\DSS\StdAfx.h"\
+	
+
+!ELSEIF  "$(CFG)" == "DSS - Win32 (WCE SH4) Release"
+
+DEP_CPP_STDAF=\
+	"..\..\DSS\StdAfx.h"\
+	
+
+!ELSEIF  "$(CFG)" == "DSS - Win32 (WCE SH4) Debug"
+
+DEP_CPP_STDAF=\
+	"..\..\DSS\StdAfx.h"\
+	
+
+!ELSEIF  "$(CFG)" == "DSS - Win32 (WCE SH3) Release"
+
+DEP_CPP_STDAF=\
+	"..\..\DSS\StdAfx.h"\
+	
+
+!ELSEIF  "$(CFG)" == "DSS - Win32 (WCE SH3) Debug"
+
+DEP_CPP_STDAF=\
+	"..\..\DSS\StdAfx.h"\
+	
+
+!ELSEIF  "$(CFG)" == "DSS - Win32 (WCE ARM) Release"
+
+DEP_CPP_STDAF=\
+	"..\..\DSS\StdAfx.h"\
+	
+
+!ELSEIF  "$(CFG)" == "DSS - Win32 (WCE ARM) Debug"
+
+DEP_CPP_STDAF=\
+	"..\..\DSS\StdAfx.h"\
+	
+
+!ELSEIF  "$(CFG)" == "DSS - Win32 (WCE MIPSFP) Release"
+
+DEP_CPP_STDAF=\
+	"..\..\DSS\StdAfx.h"\
+	
+
+!ELSEIF  "$(CFG)" == "DSS - Win32 (WCE MIPSFP) Debug"
+
+DEP_CPP_STDAF=\
+	"..\..\DSS\StdAfx.h"\
+	
+
+!ELSEIF  "$(CFG)" == "DSS - Win32 (WCE x86) Release"
+
+DEP_CPP_STDAF=\
+	"..\..\DSS\StdAfx.h"\
+	
+
+!ELSEIF  "$(CFG)" == "DSS - Win32 (WCE x86) Debug"
+
+DEP_CPP_STDAF=\
+	"..\..\DSS\StdAfx.h"\
+	
+
+!ELSEIF  "$(CFG)" == "DSS - Win32 (WCE x86em) Release"
+
+DEP_CPP_STDAF=\
+	"..\..\DSS\StdAfx.h"\
+	
+
+!ELSEIF  "$(CFG)" == "DSS - Win32 (WCE x86em) Debug"
+
+DEP_CPP_STDAF=\
+	"..\..\DSS\StdAfx.h"\
+	
+
+!ELSEIF  "$(CFG)" == "DSS - Win32 (WCE PPC) Release"
+
+DEP_CPP_STDAF=\
+	"..\..\DSS\StdAfx.h"\
+	
+
+!ELSEIF  "$(CFG)" == "DSS - Win32 (WCE PPC) Debug"
+
+DEP_CPP_STDAF=\
+	"..\..\DSS\StdAfx.h"\
+	
+
+!ENDIF 
+
+# End Source File
+# Begin Source File
+
+SOURCE=..\..\DSS\StreamFormat.cpp
+
+!IF  "$(CFG)" == "DSS - Win32 (WCE MIPS) Release"
+
+DEP_CPP_STREA=\
+	"..\..\Common\Dss.h"\
+	"..\..\DSS\StdAfx.h"\
+	"..\..\DSS\StreamFormat.h"\
+	
+
+!ELSEIF  "$(CFG)" == "DSS - Win32 (WCE MIPS) Debug"
+
+DEP_CPP_STREA=\
+	"..\..\Common\Dss.h"\
+	"..\..\DSS\StdAfx.h"\
+	"..\..\DSS\StreamFormat.h"\
+	
+
+!ELSEIF  "$(CFG)" == "DSS - Win32 (WCE SH4) Release"
+
+DEP_CPP_STREA=\
+	"..\..\DSS\StdAfx.h"\
+	"..\..\DSS\StreamFormat.h"\
+	
+NODEP_CPP_STREA=\
+	"..\..\DSS\ComObjectBase.h"\
+	"..\..\DSS\DssCodecMgr.h"\
+	
+
+!ELSEIF  "$(CFG)" == "DSS - Win32 (WCE SH4) Debug"
+
+DEP_CPP_STREA=\
+	"..\..\DSS\StdAfx.h"\
+	"..\..\DSS\StreamFormat.h"\
+	
+NODEP_CPP_STREA=\
+	"..\..\DSS\ComObjectBase.h"\
+	"..\..\DSS\DssCodecMgr.h"\
+	
+
+!ELSEIF  "$(CFG)" == "DSS - Win32 (WCE SH3) Release"
+
+DEP_CPP_STREA=\
+	"..\..\Common\Dss.h"\
+	"..\..\DSS\StdAfx.h"\
+	"..\..\DSS\StreamFormat.h"\
+	
+
+!ELSEIF  "$(CFG)" == "DSS - Win32 (WCE SH3) Debug"
+
+DEP_CPP_STREA=\
+	"..\..\DSS\StdAfx.h"\
+	"..\..\DSS\StreamFormat.h"\
+	
+NODEP_CPP_STREA=\
+	"..\..\DSS\ComObjectBase.h"\
+	"..\..\DSS\DssCodecMgr.h"\
+	
+
+!ELSEIF  "$(CFG)" == "DSS - Win32 (WCE ARM) Release"
+
+DEP_CPP_STREA=\
+	"..\..\Common\Dss.h"\
+	"..\..\DSS\StdAfx.h"\
+	"..\..\DSS\StreamFormat.h"\
+	
+
+!ELSEIF  "$(CFG)" == "DSS - Win32 (WCE ARM) Debug"
+
+DEP_CPP_STREA=\
+	"..\..\Common\Dss.h"\
+	"..\..\DSS\StdAfx.h"\
+	"..\..\DSS\StreamFormat.h"\
+	
+
+!ELSEIF  "$(CFG)" == "DSS - Win32 (WCE MIPSFP) Release"
+
+DEP_CPP_STREA=\
+	"..\..\DSS\StdAfx.h"\
+	"..\..\DSS\StreamFormat.h"\
+	
+NODEP_CPP_STREA=\
+	"..\..\DSS\ComObjectBase.h"\
+	"..\..\DSS\DssCodecMgr.h"\
+	
+
+!ELSEIF  "$(CFG)" == "DSS - Win32 (WCE MIPSFP) Debug"
+
+DEP_CPP_STREA=\
+	"..\..\DSS\StdAfx.h"\
+	"..\..\DSS\StreamFormat.h"\
+	
+NODEP_CPP_STREA=\
+	"..\..\DSS\ComObjectBase.h"\
+	"..\..\DSS\DssCodecMgr.h"\
+	
+
+!ELSEIF  "$(CFG)" == "DSS - Win32 (WCE x86) Release"
+
+DEP_CPP_STREA=\
+	"..\..\DSS\StdAfx.h"\
+	"..\..\DSS\StreamFormat.h"\
+	
+NODEP_CPP_STREA=\
+	"..\..\DSS\ComObjectBase.h"\
+	"..\..\DSS\DssCodecMgr.h"\
+	
+
+!ELSEIF  "$(CFG)" == "DSS - Win32 (WCE x86) Debug"
+
+DEP_CPP_STREA=\
+	"..\..\DSS\StdAfx.h"\
+	"..\..\DSS\StreamFormat.h"\
+	
+NODEP_CPP_STREA=\
+	"..\..\DSS\ComObjectBase.h"\
+	"..\..\DSS\DssCodecMgr.h"\
+	
+
+!ELSEIF  "$(CFG)" == "DSS - Win32 (WCE x86em) Release"
+
+DEP_CPP_STREA=\
+	"..\..\DSS\StdAfx.h"\
+	"..\..\DSS\StreamFormat.h"\
+	
+NODEP_CPP_STREA=\
+	"..\..\DSS\ComObjectBase.h"\
+	"..\..\DSS\DssCodecMgr.h"\
+	
+
+!ELSEIF  "$(CFG)" == "DSS - Win32 (WCE x86em) Debug"
+
+DEP_CPP_STREA=\
+	"..\..\DSS\StdAfx.h"\
+	"..\..\DSS\StreamFormat.h"\
+	
+NODEP_CPP_STREA=\
+	"..\..\DSS\ComObjectBase.h"\
+	"..\..\DSS\DssCodecMgr.h"\
+	
+
+!ELSEIF  "$(CFG)" == "DSS - Win32 (WCE PPC) Release"
+
+DEP_CPP_STREA=\
+	"..\..\DSS\StdAfx.h"\
+	"..\..\DSS\StreamFormat.h"\
+	
+NODEP_CPP_STREA=\
+	"..\..\DSS\ComObjectBase.h"\
+	"..\..\DSS\DssCodecMgr.h"\
+	
+
+!ELSEIF  "$(CFG)" == "DSS - Win32 (WCE PPC) Debug"
+
+DEP_CPP_STREA=\
+	"..\..\DSS\StdAfx.h"\
+	"..\..\DSS\StreamFormat.h"\
+	
+NODEP_CPP_STREA=\
+	"..\..\DSS\ComObjectBase.h"\
+	"..\..\DSS\DssCodecMgr.h"\
+	
+
+!ENDIF 
+
+# End Source File
+# Begin Source File
+
+SOURCE=..\..\DSS\StructHelper.cpp
+
+!IF  "$(CFG)" == "DSS - Win32 (WCE MIPS) Release"
+
+DEP_CPP_STRUC=\
+	"..\..\Common\Dss.h"\
+	"..\..\DSS\StdAfx.h"\
+	"..\..\DSS\StructHelper.h"\
+	
+
+!ELSEIF  "$(CFG)" == "DSS - Win32 (WCE MIPS) Debug"
+
+DEP_CPP_STRUC=\
+	"..\..\Common\Dss.h"\
+	"..\..\DSS\StdAfx.h"\
+	"..\..\DSS\StructHelper.h"\
+	
+
+!ELSEIF  "$(CFG)" == "DSS - Win32 (WCE SH4) Release"
+
+DEP_CPP_STRUC=\
+	"..\..\DSS\StdAfx.h"\
+	"..\..\DSS\StructHelper.h"\
+	
+NODEP_CPP_STRUC=\
+	"..\..\DSS\DssCodecStructs.h"\
+	
+
+!ELSEIF  "$(CFG)" == "DSS - Win32 (WCE SH4) Debug"
+
+DEP_CPP_STRUC=\
+	"..\..\DSS\StdAfx.h"\
+	"..\..\DSS\StructHelper.h"\
+	
+NODEP_CPP_STRUC=\
+	"..\..\DSS\DssCodecStructs.h"\
+	
+
+!ELSEIF  "$(CFG)" == "DSS - Win32 (WCE SH3) Release"
+
+DEP_CPP_STRUC=\
+	"..\..\Common\Dss.h"\
+	"..\..\DSS\StdAfx.h"\
+	"..\..\DSS\StructHelper.h"\
+	
+
+!ELSEIF  "$(CFG)" == "DSS - Win32 (WCE SH3) Debug"
+
+DEP_CPP_STRUC=\
+	"..\..\DSS\StdAfx.h"\
+	"..\..\DSS\StructHelper.h"\
+	
+NODEP_CPP_STRUC=\
+	"..\..\DSS\DssCodecStructs.h"\
+	
+
+!ELSEIF  "$(CFG)" == "DSS - Win32 (WCE ARM) Release"
+
+DEP_CPP_STRUC=\
+	"..\..\Common\Dss.h"\
+	"..\..\DSS\StdAfx.h"\
+	"..\..\DSS\StructHelper.h"\
+	
+
+!ELSEIF  "$(CFG)" == "DSS - Win32 (WCE ARM) Debug"
+
+DEP_CPP_STRUC=\
+	"..\..\Common\Dss.h"\
+	"..\..\DSS\StdAfx.h"\
+	"..\..\DSS\StructHelper.h"\
+	
+
+!ELSEIF  "$(CFG)" == "DSS - Win32 (WCE MIPSFP) Release"
+
+DEP_CPP_STRUC=\
+	"..\..\DSS\StdAfx.h"\
+	"..\..\DSS\StructHelper.h"\
+	
+NODEP_CPP_STRUC=\
+	"..\..\DSS\DssCodecStructs.h"\
+	
+
+!ELSEIF  "$(CFG)" == "DSS - Win32 (WCE MIPSFP) Debug"
+
+DEP_CPP_STRUC=\
+	"..\..\DSS\StdAfx.h"\
+	"..\..\DSS\StructHelper.h"\
+	
+NODEP_CPP_STRUC=\
+	"..\..\DSS\DssCodecStructs.h"\
+	
+
+!ELSEIF  "$(CFG)" == "DSS - Win32 (WCE x86) Release"
+
+DEP_CPP_STRUC=\
+	"..\..\DSS\StdAfx.h"\
+	"..\..\DSS\StructHelper.h"\
+	
+NODEP_CPP_STRUC=\
+	"..\..\DSS\DssCodecStructs.h"\
+	
+
+!ELSEIF  "$(CFG)" == "DSS - Win32 (WCE x86) Debug"
+
+DEP_CPP_STRUC=\
+	"..\..\DSS\StdAfx.h"\
+	"..\..\DSS\StructHelper.h"\
+	
+NODEP_CPP_STRUC=\
+	"..\..\DSS\DssCodecStructs.h"\
+	
+
+!ELSEIF  "$(CFG)" == "DSS - Win32 (WCE x86em) Release"
+
+DEP_CPP_STRUC=\
+	"..\..\DSS\StdAfx.h"\
+	"..\..\DSS\StructHelper.h"\
+	
+NODEP_CPP_STRUC=\
+	"..\..\DSS\DssCodecStructs.h"\
+	
+
+!ELSEIF  "$(CFG)" == "DSS - Win32 (WCE x86em) Debug"
+
+DEP_CPP_STRUC=\
+	"..\..\DSS\StdAfx.h"\
+	"..\..\DSS\StructHelper.h"\
+	
+NODEP_CPP_STRUC=\
+	"..\..\DSS\DssCodecStructs.h"\
+	
+
+!ELSEIF  "$(CFG)" == "DSS - Win32 (WCE PPC) Release"
+
+DEP_CPP_STRUC=\
+	"..\..\DSS\StdAfx.h"\
+	"..\..\DSS\StructHelper.h"\
+	
+NODEP_CPP_STRUC=\
+	"..\..\DSS\DssCodecStructs.h"\
+	
+
+!ELSEIF  "$(CFG)" == "DSS - Win32 (WCE PPC) Debug"
+
+DEP_CPP_STRUC=\
+	"..\..\DSS\StdAfx.h"\
+	"..\..\DSS\StructHelper.h"\
+	
+NODEP_CPP_STRUC=\
+	"..\..\DSS\DssCodecStructs.h"\
+	
+
+!ENDIF 
+
+# End Source File
+# Begin Source File
+
+SOURCE=..\..\DSS\WaveOutStream.cpp
+
+!IF  "$(CFG)" == "DSS - Win32 (WCE MIPS) Release"
+
+DEP_CPP_WAVEO=\
+	"..\..\Common\Dss.h"\
+	"..\..\DSS\cwavebuffer.h"\
+	"..\..\DSS\cwaveoutce.h"\
+	"..\..\DSS\StdAfx.h"\
+	"..\..\DSS\StructHelper.h"\
+	"..\..\DSS\WaveOutStream.h"\
+	
+
+!ELSEIF  "$(CFG)" == "DSS - Win32 (WCE MIPS) Debug"
+
+DEP_CPP_WAVEO=\
+	"..\..\Common\Dss.h"\
+	"..\..\DSS\cwavebuffer.h"\
+	"..\..\DSS\cwaveoutce.h"\
+	"..\..\DSS\StdAfx.h"\
+	"..\..\DSS\StructHelper.h"\
+	"..\..\DSS\WaveOutStream.h"\
+	
+
+!ELSEIF  "$(CFG)" == "DSS - Win32 (WCE SH4) Release"
+
+DEP_CPP_WAVEO=\
+	"..\..\DSS\cwavebuffer.h"\
+	"..\..\DSS\cwaveoutce.h"\
+	"..\..\DSS\StdAfx.h"\
+	"..\..\DSS\StructHelper.h"\
+	"..\..\DSS\WaveOutStream.h"\
+	
+NODEP_CPP_WAVEO=\
+	"..\..\DSS\ComObjectBase.h"\
+	"..\..\DSS\DssCodecMgr.h"\
+	"..\..\DSS\DssCodecStructs.h"\
+	
+
+!ELSEIF  "$(CFG)" == "DSS - Win32 (WCE SH4) Debug"
+
+DEP_CPP_WAVEO=\
+	"..\..\DSS\cwavebuffer.h"\
+	"..\..\DSS\cwaveoutce.h"\
+	"..\..\DSS\StdAfx.h"\
+	"..\..\DSS\StructHelper.h"\
+	"..\..\DSS\WaveOutStream.h"\
+	
+NODEP_CPP_WAVEO=\
+	"..\..\DSS\ComObjectBase.h"\
+	"..\..\DSS\DssCodecMgr.h"\
+	"..\..\DSS\DssCodecStructs.h"\
+	
+
+!ELSEIF  "$(CFG)" == "DSS - Win32 (WCE SH3) Release"
+
+DEP_CPP_WAVEO=\
+	"..\..\Common\Dss.h"\
+	"..\..\DSS\cwavebuffer.h"\
+	"..\..\DSS\cwaveoutce.h"\
+	"..\..\DSS\StdAfx.h"\
+	"..\..\DSS\StructHelper.h"\
+	"..\..\DSS\WaveOutStream.h"\
+	
+
+!ELSEIF  "$(CFG)" == "DSS - Win32 (WCE SH3) Debug"
+
+DEP_CPP_WAVEO=\
+	"..\..\DSS\cwavebuffer.h"\
+	"..\..\DSS\cwaveoutce.h"\
+	"..\..\DSS\StdAfx.h"\
+	"..\..\DSS\StructHelper.h"\
+	"..\..\DSS\WaveOutStream.h"\
+	
+NODEP_CPP_WAVEO=\
+	"..\..\DSS\ComObjectBase.h"\
+	"..\..\DSS\DssCodecMgr.h"\
+	"..\..\DSS\DssCodecStructs.h"\
+	
+
+!ELSEIF  "$(CFG)" == "DSS - Win32 (WCE ARM) Release"
+
+DEP_CPP_WAVEO=\
+	"..\..\Common\Dss.h"\
+	"..\..\DSS\cwavebuffer.h"\
+	"..\..\DSS\cwaveoutce.h"\
+	"..\..\DSS\StdAfx.h"\
+	"..\..\DSS\StructHelper.h"\
+	"..\..\DSS\WaveOutStream.h"\
+	
+
+!ELSEIF  "$(CFG)" == "DSS - Win32 (WCE ARM) Debug"
+
+DEP_CPP_WAVEO=\
+	"..\..\Common\Dss.h"\
+	"..\..\DSS\cwavebuffer.h"\
+	"..\..\DSS\cwaveoutce.h"\
+	"..\..\DSS\StdAfx.h"\
+	"..\..\DSS\StructHelper.h"\
+	"..\..\DSS\WaveOutStream.h"\
+	
+
+!ELSEIF  "$(CFG)" == "DSS - Win32 (WCE MIPSFP) Release"
+
+DEP_CPP_WAVEO=\
+	"..\..\DSS\cwavebuffer.h"\
+	"..\..\DSS\cwaveoutce.h"\
+	"..\..\DSS\StdAfx.h"\
+	"..\..\DSS\StructHelper.h"\
+	"..\..\DSS\WaveOutStream.h"\
+	
+NODEP_CPP_WAVEO=\
+	"..\..\DSS\ComObjectBase.h"\
+	"..\..\DSS\DssCodecMgr.h"\
+	"..\..\DSS\DssCodecStructs.h"\
+	
+
+!ELSEIF  "$(CFG)" == "DSS - Win32 (WCE MIPSFP) Debug"
+
+DEP_CPP_WAVEO=\
+	"..\..\DSS\cwavebuffer.h"\
+	"..\..\DSS\cwaveoutce.h"\
+	"..\..\DSS\StdAfx.h"\
+	"..\..\DSS\StructHelper.h"\
+	"..\..\DSS\WaveOutStream.h"\
+	
+NODEP_CPP_WAVEO=\
+	"..\..\DSS\ComObjectBase.h"\
+	"..\..\DSS\DssCodecMgr.h"\
+	"..\..\DSS\DssCodecStructs.h"\
+	
+
+!ELSEIF  "$(CFG)" == "DSS - Win32 (WCE x86) Release"
+
+DEP_CPP_WAVEO=\
+	"..\..\DSS\cwavebuffer.h"\
+	"..\..\DSS\cwaveoutce.h"\
+	"..\..\DSS\StdAfx.h"\
+	"..\..\DSS\StructHelper.h"\
+	"..\..\DSS\WaveOutStream.h"\
+	
+NODEP_CPP_WAVEO=\
+	"..\..\DSS\ComObjectBase.h"\
+	"..\..\DSS\DssCodecMgr.h"\
+	"..\..\DSS\DssCodecStructs.h"\
+	
+
+!ELSEIF  "$(CFG)" == "DSS - Win32 (WCE x86) Debug"
+
+DEP_CPP_WAVEO=\
+	"..\..\DSS\cwavebuffer.h"\
+	"..\..\DSS\cwaveoutce.h"\
+	"..\..\DSS\StdAfx.h"\
+	"..\..\DSS\StructHelper.h"\
+	"..\..\DSS\WaveOutStream.h"\
+	
+NODEP_CPP_WAVEO=\
+	"..\..\DSS\ComObjectBase.h"\
+	"..\..\DSS\DssCodecMgr.h"\
+	"..\..\DSS\DssCodecStructs.h"\
+	
+
+!ELSEIF  "$(CFG)" == "DSS - Win32 (WCE x86em) Release"
+
+DEP_CPP_WAVEO=\
+	"..\..\DSS\cwavebuffer.h"\
+	"..\..\DSS\cwaveoutce.h"\
+	"..\..\DSS\StdAfx.h"\
+	"..\..\DSS\StructHelper.h"\
+	"..\..\DSS\WaveOutStream.h"\
+	
+NODEP_CPP_WAVEO=\
+	"..\..\DSS\ComObjectBase.h"\
+	"..\..\DSS\DssCodecMgr.h"\
+	"..\..\DSS\DssCodecStructs.h"\
+	
+
+!ELSEIF  "$(CFG)" == "DSS - Win32 (WCE x86em) Debug"
+
+DEP_CPP_WAVEO=\
+	"..\..\DSS\cwavebuffer.h"\
+	"..\..\DSS\cwaveoutce.h"\
+	"..\..\DSS\StdAfx.h"\
+	"..\..\DSS\StructHelper.h"\
+	"..\..\DSS\WaveOutStream.h"\
+	
+NODEP_CPP_WAVEO=\
+	"..\..\DSS\ComObjectBase.h"\
+	"..\..\DSS\DssCodecMgr.h"\
+	"..\..\DSS\DssCodecStructs.h"\
+	
+
+!ELSEIF  "$(CFG)" == "DSS - Win32 (WCE PPC) Release"
+
+DEP_CPP_WAVEO=\
+	"..\..\DSS\cwavebuffer.h"\
+	"..\..\DSS\cwaveoutce.h"\
+	"..\..\DSS\StdAfx.h"\
+	"..\..\DSS\StructHelper.h"\
+	"..\..\DSS\WaveOutStream.h"\
+	
+NODEP_CPP_WAVEO=\
+	"..\..\DSS\ComObjectBase.h"\
+	"..\..\DSS\DssCodecMgr.h"\
+	"..\..\DSS\DssCodecStructs.h"\
+	
+
+!ELSEIF  "$(CFG)" == "DSS - Win32 (WCE PPC) Debug"
+
+DEP_CPP_WAVEO=\
+	"..\..\DSS\cwavebuffer.h"\
+	"..\..\DSS\cwaveoutce.h"\
+	"..\..\DSS\StdAfx.h"\
+	"..\..\DSS\StructHelper.h"\
+	"..\..\DSS\WaveOutStream.h"\
+	
+NODEP_CPP_WAVEO=\
+	"..\..\DSS\ComObjectBase.h"\
+	"..\..\DSS\DssCodecMgr.h"\
+	"..\..\DSS\DssCodecStructs.h"\
+	
+
+!ENDIF 
+
+# End Source File
+# End Group
+# Begin Group "Header Files"
+
+# PROP Default_Filter "h;hpp;hxx;hm;inl"
+# Begin Source File
+
+SOURCE=..\..\DSS\CodecManager.h
+# End Source File
+# Begin Source File
+
+SOURCE=..\..\DSS\CriticalSection.h
+# End Source File
+# Begin Source File
+
+SOURCE=..\..\DSS\cwavebuffer.h
+# End Source File
+# Begin Source File
+
+SOURCE=..\..\DSS\cwaveoutce.h
+# End Source File
+# Begin Source File
+
+SOURCE=..\..\DSS\debugfile.h
+# End Source File
+# Begin Source File
+
+SOURCE=..\..\DSS\Dictionary.h
+# End Source File
+# Begin Source File
+
+SOURCE=..\..\DSS\Driver.h
+# End Source File
+# Begin Source File
+
+SOURCE=..\..\DSS\Drivers.h
+# End Source File
+# Begin Source File
+
+SOURCE=..\..\DSS\DssString.h
+# End Source File
+# Begin Source File
+
+SOURCE=..\..\DSS\FileInputStream.h
+# End Source File
+# Begin Source File
+
+SOURCE=..\..\DSS\FileOutputStream.h
+# End Source File
+# Begin Source File
+
+SOURCE=..\..\DSS\MediaPlayer.h
+# End Source File
+# Begin Source File
+
+SOURCE=..\..\DSS\middleman.h
+# End Source File
+# Begin Source File
+
+SOURCE=..\..\DSS\regkey.h
+# End Source File
+# Begin Source File
+
+SOURCE=..\..\DSS\regproperty.h
+# End Source File
+# Begin Source File
+
+SOURCE=..\..\DSS\regpropertybag.h
+# End Source File
+# Begin Source File
+
+SOURCE=..\..\DSS\StdAfx.h
+# End Source File
+# Begin Source File
+
+SOURCE=..\..\DSS\StreamFormat.h
+# End Source File
+# Begin Source File
+
+SOURCE=..\..\DSS\StructHelper.h
+# End Source File
+# Begin Source File
+
+SOURCE=..\..\DSS\taskqueue.h
+# End Source File
+# Begin Source File
+
+SOURCE=..\..\DSS\TQueue.h
+# End Source File
+# Begin Source File
+
+SOURCE=..\..\DSS\WaveOutStream.h
+# End Source File
+# End Group
+# Begin Group "Resource Files"
+
+# PROP Default_Filter "ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe"
+# End Group
+# End Target
+# End Project

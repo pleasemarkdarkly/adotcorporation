@@ -1,0 +1,98 @@
+# ====================================================================
+#
+#      pm_arm_dadio.cdl
+#
+#      eCos pm layer for iobjects dadio
+#
+# ====================================================================
+# ====================================================================
+######DESCRIPTIONBEGIN####
+#
+# Author(s):      toddm
+# Original data:  toddm
+# Contributors:
+# Date:           2000-06-09
+#
+#####DESCRIPTIONEND####
+#
+# ====================================================================
+
+cdl_package DDOPKG_IO_PM_ARM_DADIO {
+    display       "Dadio power management sub-system"
+#    parent	  DDOPKG_DADIO
+    include_dir	  dadio/io
+    include_files pm.h
+    description   "
+        This option enables the power management sub-system."
+#    doc           redirect/ecos-device-drivers.html
+
+    compile       -library=libextras.a   pm.c
+
+    cdl_option DDODAT_IO_PM_NAME {
+	display		"PM device name"
+	flavor		data
+	default_value	{ "\"/dev/pm\"" }
+	description	"
+		Getting a handle to this device allows access to several IOCTLs for
+		system wide power management and is required for any individual devices
+		requiring power management."
+    }
+
+    # TODO change this to a computed value if possible
+    cdl_option DDONUM_IO_PM_TABLE_ENTRIES {
+	display		"Size of PM table"
+	flavor		data
+	default_value	4
+	description	"
+		Each device that wishes to be managed by this sub-system must have a
+		slot in a table maintained by the sub-system.  This value is the
+		maximum number of devices that may be managed."
+    }
+
+    cdl_component DDOPKG_IO_PM_ARM_DADIO_OPTIONS {
+        display "Power management build options"
+        flavor  none
+        description   "
+	    Package specific build options including control over
+	    compiler flags used only in building this package,
+	    and details of which tests are built."
+
+
+        cdl_option DDOPKG_IO_PM_ARM_DADIO_CFLAGS_ADD {
+            display "Additional compiler flags"
+            flavor  data
+            no_define
+            default_value { "" }
+            description   "
+                This option modifies the set of compiler flags for
+                building these serial device drivers. These flags are used in addition
+                to the set of global flags."
+        }
+
+        cdl_option DDOPKG_IO_PM_ARM_DADIO_CFLAGS_REMOVE {
+            display "Suppressed compiler flags"
+            flavor  data
+            no_define
+            default_value { "" }
+            description   "
+                This option modifies the set of compiler flags for
+                building these serial device drivers. These flags are removed from
+                the set of global flags if present."
+        }
+
+	cdl_option DDOPKG_IO_PM_ARM_DADIO_TESTS {
+	    display "Power management tests"
+ 	    flavor  data
+            no_define
+            calculated { "tests/pm_test" }
+	    description "
+                This option specifies the set of tests for the power managment
+               sub-system."
+	}
+    }
+}
+
+# EOF pm_arm_dadio.cdl
+
+
+

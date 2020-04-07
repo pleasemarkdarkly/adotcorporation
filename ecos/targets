@@ -1,0 +1,40 @@
+#
+#  This is the master list of all available ecos kernel builds
+#
+#  To build a kernel that's listed here, at the command line type:
+#  % make TARGET=<kernel name>
+#  
+#  To clean a kernel, type:
+#  % make TARGET=<kernel name> clean
+#  Cleaning a kernel basically deletes the *_build and *_install directories
+#
+
+ifeq ($(TARGET),cvs-dar-darwin-rom)
+	MLT_FILE := mlt_arm_edb7212_rom.mlt
+	ECOS_REPOSITORY := cvs
+endif
+
+ifeq ($(TARGET),cvs-dar-darwin-ram)
+	MLT_FILE := mlt_arm_edb7212_ram.mlt
+	ECOS_REPOSITORY := cvs
+endif
+
+ifeq ($(TARGET),cvs-dar-dharma-rom)
+	MLT_FILE := mlt_arm_edb7212_rom.mlt
+	ECOS_REPOSITORY := cvs
+endif
+
+ifeq ($(TARGET),cvs-dar-dharma-ram)
+	MLT_FILE := mlt_arm_edb7212_ram.mlt
+	ECOS_REPOSITORY := cvs
+endif
+
+ifeq ($(TARGET),dar-rom)
+	MLT_FILE := mlt_arm_edb7212_rom.mlt
+	ECOS_REPOSITORY := dar
+endif
+
+ifeq ($(TARGET),dar-ram)
+	MLT_FILE := mlt_arm_edb7212_ram.mlt
+	ECOS_REPOSITORY := dar
+endif

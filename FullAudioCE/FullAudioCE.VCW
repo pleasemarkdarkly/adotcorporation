@@ -1,0 +1,136 @@
+Microsoft eMbedded Visual Tools Workspace File, Format Version 3.00
+# WARNING: DO NOT EDIT OR DELETE THIS WORKSPACE FILE!
+
+###############################################################################
+
+Project: "DSS"=.\v2\WinCE\DSS\DSS.vcp - Package Owner=<4>
+
+Package=<5>
+{{{
+    begin source code control
+    "$/FullAudioCE/v2/WINCE/DSS", IEFCAAAA
+    .\v2\wince\dss
+    end source code control
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Project: "FullAudioCE"=.\v2\WinCE\FullAudioCE\FullAudioCE.vcp - Package Owner=<4>
+
+Package=<5>
+{{{
+    begin source code control
+    "$/FullAudioCE/v2/WINCE/FullAudioCE", PEFCAAAA
+    .\v2\wince\fullaudioce
+    end source code control
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name Jukebox
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "Jukebox"=.\Jukebox\Jukebox.vcp - Package Owner=<4>
+
+Package=<5>
+{{{
+    begin source code control
+    "$/FullAudioCE/Jukebox", KUECAAAA
+    .\jukebox
+    end source code control
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Project: "MP3Codec"=.\v2\WinCE\MP3Codec\MP3Codec.vcp - Package Owner=<4>
+
+Package=<5>
+{{{
+    begin source code control
+    "$/FullAudioCE/v2/WINCE/MP3Codec", KEFCAAAA
+    .\v2\wince\mp3codec
+    end source code control
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Project: "WMACodec"=.\v2\WinCE\WMACodec\WMACodec.vcp - Package Owner=<4>
+
+Package=<5>
+{{{
+    begin source code control
+    "$/FullAudioCE/v2/WINCE/WMACodec", OEFCAAAA
+    .\v2\wince\wmacodec
+    end source code control
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Project: "appcrypt"=.\V2\WINCE\DES\appcrypt\appcrypt.vcp - Package Owner=<4>
+
+Package=<5>
+{{{
+    begin source code control
+    "$/FullAudioCE/v2/des/appcrypt", KWECAAAA
+    .\v2\wince\des\appcrypt
+    end source code control
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Project: "codec"=.\v2\WinCE\des\codeccrypt\codec.vcp - Package Owner=<4>
+
+Package=<5>
+{{{
+    begin source code control
+    "$/FullAudioCE/v2/WINCE/des/codeccrypt", FEFCAAAA
+    .\v2\wince\des\codeccrypt
+    end source code control
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Global:
+
+Package=<5>
+{{{
+    begin source code control
+    "$/FullAudioCE", JUECAAAA
+    .
+    end source code control
+}}}
+
+Package=<3>
+{{{
+}}}
+
+###############################################################################
+

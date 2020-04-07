@@ -1,0 +1,12 @@
+/bootp.h/1.7/Fri Apr 06 17:20:42 2001//
+/dhcp.h/1.2/Fri Jan 05 17:12:40 2001//
+/netdb.h/1.2/Fri Apr 06 17:20:42 2001//
+/network.h/1.4/Fri Apr 06 17:20:42 2001//
+/tftp_support.h/1.3/Fri Apr 06 17:20:42 2001//
+D/arpa////
+D/lib////
+D/machine////
+D/net////
+D/netinet////
+D/netinet6////
+D/sys////

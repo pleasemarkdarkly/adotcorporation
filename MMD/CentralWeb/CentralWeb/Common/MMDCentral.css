@@ -1,0 +1,117 @@
+body {}
+
+.HdrSection { font-family: Trebuchet MS; font-size: medium; background-color : Gray; border: solid black 1px; text-align: center; }
+.HdrSectionSelected { font-family: Trebuchet MS; font-size: medium; background-color : White; border: solid black 1px; text-align: center; }
+.HdrTitle {	color: Black; font-family: Trebuchet MS; font-size: large; font-weight: bold; }
+
+.PageTitle { color: Black; font-family: Trebuchet MS; font-size: large; font-weight: bold; padding-bottom: 5pt; }
+.SectionTitle { color: Black; font-family: Trebuchet MS; font-size: medium; font-weight: bold; padding-top: 2mm; }
+
+.BreadCrumb { color: Red; font-family: Trebuchet MS; font-size: xx-small ; font-weight: normal; }
+
+.ErrMsg { color: Red;	font-family: Trebuchet MS;	font-size: medium; }
+.StatusMsg { color: Blue;	font-family: Trebuchet MS;	font-size: medium; }
+
+.AlertMsg {font-size: smaller; font-weight: normal; margin-top: 5px; margin-left: 5px; margin-right: 5px; }
+.AlertLink {font-size: smaller; font-weight: normal; margin-top: 5px; margin-left: 5px; margin-right: 5px; text-align: center;}
+
+.ShortCut { color: Red; font-family: Trebuchet MS; font-size: smaller; font-weight: normal; }
+
+.Hidden { display: none; }
+
+.Text { color: Black; font-family: Trebuchet MS; font-size: smaller; font-weight: normal; padding-left: 10mm; }
+
+.StdTable 
+	{ 
+	margin: 0pt;
+	}
+	
+.StdRow 
+	{
+	margin:0pt;
+
+	}
+
+.StdHdr
+	{ 
+	margin:0pt;
+	padding-left: 2px;
+	padding-right: 2px;
+	border-bottom: 1px black solid;
+	font-weight: bold;
+	line-height: 15px;
+	}	
+		
+.StdCell 
+	{ 
+	margin:0pt;
+	padding-left: 2px;
+	padding-right: 2px;
+	border-bottom: 1px black solid;
+	
+	}	
+
+.LVNavTable
+	{
+	}
+	
+.LVViewTable
+	{
+	}
+	
+
+	
+
+.LVNavRow
+	{
+	}
+	
+.LVViewRow
+	{
+	}
+.LVHdrRow
+	{
+	}
+.LVFilterRow
+	{
+	}
+	
+.LVNavCell
+	{
+	}
+.LVHdrCell
+	{
+	padding-left: 4px; padding-right: 4px; 
+	padding-bottom: 2px;
+	font-weight: bold;
+	margin:0pt;
+	border-bottom: 1px black solid;
+	}
+.LVFilterCell
+	{
+	margin:0pt;
+	padding-left: 2pt;
+	padding-right: 2pt;
+	border-bottom: 1px black solid;
+	}			 
+.LVViewCell
+	{
+	margin:0pt;
+	padding-left: 2pt;
+	padding-right: 2pt;
+	border-bottom: 1px black solid;
+	}
+	
+	
+.LVNavLink
+	{
+	}
+.LVSortLink
+	{ 
+	}
+.LVViewLink
+	{
+	}	
+	
+.FooterHdr { font-size: x-small; font-weight: bold }
+.Footer { font-size: x-small; }

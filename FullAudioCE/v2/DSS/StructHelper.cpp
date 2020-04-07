@@ -1,0 +1,23 @@
+// StructHelper.cpp: implementation of the StructHelper class.
+//
+//////////////////////////////////////////////////////////////////////
+
+#include "stdafx.h"
+#include "StructHelper.h"
+
+//////////////////////////////////////////////////////////////////////
+// Construction/Destruction
+//////////////////////////////////////////////////////////////////////
+
+
+void DestroyCodecEventInfo(CodecEventInfo* p)
+{
+	if(p != NULL)
+	{
+		delete p->pFrame;
+		delete [] p->pSpectral;
+		delete [] p->pWaveform;
+		delete p;
+	}
+}
+

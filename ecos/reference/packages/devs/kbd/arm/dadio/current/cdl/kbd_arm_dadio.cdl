@@ -1,0 +1,79 @@
+# ====================================================================
+#
+#      kbd_arm_dadio.cdl
+#
+#      eCos kbd layer for iobjects dadio
+#
+# ====================================================================
+# ====================================================================
+######DESCRIPTIONBEGIN####
+#
+# Author(s):      toddm
+# Original data:  toddm
+# Contributors:
+# Date:           2000-06-09
+#
+#####DESCRIPTIONEND####
+#
+# ====================================================================
+
+# TODO: figure out how to get DDOHWR_CES or DDOHWR_COMDEX from the environment
+#	check the 'requires' clause below
+
+cdl_package DDOPKG_IO_KBD_ARM_DADIO {
+    display       "Dadio keyboard device drivers"
+    include_dir	  dadio/io
+    include_files kbd_support.h
+#    requires	  DDOHWR_CES || DDOHWR_COMDEX
+    description   "This option enables device drivers for keyboards found on Dadio devices."
+#    doc           redirect/ecos-device-drivers.html
+
+    compile       -library=libextras.a   kbd_support.c
+
+    cdl_component DDOPKG_IO_KBD_ARM_DADIO_OPTIONS {
+        display "Keyboard build options"
+        flavor  none
+        description   "
+	    Package specific build options including control over
+	    compiler flags used only in building this package,
+	    and details of which tests are built."
+
+
+        cdl_option DDOPKG_IO_KBD_ARM_DADIO_CFLAGS_ADD {
+            display "Additional compiler flags"
+            flavor  data
+            no_define
+            default_value { "" }
+            description   "
+                This option modifies the set of compiler flags for
+                building these serial device drivers. These flags are used in addition
+                to the set of global flags."
+        }
+
+        cdl_option DDOPKG_IO_KBD_ARM_DADIO_CFLAGS_REMOVE {
+            display "Suppressed compiler flags"
+            flavor  data
+            no_define
+            default_value { "" }
+            description   "
+                This option modifies the set of compiler flags for
+                building these serial device drivers. These flags are removed from
+                the set of global flags if present."
+        }
+
+	cdl_option DDOPKG_IO_KBD_ARM_DADIO_TESTS {
+	    display "Keyboard tests"
+	    flavor  data
+            no_define
+            calculated { "tests/kbd_test" }
+	    description  "
+		This option specifies the set of tests for the
+		keyboard interface."
+        }	
+    }
+}
+
+# EOF kbd_arm_dadio.cdl
+
+
+

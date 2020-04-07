@@ -1,0 +1,64 @@
+Web Services
+
+Missing Methods
+
+Idle Loop -- choosing which idle loops to run in which store/store concepts/device location type?
+
+Client Inventory Update Request -- 
+When central requests content/metadata update from server, we need a way to allow the client to specify 
+on the central server a filter of the content at Master.  This can be done via the feed channel at central.
+
+
+Reporting
+
+Objects required for reporting
+
+	- Report
+		- Tree of ReportObject class
+		- save hitlists
+		- recs per page
+		- pagination
+		- child aggregates
+		
+	- ReportObject class - 
+		- generates sql based on Input XML and Metadata XML.
+		- save hitlists
+		
+	- sql generator
+		- select
+		- from
+		- where
+		- group by
+		
+		
+Report Metadata XML
+
+	- table, key
+	- child relationships
+	
+	
+Idle Loop configuration
+
+screen types
+	
+	show time
+	
+	standard screen ML
+		template - MMD File
+	
+	
+	video
+		video file - MMD File
+	
+	image
+		image file - MMD File
+		optional link
+		
+	reclist
+		rec list type
+		media type
+		items to display per page
+		template (optional??) - MMD File, if not specified, use default template for given rec list type
+		
+	special offer
+		

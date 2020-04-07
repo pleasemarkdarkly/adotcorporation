@@ -1,0 +1,24 @@
+MessageFrom: David Proctor (Fullplay Media) [duppy@fullplaymedia.com]
+Sent: Thursday, April 04, 2002 12:00 PM
+To: Kenn Gordon; Chris Lothers; Josh Kelly
+Cc: Derek DiFilippo; Chris Auzins; Tim Fullplay Davis (Tim Davis); Teman Clark-Lindh (temancl@fullplaymedia.com); Dan Conti (danc@fullplaymedia.com); Mona
+Subject: New Trackgear project "DJ Hardware" for HW revision level and unit tracking, not for design bugs
+
+I have finally set up the Trackgear project "DJ Hardware" to track the revision level and location of each DJ.
+
+The Summary field (title) will contain the serial number (ex. DJ109) only.
+
+Every HW mod applied will be recorded by adding an entry to the Notes field of the "bug".
+We will try to update the PCB Revison Level and PCB Mod Level fields to stay in sync with the notes for easier searching, but the notes field will be considered the offcial record.
+
+Chris will also record which PCB serial #, power supply, and HDD, and CDD are in each case.
+
+Every test run will be recorded by adding an entry to the Notes field recording PASSED or FAILED.
+
+I expect ChrisL to be the only person updating the Notes field at this time.  If we send a DJ off-site we should also record who it was sent to (with contact info) in the Notes field.
+
+Anybody can look at this database to determine which HW mods have been applied to their DJ.  The serial number "DJ00109" is located on the bottom of the case.
+
+We still need to come up with an offcial numbering scheme for the HW mods.  The short term goal is to get all DJ's up to 90MHz with a few other mods applied and use that as a starting point.
+
+Dupp

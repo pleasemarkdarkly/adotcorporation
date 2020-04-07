@@ -1,0 +1,1 @@
+Removed assertion from unlock_inner.  Most expedient solution at the time.

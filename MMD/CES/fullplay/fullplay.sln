@@ -1,0 +1,54 @@
+Microsoft Visual Studio Solution File, Format Version 7.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Maverick", "http://localhost/Maverick/Maverick.csproj", "{9908207A-A70E-4B8F-99C1-39C00646D5CC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StoreLib", "D:\MMD\Store\StoreLib\StoreLib.csproj", "{75A8283D-5CD7-44B7-8073-616104CC75E4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Fullplay", "http://mmdserver/fullplay/Fullplay.csproj", "{B8E9B59F-3413-4364-ACB1-AFD5C4F0D61E}"
+EndProject
+Global
+	GlobalSection(SourceCodeControl) = preSolution
+		SccNumberOfProjects = 4
+		SccLocalPath0 = .
+		CanCheckoutShared = false
+		SolutionUniqueID = {19906B81-69C3-47F6-8E79-7401D602CFC3}
+		SccProjectUniqueName1 = http://localhost/Maverick/Maverick.csproj
+		SccProjectName1 = \u0022$/MMD/Maverick\u0022,\u0020LKEHAAAA
+		SccLocalPath1 = ..\\..\\..\\..\\..\\maverick\\maverick
+		CanCheckoutShared = false
+		SccProjectEnlistmentChoice1 = 2
+		SccProjectUniqueName2 = D:\\MMD\\Store\\StoreLib\\StoreLib.csproj
+		SccProjectName2 = \u0022$/MMD/Store\u0022,\u0020FJZGAAAA
+		SccLocalPath2 = D:\\MMD\\Store
+		CanCheckoutShared = false
+		SccProjectFilePathRelativizedFromConnection2 = StoreLib\\
+		SccProjectUniqueName3 = http://mmdserver/fullplay/Fullplay.csproj
+		SccProjectName3 = \u0022$/MMD/CES/fullplay/Fullplay\u0022,\u0020TIGHAAAA
+		SccLocalPath3 = ..\\..\\..\\..\\..\\inetpub\\wwwroot\\fullplay
+		CanCheckoutShared = false
+		SccProjectEnlistmentChoice3 = 2
+	EndGlobalSection
+	GlobalSection(SolutionConfiguration) = preSolution
+		ConfigName.0 = Debug
+		ConfigName.1 = Release
+	EndGlobalSection
+	GlobalSection(ProjectDependencies) = postSolution
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+		{9908207A-A70E-4B8F-99C1-39C00646D5CC}.Debug.ActiveCfg = Debug|.NET
+		{9908207A-A70E-4B8F-99C1-39C00646D5CC}.Debug.Build.0 = Debug|.NET
+		{9908207A-A70E-4B8F-99C1-39C00646D5CC}.Release.ActiveCfg = Release|.NET
+		{9908207A-A70E-4B8F-99C1-39C00646D5CC}.Release.Build.0 = Release|.NET
+		{75A8283D-5CD7-44B7-8073-616104CC75E4}.Debug.ActiveCfg = Debug|.NET
+		{75A8283D-5CD7-44B7-8073-616104CC75E4}.Debug.Build.0 = Debug|.NET
+		{75A8283D-5CD7-44B7-8073-616104CC75E4}.Release.ActiveCfg = Release|.NET
+		{75A8283D-5CD7-44B7-8073-616104CC75E4}.Release.Build.0 = Release|.NET
+		{B8E9B59F-3413-4364-ACB1-AFD5C4F0D61E}.Debug.ActiveCfg = Debug|.NET
+		{B8E9B59F-3413-4364-ACB1-AFD5C4F0D61E}.Debug.Build.0 = Debug|.NET
+		{B8E9B59F-3413-4364-ACB1-AFD5C4F0D61E}.Release.ActiveCfg = Release|.NET
+		{B8E9B59F-3413-4364-ACB1-AFD5C4F0D61E}.Release.Build.0 = Release|.NET
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal

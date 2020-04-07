@@ -1,0 +1,34 @@
+Microsoft Visual Studio Solution File, Format Version 7.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Interop", "Interop.csproj", "{CAD0DF2D-D1ED-439B-B71D-2B58ACE8744F}"
+EndProject
+Global
+	GlobalSection(SourceCodeControl) = preSolution
+		SccNumberOfProjects = 2
+		SccLocalPath0 = .
+		CanCheckoutShared = false
+		SolutionUniqueID = {836D8444-40EB-4B31-ABFA-EBA618A2B604}
+		SccProjectUniqueName1 = Interop.csproj
+		SccLocalPath1 = .
+		CanCheckoutShared = false
+	EndGlobalSection
+	GlobalSection(SolutionConfiguration) = preSolution
+		ConfigName.0 = Debug
+		ConfigName.1 = Release
+	EndGlobalSection
+	GlobalSection(ProjectDependencies) = postSolution
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+		{CAD0DF2D-D1ED-439B-B71D-2B58ACE8744F}.Debug.ActiveCfg = Debug|.NET
+		{CAD0DF2D-D1ED-439B-B71D-2B58ACE8744F}.Debug.Build.0 = Debug|.NET
+		{CAD0DF2D-D1ED-439B-B71D-2B58ACE8744F}.Release.ActiveCfg = Release|.NET
+		{CAD0DF2D-D1ED-439B-B71D-2B58ACE8744F}.Release.Build.0 = Release|.NET
+	EndGlobalSection
+	GlobalSection(SolutionItems) = postSolution
+		Item:1 = Interop.exe.config
+		Item:2 = bin\Debug\Interop.exe.config
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,73 @@
+The BLAT CGI accepts both GET and FORM CGI usage
+Usage :
+
+1)
+  Call from Web server
+    http://server/scripts/blat.exe/linecommand.txt
+
+    http://linecommand.txt must be a single line text file, with the BLAT
+    command line, like (without the double quotes):
+         "- -t myname@mydomain.com -server smtp.mydomain.com -f myname@mydomain.com"
+
+2)
+    http://server/scripts/blat.exe
+    Your HTTP request must contain some vars with the command line.:
+        TO :            the -t parameters of Blat
+        CC :            the -c parameters of Blat
+        BCC :           the -b parameters of Blat
+        SENDER :        the -f parameters of Blat
+        FROM :          the -i parameters of Blat
+        ORGANISATION :  the -o parameters of Blat
+        SERVER :        the -server parameters of Blat
+        SUBJECT :       the -s parameters of Blat
+        PORT :          the -port parameters of Blat
+        HOSTNAME :      the -hostname parameters of Blat
+        TIMEOUT :       the -ti parameter of Blat
+
+    These Variable are Boolean (if present and set TO "1" or "Y", added the option,
+                                if not esent or set TO "N" or "0", remove the option)
+
+        NOH :           the -noh parameters of Blat
+        NOH2 :          the -noh2 parameters of Blat
+        MIME :          the -mime parameters of Blat
+        UUENCODE :      the -uuencode parameters of Blat
+        BASE64 :        the -base64 parameters of Blat
+        REQUESTRECEIPT :the -r parameter of Blat
+        NOTIFY :        the -d parameter of Blat
+
+You can prefix these var name bu "Blat_" (ie using BLAT_SUBJECT instead
+SUBJECT) if you don't want see the variable content in the message.
+
+Blat_success and Blat_failure will contain the URL for success and failure
+messages.
+
+You need only copy blat.exe to your \inetpub\scripts directory (or cgi-bin)
+
+Example of HTML page using blat
+
+<HTML><BODY>
+GET test:<br>
+
+<FORM ACTION="/scripts/blat.exe" METHOD="GET">
+Enter here your email
+Sender: <INPUT TYPE="text" SIZE="20" NAME="Sender" VALUE="myname@mydomain.com">
+<br>
+    <INPUT TYPE="text" SIZE="20" NAME="TO" VALUE="myname2@winimage.com">
+<br>
+    <INPUT TYPE="text" SIZE="20" NAME="Blat_Subject" VALUE="le sujet est 'quot' !">
+<br>
+SMTP Server: <INPUT TYPE="text" SIZE="20" NAME="SERVER" VALUE="smtp.site1.csi.com">
+<br>
+    <INPUT TYPE="text" SIZE="20" NAME="Var2" VALUE="Var_2">
+<br>
+    <INPUT TYPE="text" SIZE="20" NAME="Var3" VALUE="Var_3">
+<br>
+    <INPUT TYPE="hidden" NAME="Blat_success" VALUE="http://localhost/good.htm">
+    <INPUT TYPE="hidden" NAME="Blat_failure" VALUE="http://localhost/bad.htm">
+    <INPUT TYPE="hidden" NAME="Blat_Mime" VALUE="Y">
+    <INPUT TYPE="submit" VALUE="submit"><BR>
+</form></BODY></HTML>
+
+
+TODO :
+ - improve documentation

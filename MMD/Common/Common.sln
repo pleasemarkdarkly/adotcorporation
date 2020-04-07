@@ -1,0 +1,33 @@
+Microsoft Visual Studio Solution File, Format Version 7.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CommonLib", "CommonLib\CommonLib.csproj", "{EE1437C6-3CAD-42CA-AF68-7A13E52E87D1}"
+EndProject
+Global
+	GlobalSection(SourceCodeControl) = preSolution
+		SccNumberOfProjects = 2
+		SccProjectName0 = \u0022$/MMD/Common\u0022,\u0020ZBAHAAAA
+		SccLocalPath0 = .
+		SccProvider0 = MSSCCI:Microsoft\u0020Visual\u0020SourceSafe
+		CanCheckoutShared = false
+		SolutionUniqueID = {7FC59E21-8E65-4E7B-AC63-B6A8C4A67C09}
+		SccProjectUniqueName1 = CommonLib\\CommonLib.csproj
+		SccLocalPath1 = .
+		CanCheckoutShared = false
+		SccProjectFilePathRelativizedFromConnection1 = CommonLib\\
+	EndGlobalSection
+	GlobalSection(SolutionConfiguration) = preSolution
+		ConfigName.0 = Debug
+		ConfigName.1 = Release
+	EndGlobalSection
+	GlobalSection(ProjectDependencies) = postSolution
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+		{EE1437C6-3CAD-42CA-AF68-7A13E52E87D1}.Debug.ActiveCfg = Debug|.NET
+		{EE1437C6-3CAD-42CA-AF68-7A13E52E87D1}.Debug.Build.0 = Debug|.NET
+		{EE1437C6-3CAD-42CA-AF68-7A13E52E87D1}.Release.ActiveCfg = Release|.NET
+		{EE1437C6-3CAD-42CA-AF68-7A13E52E87D1}.Release.Build.0 = Release|.NET
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal

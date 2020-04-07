@@ -1,0 +1,329 @@
+<HTML><HEAD><TITLE>Date Picker</TITLE>
+<link rel="stylesheet" type="text/css" href="calendar.css" />
+</HEAD>
+<BODY BGCOLOR=#FFFFFF TEXT=#000000 LINK=#990000 VLINK=#990000 ALINK=#990000 onLoad="DoLoad()">
+<BASEFONT FACE="Arial,Helvetica,Geneva,Swiss,Sans Serif">
+<TABLE id="idBody" class="Calendar" style="xxborder: purple solid 1px">
+<TR HEIGHT=20>
+	<TD class="calHeaderButton" ID="idPrev" onClick="Prev()">&lt;&lt;</TD>
+	<TD class="calHeader" COLSPAN="5"><SPAN ID="MonthTitle"></SPAN>&nbsp;&nbsp;<SPAN ID="YearTitle"></SPAN></TD>
+	<TD class="calHeaderButton" ID="idNext" onClick="Next()">&gt;&gt;</TD>
+</TR>
+<TR>
+	<TD class="calDayOfWeek">S</TD>
+	<TD class="calDayOfWeek">M</TD>
+	<TD class="calDayOfWeek">T</TD>
+	<TD class="calDayOfWeek">W</TD>
+	<TD class="calDayOfWeek">Th</TD>
+	<TD class="calDayOfWeek">F</TD>
+	<TD class="calDayOfWeek">S</TD>
+</TR>
+<SPAN ID="CalDates">
+<TR><TD class="calDate"></TD><TD class="calDate"></TD><TD class="calDate"></TD><TD class="calDate"></TD><TD class="calDate"></TD><TD class="calDate"></TD><TD class="calDate"></TD></TR>
+<TR><TD class="calDate"></TD><TD class="calDate"></TD><TD class="calDate"></TD><TD class="calDate"></TD><TD class="calDate"></TD><TD class="calDate"></TD><TD class="calDate"></TD></TR>
+<TR><TD class="calDate"></TD><TD class="calDate"></TD><TD class="calDate"></TD><TD class="calDate"></TD><TD class="calDate"></TD><TD class="calDate"></TD><TD class="calDate"></TD></TR>
+<TR><TD class="calDate"></TD><TD class="calDate"></TD><TD class="calDate"></TD><TD class="calDate"></TD><TD class="calDate"></TD><TD class="calDate"></TD><TD class="calDate"></TD></TR>
+<TR><TD class="calDate"></TD><TD class="calDate"></TD><TD class="calDate"></TD><TD class="calDate"></TD><TD class="calDate"></TD><TD class="calDate"></TD><TD class="calDate"></TD></TR>
+<TR><TD class="calDate"></TD><TD class="calDate"></TD><TD class="calDate"></TD><TD class="calDate"></TD><TD class="calDate"></TD><TD class="calDate"></TD><TD class="calDate"></TD></TR>
+</SPAN>
+<TR><TD COLSPAN="7" HEIGHT=1 BGCOLOR=#000000></TD></TR>
+<TR><TD COLSPAN="7" ALIGN=MIDDLE><A HREF="javascript:Cancel();">Cancel</A></TD></TR>
+<!--
+<tr><td colspan=2 align=center><a href="javascript:alert(idBody.innerHTML)">Test</a></td></tr>
+-->
+</TABLE>
+
+<SCRIPT>
+<!--
+var g_fCalLoaded=false;
+
+var MONTHS = new Array( 'January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December');
+//var MONTHS = new Array( 'Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec');
+
+var DAYS = new Array( 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31);
+
+var dates;
+
+var dMin;var dMax;
+
+var dtInput = new Date();
+var dtCurrent;
+
+var dtMax = null;
+var dtMin = null;
+
+
+function SetupPrevButton(month,year)
+{
+	if(month == 0)
+	{
+		year -= 1;
+		month = 11;
+	}
+	else 
+		month -= 1;
+	var days = GetDaysInMonth(month,year);
+	if(ValidDate(days,month,year))
+	{
+		idPrev.innerText = "<<";
+		idPrev.onclick = Prev;
+		idPrev.style.cursor = "hand";
+	}
+	else
+	{
+		idPrev.innerText = "";
+		idPrev.onclick = null;
+		idPrev.style.cursor = "default";
+	}		
+}
+
+function SetupNextButton(month,year)
+{
+	if(month == 11)
+	{
+		year += 1;
+		month = 0;
+	}
+	else
+		month += 1;
+		
+	if(ValidDate(1,month,year))
+	{
+		idNext.innerText = ">>";
+		idNext.onclick = Next;
+		idNext.style.cursor = "hand";
+	}
+	else
+	{
+		idNext.innerText = "";
+		idNext.onclick = null;
+		idNext.style.cursor = "default";
+	}
+	
+}
+
+function BuildCurrentCalendar()
+{
+	var dtFirst = new Date(dtCurrent.getFullYear(),dtCurrent.getMonth(),1);
+	var days = GetDaysInMonth(dtCurrent.getMonth(),dtCurrent.getFullYear());		
+	var prev_month = (dtCurrent.getMonth() == 0) ? 11 : (dtCurrent.getMonth() - 1);
+	var prev_year = (prev_month == 11) ? dtCurrent.getFullYear() - 1 : dtCurrent.getFullYear();
+	var prev_days = GetDaysInMonth(prev_month,prev_year);
+	
+	SetupPrevButton(dtCurrent.getMonth(),dtCurrent.getFullYear());
+	SetupNextButton(dtCurrent.getMonth(),dtCurrent.getFullYear());	
+	
+	dMin = dtFirst.getDay();
+	dMax = dMin + days;
+	
+	dates[4][0].parentElement.style.display = "inline";
+	dates[5][0].parentElement.style.display = "inline";
+	
+	var dtToday = new Date();
+	
+	for(i=0;i<7;i++)
+	{
+		for(j=0;j<6;j++)
+		{
+			var t=j*7+i;
+			if(t >= dMin && t < dMax)
+			{
+				var day = t + 1 - dMin;
+				
+				dates[j][i].innerText = day;
+
+				if(ValidDate(day,dtCurrent.getMonth(),dtCurrent.getFullYear()))
+				{
+					dates[j][i].isDay = true;
+					dates[j][i].onclick = DateClick;
+					if(day == dtInput.getDate() &&
+					   dtCurrent.getMonth() == dtInput.getMonth() &&
+					   dtCurrent.getFullYear() == dtInput.getFullYear())
+					{
+						dates[j][i].className = "calInput";
+					} 
+					else if(day == dtToday.getDate() &&
+						dtCurrent.getMonth() == dtToday.getMonth() &&
+						dtCurrent.getFullYear() == dtToday.getFullYear())
+					{
+						dates[j][i].className = "calToday";
+					}
+					else
+					{
+						dates[j][i].className = "calDate";
+					}
+				}
+				else
+				{
+					dates[j][i].isDay = false;
+					dates[j][i].className = "calBadDate";
+					dates[j][i].onclick = null;
+				}
+			}
+			else
+			{
+				if(i == 0 && j > 3 && t >= dMax)
+				{
+					dates[j][0].parentElement.style.display = "none";
+				}
+				
+				dates[j][i].className = "calNoDate";
+				dates[j][i].isDay = false;
+				dates[j][i].onclick = null;
+				
+				if(t < dMin)
+				{
+					dates[j][i].innerText = prev_days + t + 1 - dMin;
+				}
+				else if(t >= dMax)
+				{
+					dates[j][i].innerText = t + 1 - dMax;
+				}
+			}
+		}
+	}
+	document.all.MonthTitle.innerText = MONTHS[dtCurrent.getMonth()];
+	document.all.YearTitle.innerText = dtCurrent.getFullYear();
+	window.parent.SetCalFrameSize(idBody.offsetWidth,idBody.offsetHeight +1);
+}
+
+function DoLoad()
+{
+	dates = new Array(6);
+	trs = document.all.CalDates.children.tags("TR");
+	for(i=0;i<6;i++)
+		dates[i] = trs[i].children.tags("TD");
+}
+
+function TC()
+{
+if(event.srcElement.className=="dt")
+{
+	var dt=new Date();
+	wp.SetDate(dt.getDate(),dt.getMonth()+1,dt.getFullYear());
+	cf.style.display="none";
+}
+event.cancelBubble = true;
+}
+
+function Cancel()
+{
+	window.parent.document.all.CalFrame.style.display="none";
+	//event.cancelBubble = true;
+}
+
+function DateClick()
+{
+	if(event.srcElement.isDay)
+	{
+		var iDay = event.srcElement.innerText;
+		dtCurrent.setDate(iDay);
+		window.parent.SetDate(dtCurrent.getDate(),dtCurrent.getMonth()+1,dtCurrent.getFullYear())
+		window.parent.document.all.CalFrame.style.display="none";
+	}
+	event.cancelBubble=true;
+}
+
+function Next()
+{
+	var dtNew = new Date(dtCurrent);
+	if(event.ctrlKey)
+		dtNew.setFullYear(dtNew.getFullYear() + 1);
+	else if(dtNew.getMonth() == 11)
+		dtNew.setFullYear(dtNew.getFullYear() + 1,0);
+	else
+		dtNew.setMonth(dtNew.getMonth() + 1);
+	
+	if(dtMax && dtNew > dtMax)
+	{
+		alert("Valid date selections are prior to " + DateToString(dtMax) + ".");
+		return;	
+	}
+	
+	dtCurrent = dtNew;
+	BuildCurrentCalendar();
+}
+
+function DateToString(dt)
+{
+	return MONTHS[dt.getMonth()] + " " + dt.getDate() + ", " + dt.getFullYear();
+}
+
+function Prev()
+{
+	var dtNew = new Date(dtCurrent);
+	if(event.ctrlKey)
+		dtNew.setFullYear(dtNew.getFullYear()-1);
+	else if(dtNew.getMonth() == 0)
+		dtNew.setFullYear(dtCurrent.getFullYear() - 1,11);
+	else
+		dtNew.setMonth(dtCurrent.getMonth() - 1);
+	
+	if(dtMin && dtNew < dtMin)
+	{
+		alert("Valid date selections are after " + DateToString(dtMin) + ".");
+		return;
+	}
+	dtCurrent = dtNew;
+	BuildCurrentCalendar();
+}
+
+function SetInputDate(day,month,year) 
+{
+	dtInput = new Date(year,month,day);
+}
+
+function SetDate(day,month,year) { 
+	dtCurrent = new Date(year,month,day);
+
+	if(dtMin && dtCurrent < dtMin)
+		dtCurrent = new Date(dtMin);
+	else if(dtMax && dtCurrent > dtMax)
+		dtCurrent = new Date(dtMax);
+	
+}
+
+function SetMinMax(min,max) 
+{
+	dtMin = min;
+	dtMax = max;
+}
+
+function ValidDate(day,month,year)
+{
+	dtValid = new Date(year,month,day);
+
+	if(dtMin && dtMin > dtValid)
+		return false;
+	
+	if(dtMax && dtMax < dtValid)
+		return false;
+		
+	return true;
+}
+
+
+function IsLeapYear(year) {return( 0==year%4 && ((year%100!=0)||(year%400==0)) );}
+
+function GetDaysInMonth(month,year)
+{
+	var days = DAYS[month];
+	if((month == 1) && IsLeapYear(year))
+		days ++;
+	return days;
+}
+
+
+function GetDOW(day,month,year)
+{
+var dt=new Date(year,month-1,day);
+return (dt.getDay()+(7-wp.GetDowStart()))%7;
+}
+
+
+g_fCalLoaded=true;
+//-->
+</SCRIPT>
+
+</BODY>
+</HTML>

@@ -1,0 +1,1181 @@
+<?xml version="1.0"?>
+<mentortool>
+  <views>
+    <view name="event_package_list" table="tblMMD_Package" key="idPackage" >
+		<fields>
+			<field name="idPackage" dt="int" sort="0" />
+			<field name="idSourceLevel" dt="int" sort="0">
+				<filter type="lookupenum" op="eq">
+					<param name="type" value="MMD.Central.CentralLib.XmlObjects.MMDPackageLevel"/>
+				</filter>
+				<display type="lookupenum" op="eq">
+					<param name="type" value="MMD.Central.CentralLib.XmlObjects.MMDPackageLevel"/>
+				</display>
+			</field>
+			<field name="idDestLevel" dt="int" sort="0">
+				<filter type="lookupenum" op="eq">
+					<param name="type" value="MMD.Central.CentralLib.XmlObjects.MMDPackageLevel"/>
+				</filter>
+				<display type="lookupenum" op="eq">
+					<param name="type" value="MMD.Central.CentralLib.XmlObjects.MMDPackageLevel"/>
+				</display>
+			</field>
+			<field name="idSendEvent" dt="int" sort="0">
+				<filter type="lookupdb" op="eq">
+					<param name="sql" value="select idEventSchedule, sDesc from tblMMD_EventSchedule"/>
+				</filter>
+				<display type="lookupdb" op="eq">
+					<param name="sql" value="select idEventSchedule, sDesc from tblMMD_EventSchedule"/>
+				</display>
+			</field>
+			<field name="idRecvEvent" dt="int" sort="0">
+				<filter type="lookupdb" op="eq">
+					<param name="sql" value="select idEventSchedule, sDesc from tblMMD_EventSchedule"/>
+				</filter>
+				<display type="lookupdb" op="eq">
+					<param name="sql" value="select idEventSchedule, sDesc from tblMMD_EventSchedule"/>
+				</display>
+			</field>
+			<field name="sDesc" dt="string" sort="0" />
+			<field name="sTransportSubdir" dt="string" sort="0" />
+		</fields>
+    </view>
+    <view name="event_schedule" table="tblMMD_EventSchedule" key="idEventSchedule" >
+		<fields>
+			<field name="idEventSchedule" dt="int" sort="0" />
+			<field name="byType" dt="int" sort="0" />
+			<field name="iPeriodMinutes" dt="int" sort="0" />
+			<field name="dtTimeOfDay" dt="int" sort="0" />
+			<field name="bfDaysOfWeek" dt="int" sort="0" />
+			<field name="dtRunOnce" dt="int" sort="0" />
+			<field name="bRunNow" dt="int" sort="0" />
+			<field name="sDesc" dt="string" sort="1" >
+				<filter type="text" op="like" >
+					<param name="maxlength" value="100" />
+					<param name="size" value="10" />
+				</filter>
+			</field>
+			<field name="iPriority" dt="int" sort="1" >
+				<filter type="text" op="eq">
+					<param name="maxlength" value="10"/>
+					<param name="size" value="4"/>
+				</filter>					
+			</field>
+			<field name="byStatus" dt="int" sort="0">
+				<filter type="lookupenum" op="eq">
+					<param name="type" value="MMD.Central.CentralLib.XmlObjects.EventRunStatus" />
+				</filter>
+				<display type="lookupenum">
+					<param name="type" value="MMD.Central.CentralLib.XmlObjects.EventRunStatus" />
+				</display>
+			</field>
+			<field name="dtLastRun" dt="datetime" sort="0" />
+		</fields>
+    </view>
+    <view name="rec_list_type_attr" table="tblMMD_RecommendListTypeAttributeStaging" key="idRecListTypeAttribute" >
+		<fields>
+			<field name="idRecListTypeAttribute" dt="int" sort="0" />
+			<field name="idRecListType" dt="int" sort="0" />
+			<field name="sName" dt="string" sort="0" />
+			<field name="bRequired" dt="int" sort="0" >
+				<display type="lookupex" op="eq" >
+					<lv key="0" value="No" />
+					<lv key="1" value="Yes" />
+				</display>
+			</field>
+			<field name="idRecListAttributeType" dt="int" sort="0" >
+				<display type="lookupdb" op="eq">
+					<param name="sql" value="select idRecListAttributeType, sName from tblMMD_RecommendListAttributeType order by sName" />
+				</display>
+			</field>
+		</fields>
+    </view>
+    <view name="rec_list_type_item_attr" table="tblMMD_RecommendListTypeItemAttributeStaging" key="idRecListTypeItemAttribute" >
+		<fields>
+			<field name="idRecListTypeItemAttribute" dt="int" sort="0" />
+			<field name="idRecListType" dt="int" sort="0" />
+			<field name="sName" dt="string" sort="0" />
+			<field name="bRequired" dt="int" sort="0" >
+				<display type="lookupex" op="eq" >
+					<lv key="0" value="No" />
+					<lv key="1" value="Yes" />
+				</display>
+			</field>
+			<field name="idRecListAttributeType" dt="int" sort="0" >
+				<display type="lookupdb" op="eq">
+					<param name="sql" value="select idRecListAttributeType, sName from tblMMD_RecommendListAttributeType order by sName" />
+				</display>
+			</field>
+		</fields>
+    </view>
+	<view name="rpt_product_activity" table="tblCSW_ReportProductActivity" key="id" >
+		<fields>
+			<field name="id" dt="int" sort="1" />
+			<field name="idStore" dt="int" sort="1" >
+				<filter type="lookupdb" op="eq">
+					<param name="sql" value="select idStore, sName from tblMMD_StoreConfiguration" />
+				</filter>
+				<display type="lookupdb" op="eq">
+					<param name="sql" value="select idStore, sName from tblMMD_StoreConfiguration" />
+				</display>
+			</field>		
+			<field name="idDevice" dt="int" sort="1" />
+			<field desc="idMediaType" name="idMediaType" dt="int" sort="1" >
+				<filter type="lookupdb" op="eq">
+					<param name="sql" value="select idMediaType, sName from tblMMD_MetaDataMediaType where bUseInDevice = 1 order by sName"/>
+				</filter>
+				<display type="lookupdb" op="eq">
+					<param name="sql" value="select idMediaType, sName from tblMMD_MetaDataMediaType"/>
+				</display>
+			</field>
+			<field name="idLocationMode" dt="int" sort="1" >
+				<filter type="lookupdb" op="eq">
+					<param name="sql" value="select idLocationMode, sName from tblMMD_LocationMode" />
+				</filter>
+				<display type="lookupdb" op="eq">
+					<param name="sql" value="select idLocationMode, sName from tblMMD_LocationMode" />
+				</display>
+			
+			</field>
+
+		<field name="AvgScans" dt="int" sort="1" >
+            <filter type="text" op="eq">
+                <param name="maxlength" value="10"/>
+                <param name="size" value="4"/>
+            </filter>					
+		</field>
+		<field name="AvgViews" dt="int" sort="1" >
+			<filter type="text" op="eq">
+				<param name="maxlength" value="10" />
+				<param name="size" value="4" />
+			</filter>
+		</field>
+		</fields>						
+	</view>
+	<view name="rpt_shopper_success" table="tblCSW_ReportShopperSuccess" key="id">
+		<fields>
+		<field name="id" dt="int" sort="1" />
+		<field name="idStoreConcept" dt="int" sort="1" >
+			<filter type="lookupdb" op="eq">
+				<param name="sql" value="select idStoreConcept, sName from tblMMD_StoreConcept" />
+			</filter>
+			<display type="lookupdb" op="eq">
+				<param name="sql" value="select idStoreConcept, sName from tblMMD_StoreConcept" />
+			</display>
+		</field>
+		<field name="idStore" dt="int" sort="1" >
+			<filter type="lookupdb" op="eq">
+				<param name="sql" value="select idStore, sName from tblMMD_StoreConfiguration" />
+			</filter>
+			<display type="lookupdb" op="eq">
+				<param name="sql" value="select idStore, sName from tblMMD_StoreConfiguration" />
+			</display>
+		</field>		
+		<field name="idDevice" dt="int" sort="1" />
+		<field name="cTotalSessions" dt="int" sort="1" />
+		<field name="cGoodSessions" dt="int" sort="1" />
+		<field name="cAbortedSessions" dt="int" sort="1" />
+		<field name="flSuccessRate" dt="float" sort="1" />		
+		</fields>
+	</view>
+	<view name="rpt_device_utilization" table="tblCSW_ReportDeviceUtilization" key="id">
+		<fields>
+		<field name="id" dt="int" sort="1" />
+		<field name="idStoreConcept" dt="int" sort="1" >
+			<filter type="lookupdb" op="eq">
+				<param name="sql" value="select idStoreConcept, sName from tblMMD_StoreConcept" />
+			</filter>
+			<display type="lookupdb" op="eq">
+				<param name="sql" value="select idStoreConcept, sName from tblMMD_StoreConcept" />
+			</display>
+		</field>
+		<field name="idLocationMode" dt="int" sort="1" >
+			<filter type="lookupdb" op="eq">
+				<param name="sql" value="select idLocationMode, sName from tblMMD_LocationMode" />
+			</filter>
+			<display type="lookupdb" op="eq">
+				<param name="sql" value="select idLocationMode, sName from tblMMD_LocationMode" />
+			</display>
+		
+		</field>
+		<field name="idStore" dt="int" sort="1" >
+			<filter type="lookupdb" op="eq">
+				<param name="sql" value="select idStore, sName from tblMMD_StoreConfiguration" />
+			</filter>
+			<display type="lookupdb" op="eq">
+				<param name="sql" value="select idStore, sName from tblMMD_StoreConfiguration" />
+			</display>
+		</field>		
+		<field name="idDevice" dt="int" sort="1" />
+		<field name="AvgSessionLength" dt="int" sort="1" />
+		<field name="AvgSessionsPerDay" dt="int" sort="1" />
+		<field name="utilization" dt="float" sort="1" />		
+	</fields>
+	</view>
+	<view name="rpt_session_count_by_time_of_day" table="tblCSW_ReportSessionCountByTimeOfDay" key="id">
+	<fields>
+		<field name="id" dt="int" sort="1" />
+		<field name="idStoreConcept" dt="int" sort="1" >
+			<filter type="lookupdb" op="eq">
+				<param name="sql" value="select idStoreConcept, sName from tblMMD_StoreConcept" />
+			</filter>
+			<display type="lookupdb" op="eq">
+				<param name="sql" value="select idStoreConcept, sName from tblMMD_StoreConcept" />
+			</display>
+		</field>
+		<field name="idLocationMode" dt="int" sort="1" >
+			<filter type="lookupdb" op="eq">
+				<param name="sql" value="select idLocationMode, sName from tblMMD_LocationMode" />
+			</filter>
+			<display type="lookupdb" op="eq">
+				<param name="sql" value="select idLocationMode, sName from tblMMD_LocationMode" />
+			</display>
+		
+		</field>
+		<field name="idStore" dt="int" sort="1" >
+			<filter type="lookupdb" op="eq">
+				<param name="sql" value="select idStore, sName from tblMMD_StoreConfiguration" />
+			</filter>
+			<display type="lookupdb" op="eq">
+				<param name="sql" value="select idStore, sName from tblMMD_StoreConfiguration" />
+			</display>
+		</field>
+		<field name="idDevice" dt="int" sort="1">
+            <filter type="text" op="eq">
+                <param name="maxlength" value="10"/>
+                <param name="size" value="4"/>
+            </filter>					
+		</field>
+		<field name="morning" dt="int" sort="1" />
+		<field name="lunch" dt="int" sort="1" />
+		<field name="afternoon" dt="int" sort="1" />
+		<field name="evening" dt="int" sort="1" />
+		<field name="night" dt="int" sort="1" />
+		<field name="total" dt="int" sort="1" />
+		</fields>
+	</view>
+	<view name="rpt_new_release_detail" table="tblCSW_ReportNewReleaseDetail" key="id">
+		<fields>
+		<field name="id" dt="int" sort="1" />
+		<field name="dtRelease" dt="datetime" sort="1" format="d" />			
+		<field name="sTitle" dt="string" sort="1" >
+			<filter type="text" op="like" >
+				<param name="maxlength" value="260" />
+				<param name="size" value="15" />
+			</filter>
+		</field>
+		<field name="sArtist" dt="string" sort="1" >
+			<filter type="text" op="like" >
+				<param name="maxlength" value="100" />
+				<param name="size" value="15" />
+			</filter>
+		</field>
+		<field desc="idGenre" name="genre" dt="string" sort="1">
+			<filter type="lookupdb" op="like">
+				<param name="sql" value="select * from ( select G.sDescription, M.sName + ' - ' + G.sDescription as sDisplay from tblMMD_MetaDataGenre G join tblMMD_MetaDataMediaTypeGenre MG ON G.idGenre = MG.idGenre JOIN tblMMD_MetaDataMediaType M ON MG.idMediaType = M.idMediaType where M.bUseInDevice = 1 and G.bUseInDevice = 1 union select sGamePlatform, 'GAME - ' + sGamePlatform from tblMMD_MetaDataGamePlatform ) X order by sDisplay" />
+			</filter>
+			<display type="lookupdb" op="like">
+				<param name="sql" value="select sDescription, sDescription from tblMMD_MetaDataGenre union select sGamePlatform, sGamePlatform from tblMMD_MetaDataGamePlatform"/>
+			</display>
+		</field>		
+
+		<field name="idProduct" dt="int" sort="0" />
+		<field name="sUPC" dt="string" sort="0" />
+		<field name="cViews" dt="int" sort="1" >
+            <filter type="text" op="eq">
+                <param name="maxlength" value="10"/>
+                <param name="size" value="4"/>
+            </filter>			
+		</field>			
+		<field name="cSampled" dt="int" sort="1" >
+            <filter type="text" op="eq">
+                <param name="maxlength" value="10"/>
+                <param name="size" value="4"/>
+            </filter>			
+		</field>			
+		<field name="cScans" dt="int" sort="1" >
+            <filter type="text" op="eq">
+                <param name="maxlength" value="10"/>
+                <param name="size" value="4"/>
+            </filter>			
+		</field>			
+		<field name="cSelects" dt="int" sort="1" >
+            <filter type="text" op="eq">
+                <param name="maxlength" value="10"/>
+                <param name="size" value="4"/>
+            </filter>			
+		</field>			
+		</fields>		
+	</view>
+	<view name="rpt_new_release_activity" table="tblCSW_ReportNewReleaseActivity" key="id">
+		<fields>
+		<field name="id" dt="int" sort="1" />
+		<field name="sTitle" dt="string" sort="1" >
+			<filter type="text" op="like" >
+				<param name="maxlength" value="260" />
+				<param name="size" value="15" />
+			</filter>
+		</field>
+		<field desc="idMediaType" name="idMediaType" dt="int" sort="1" >
+			<filter type="lookupdb" op="eq">
+				<param name="sql" value="select idMediaType, sName from tblMMD_MetaDataMediaType where bUseInDevice = 1 order by sName"/>
+			</filter>
+			<display type="lookupdb" op="eq">
+				<param name="sql" value="select idMediaType, sName from tblMMD_MetaDataMediaType"/>
+			</display>
+		</field>
+		<field name="cViews" dt="int" sort="1" >
+            <filter type="text" op="eq">
+                <param name="maxlength" value="10"/>
+                <param name="size" value="4"/>
+            </filter>			
+		</field>			
+		<field name="cSampled" dt="int" sort="1" >
+            <filter type="text" op="eq">
+                <param name="maxlength" value="10"/>
+                <param name="size" value="4"/>
+            </filter>			
+		</field>			
+		<field name="percentSample" dt="float" sort="1" >
+            <filter type="text" op="eq">
+                <param name="maxlength" value="10"/>
+                <param name="size" value="4"/>
+            </filter>			
+		</field>			
+		<field name="dtRelease" dt="datetime" sort="1" format="d" />			
+		</fields>
+	</view>
+	<view name="rpt_top_viewed_products" table="tblCSW_ReportTopViewedProducts" key="id">
+	<fields>
+		<field name="id" dt="int" sort="1" />
+		<field name="idStore" dt="int" sort="1" >
+			<filter type="lookupdb" op="eq">
+				<param name="sql" value="select idStore, sName from tblMMD_StoreConfiguration" />
+			</filter>
+			<display type="lookupdb" op="eq">
+				<param name="sql" value="select idStore, sName from tblMMD_StoreConfiguration" />			
+			</display>
+		</field>
+		<field desc="idMediaType" name="idMediaType" dt="int" sort="1" >
+			<filter type="lookupdb" op="eq">
+				<param name="sql" value="select idMediaType, sName from tblMMD_MetaDataMediaType where bUseInDevice = 1 order by sName"/>
+			</filter>
+			<display type="lookupdb" op="eq">
+				<param name="sql" value="select idMediaType, sName from tblMMD_MetaDataMediaType"/>
+			</display>
+		</field>
+		<field desc="idGenre" name="genre" dt="string" sort="1">
+			<filter type="lookupdb" op="like">
+				<param name="sql" value="select * from ( select G.sDescription, M.sName + ' - ' + G.sDescription as sDisplay from tblMMD_MetaDataGenre G join tblMMD_MetaDataMediaTypeGenre MG ON G.idGenre = MG.idGenre JOIN tblMMD_MetaDataMediaType M ON MG.idMediaType = M.idMediaType where M.bUseInDevice = 1 and G.bUseInDevice = 1 union select sGamePlatform, 'GAME - ' + sGamePlatform from tblMMD_MetaDataGamePlatform ) X order by sDisplay" />
+			</filter>
+			<display type="lookupdb" op="like">
+				<param name="sql" value="select sDescription, sDescription from tblMMD_MetaDataGenre union select sGamePlatform, sGamePlatform from tblMMD_MetaDataGamePlatform"/>
+			</display>
+		</field>		
+			
+		<field name="sUPC" dt="string" sort="0" />
+		<field name="sTitle" dt="string" sort="1" >
+			<filter type="text" op="like" >
+				<param name="maxlength" value="260" />
+				<param name="size" value="15" />
+			</filter>
+		</field>
+		<field name="sArtist" dt="string" sort="1" >
+			<filter type="text" op="like" >
+				<param name="maxlength" value="100" />
+				<param name="size" value="10" />
+			</filter>
+		</field>
+
+		<field name="cScans" dt="int" sort="1" >
+            <filter type="text" op="eq">
+                <param name="maxlength" value="10"/>
+                <param name="size" value="4"/>
+            </filter>			
+		</field>			
+		</fields>
+	</view>
+
+	<view name="rpt_top_scanned_products" table="tblCSW_ReportTopScannedProducts" key="id">
+		<fields>
+		<field name="id" dt="int" sort="1" />
+		<field name="idStore" dt="int" sort="1" >
+			<filter type="lookupdb" op="eq">
+				<param name="sql" value="select idStore, sName from tblMMD_StoreConfiguration" />
+			</filter>
+			<display type="lookupdb" op="eq">
+				<param name="sql" value="select idStore, sName from tblMMD_StoreConfiguration" />			
+			</display>
+		</field>
+		<field desc="idMediaType" name="idMediaType" dt="int" sort="1" >
+			<filter type="lookupdb" op="eq">
+				<param name="sql" value="select idMediaType, sName from tblMMD_MetaDataMediaType where bUseInDevice = 1 order by sName"/>
+			</filter>
+			<display type="lookupdb" op="eq">
+				<param name="sql" value="select idMediaType, sName from tblMMD_MetaDataMediaType"/>
+			</display>
+		</field>
+		<field desc="idGenre" name="genre" dt="string" sort="1">
+			<filter type="lookupdb" op="like">
+				<param name="sql" value="select * from ( select G.sDescription, M.sName + ' - ' + G.sDescription as sDisplay from tblMMD_MetaDataGenre G join tblMMD_MetaDataMediaTypeGenre MG ON G.idGenre = MG.idGenre JOIN tblMMD_MetaDataMediaType M ON MG.idMediaType = M.idMediaType where M.bUseInDevice = 1 and G.bUseInDevice = 1 union select sGamePlatform, 'GAME - ' + sGamePlatform from tblMMD_MetaDataGamePlatform ) X order by sDisplay" />
+			</filter>
+			<display type="lookupdb" op="like">
+				<param name="sql" value="select sDescription, sDescription from tblMMD_MetaDataGenre union select sGamePlatform, sGamePlatform from tblMMD_MetaDataGamePlatform"/>
+			</display>
+		</field>		
+			
+		<field name="sUPC" dt="string" sort="0" />
+		<field name="sTitle" dt="string" sort="1" >
+			<filter type="text" op="like" >
+				<param name="maxlength" value="260" />
+				<param name="size" value="15" />
+			</filter>
+		</field>
+		<field name="sArtist" dt="string" sort="1" >
+			<filter type="text" op="like" >
+				<param name="maxlength" value="100" />
+				<param name="size" value="10" />
+			</filter>
+		</field>
+
+		<field name="cScans" dt="int" sort="1" >
+            <filter type="text" op="eq">
+                <param name="maxlength" value="10"/>
+                <param name="size" value="4"/>
+            </filter>			
+		</field>			
+		</fields>
+	</view>
+	<view name="rpt_rec_list_usage_all_stores" table="tblCSW_ReportRecListUsageAllStores" key="id">
+		<fields>
+			<field name="id" dt="int" sort="1" />
+			<field name="iYear" dt="int" sort="1" >
+                <filter type="text" op="eq">
+                    <param name="maxlength" value="10"/>
+                    <param name="size" value="3"/>
+                </filter>			
+			</field>
+			<field name="iMonth" dt="int" sort="1" >
+                <filter type="text" op="eq">
+                    <param name="maxlength" value="10"/>
+                    <param name="size" value="3"/>
+                </filter>			
+			</field>			
+			<field name="iDay" dt="int" sort="1" >
+                <filter type="text" op="eq">
+                    <param name="maxlength" value="10"/>
+                    <param name="size" value="3"/>
+                </filter>						
+			</field>
+			<field name="iWeek" dt="int" sort="1" >
+                <filter type="text" op="eq">
+                    <param name="maxlength" value="10"/>
+                    <param name="size" value="3"/>
+                </filter>			
+			</field>
+			<field name="dtDay" dt="datetime" format="dddd d MMM" sort="1" />
+			<field name="store_concept" dt="string" sort="1" >
+				<filter type="lookupdb" op="like">
+					<param name="sql" value="select sName, sName from tblMMD_StoreConcept" />
+				</filter>
+				<display type="lookupdb" op="like">
+					<param name="sql" value="select sName, sName from tblMMD_StoreConcept" />
+				</display>
+			</field>
+			<field name="rec_list_type" dt="string" sort="1" >
+				<filter type="lookupdb" op="like">
+					<param name="sql" value="select sName, sName from tblMMD_RecommendListType" />
+				</filter>
+				<display type="lookupdb" op="like">
+					<param name="sql" value="select sName, sName from tblMMD_RecommendListType" />				
+				</display>
+			</field>
+			<field desc="idMediaType" name="product_type" dt="string" sort="1" >
+				<filter type="lookupdb" op="like">
+					<param name="sql" value="select sName, sName from tblMMD_MetaDataProductType where idProductType &lt;&gt; 2 order by sName"/>
+				</filter>
+				<display type="lookupdb" op="like">
+					<param name="sql" value="select sName, sName from tblMMD_MetaDataProductType where idProductType &lt;&gt; 2"/>
+				</display>
+			</field>
+			<field name="title" dt="string" sort="1" >
+				<filter type="text" op="like" >
+					<param name="maxlength" value="260" />
+					<param name="size" value="15" />
+				</filter>
+			</field>
+			<field name="cSelects" dt="int" sort="1" >
+                <filter type="text" op="eq">
+                    <param name="maxlength" value="10"/>
+                    <param name="size" value="4"/>
+                </filter>			
+			</field>			
+		</fields>
+	</view>
+	<view name="rpt_agg_product_stats" table="tblCSW_ReportAggregateProductStats" key="id">
+		<fields>
+			<field name="id" dt="int" sort="1" />
+			<field name="iYear" dt="int" sort="1" >
+                <filter type="text" op="eq">
+                    <param name="maxlength" value="10"/>
+                    <param name="size" value="3"/>
+                </filter>			
+			
+			</field>
+<!--			<field name="iMonth" dt="int" sort="1" /> -->
+			<field name="iWeek" dt="int" sort="1" >
+                <filter type="text" op="eq">
+                    <param name="maxlength" value="10"/>
+                    <param name="size" value="3"/>
+                </filter>			
+			
+			</field>
+<!--			<field name="iDay" dt="int" sort="1" /> -->
+			<field desc="idMediaType" name="media_type" dt="string" sort="1" >
+				<filter type="lookupdb" op="like">
+					<param name="sql" value="select sName, sName from tblMMD_MetaDataMediaType where bUseInDevice = 1 order by sName"/>
+				</filter>
+				<display type="lookupdb" op="like">
+					<param name="sql" value="select sName, sName from tblMMD_MetaDataMediaType"/>
+				</display>
+			</field>
+			<field desc="idGenre" name="genre" dt="string" sort="1">
+				<filter type="lookupdb" op="like">
+					<param name="sql" value="select * from ( select G.sDescription, M.sName + ' - ' + G.sDescription as sDisplay from tblMMD_MetaDataGenre G join tblMMD_MetaDataMediaTypeGenre MG ON G.idGenre = MG.idGenre JOIN tblMMD_MetaDataMediaType M ON MG.idMediaType = M.idMediaType where M.bUseInDevice = 1 and G.bUseInDevice = 1 union select sGamePlatform, 'GAME - ' + sGamePlatform from tblMMD_MetaDataGamePlatform ) X order by sDisplay" />
+				</filter>
+				<display type="lookupdb" op="like">
+					<param name="sql" value="select sDescription, sDescription from tblMMD_MetaDataGenre union select sGamePlatform, sGamePlatform from tblMMD_MetaDataGamePlatform"/>
+				</display>
+			</field>			
+
+			<field name="title" dt="string" sort="1" >
+				<filter type="text" op="like" >
+					<param name="maxlength" value="260" />
+					<param name="size" value="15" />
+				</filter>
+			</field>
+			<field name="artist" dt="string" sort="1" >
+				<filter type="text" op="like" >
+					<param name="maxlength" value="100" />
+					<param name="size" value="10" />
+				</filter>
+			</field>
+			<field name="cScans" dt="int" sort="1" >
+                <filter type="text" op="eq">
+                    <param name="maxlength" value="10"/>
+                    <param name="size" value="3"/>
+                </filter>			
+			</field>			
+			<field name="cSelects" dt="int" sort="1" >
+                <filter type="text" op="eq">
+                    <param name="maxlength" value="10"/>
+                    <param name="size" value="3"/>
+                </filter>			
+			</field>			
+			<field name="cTotal" dt="int" sort="1" >
+                <filter type="text" op="eq">
+                    <param name="maxlength" value="10"/>
+                    <param name="size" value="3"/>
+                </filter>			
+
+			</field>
+		</fields>
+	</view>
+	<view name="ad_files" table="vwCSW_AdvertismentFile_lv" key="idFile">
+		<fields>
+			<field name="idFile" dt="int" sort="1" />
+			<field name="iType" dt="int" sort="1">
+				<filter type="lookupex" op="eq">
+					<lv key="0" value="Banner"/>
+					<lv key="1" value="Idle Loop Frame" />
+					<lv key="2" value="Special Offer" />
+				</filter>
+				<display type="lookupex" op="eq">
+					<lv key="0" value="Banner"/>
+					<lv key="1" value="Idle Loop Frame" />
+					<lv key="2" value="Special Offer" />				
+				</display>
+			</field>
+			<field name="cItems" dt="int" sort="1" />
+			<field name="sMIMEType" dt="string" sort="1" >
+				<filter type="text" op="like" >
+					<param name="maxlength" value="100" />
+					<param name="size" value="10" />
+				</filter>
+			</field>
+			<field name="sFileName" dt="string" sort="1" >
+				<filter type="text" op="like" >
+					<param name="maxlength" value="256" />
+					<param name="size" value="15" />
+				</filter>
+			</field>
+			<field name="dtChanged" dt="datetime" sort="1" />
+			<field name="sChangedBy" dt="string" sort="1" >
+				<filter type="text" op="like" >
+					<param name="maxlength" value="30" />
+					<param name="size" value="8" />
+				</filter>
+			</field>
+		</fields>
+	</view>
+	<view name="idleloops" table="vwCSW_IdleLoopStaging_lv" key="idIdleLoop">
+		<fields>
+			<field name="idIdleLoop" dt="int" sort="1" />
+			<field name="sName" dt="string" sort="1">
+				<filter type="text" op="like" >
+					<param name="maxlength" value="100" />
+					<param name="size" value="15" />
+				</filter>									
+			</field>
+			<field name="idStoreConcept" dt="int" sort="1">
+				<filter type="lookupdb" op="eq">
+					<param name="sql" value="select idStoreConcept, sName from tblMMD_StoreConcept order by sName" />
+				</filter>
+				<display type="lookupdb" op="eq">
+					<param name="sql" value="select idStoreConcept, sName from tblMMD_StoreConcept order by sName" />				
+				</display>
+			</field>
+			<field name="dtChanged" dt="datetime" sort="1" />
+			<field name="sChangedBy" dt="string" sort="1" >
+				<filter type="text" op="like" >
+					<param name="maxlength" value="100" />
+					<param name="size" value="10" />
+				</filter>												
+			</field>
+			<field name="cItems" dt="int" sort="1" >
+				<filter type="text" op="eq" >
+					<param name="maxlength" value="10" />
+					<param name="size" value="4" />
+				</filter>
+			</field>
+			<field name="cAssociations" dt="int" sort="1" >
+				<filter type="text" op="eq" >
+					<param name="maxlength" value="10" />
+					<param name="size" value="4" />
+				</filter>
+			</field>
+
+			<field desc="byStatus" name="byStatus" dt="int" sort="1">
+				<filter type="lookupex" op="eq">
+					<lv key="0" value="UnChanged"/>
+					<lv key="1" value="New"/>
+					<lv key="2" value="Changed"/>
+					<lv key="3" value="Deleted"/>
+				</filter>
+				<display type="lookupex" op="eq">
+					<lv key="0" value="UnChanged"/>
+					<lv key="1" value="&lt;span style=&quot;color: green&quot;&gt;New&lt;/span&gt;"/>
+					<lv key="2" value="&lt;span style=&quot;color: red&quot;&gt;Changed&lt;/span&gt;"/>
+					<lv key="3" value="&lt;span style=&quot;color: blue&quot;&gt;Deleted&lt;/span&gt;"/>				
+				</display>
+			</field>
+			
+		</fields>
+	</view>
+	<view name="idleloopelements" table="tblMMD_IdleLoopElementStaging" key="idIdleLoopElement">
+		<fields>
+			<field name="idIdleLoopElement" dt="int" sort="1" />
+			<field name="idIdleLoop" dt="int" sort="1" />
+			<field name="iSeq" dt="int" sort="1" />
+			<field name="sName" dt="string" sort="1">
+				<filter type="text" op="like" >
+					<param name="maxlength" value="100" />
+					<param name="size" value="15" />
+				</filter>															
+			</field>
+			<field name="sMIMEType" dt="string" sort="1" >
+				<filter type="text" op="like" >
+					<param name="maxlength" value="100" />
+					<param name="size" value="15" />
+				</filter>																		
+			</field>
+			<field name="sURL" dt="string" sort="1" />
+			<field name="cSecsPlayingTime" dt="int" sort="1" />
+			<field name="dtChanged" dt="datetime" sort="1" />
+			<field name="sChangedBy" dt="string" sort="1" >
+				<filter type="text" op="like" >
+					<param name="maxlength" value="100" />
+					<param name="size" value="10" />
+				</filter>																					
+			</field>
+			<field name="sAssetInfo" dt="string" sort="1" >
+				<filter type="text" op="like" >
+					<param name="maxlength" value="100" />
+					<param name="size" value="15" />
+				</filter>																								
+			</field>
+		</fields>
+	</view>
+	<view name="banners" table="tblMMD_BannerStaging" key="idBanner">
+		<fields>
+			<field desc="idBanner" name="idBanner" dt="int" sort="1" />
+			<field desc="idBannerType" name="idBannerType" dt="int" sort="1">
+				<filter type="lookupdb" op="eq">
+					<param name="sql" value="select idBannerType, sName from tblMMD_BannerType" />
+				</filter>
+				<display type="lookupdb" op="eq">
+					<param name="sql" value="select idBannerType, sName from tblMMD_BannerType" />
+				</display>
+			</field>
+			<field desc="sName" name="sName" dt="string" sort="1">
+				<filter type="text" op="like" >
+					<param name="maxlength" value="100" />
+					<param name="size" value="25" />
+				</filter>						
+			</field>	
+			<field desc="sURL" name="sURL" dt="string" sort="1"/>
+			<field name="dtCreated" dt="datetime" sort="1" />
+			<field name="dtChanged" dt="datetime" sort="1" />
+			<field name="sCreatedBy" dt="string" sort="1" >
+				<filter type="text" op="like" >
+					<param name="maxlength" value="100" />
+					<param name="size" value="7" />
+				</filter>
+			</field>
+			<field name="sChangedBy" dt="string" sort="1" >
+				<filter type="text" op="like" >
+					<param name="maxlength" value="100" />
+					<param name="size" value="7" />
+				</filter>
+			</field>		
+			<field desc="byStatus" name="byStatus" dt="int" sort="1">
+				<filter type="lookupex" op="eq">
+					<lv key="0" value="UnChanged"/>
+					<lv key="1" value="New"/>
+					<lv key="2" value="Changed"/>
+					<lv key="3" value="Deleted"/>
+				</filter>
+				<display type="lookupex" op="eq">
+					<lv key="0" value="UnChanged"/>
+					<lv key="1" value="&lt;span style=&quot;color: green&quot;&gt;New&lt;/span&gt;"/>
+					<lv key="2" value="&lt;span style=&quot;color: red&quot;&gt;Changed&lt;/span&gt;"/>
+					<lv key="3" value="&lt;span style=&quot;color: blue&quot;&gt;Deleted&lt;/span&gt;"/>				
+				</display>
+			</field>
+
+		</fields>
+	</view>
+	<view name="bannertypeview" table="tblMMD_BannerType" key="idBannerType">
+		<fields>
+			<field desc="idBannerType" name="idBannerType" dt="int" sort="1"/>
+			<field desc="sName" name="sName" dt="string" sort="1" >
+					<filter type="text" op="like" >
+						<param name="maxlength" value="100" />
+						<param name="size" value="25" />
+					</filter>				
+			</field>
+			<field name="iWidth" dt="int" sort="1" />
+			<field name="iHeight" dt="int" sort="1" />
+		</fields>
+	</view>
+	<view name="producttitleartist" table="vwCSW_ProductTitleArtist" key="idItem">
+		<fields>
+			<field desc="idItem" name="idItem" dt="int" sort="1"/>
+			<field desc="dtRelease" name="dtRelease" dt="datetime" format="yyyy" sort="1" />
+			<field desc="idProductType" name="idProductType" dt="int" sort="1" />
+			<field desc="idMediaType" name="idMediaType" dt="int" sort="1" >
+				<filter type="lookupdb" op="eq">
+					<param name="sql" value="select idMediaType, sName from tblMMD_MetaDataMediaType where bUseInDevice = 1 order by sName"/>
+				</filter>
+				<display type="lookupdb" op="eq">
+					<param name="sql" value="select idMediaType, sName from tblMMD_MetaDataMediaType where bUseInDevice = 1 order by sName"/>
+				</display>
+			</field>
+			<field desc="idGenre" name="idGenre" dt="int" sort="1">
+				<filter type="lookupdb" op="eq">
+					<param name="sql" value="select idGenre, sDescription from tblMMD_MetadataGenre"/>
+				</filter>
+				<display type="lookupdb" op="eq">
+					<param name="sql" value="select idGenre, sDescription from tblMMD_MetaDataGenre"/>
+				</display>
+			</field>			
+			<field desc="sTitle" name="sTitle" dt="string" sort="1">
+					<filter type="text" op="like" >
+						<param name="maxlength" value="260" />
+						<param name="size" value="25" />
+					</filter>				
+			</field>
+			<field desc="sArtist" name="sArtist" dt="string" sort="1">
+					<filter type="text" op="like" >
+						<param name="maxlength" value="260" />
+						<param name="size" value="15" />
+					</filter>				
+			</field>
+		</fields>
+	</view>
+	<view name="reclistitemview" table="vwMMD_RecommendListItemStaging_lv" key="idRecListItem">
+		<fields>
+			<field desc="idRecListItem" name="idRecListItem" dt="int" sort="1" />
+			<field desc="idRecList" name="idRecList" dt="int" sort="1" />
+			<field desc="idItem" name="idItem" dt="int" sort="1" />
+			<field name="idProduct" dt="int" sort="1" />
+			<field desc="iSeq" name="iSeq" dt="int" sort="1" />
+			<field desc="dtChanged" name="dtChanged" dt="datetime" sort="1" />
+			<field desc="sChangedBy" name="sChangedBy" dt="string" sort="1" >
+				<filter type="text" op="like" >
+					<param name="maxlength" value="20" />
+					<param name="size" value="10" />
+				</filter>							
+			</field>
+			<field desc="dtRelease" name="dtRelease" dt="datetime" format="%y" sort="1" />
+			<field desc="sTitle" name="sTitle" dt="string" sort="1">
+					<filter type="text" op="like" >
+						<param name="maxlength" value="260" />
+						<param name="size" value="25" />
+					</filter>				
+			</field>
+			<field desc="sArtist" name="sArtist" dt="string" sort="1">
+					<filter type="text" op="like" >
+						<param name="maxlength" value="260" />
+						<param name="size" value="15" />
+					</filter>				
+			</field>
+			<field desc="idProductType" name="idProductType" dt="int" sort="1" >
+				<filter type="lookupdb" op="eq">
+					<param name="sql" value="select idProductType, sName from tblMMD_MetaDataProductType order by sName"/>
+				</filter>
+				<display type="lookupdb" op="eq">
+					<param name="sql" value="select idProductType, sName from tblMMD_MetaDataProductType order by sName"/>
+				</display>
+			</field>
+		</fields>
+	</view>
+	<view name="reclistview" table="vwCSW_RecommendListStaging_lv" key="idRecList">
+		<fields>
+			<field desc="idRecList" name="idRecList" dt="int" sort="1" />
+			<field name="idStoreConcept" dt="int" sort="1">
+				<filter type="lookupdb" op="eq">
+					<param name="sql" value="select idStoreConcept, sName from tblMMD_StoreConcept"/>
+				</filter>
+				<display type="lookupdb" op="eq">
+					<param name="sql" value="select idStoreConcept, sName from tblMMD_StoreConcept"/>
+				</display>
+			</field>
+			<field desc="idRecListType" name="idRecListType" dt="int" sort="1">
+				<filter type="lookupdb" op="eq">
+					<param name="sql" value="select idRecListType, sName from tblMMD_RecommendListType"/>
+				</filter>
+				<display type="lookupdb" op="eq">
+					<param name="sql" value="select idRecListType, sName from tblMMD_RecommendListType"/>
+				</display>
+			</field>
+			<field desc="idProductType" name="idProductType" dt="int" sort="1" >
+				<filter type="lookupdb" op="eq">
+					<param name="sql" value="select idProductType, sName from tblMMD_MetaDataProductType order by sName"/>
+				</filter>
+				<display type="lookupdb" op="eq">
+					<param name="sql" value="select idProductType, sName from tblMMD_MetaDataProductType order by sName"/>
+				</display>
+			</field>
+			<field desc="idRecListBaseType" name="idRecListBaseType" dt="int" sort="1" />
+			<field desc="cItems" name="cItems" dt="int" sort="1" />
+			<field name="bSystem" dt="int" sort="0" />
+			<field desc="dtChanged" name="dtChanged" dt="datetime" sort="1"/>
+			<field desc="byStatus" name="byStatus" dt="int" sort="1">
+				<filter type="lookupex" op="eq">
+					<lv key="0" value="UnChanged"/>
+					<lv key="1" value="New"/>
+					<lv key="2" value="Changed"/>
+					<lv key="3" value="Deleted"/>
+				</filter>
+				<display type="lookupex" op="eq">
+					<lv key="0" value="UnChanged"/>
+					<lv key="1" value="&lt;span style=&quot;color: green&quot;&gt;New&lt;/span&gt;"/>
+					<lv key="2" value="&lt;span style=&quot;color: red&quot;&gt;Changed&lt;/span&gt;"/>
+					<lv key="3" value="&lt;span style=&quot;color: blue&quot;&gt;Deleted&lt;/span&gt;"/>				
+				</display>
+			</field>
+		</fields>
+	</view>
+	<view name="registered_files" table="vwMMD_RegisteredFiles_lv" key="idFile">
+		<fields>
+			<field name="idFile" dt="int" sort="0" />
+		<field name="idStoreConcept" dt="int" sort="1" >
+			<filter type="lookupdb" op="eq">
+				<param name="sql" value="select idStoreConcept, sName from tblMMD_StoreConcept" />
+			</filter>
+			<display type="lookupdb" op="eq">
+				<param name="sql" value="select idStoreConcept, sName from tblMMD_StoreConcept" />
+			</display>
+		</field>
+			
+			<field name="sName" dt="string" sort="1" >
+				<filter type="text" op="like" >
+					<param name="maxlength" value="200" />
+					<param name="size" value="15" />
+				</filter>
+			</field>
+			<field name="iType" dt="int" sort="1" >
+				<filter type="lookupenum" op="eq">
+					<param name="type" value="MMD.Central.CentralLib.XmlObjects.MMDPostedFile" />
+				</filter>
+				<display type="lookupenum" op="eq">
+					<param name="type" value="MMD.Central.CentralLib.XmlObjects.MMDPostedFile" />
+				</display>
+			</field>
+			<field name="iFileMediaType" dt="int" sort="1" >
+				<filter type="lookupenum" op="eq">
+					<param name="type" value="MMD.Central.CentralLib.XmlObjects.FileMediaType" />
+				</filter>
+				<display type="lookupenum" op="eq">
+					<param name="type" value="MMD.Central.CentralLib.XmlObjects.FileMediaType" />
+				</display>			
+			</field>
+			<field name="sMIMEType" dt="string" sort="1" >
+				<filter type="text" op="like" >
+					<param name="maxlength" value="100" />
+					<param name="size" value="10" />
+				</filter>
+			</field>
+			<field name="sFileName" dt="string" sort="1" >
+				<filter type="text" op="like" >
+					<param name="maxlength" value="256" />
+					<param name="size" value="10" />
+				</filter>
+			</field>
+			<field name="dtChanged" dt="datetime" sort="1" />
+			<field name="sChangedBy" dt="string" sort="1" >
+				<filter type="text" op="like" >
+					<param name="maxlength" value="30" />
+					<param name="size" value="7" />
+				</filter>
+			</field>
+			<field name="cAssociations" dt="int" sort="1" >
+				<filter type="text" op="eq" >
+					<param name="maxlength" value="10" />
+					<param name="size" value="4" />
+				</filter>
+			
+			
+			</field>
+			
+		</fields>
+	</view>
+	<view name="attract_loop_items" table="vwCSW_AttractLoopItems_lv" key="idIdleLoopElement">
+		<fields>
+			<field name="idIdleLoopElement" dt="int" sort="0" />
+			<field name="idIdleLoop" dt="int" sort="0" />
+			<field name="iSeq" dt="int" sort="1" />
+			
+			<field name="sName" dt="string" sort="0" >
+				<filter type="text" op="like">
+					<param name="maxlength" value="100" />
+					<param name="size" value="10" />
+				</filter>
+			</field>
+			
+			<field name="iFrameType" dt="int" sort="1" >
+				<filter type="lookupenum" op="eq">
+					<param name="type" value="MMD.Central.CentralLib.XmlObjects.FrameType" />
+				</filter>
+				<display type="lookupenum">
+					<param name="type" value="MMD.Central.CentralLib.XmlObjects.FrameType" />
+				</display>
+			</field>
+			<field name="dtChanged" dt="datetime" sort="1" />
+			<field name="sChangedBy" dt="string" sort="0" />
+			
+			<field desc="idMediaType" name="idMediaType" dt="int" sort="1" >
+				<filter type="lookupdb" op="eq">
+					<param name="sql" value="select idMediaType, sName from tblMMD_MetaDataMediaType where bUseInDevice = 1 order by sName"/>
+				</filter>
+				<display type="lookupdb" op="eq">
+					<param name="sql" value="select idMediaType, sName from tblMMD_MetaDataMediaType where bUseInDevice = 1 order by sName"/>
+				</display>
+			</field>
+
+		</fields>
+	</view>
+	<view name="feature_requests" table="vwCSW_FeatureRequest_lv" key="idFeatureRequest">
+		<field name="idFeatureRequest" dt="int" sort="0" />
+		<field name="idItem" dt="int" sort="1">
+			<filter type="text" op="eq">
+				<param name="maxlength" value="10" />
+				<param name="size" value="4" />
+			</filter>
+		</field>
+		<field name="dtChanged" dt="datetime" sort="1" />
+		<field name="sChangedBy" dt="string" sort="1" >
+			<filter type="text" op="like" >
+				<param name="maxlength" value="100" />
+				<param name="size" value="7" />
+			</filter>
+		</field>
+		<field name="sAuthor" dt="string" sort="1" >
+			<filter type="text" op="like" >
+				<param name="maxlength" value="100" />
+				<param name="size" value="7" />
+			</filter>
+		
+		</field>
+		
+		<field name="sTitle" dt="string" sort="1" >
+			<filter type="text" op="like" >
+				<param name="maxlength" value="260" />
+				<param name="size" value="15" />
+			</filter>
+		</field>
+		<field name="sArtist" dt="string" sort="1" >
+			<filter type="text" op="like" >
+				<param name="maxlength" value="100" />
+				<param name="size" value="15" />
+			</filter>
+		</field>
+		<field name="sXref" dt="string" sort="1" >
+			<filter type="text" op="like">
+				<param name="maxlength" value="12" />
+				<param name="size" value="8" />
+			</filter>
+		</field>
+	</view>
+	<view name="deviceconfiguration" table="vwCSW_DeviceConfiguration_lv" key="idDevice">
+		<fields>
+			<field desc="idDevice" name="idDevice" dt="int" sort="1" >
+				<filter type="text" op="eq">
+					<param name="maxlength" value="10" />
+					<param name="size" value="4" />
+				</filter>
+			</field>
+			<field name="idStore" dt="int" sort="1" >
+				<filter type="lookupdb" op="eq">                    
+                    <param name="sql" value="select idStore, sName from tblMMD_StoreConfiguration order by sName"/>
+                </filter>
+                <display type="lookupdb">
+                    <param name="sql" value="select idStore, sName from tblMMD_StoreConfiguration"/>
+                </display>		
+			</field>
+			<field name="idStoreConcept" dt="int" sort="1">
+				<filter type="lookupdb" op="eq">
+					<param name="sql" value="select idStoreConcept, sName from tblMMD_StoreConcept" />
+				</filter>
+				<display type="lookupdb" op="eq">
+					<param name="sql" value="select idStoreConcept, sName from tblMMD_StoreConcept" />
+				</display>
+			</field>
+
+			<field desc="idLocationMode" name="idLocationMode" dt="int" sort="1" >
+				<filter type="lookupdb" op="eq">                    
+                    <param name="sql" value="select idLocationMode, sName from tblMMD_LocationMode"/>
+                </filter>
+                <display type="lookupdb">
+                    <param name="sql" value="select idLocationMode, sName from tblMMD_LocationMode"/>
+                </display>		
+			</field>
+			<field desc="idIdleLoop" name="idIdleLoop" dt="int" sort="1">
+				<filter type="lookupdb" op="eq">                    
+                    <param name="sql" value="select idIdleLoop, sName from tblMMD_IdleLoop"/>
+                </filter>
+                <display type="lookupdb">
+                    <param name="sql" value="select idIdleLoop, sName from tblMMD_IdleLoop"/>
+                </display>					
+			</field>
+			<field desc="sMacAddress" name="sMacAddress" dt="string" sort="1">
+					<filter type="text" op="like" >
+						<param name="maxlength" value="20" />
+						<param name="size" value="10" />
+					</filter>	
+			</field>
+			<field name="cSessionLength" dt="int" sort="1">
+				<filter type="text" op="eq">
+					<param name="maxlength" value="10" />
+					<param name="size" value="4" />
+				</filter>
+			</field>
+			<field name="cSessions" dt="int" sort="1">
+				<filter type="text" op="eq">
+					<param name="maxlength" value="10" />
+					<param name="size" value="4" />
+				</filter>
+			</field>
+			<field name="cScans" dt="int" sort="1">
+				<filter type="text" op="eq">
+					<param name="maxlength" value="10" />
+					<param name="size" value="4" />
+				</filter>
+			</field>
+			<field name="dtLastUpdate" dt="datetime" sort="1" />			
+		</fields>
+	</view>
+	<view name="storeconfiguration" table="vwCSW_StoreConfiguration_lv" key="idStore">
+		<fields>
+			<field  name="idStore" dt="int" sort="1" >
+				<filter type="text" op="eq">
+					<param name="maxlength" value="10" />
+					<param name="size" value="4" />
+				</filter>
+			</field>
+			<field name="idStoreConcept" dt="int" sort="1">
+				<filter type="lookupdb" op="eq">
+					<param name="sql" value="select idStoreConcept, sName from tblMMD_StoreConcept" />
+				</filter>
+				<display type="lookupdb" op="eq">
+					<param name="sql" value="select idStoreConcept, sName from tblMMD_StoreConcept" />
+				</display>
+			</field>
+			<field name="sName" dt="string" sort="1">
+				<filter type="text" op="like">
+					<param name="maxlength" value="100" />
+					<param name="size" value="10" />
+				</filter>
+			</field>
+			<field name="sCity" dt="string" sort="1">
+				<filter type="text" op="like">
+					<param name="maxlength" value="100" />
+					<param name="size" value="10" />
+				</filter>
+			</field>
+			<field name="sState" dt="string" sort="1">
+				<filter type="text" op="like">
+					<param name="maxlength" value="2" />
+					<param name="size" value="2" />
+				</filter>
+			</field>
+			<field name="sZip" dt="string" sort="1">
+				<filter type="text" op="like">
+					<param name="maxlength" value="10" />
+					<param name="size" value="5" />
+				</filter>
+			</field>
+			<field name="cDevices" dt="int" sort="1">
+				<filter type="text" op="eq">
+					<param name="maxlength" value="10" />
+					<param name="size" value="4" />				
+				</filter>
+			</field>
+			<field name="cWorking" dt="int" sort="1">
+				<filter type="text" op="eq">
+					<param name="maxlength" value="10" />
+					<param name="size" value="4" />				
+				</filter>
+			</field>
+			<field name="sHostName" dt="string" sort="1">
+				<filter type="text" op="like">
+					<param name="maxlength" value="100" />
+					<param name="size" value="10" />
+				</filter>
+			</field>
+			
+		</fields>
+	</view>
+
+
+  </views>
+  <joins>
+    <lefttable name="vwMentor_Person">
+        <righttable name="tblMentor_MR" type="INNER">
+            <joinfield name="pn" leftname="pn" rightname="pn"/>
+        </righttable>
+        <righttable name="tblMentor_ME" type="INNER">
+            <joinfield name="pn" leftname="pn" rightname="pn"/>
+        </righttable>
+        <righttable name="vwMentor_FSFullLocation" type="LEFT">
+            <joinfield name="BuildingId" leftname="BuildingId" rightname="BuildingId"/>
+        </righttable>
+    </lefttable>
+    <lefttable name="vwMentor_MGInfo">
+    </lefttable>
+    <lefttable name="vwMentor_MGParticipants_lv">
+    </lefttable>
+  </joins>
+</mentortool>
+

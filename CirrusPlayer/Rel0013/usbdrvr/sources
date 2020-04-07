@@ -1,0 +1,24 @@
+#*****************************************************************************
+#
+# SOURCES - Defines how to build the Maverick(tm) USB Driver in the NT build
+#           environment.
+#
+# Copyright (c) 2000 Cirrus Logic, Inc.
+#
+#*****************************************************************************
+TARGETNAME=mavusb
+TARGETTYPE=DRIVER
+DRIVERTYPE=WDM
+
+TARGETPATH=obj
+
+TARGETLIBS=$(DDK_LIB_PATH)\usbd.lib
+
+USE_MAPSYM=1
+
+SOURCES=mavusb.rc  \
+        mavioctl.c \
+        mavocrw.c  \
+        mavpnp.c   \
+        mavpwr.c   \
+        mavusb.c

@@ -1,0 +1,22 @@
+<HTML><BODY>
+GET test:<br>
+
+<FORM ACTION="/scripts/blat.exe" METHOD="GET">
+Enter here your email
+Sender: <INPUT TYPE="text" SIZE="50" NAME="Sender" VALUE="myname@mydomain.com">
+<br>
+To:  <INPUT TYPE="text" SIZE="50" NAME="TO" VALUE="myname2@yourdomain.com">
+<br>
+Subject:    <INPUT TYPE="text" SIZE="50" NAME="Blat_Subject" VALUE="The sujet : blat cgi demo">
+<br>
+SMTP Server: <INPUT TYPE="text" SIZE="50" NAME="SERVER" VALUE="smtp.site1.csi.com">
+<br>
+user var2:    <INPUT TYPE="text" SIZE="50" NAME="Var2" VALUE="Var_2">
+<br>
+user var3:    <INPUT TYPE="text" SIZE="50" NAME="Var3" VALUE="Var_3">
+<br>
+    <INPUT TYPE="hidden" NAME="Blat_success" VALUE="http://localhost/good.htm">
+    <INPUT TYPE="hidden" NAME="Blat_failure" VALUE="http://localhost/bad.htm">
+    <INPUT TYPE="hidden" NAME="Blat_Mime" VALUE="Y">
+    <INPUT TYPE="submit" VALUE="submit"><BR>
+</form></BODY></HTML>

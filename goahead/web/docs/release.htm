@@ -1,0 +1,285 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<HTML><HEAD><TITLE>GoAhead WebServer 2.1 Release Notes</TITLE>
+<META content="text/html; charset=iso-8859-1" http-equiv=Content-Type>
+<META content="MSHTML 5.00.2314.1000" name=GENERATOR>
+<LINK REL="stylesheet" HREF="../style/normal_ws.css" TYPE="text/css"></HEAD>
+<BODY bgColor=#ffffff>
+
+<table width="580"><tr><td>
+<H1> GoAhead® WebServer 2.1 Release Notes </H1><P><B>Release Date:</B> 5/23/00<BR><B>File: </B>release.htm<BR></P><P> These  notes provides 
+release-specific information for the May, 2000 release of GoAhead 
+WebServer 2.1.  Please 
+see the License Agreement  as well as the online documentation included 
+with this WebServer  release.  </P><H2> Table of Contents</H2><BLOCKQUOTE><P>1. <A HREF="#what">What's 
+New in This Release?<BR></A>2. <A HREF="#requirements">Operating System Support</A><BR>3. <A HREF="#feature">Feature Support</A><BR>4. <A 
+href="#installation">Compiling and Running GoAhead WebServer 2.1<BR></A>5. <A HREF="#accessing">Accessing the GoAhead WebServer Home Page</A><BR>6. <A HREF="#webcompiler">The GoAhead WebCompiler</A><BR>7. <A HREF="#extensions">The   WebServer Extensions</A><BR>8. <A HREF="#Issues">Known Issues in WebServer 2.1<BR></A>9. <A HREF="#kissues">Resolved  Issues in WebServer 2.1</A><BR>10. <A HREF="#rissues">Resolved Issues from WebServer 2.0</A><BR>11. <A HREF="#copyright">Copyright 
+Information </A></P></BLOCKQUOTE><H2>1. What's New in This Release?<A name=what></A> </H2><P>WebServer 2.1 differs as follows from release 2.0: </P><BLOCKQUOTE><UL><LI>Windows 2000 Port</LI><LI>eCos port</LI><LI><A HREF="#SSL">Secure Socket Layer </A>(SSL)</LI><LI><A HREF="#DA">Digest Access Authentication</A> (DAA)</LI><LI><A HREF="#UM">User Management</A></LI><LI><A HREF="#newapis">New APIs</A></LI><LI><A HREF="#CGI">Standard CGI Implementation</A>  </LI></UL></BLOCKQUOTE><H2>Secure Socket Layer  <A NAME="SSL"></A></H2><P>WebServer 2.1   supports  Secure Socket Layering (SSL), a protocol created by Netscape Communications Corporation for authentication and encryption over TCP/IP networks. SSL is, for the most part, invisible to the end user.  The web browser may notify the user that they are about to enter a secure web page, and perhaps use a visual cue to indicate the duration that SSL is active. The HTTPS prefix on the URL  (<B>https</B>://www.goahead.com)  indicates that the SSL protocol will be used.    </P><P> 
+
+SSL uses two layers:  the <B>SSL Message Layer</B> and the <B>SSL Record Layer</B>.  The Message Layer  constructs and sends user data, handshake messages, alert messages, and change cipher specification messages.  Its primary  task is to set  up the mutual understanding required by both client and server for the SSL Record Layer, which is responsible for sending  SSL data records.
+
+ 
+
+</P><H2>Digest Access Authentication<A NAME="DA"></A></H2><P>WebServer 2.1 supports digest access authentication (DAA), which is  an authentication scheme for HTTP that is more secure than the   basic access authentication scheme.  The primary advantage of DAA is that , unlike basic access authentication, passwords are never transmitted across the Internet in an unencrypted form. </P><P>The web browser presentation for DAA  is essentially the same as for basic access authentication. The user typically is prompted for a user ID and password before being allowed  access to a URL. In basic access,  passwords are sent as clear text.  In  digest access, the user ID and password are encrypted using  the RSA Data Security, Inc. MD5 Message-Digest Algorithm before being sent. </P><H2><B>User Management<A NAME="UM"></A></B></H2><P>In   password protected sites,  multiple user IDs with  multiple levels of security may be necessary. In  WebServer 2.1, these include:
+</P><BLOCKQUOTE><UL><LI>User IDs</LI><LI>User Groups</LI><LI>URL Access Limits
+</LI></UL></BLOCKQUOTE><P>A <B>User ID</B> contains   these data elements:
+</P><BLOCKQUOTE><OL><LI>User Name</LI><LI>User Password
+</LI><LI>User Group (determines access rights of user)
+</LI><LI>Protect</LI><LI>Enabled  </LI></OL></BLOCKQUOTE><P><B>User Groups</B> contain these data elements:
+</P><OL><OL><LI>Group Name (i.e., administrator, user, guest)
+</LI><LI>Privileges (none, read files,  administrate users)
+</LI><LI>Protect </LI><LI>Enabled
+</LI></OL></OL><P>URL Access Limits are used when certain directories or URL pages on the web site have exceptionally secure access limits.  If a directory has an access limit associated with it, its contents default to the directories access limit. </P><P><B>URL Access Limits</B> have the following data elements:
+</P><BLOCKQUOTE><OL><LI>URL name (name of the web page or directory)
+</LI><LI>Access Method (one of NONE, FULL, BASIC, or DIGEST)</LI><LI>Encryption Required
+</LI><LI>User Group (currently limited to one user group for simplicity)
+
+</LI></OL></BLOCKQUOTE><P>By default, there are no user functions  that require   administrator privilege; however, the following functions  could  be configured to require administrator privileges if that level  of security is necessary  in your application:</P><BLOCKQUOTE><OL><LI>
+
+Add User
+</LI><LI>Delete User
+</LI><LI>Change Password
+</LI><LI>Change User Class
+</LI><LI>Add User Group
+</LI><LI>Delete User Group
+</LI><LI>Change Privileges
+</LI><LI>Add Access Limit
+</LI><LI>Delete Access Limit
+</LI><LI>Change Privilege
+</LI><LI>Change User Group
+</LI></OL></BLOCKQUOTE><H4>
+
+ User Management  Page Access
+
+</H4><P>Whenever a browser    requests a page,   WebServer   checks to see if there is an AccessLimit assigned to  the requested page.  Access Limits are  stored in the umconfig.txt file located in the operating system directory where  WebServer 2.1 was installed. If   no user group is assigned to the access limit, then the default privilege takes effect with WebServer taking  the following actions:
+
+</P><BLOCKQUOTE><UL><LI>If the  default Privilege is "none", WebServer responds with the &quot;File not Found&quot; header.
+</LI><LI>If the default Privilege is not "none", WebServer returns the  page.</LI></UL></BLOCKQUOTE><P>If  a user group is assigned to the access limit, then WebServer:</P><OL><OL><LI>sends an Authenticate response header (DAA if enabled),
+</LI><LI>waits for the receipt of Authorization Request Header from the client,</LI><LI>compares the user ID and password with those stored  in the registered context, and
+</LI><LI>sends the page to the client if the user is authorized.
+
+
+
+</LI></OL></OL><H2>New User Management APIs<A NAME="newapis"></A></H2><P>These APIs are new to WebServer 2.1:</P><TABLE WIDTH="58%" BORDER="0"><TR valign=top><TD WIDTH="27%"><P><B>Database<BR><BR></B>dbAddRow<BR>dbClose	 
+<BR>dbDeleteRow
+<BR>dbGetTableId
+<BR>dbGetTableNrow<BR>dbGetTableName 
+<BR>dbLoad	 
+<BR>dbOpen	 
+<BR>dbReadInt	 
+<BR>dbReadStr	 
+<BR>dbRegisterDBSchema
+<BR>dbSave	 
+<BR>dbSearchStr	 
+<BR>dbSetTableNrow	 
+<BR>dbWriteInt	 
+<BR>dbWriteStr	<BR>dbZero<BR><BR></P></TD><TD WIDTH="32%"><P><B>User Management<BR><BR></B>umAccessLimitExists
+<BR>umAddAccessLimit	
+<BR>umAddGroup
+<BR>umAddUser	
+<BR>umClose	
+<BR>umCommit	
+<BR>umDeleteAccessLimit	
+<BR>umDeleteGroup
+<BR>umDeleteUser	
+<BR>umGetAccessLimit<BR>umGetAccessLimitGroup
+<BR>umGetAccessLimitMethod
+<BR>umGetAccessLimitSecure
+<BR>umGetAccessMethodForURL
+<BR>umGetFirstAccessLimit<BR>umGetFirstGroup<BR>umGetFirstUser<BR>umGetGroupAccessMethod
+<BR>umGetGroupEnabled	
+<BR>umGetGroupPrivilege	
+<BR>umGetNextGroup<BR>
+	
+</P></TD><TD WIDTH="41%"><P>umGetNextUser<BR>umGetUserGroup	<BR>umGetUserEnabled	
+<BR>umGetUserPassword<BR>umGroupExists<BR>umOpen	
+<BR>umRestore	
+<BR>umSetAccessLimitGroup
+<BR>umSetAccessLimitMethod
+<BR>umSetAccessLimitSecure
+<BR>umSetGroupAccessMethod
+<BR>umSetGroupEnabled	
+<BR>umSetGroupPrivilege	
+<BR>umSetUserEnabled	
+<BR>umSetUserGroup	
+<BR>umSetUserPassword	
+<BR>umUserCanAccessURL<BR>umUserExists	
+<BR><BR><B>Digest Authentication</B>	
+<BR><BR>websCalcNonce	
+<BR>websCalcOpaque	
+<BR>websCalcDigest	<BR></P></TD></TR></TABLE><H2>Standard CGI Implementation<A NAME="CGI"></A> </H2><P><B>Note</B>: CGI is not supported in Windows CE. </P><P>The Common Gateway Interface (CGI) is a standard for interfacing external applications with information servers, such as HTTP or Web servers. A plain HTML document retrieved by  a Web daemon   is a static  text file that doesn't change. A CGI program, on the other hand, is executed in real-time and able to  output dynamic content.</P><P> CGI scripts are written in any language that can read STDIN, write to STDOUT, and read environment variables. This means that virtually any programming language can be used, including C, Perl, or even shell scripting. </P><P><B>Note:</B> this WebServer documentation does not  provide instructions  on how to  write  CGI scripts for processing Web forms; however,    numerous books and Websites are readily available that do an excellent job in covering  this basic  information. </P><P>In  WebServer  2.0, GoForms CGI processing was accomplished by instructing the webs module to treat all URLs beginning with &quot;/goform&quot;  as  <A HREF="../over/goforms.htm">GoForms</A>.   Using a similar mechanism, WebServer 2.1 has   a new "handler" that is  called when URL requests are received for URLs beginning with &quot;/cgi-bin&quot;.  CGI executable processes must be located in the WebServer's  <FONT FACE="Courier New, Courier, mono">cgi-bin</FONT> subdirectory.  Separate processes will be created for each CGI request.
+</P><H3>Environment Variables</H3><P>Input to Standard CGIs is   accomplished mainly through these environment variables:</P><P>
+
+SERVER_SOFTWARE<BR>  The name and version of the information server software answering the request (and running the gateway). <BR>Format: name/version 
+</P><P>SERVER_NAME<BR>  The server's hostname, DNS alias, or IP address as it would appear in self-referencing URLs.</P><P> 
+GATEWAY_INTERFACE<BR>The revision of the CGI specification used by this server. <BR>Format: CGI/revision 
+</P><P>SERVER_PROTOCOL<BR>The name and revision of the information protocol used by this request. <BR>Format: protocol/revision 
+</P><P>SERVER_PORT<BR>The port number receiving  the request. 
+</P><P>REQUEST_METHOD<BR>The method used to make  the request. For HTTP, this is "GET", "HEAD", "POST", etc. 
+</P><P>PATH_INFO<BR>The extra path information, as given by the client. In other words, scripts can be accessed by their virtual pathname, followed by extra information at the end of this path. The extra information is sent as PATH_INFO. The server  decodes  this information  before it is passed to the CGI script. 
+</P><P>PATH_TRANSLATED<BR>The server provides a translated version of PATH_INFO, which completes a  virtual-to-physical mapping of the path as required. 
+</P><P>SCRIPT_NAME<BR>A virtual path to the script being executed for self-referencing URLs. 
+</P><P>QUERY_STRING<BR>The information which follows the "?" in the URL which referenced this script. This is the query information. It is not   decoded in any fashion. This variable is always   set when there is query information, regardless of command line decoding. 
+</P><P>REMOTE_HOST<BR>The hostname making the request. If the server does not have this information, it will set REMOTE_ADDR and leave this unset. 
+</P><P>REMOTE_ADDR<BR>The IP address of the remote host making the request. 
+</P><P>AUTH_TYPE<BR>If  the script is protected, this is the protocol-specific authentication method used to validate the user. 
+</P><P>REMOTE_USER<BR>If  the script is protected, this is the authenticated username. 
+</P><P>REMOTE_IDENT<BR>This variable is set to the remote user name retrieved from the server. Use of this variable should be limited to logging only. 
+</P><P>CONTENT_TYPE<BR>For queries having  attached information, such as HTTP POST and PUT, this identifies  the content type of the data. 
+</P><P>CONTENT_LENGTH<BR>The length of the said content as given by the client. 
+
+</P><P>HTTP_ACCEPT<BR>The MIME types accepted by the  client, as given by HTTP headers. Other protocols may need to receive this information from elsewhere. Each item in this list should be separated by commas as specified by  HTTP. <BR>Format: type/subtype, type/subtype. 
+</P><P>HTTP_USER_AGENT<BR>The browser being used by the  client  to send the request. General format: software/version library/version. 
+</P><H3>Standard CGI Implementation Data Structures</H3><P>
+
+ 
+
+The data structures provided  for GoForms  function  for standard CGI  implementation.</P><H2>2. Operating System Support <A NAME="requirements"></A> </H2><BLOCKQUOTE><UL><LI>Windows 2000</LI><LI>Windows 98</LI><LI>Windows 95 </LI><LI>Windows NT</LI><LI>Windows CE</LI><LI>VxWorks 5.3.1</LI><LI>VxWorks 5.4</LI><LI>LynxOS</LI><LI>LINUX </LI><LI>eCos</LI><LI>QNX</LI></UL></BLOCKQUOTE><H2>3. Feature Support<A NAME="feature"></A></H2><TABLE BORDER="0" WIDTH="454">
+
+<TR><TD WIDTH="98">&nbsp;</TD><TD WIDTH="74"><B>User <BR>Management</B></TD><TD WIDTH="29"><B>DAA</B></TD><TD WIDTH="34"><B>SSL</B></TD><TD WIDTH="25"><B>CGI</B></TD><TD WIDTH="35"><B>ASP</B></TD><TD WIDTH="61"><B>JavaScript</B></TD><TD WIDTH="64"><B>GoForms</B></TD></TR>
+
+<TR><TD WIDTH="98"><B>Windows 2000</B></TD><TD WIDTH="74"> <DIV ALIGN="CENTER">yes</DIV></TD><TD WIDTH="29"><DIV ALIGN="CENTER">yes</DIV></TD><TD WIDTH="34"><DIV ALIGN="CENTER">yes</DIV></TD><TD WIDTH="25"><DIV ALIGN="CENTER">yes</DIV></TD><TD WIDTH="35"><DIV ALIGN="CENTER">yes</DIV></TD><TD WIDTH="61"><DIV ALIGN="CENTER">yes</DIV></TD><TD WIDTH="64"><DIV ALIGN="CENTER">yes</DIV></TD></TR>
+
+<TR><TD WIDTH="98"><B>Windows 98</B></TD><TD WIDTH="74"><DIV ALIGN="CENTER">yes</DIV></TD><TD WIDTH="29"><DIV ALIGN="CENTER">yes</DIV></TD><TD WIDTH="34"><DIV ALIGN="CENTER">yes</DIV></TD><TD WIDTH="25"><DIV ALIGN="CENTER">yes</DIV></TD><TD WIDTH="35"><DIV ALIGN="CENTER">yes</DIV></TD><TD WIDTH="61"><DIV ALIGN="CENTER">yes</DIV></TD><TD WIDTH="64"><DIV ALIGN="CENTER">yes</DIV></TD></TR>
+
+<TR><TD WIDTH="98"><B>Windows NT</B></TD><TD WIDTH="74"><DIV ALIGN="CENTER">yes</DIV></TD><TD WIDTH="29"><DIV ALIGN="CENTER">yes</DIV></TD><TD WIDTH="34"><DIV ALIGN="CENTER">yes</DIV></TD><TD WIDTH="25"><DIV ALIGN="CENTER">yes</DIV></TD><TD WIDTH="35"><DIV ALIGN="CENTER">yes</DIV></TD><TD WIDTH="61"><DIV ALIGN="CENTER">yes</DIV></TD><TD WIDTH="64"><DIV ALIGN="CENTER">yes</DIV></TD></TR>
+
+<TR><TD WIDTH="98"><B>Windows CE</B></TD><TD WIDTH="74"><DIV ALIGN="CENTER">yes</DIV></TD><TD WIDTH="29"><DIV ALIGN="CENTER">yes</DIV></TD><TD WIDTH="34"><DIV ALIGN="CENTER"><B>no</B></DIV></TD><TD WIDTH="25"><DIV ALIGN="CENTER"><B>no</B></DIV></TD><TD WIDTH="35"><DIV ALIGN="CENTER">yes</DIV></TD><TD WIDTH="61"><DIV ALIGN="CENTER">yes</DIV></TD><TD WIDTH="64"><DIV ALIGN="CENTER">yes</DIV></TD></TR>
+
+<TR><TD WIDTH="98"><B>VXWorks</B></TD><TD WIDTH="74"><DIV ALIGN="CENTER">yes</DIV></TD><TD WIDTH="29"><DIV ALIGN="CENTER">yes</DIV></TD><TD WIDTH="34"><DIV ALIGN="CENTER"><B>no</B></DIV></TD><TD WIDTH="25"><DIV ALIGN="CENTER">yes*</DIV></TD><TD WIDTH="35"><DIV ALIGN="CENTER">yes</DIV></TD><TD WIDTH="61"><DIV ALIGN="CENTER">yes</DIV></TD><TD WIDTH="64"><DIV ALIGN="CENTER">yes</DIV></TD></TR>
+
+<TR><TD WIDTH="98"><B>Lynx</B></TD><TD WIDTH="74"><DIV ALIGN="CENTER">yes</DIV></TD><TD WIDTH="29"><DIV ALIGN="CENTER">yes</DIV></TD><TD WIDTH="34"><DIV ALIGN="CENTER"><B>no</B></DIV></TD><TD WIDTH="25"><DIV ALIGN="CENTER">yes</DIV></TD><TD WIDTH="35"><DIV ALIGN="CENTER">yes</DIV></TD><TD WIDTH="61"><DIV ALIGN="CENTER">yes</DIV></TD><TD WIDTH="64"><DIV ALIGN="CENTER">yes</DIV></TD></TR>
+
+<TR><TD WIDTH="98"><B>Linux</B></TD><TD WIDTH="74"><DIV ALIGN="CENTER">yes</DIV></TD><TD WIDTH="29"><DIV ALIGN="CENTER">yes</DIV></TD><TD WIDTH="34"><DIV ALIGN="CENTER">yes</DIV></TD><TD WIDTH="25"><DIV ALIGN="CENTER">yes</DIV></TD><TD WIDTH="35"><DIV ALIGN="CENTER">yes</DIV></TD><TD WIDTH="61"><DIV ALIGN="CENTER">yes</DIV></TD><TD WIDTH="64"><DIV ALIGN="CENTER">yes</DIV></TD></TR>
+
+<TR><TD WIDTH="98"><B>eCos</B></TD><TD WIDTH="74"><DIV ALIGN="CENTER">yes<B>**</B></DIV></TD><TD WIDTH="29"><DIV ALIGN="CENTER">yes<B>**</B></DIV></TD><TD WIDTH="34"><DIV ALIGN="CENTER"><B>no</B></DIV></TD><TD WIDTH="25"><DIV ALIGN="CENTER">yes<B>**</B></DIV></TD><TD WIDTH="35"><DIV ALIGN="CENTER">yes<B>**</B></DIV></TD><TD WIDTH="61"><DIV ALIGN="CENTER">yes<B>**</B></DIV></TD><TD WIDTH="64"><DIV ALIGN="CENTER">yes<B>**</B></DIV></TD></TR>
+
+
+
+<TR><TD WIDTH="98"><B>QNX  </B></TD><TD WIDTH="74"><DIV ALIGN="CENTER">yes<B>**</B></DIV></TD><TD WIDTH="29"><DIV ALIGN="CENTER">yes<B>**</B></DIV></TD><TD WIDTH="34"><DIV ALIGN="CENTER">yes<B>**</B></DIV></TD><TD WIDTH="25"><DIV ALIGN="CENTER">yes<B>**</B></DIV></TD><TD WIDTH="35"><DIV ALIGN="CENTER">yes<B>**</B></DIV></TD><TD WIDTH="61"><DIV ALIGN="CENTER">yes<B>**</B></DIV></TD><TD WIDTH="64"><DIV ALIGN="CENTER">yes<B>**</B></DIV></TD></TR></TABLE><P><BR>* Need to follow special <A HREF="../over/cgi.htm">CGI instructions for VxWorks</A>.<BR>** Not tested by GoAhead.</P><H2>4. Compiling and Running  GoAhead WebServer 2.1<A name=installation></A> 
+</H2><P>This release supports  compiling and running  the
+GoAhead WebServer under WindRiver VxWorks, Windows 95, 98, 2000, NT, and CE, LynxOS, LINUX, and
+eCos. </P><P>Before trying to build the GoAhead WebServer,  ensure that  you have the
+latest  version from GoAhead by checking <a href="http://www.goahead.com/webserver">http://www.goahead.com/webserver</a>.
+Each supported platform has an operating system subdirectory, which includes a Makefile
+for building, and a main program for invoking and initializing the GoAhead WebServer.</P><P>To build and run  WebServer, change to the relevant
+operating system directory and use &quot;make&quot; or the instructions below   to initiate the build. Some of the make or batch
+files may need to be modified for the configuration of your system or the target system.
+See <A HREF="#configws">Configuring the GoAhead WebServer</A> below.</P><H3>Installation Notes</H3><P><B>User Management<BR></B>The user management and access limit configuration is stored in a file called umconfig.txt. This file is created when the user management configuration is saved through the web interface.  It is not provided in this distribution. </P><P><B>Standard CGI Implementation<BR></B>The cgitest.c    file is a sample CGI program that creates an HTML page that displays the CGI environment variables.  This source code module is stand-alone, meaning that no other source files are required to generate an executable (with the exception of &quot;stdio.h&quot;).  For VxWorks, a similar sample CGI program can be found in vxcgitst.c.</P><H3>Operating Systems</H3><P></P><P><strong>For VxWorks:</strong></P><blockquote>
+
+<PRE>
+  cd VXWORKS
+  setpath 
+  make
+</PRE></blockquote><P>The above commands build for an x86 platform. If you are  building for a Power PC 604 platform, use &quot;ppcpath&quot; and &quot;make -f Makefile.ppc&quot; instead. For other platforms, modify setpath.bat to set the PATH environment variable for your development environment and target device.  Modify the compiler flags and options in Makefile to build for your specific target device. </P><P>Load webs.o onto the target system and use standard VxWorks procedures to load the program into memory and execute it (load module and task spawn).</P><P>To terminate WebServer so that it can be   restarted without being reloaded, send a SIGTERM or SIGKILL signal to the WebServer task by using the &quot;kill&quot; API with signal numbers 15 or 9 respectively.  Never use the taskDelete or td APIs when  you plan on restarting WebServer.</P><P><strong>For Windows NT:</strong></P><blockquote><PRE> cd WIN
+ nmake /f webs.mak
+ webs</PRE></blockquote><P>To stop WebServer, right click on the taskbar icon for the
+  GoAhead WebServer and select &quot;Close&quot;.</P><p><strong>For Windows 95, 98,  2000:</strong>		</p><BLOCKQUOTE><OL></OL><PRE> cd WIN
+&nbsp;setpath (NOTE: Users of Visual Studio 6.0 may 
+          not need to use this command to set their environment path.) 
+ nmake /f webs.mak
+ webs</PRE></BLOCKQUOTE><P>Modify setpath.bat to set PATH environment variable for your development environment.</P><P>To stop WebServer, right click on the taskbar icon for the
+GoAhead WebServer and select &quot;Close&quot;.</P><P><B>If using Microsoft Visual Studio:</B></P><OL><OL><LI>Open MS C++.</LI><LI>Open the provided workspace and select File|Open Workspace.</LI><LI>Navigate to the directory where you unzipped the WebServer files (i.e., E:\webserver\win\webs.dsw).</LI><LI>Click   Open.</LI><LI>Select 'build webs.exe' from the Build Menu. </LI><LI> The following should appear in the bottom window:<BR><BR><P>--------------------Configuration: webs - Win32<BR>Debug-------------------------------<BR>webs.exe - 0 errors(s), 0 warning(s)</P></LI><LI>From the Build Menu, select  'Execute webs.exe' . The  'GoAhead WebServer' button should now appear on the taskbar. </LI><LI>Follow the instructions provided in &quot;<A HREF="#accessing">Accessing the WebServer Home Page</A>&quot;. </LI><LI>If SSL support is required, these additional steps are necessary:<OL><LI type=a>Add the webSSL.c file to the list of program files.</LI><LI type=a>Add WEBS.SSL_SUPPORT to the preprocessor definitions of the project settings.</LI><LI type=a>Add the include path of the RSA package to the additional include directories.</LI><LI type=a>Add the library path of the RSA package to the additional library paths.</LI><LI type=a>Add the RSA library file name to the library modules. </LI></OL></OL></OL><p><B>Note for users of Microsoft Visual C++:</B></p><P>If you see the following Setup Environment Variables message after
+installing Visual C++, use  the Visual C++  instructions provided below <B>BEFORE</B> building and running GoAhead
+WebServer. </P><P><B>Setup Environment Variables message:</B></P><P>&quot;For your convenience, the environment variables required to
+  run build tools from a command prompt are saved in the VCVARS32.BAT file in your BIN
+  directory.&quot;</P><P><B>Visual C++ Instructions:</B></P><P>1. Copy the VCVARS32.BAT file to your root directory (usually C:\).<br>
+2. Add the file's path name to your AUTOEXEC.BAT file.<br>
+3. Reboot your System.</P><p><strong>For Windows CE:</strong></p><P>Either of two different methods may be used  to  build  the Windows CE WebServer: </P><P>Using build.bat:</P><OL><LI>In the WebServer build.bat file (CE/build.bat), ensure that the &quot;set PATH&quot; statement is correct, and  that both the include and library files paths are correct.</LI><LI>Ensure that all compiler flags are set correctly.<BR><BR><B>Note</B>: You can get the correct flag settings for each processor from within Visual C++. Set your project to build against the target SDK. Access the compiler settings  from the menu bar. Choose Project, Settings, and  the C/C++ tab.  The textbox labeled &quot;Preprocessor definitions&quot; lists the compiler settings. </LI><LI>Run the build.bat file. </LI><LI>Load webs.exe and your web pages on to your CE device
+  using your normal procedures to transfer files  to the device. The default location for the
+  web pages is in the \web directory. This can be modified in main.c. Using precompiled and
+  linked pages (see WEBS_PAGE_ROM and WebCompiler below) make it easy to load the
+  application and its pages to the system in one step. </LI></OL><P>Using Microsoft's C++  Visual Studio:  </P><OL><LI>In Microsoft Visual C++, Visual Studio, open the workspace webs.dsw in
+  the CE subdirectory.</LI><LI>Set the include and library paths properly for your device. <BR>Be sure
+  the symbolic constants CE, UEMF, WEBS, and UNICODE are defined. </LI><LI>Use the build facilities of
+  Visual Studio to generate webs.exe. </LI><LI>Load webs.exe and your web pages on to your CE device
+  using your normal procedures to transfer files  to the device. The default location for the
+  web pages is in the \web directory. This can be modified in main.c. Using precompiled and
+  linked pages (see WEBS_PAGE_ROM and WebCompiler below) make it easy to load the
+  application and its pages to the system in one step. </LI></OL><P><B>Note:</B> By default,  user management and digest access are not added when WebServer compiles. If these features are desired, set the proper flags in the build.bat file.</P><P><strong>For LINUX:</strong></P><blockquote>
+<PRE>
+cd LINUX
+make
+su;# As super user
+./webs</PRE></blockquote><P><strong>For LYNX:</strong></P><blockquote>
+<PRE>cd LYNX
+make
+su;# As super user
+./webs</PRE></blockquote><P><strong>For eCos</strong>:</P><blockquote>
+
+<PRE>
+cd ECOS
+make
+su;# As super user
+webs</PRE></blockquote><P><B>For QNX:</B></P><BLOCKQUOTE><PRE>CD QNX4
+make
+su ;# As super user
+webs
+</PRE></BLOCKQUOTE><H2><strong> 5. Accessing the WebServer   Home Page (Windows)<A NAME="accessing"></A> </strong></H2><P>1. Launch your browser on the same system as WebServer.
+</P><P>2. Launch GoAhead WebServer using web.exe (located in the folder for your OS, 
+   e.g., WIN).
+   <BR>Note: WebServer icon should now appear in the task menu.
+</P><P>3. In the browser's Address field enter "http://[YOURHOSTNAME]" or 
+   "http://[YOURIPADDRESS] 
+   <BR>  Note: defaults to port 80. Otherwise use "http://xxxxxxx:yy" where "yy" is 
+   the correct port number.
+</P><P>To determine your system's host name or IP address, at the command prompt type either &quot;hostname&quot; &lt;enter&gt; or &quot;ipconfig&quot; &lt;enter&gt; (for Win95, instead use &quot;winipcfg&quot; to see the IP address). </P><P>4. The server's default home page is home.asp. </P><H3><strong>Configuring the GoAhead WebServer<A NAME="configws"></A></strong></H3><P>You can customize the configuration of the GoAhead WebServer by
+changing the compiler defines in the per-operating system Makefile. The following defines
+are relevant:</P><BLOCKQUOTE><P>WEBS_PAGE_ROM <BR>Define this to retrieve pages from ROM vs file system.</P><P>WEBS_LOG_SUPPORT <BR>Define this to enable loging of web accesses to a
+file.</P><P>WEBS_KEEP_ALIVE_SUPPORT <BR>Define this to enable HTTP/1.0 keep alive support.<BR>(untested in WeServer 2.1)</P><P>WEBS_IF_MODIFIED_SUPPORT <BR>Define this to enable if-modified-since
+support.<BR>(untested in WeServer 2.1)</P><P>B_STATS <BR>Define this to enable memory and stack statistics.</P><P>DIGEST_ACCESS_SUPPORT<BR>Define this to enable Digest Access Authentication.</P><P>USER_MANAGEMENT_SUPPORT<BR>Define this to enable the use and configure-ability of User Management.</P><P>WEBS_SSL_SUPPORT<BR>Define this to enable SSL support.</P></BLOCKQUOTE><P>In all cases, the symbolic constants UEMF and WEBS <B>must</B> be defined in the command
+line arguments to the compiler. The symbolic constant UNICODE needs to be defined for
+Windows CE compilations or any other builds that need to use unicoded character strings. Please see  the WebServer online documentation for more detailed configuration
+instructions. </P><P>You should also customize the per-operating system main.c startup
+program. For example, the Windows main program is under WIN/main.c. This main program
+defines the HTTP port, password,   web page directory, default error handling, and default trace message handling, among other things. It is expected
+that you will use this program as the basis for integrating the source into your real-time
+operating environment. For VXWORKS, you may need to change the CC, LD definitions in
+VXWORKS/Makefile if you are using a different BSP. Also you will need to change the
+variable ROOT_DIR in main.c to reflect the name of the root directory for your file
+system. When editing source files, set your tab stop setting to 4.</P><H2><strong>6. GoAhead WebCompiler<A NAME="webcompiler"></A></strong></H2><P>The WebCompiler creates ROMable C source code for a set of Web
+pages. The WebCompiler takes as input a list of files and a prefix to strip off the web
+page filenames. It writes  to its standard output a C source file representing the web
+pages. For example:</P><BLOCKQUOTE><PRE>webcomp /mydir file.list &gt;webrom.c </PRE></BLOCKQUOTE><P>The first parameter is the prefix to remove from all the files in
+the file.list. The standard Makefiles are already setup to compile webrom.c. Please see <A HREF="#configws">Configuring GoAhead WebServer</A>  above for instructions on enabling ROM access.</P><H2><strong> 7. GoAhead WebServer Extensions<A NAME="extensions"></A></strong></H2><P>If you   create some great extensions and applications based upon
+the GoAhead WebServer and want to make them freely available to the WebServer community, you can add them to an archive of user  contributions that is maintained   on the GoAhead web site. Please submit 
+postings to webservercode@goahead.com for posting to the archive.</P><H2>8. Known Issues in WebServer 2.1<A NAME="issues"></A></H2><P>Refer  to   GoAhead's on-line support for WebServer  at<A HREF="http://goahead.custhelp.com/cgi-bin/goahead" TARGET="new">  http://goahead.custhelp.com/cgi-bin/goahead</A> for current WebServer issues.</P><TABLE  BORDER="0"><TR><TD WIDTH="95"><B>GoAhead Bug #</B></TD><TD WIDTH="428"><B>Issue Summary </B></TD></TR><TR><TD WIDTH="95">BUG01614</TD><TD WIDTH="428">TOC Treeapp does not show when accessed from &quot;localhost&quot;.</TD></TR><TR><TD WIDTH="95">BUG00159</TD><TD WIDTH="428">Java Applets do not execute properly when compiled into webs.	</TD></TR></TABLE><H2>9. Resolved  Issues in WebServer 2.1<A NAME="kissues"></A></H2><TABLE  BORDER="0">
+
+<TR><TD WIDTH="19%"><B>GoAhead Bug #</B></TD><TD WIDTH="81%"><B>Issue Summary </B></TD></TR>
+
+<TR><TD WIDTH="19%">BUG00686</TD><TD>Webserver hangs on CE when processing asp files greater than 2k. </TD></TR>
+
+<TR><TD>BUG01202</TD><TD>Significant memory leak on long-running Windows CE applications. </TD></TR>
+<TR><TD>BUG01285</TD><TD WIDTH="81%">SocketWaitForEvent returns wrong values thus causing loss of socket data. </TD></TR>
+
+<TR><TD>BUG01311</TD><TD WIDTH="81%">Unable to return multiple values with &lt;select&gt; tag using websGetVar. </TD></TR>
+<TR><TD WIDTH="19%">BUG01422</TD><TD>Missing fxn call to process POST request sent without a content-length header. </TD></TR>
+
+<TR><TD>BUG01497</TD><TD>Ability to upgrade WebServer while server is running in VxWorks.  </TD></TR>
+<TR><TD>BUG01510</TD><TD>The error() routinge is currently defined in the 'uemf.c' file. </TD></TR>
+
+<TR><TD>BUG01518</TD><TD>Can bypass security by adding an extra slash in URL. </TD></TR>
+<TR><TD>BUG01546</TD><TD WIDTH="81%">An ASP file is processed even
+when the request is only for the HEAD. </TD></TR>
+
+<TR><TD>BUG01574</TD><TD>List of WebServer files (files21.txt) needs updating.  </TD></TR>
+<TR><TD>BUG01587</TD><TD>Webs page faults when running on VxWorks. </TD></TR>
+
+<TR><TD>BUG01095</TD><TD>WebServer crashes when browser &quot;Stop&quot; button is activated.  </TD></TR>
+<TR><TD>BUG00797</TD><TD>Password function can be bypassed  by using the browser's refresh function.</TD></TR>
+
+<TR><TD>BUG0834</TD><TD>IE 5 security doesn't display password dialog box. </TD></TR>
+<TR><TD>BUG00999</TD><TD>Memory leak in CE timer functions. </TD></TR>
+
+<TR><TD>BUG01093</TD><TD>Reentrant issue for websTimeout.  </TD></TR>
+<TR><TD>BUG01135</TD><TD WIDTH="81%">WebServer has exception error intermediately in main.c function timerProc.  </TD></TR>
+
+</TABLE><H2>10. Resolved  Issues from  WebServer 2.0<A NAME="rissues"></A></H2><TABLE WIDTH="100%" BORDER="0"><TR><TD WIDTH="18%"><B>GoAhead Bug #</B></TD><TD WIDTH="82%"><B>Issue Summary </B></TD></TR><TR><TD WIDTH="18%">BUG00028</TD><TD WIDTH="82%">Broken links in Online Documentation	QA</TD></TR><TR><TD WIDTH="18%">BUG00043</TD><TD WIDTH="82%">	WEBS_IF_MODIFIED-SUPPORT compile crashes	QA</TD></TR><TR><TD WIDTH="18%">BUG00068</TD><TD WIDTH="82%">NO_BALLOC and asp.asp crash the WebServer</TD></TR><TR><TD WIDTH="18%">BUG00077</TD><TD WIDTH="82%">Compile errors with WEBS_PAGE_ROM	</TD></TR><TR><TD WIDTH="18%">BUG00044</TD><TD WIDTH="82%">Conforming link names	</TD></TR><TR><TD WIDTH="18%">BUG00009</TD><TD WIDTH="82%">Non-crashing compile error in Visual Studio with socket.c</TD></TR><TR><TD WIDTH="18%">BUG00022</TD><TD WIDTH="82%">	&quot;websDefaultHandler&quot; exceptions if a directory is passed	</TD></TR><TR><TD WIDTH="18%">BUG00064</TD><TD WIDTH="82%">WebServer 2.0 Release documentation says 2.0 Beta	</TD></TR><TR><TD WIDTH="18%">BUG00549</TD><TD WIDTH="82%">WebServer goforms handler not able to process forms greater than 512K	</TD></TR><TR><TD WIDTH="18%">BUG00072</TD><TD WIDTH="82%">VXWorks page faults after 450+ hits	</TD></TR><TR><TD WIDTH="18%">BUG00416</TD><TD WIDTH="82%">Reinitialize num in websDecodeUrl 	</TD></TR><TR><TD WIDTH="18%">BUG00113</TD><TD WIDTH="82%">Missing space in the text	Fixed	</TD></TR><TR><TD WIDTH="18%">BUG01137</TD><TD WIDTH="82%">Javascript engine memory leak and suggested fix		</TD></TR><TR><TD WIDTH="18%">BUG00898</TD><TD WIDTH="82%">Parameters in the documentation for websAspDefine don't match the .h file	</TD></TR><TR><TD WIDTH="18%">BUG00899</TD><TD WIDTH="82%">ejSetResult is undocumented	</TD></TR><TR><TD WIDTH="18%">ENH00956</TD><TD WIDTH="82%">http server push functionality	</TD></TR><TR><TD WIDTH="18%">BUG00015</TD><TD WIDTH="82%">about.htm is not supposed to be in the WS documentation	</TD></TR><TR><TD WIDTH="18%">BUG00035</TD><TD WIDTH="82%">packaget doesn't grab all needed files for webs.zip</TD></TR><TR><TD WIDTH="18%">BUG00067</TD><TD WIDTH="82%">WEBS_LOGS_SUPPORT is not recognized	</TD></TR></TABLE><H2>
+  11. Copyright Information
+<A name=copyright></A> </H2><H3>Trademarks </H3><P>GoAhead and GoAhead WebServer are  registered trademarks of GoAhead Software.   All other brand or product names are the trademarks or 
+registered trademarks of their respective holders. </P><H3>Copyright </H3><P>Copyright © 1999, 2000 GoAhead Software, Inc. All rights reserved. </P><P>Product and technical information in this document is subject to change 
+without notice and does not represent a commitment on the part of GoAhead 
+Software, Inc. </P><H3>Copy Restrictions </H3><P>The software described in this document may be used and copied only in 
+accordance with the terms of the accompanying license agreement. </P><P>GoAhead Software, Inc. <BR>10900 NE 8th Street<BR>Suite 750 <BR>Bellevue, WA 
+98004 <BR>+1 ( 425) 453-1900 <BR>www.goahead.com <BR>info@goahead.com </P><P>&nbsp;</P><P>&nbsp;</P><P>&nbsp;</P><P>&nbsp;</P><P>&nbsp;</P><P>&nbsp;</P><P>&nbsp;</P><P>&nbsp;</P><P>&nbsp;</P><P>&nbsp; </P></td></tr></table>
+</BODY></HTML>

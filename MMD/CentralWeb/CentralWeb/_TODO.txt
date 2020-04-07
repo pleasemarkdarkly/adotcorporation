@@ -1,0 +1,15 @@
+fix bugs in trackgear
++fix AddSort ListView Page Command. 
+
+limit banner images to appropriate mime types (bmp, jpg, gif)
+
+add commands for idle loop - add, update, delete, undo, submit
+IdleLoopView - update idle loop as changed when schedule updated.
+IdleLoopView - undo, delete, submit action links
+
+add commands for idle loop frames - add, update, delete, insert/reorder
+
+limit frame file uploads to appropriate mime types
+
+support multiple files per frame (in the case of tml, if we decide to support)?  1-M tblMMD_IdleLoopElementFile
+
