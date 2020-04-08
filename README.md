@@ -1,25 +1,46 @@
 ## Interactive Objects / Fullplay Media Source Code
 
-The following codebase was the bases of the aforementioned companies between 1998 and 2001. The code comprises of various configurations of an embedded media player ala mp3. The system uses both a fixed operating environment per the Cirrus Logic reference code and [eCos](http://ecos.sourceware.org/).
+![Ancient Code](https://img.shields.io/badge/Code-Ancient-orange) ![GitHub repo size](https://img.shields.io/github/repo-size/pleasemarkdarkly/adotcorporation) ![GitHub language count](https://img.shields.io/github/languages/count/pleasemarkdarkly/adotcorporation) ![GitHub top language](https://img.shields.io/github/languages/top/pleasemarkdarkly/adotcorporation) ![GitHub pull requests](https://img.shields.io/github/issues-pr/pleasemarkdarkly/adotcorporation)
 
-The system ran mostly on the Cirrus Logic Maverick line of ARM7 32bit with internal 32kb of SRAM. Support for ethernet, CD-ROM, HDD, Dataplay, SD, MMC, and Smart Media was supported as well as various sized LCD 2-bit, 4-bit, etc. 
+![Microsoft AutoPC](../images/autopc.png)
+![Handheld Reference](images/mediadevice.png) mp3 player barebones hardware. circa 1999.
+![Iomega Hipzip](images/iomega.jpg) [Iomega Hipzip](https://www.electronicsweb.com/doc/iomega-announces-retail-launch-of-revolutiona-0001) 
+![DJ Player](images/dj.jpg)
 
-The Microsoft Windows Media Codec has been removed due to licensing restrictions. As well as the FreeDB .dat file, circa 1998.  If you need this, feel free to email. 
+The following codebase was developed at the aforementioned companies between 1998 and 2006. The code comprises of various configurations of an embedded media player or commonly known as mp3 players. 
 
-The following individuals contributed to the code, if I have left anyone out, feel free to make a pull request. 
+The software stack system supports a number of hardware architectures, specifically, [Windows CE MIPS VR4111 (first generation PalmPC)](https://www.eetimes.com/nec-electronics-vr4111-cpu-at-the-heart-of-casios-new-cassiopeia-e-10-palm-pc/#), [Window CE Pocket PC Casseopia (VR4121)](https://www.digchip.com/datasheets/download_datasheet.php?id=1039903&part-number=VR4121), [Microsoft's First Generation AutoPC (SH3)](https://www.cnet.com/news/clarion-to-build-autopc-using-ms-software/), [Cirrus Logic Maverick (7412)](http://ecos.sourceware.org/ecos/boards/edb7212.html).  Additionally, the software sits on top of [eCos](http://ecos.sourceware.org/). So in summary, MIPS, SH3, and ARM.
 
-Todd Malsbary
-Edward Miller
-Matt Tadd
-Ezra Driebach
-Dan Conti
-Kenn Gordon
+![Development Board](images/dharma-banner.png)
 
-In 1998, before mp3 was even a thing. I wanted to make a playlist songs for a girl that I had a crush on. Making a mix-CD seemed like a lot of work. 
+The Dharma system (above) included all the peripherals and software needed to create any permutation of a digital media device you wanted.  Centered around the (super low cost) Cirrus Logic Maverick 7212, an ARM7 with internal 32kb of SRAM and access to both 16bit or 32bit wide FLASH. As you can see from the picture above, the system supported ethernet, CD-ROM, HDD, Dataplay, SD, MMC, and Smart Media was supported as well as various sized LCD 2-bit, 4-bit, etc. In the 1998 the feature ot differentiate was what was the storage, how easy was it to use, and where did you get your content. For example, cutting edge format plays such as [Dataplay](https://www.bizjournals.com/denver/stories/2001/06/04/daily41.html) was also supported. The company folded before any significant launch so here is a picture.
 
-MP3 had just been formalized for a streaming audio format for satelite radio and I had a Sony mini-disc which I wondered why I couldn't write to the disk arbitrary data.
+![Dataplay](images/dataplay.jpeg)
 
-Additionally, Microsoft had just released the first PalmPC Casseopia which used the VR4111 MIPS processor. Michael Hipp had written a reference mp3 implementation, which I purchased, using this as a starting point, I read the NEC processor specification for the VR4111 and realized that the Microsft Visual Studio compiler for Windows CE didn't recognize the MACC processor instruction. With the C implementation of the mp3 decoder not fast enough, something had to be done.
+## Removed code
+
+_The Microsoft Windows Media Codec has been removed due to licensing restrictions. As well as the FreeDB .dat file, circa 1998.  If you need this, let me know._
+
+## MIT License
+
+_Developers listed in alphabetical order._
+
+Copyright (c) 1998-2020 Benjamin Eitzen, Dan Conti, Daniel Bolstad, Daniel Coughlin, Edward Miller, Ezra Dreisbach, James Zipperer, Kenneth Gordon, Matthew Tadd, Morgan Belford, Noah Maas, Phil Rutchman, Todd Malsbury, A DOT Corporation.
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+See License.MD file for complete License.
+
+## Background
+
+Mp3 had just been approved for a streaming audio format, the [RIO](https://en.wikipedia.org/wiki/Rio_PMP300) was released in Korea and I had a [Sony mini-disc](https://en.wikipedia.org/wiki/MiniDisc) which I wondered why I couldn't connect the disk to a PC or write arbitrary data as the 170MB were dedicated to the propritary ATRAC format. PC audio jukeboxes were not a thing, storage and [RAM were prohibatively expensive](https://mkomo.com/cost-per-gigabyte). Palm Pilot was the dominate handheld. From the date of the idea to create an mp3 player for a pocket device, my collegues Ed Miller, Matt Tadd, and myself worked on a half dozen hardware platforms, none of which were powerful enough to decode faster than realtime, resulting in audio stutters. First generation PocketPC, AutoPC, even the first generation mp3 player RIO (Micronas 3507D) were all unable work. Additionally, Compact Flash storage was between 4 to 128 MBs, at about $1 per MB. Six months later, we recieved the Casio E-100 prototype, and our player worked. _Moral: You have to fail alot before succeeding, its part of the process._
+
+![Microsoft Windows Media Player](images/mediadevice.png) Windows Media only playback, first digital audio portable player. circa 1998.
+
+## Fixed point
+
+AThe first Casio PalmPC Casseopia running Microsoft Windows CE used the [NEC VR4111 MIPS processor](https://www.datasheetarchive.com/pdf/download.php?id=f32cdf2af5921ab5d768596e7ec686c4a8df45&type=P&term=VR4111). I acquired the rights to a reference mp3 implementation, using this as a starting point, analyzed the VR4111 processor specification and the output of C code from Microsft Visual Studio compiler for Windows CE.  Inefficiencies in the compilation and unsupported assembly were significant issues to overcome. Below are the highlights. 
 
 First moving floats to fixed point.
 
@@ -41,7 +62,7 @@ First moving floats to fixed point.
 #elif defined(REAL_IS_INT)
 ```
 
-The VR4111 required a hack to access the MACC.
+Create an abstraction for the fixed point mulitplication. 
 
 ```
 inline int mult_real(int a, int b)
@@ -100,7 +121,9 @@ inline int mult_real(int a, int b)
 
 ```
 
-Using the MACC to speed up the decode process.
+And time the output. Basically, you need a second of audio to be decoded within a second. 
+
+Find processors which have special operations generally called multiply and accumilate.  Using the MACC to speed up the decode process.
 
 ```
 #elif defined(_MIPS_) && defined(MIPS_4111)
@@ -113,64 +136,15 @@ Using the MACC to speed up the decode process.
             _sum -= tmp;
             mips_macc(*(--window), *b0++, &tmp);
             _sum -= tmp;
-            mips_macc(*(--window), *b0++, &tmp);
-            _sum -= tmp;
-            mips_macc(*(--window), *b0++, &tmp);
-            _sum -= tmp;
-            mips_macc(*(--window), *b0++, &tmp);
-            _sum -= tmp;
-            mips_macc(*(--window), *b0++, &tmp);
-            _sum -= tmp;
-            mips_macc(*(--window), *b0++, &tmp);
-            _sum -= tmp;
-            mips_macc(*(--window), *b0++, &tmp);
-            _sum -= tmp;
-            mips_macc(*(--window), *b0++, &tmp);
-            _sum -= tmp;
-            mips_macc(*(--window), *b0++, &tmp);
-            _sum -= tmp;
-            mips_macc(*(--window), *b0++, &tmp);
-            _sum -= tmp;
-            mips_macc(*(--window), *b0++, &tmp);
-            _sum -= tmp;
-            mips_macc(*(--window), *b0++, &tmp);
-            _sum -= tmp;
-            mips_macc(*(--window), *b0++, &tmp);
-            _sum -= tmp;
-            mips_macc(*(--window), *b0++, &tmp);
-            _sum -= tmp;
-
+      
+            ...
+      
             mips_macc_end(_sum, &sum);
 ```
 
-The next generation Casseopia came with the next version of the VR4121, along with MADD16.
+NEC's VR4111 provided the madd16 operator which worked.
 
 ```
-#if defined(MIPS_4121) && defined(OPT_MACC)
-//#pragma optimize("", off)  // turn all optimizations off, otherwise
-// clmips will mess up the registers used by
-// the 4121 macc instruction
-static real mips_4121_helper1(real *window, real *b0)
-{
-    real res;              //42
-                          /*
-      sum  = MULT_REAL(*window++, *b0++);
-      sum -= MULT_REAL(*window++, *b0++);
-      sum += MULT_REAL(*window++, *b0++);
-      sum -= MULT_REAL(*window++, *b0++);
-      sum += MULT_REAL(*window++, *b0++);
-      sum -= MULT_REAL(*window++, *b0++);
-      sum += MULT_REAL(*window++, *b0++);
-      sum -= MULT_REAL(*window++, *b0++);
-      sum += MULT_REAL(*window++, *b0++);
-      sum -= MULT_REAL(*window++, *b0++);
-      sum += MULT_REAL(*window++, *b0++);
-      sum -= MULT_REAL(*window++, *b0++);
-      sum += MULT_REAL(*window++, *b0++);
-      sum -= MULT_REAL(*window++, *b0++);
-      sum += MULT_REAL(*window++, *b0++);
-      sum -= MULT_REAL(*window++, *b0++);
-*/
     __asm("lw %t3,0(%0);" //load pointer to first array in %t3
           "lw %t4,0(%1);" //load pointer to second array in %t4
           "mtlo zero;"      //clear accumulate register
@@ -192,89 +166,20 @@ static real mips_4121_helper1(real *window, real *b0)
           "lw %t6,0x8(%t4);" //load value from %t4 at offset 8
           "madd16 %t5,%t6;"
           //".word 0x01AE0028;" //macc %t5, %t6
+    
+           ...
 
-          "lw %t5,0xC(%t3);"  //load value from %t3 at offset 12 (index 3)
-          "sub %t5,zero,%t5;" //negate %t5
-          "lw %t6,0xC(%t4);"  //load value from %t4 at offset 12
-          "madd16 %t5,%t6;"
-          //".word 0x01AE0028;"    //macc %t5, %t6
-
-          "lw %t5,0x10(%t3);" //load value from %t3 at offset 0 (index 4)
-          "lw %t6,0x10(%t4);" //load value from %t4 at offset 0
-          "madd16 %t5,%t6;"
-          //".word 0x01AE0028;"    //macc %t5, %t6
-
-          "lw %t5,0x14(%t3);" //load value from %t3 at offset 4 (index 5)
-          "sub %t5,zero,%t5;" //negate %t5
-          "lw %t6,0x14(%t4);" //load value from %t4 at offset 4
-          "madd16 %t5,%t6;"
-          //".word 0x01AE0028;"    //macc %t5, %t6
-
-          "lw %t5,0x18(%t3);" //load value from %t3 at offset 8 (index 6)
-          "lw %t6,0x18(%t4);" //load value from %t4 at offset 8
-          "madd16 %t5,%t6;"
-          //".word 0x01AE0028;" //macc %t5, %t6
-
-          "lw %t5,0x1C(%t3);" //load value from %t3 at offset 12 (index 7)
-          "sub %t5,zero,%t5;" //negate %t5
-          "lw %t6,0x1C(%t4);" //load value from %t4 at offset 12
-          "madd16 %t5,%t6;"
-          //".word 0x01AE0028;"    //macc %t5, %t6
-
-          "lw %t5,0x20(%t3);" //load value from %t3 at offset 0 (index 8)
-          "lw %t6,0x20(%t4);" //load value from %t4 at offset 0
-          "madd16 %t5,%t6;"
-          //".word 0x01AE0028;"    //macc %t5, %t6
-
-          "lw %t5,0x24(%t3);" //load value from %t3 at offset 4 (index 9)
-          "sub %t5,zero,%t5;" //negate %t5
-          "lw %t6,0x24(%t4);" //load value from %t4 at offset 4
-          "madd16 %t5,%t6;"
-          //".word 0x01AE0028;"    //macc %t5, %t6
-
-          "lw %t5,0x28(%t3);" //load value from %t3 at offset 8 (index 10)
-          "lw %t6,0x28(%t4);" //load value from %t4 at offset 8
-          "madd16 %t5,%t6;"
-          //".word 0x01AE0028;" //macc %t5, %t6
-
-          "lw %t5,0x2C(%t3);" //load value from %t3 at offset 12 (index 11)
-          "sub %t5,zero,%t5;" //negate %t5
-          "lw %t6,0x2C(%t4);" //load value from %t4 at offset 12
-          "madd16 %t5,%t6;"
-          //".word 0x01AE0028;"    //macc %t5, %t6
-
-          "lw %t5,0x30(%t3);" //load value from %t3 at offset 0 (index 12)
-          "lw %t6,0x30(%t4);" //load value from %t4 at offset 0
-          "madd16 %t5,%t6;"
-          //".word 0x01AE0028;"    //macc %t5, %t6
-
-          "lw %t5,0x34(%t3);" //load value from %t3 at offset 4 (index 13)
-          "sub %t5,zero,%t5;" //negate %t5
-          "lw %t6,0x34(%t4);" //load value from %t4 at offset 4
-          "madd16 %t5,%t6;"
-          //".word 0x01AE0028;"    //macc %t5, %t6
-
-          "lw %t5,0x38(%t3);" //load value from %t3 at offset 8 (index 14)
-          "lw %t6,0x38(%t4);" //load value from %t4 at offset 8
-          "madd16 %t5,%t6;"
-          //".word 0x01AE0028;" //macc %t5, %t6
-
-          "lw %t5,0x3C(%t3);" //load value from %t3 at offset 12 (index 15)
-          "sub %t5,zero,%t5;" //negate %t5
-          "lw %t6,0x3C(%t4);" //load value from %t4 at offset 12
-          "madd16 %t5,%t6;"
-          //".word 0x01AE0028;"    //macc %t5, %t6
-
-          "mflo %t1;"
-          "srl %t1,%t1,15;" //FRACBITS
-          "mfhi %t2;"
-          "sll %t2,%t2,32-15;" //FRACBITS
-          "or %t2,%t2,%t1;"
-          "sw %t2,0(%0)",
-          &res);
-
-    return res;
-}
 ```
 
-This allowed us to have the fastest decoders in the industry.
+## Additional Devices
+
+![DJ Player](images/dj-close.jpg)
+![First genration embedded reference player](images/maverick_chip.jpg)
+![Microsoft Windows Media](images/mediaplayer.png)
+![mp3 Player and a Gameboy Emulator](images/mediadevice.png)
+![Digital Jukebox](images/dj.jpg)
+![Microdrive](images/ibm340.jpg)
+
+
+![A DOT Corporation](images/adot.png)
+
