@@ -2,16 +2,11 @@
 
 ![Ancient Code](https://img.shields.io/badge/Code-Ancient-orange) ![GitHub repo size](https://img.shields.io/github/repo-size/pleasemarkdarkly/adotcorporation) ![GitHub language count](https://img.shields.io/github/languages/count/pleasemarkdarkly/adotcorporation) ![GitHub top language](https://img.shields.io/github/languages/top/pleasemarkdarkly/adotcorporation) ![GitHub pull requests](https://img.shields.io/github/issues-pr/pleasemarkdarkly/adotcorporation)
 
-![Microsoft AutoPC](../images/autopc.png)
-![Handheld Reference](images/mediadevice.png) mp3 player barebones hardware. circa 1999.
-![Iomega Hipzip](images/iomega.jpg) [Iomega Hipzip](https://www.electronicsweb.com/doc/iomega-announces-retail-launch-of-revolutiona-0001) 
-![DJ Player](images/dj.jpg)
+![Development Board](images/dharma-banner.png)
 
 The following codebase was developed at the aforementioned companies between 1998 and 2006. The code comprises of various configurations of an embedded media player or commonly known as mp3 players. 
 
 The software stack system supports a number of hardware architectures, specifically, [Windows CE MIPS VR4111 (first generation PalmPC)](https://www.eetimes.com/nec-electronics-vr4111-cpu-at-the-heart-of-casios-new-cassiopeia-e-10-palm-pc/#), [Window CE Pocket PC Casseopia (VR4121)](https://www.digchip.com/datasheets/download_datasheet.php?id=1039903&part-number=VR4121), [Microsoft's First Generation AutoPC (SH3)](https://www.cnet.com/news/clarion-to-build-autopc-using-ms-software/), [Cirrus Logic Maverick (7412)](http://ecos.sourceware.org/ecos/boards/edb7212.html).  Additionally, the software sits on top of [eCos](http://ecos.sourceware.org/). So in summary, MIPS, SH3, and ARM.
-
-![Development Board](images/dharma-banner.png)
 
 The Dharma system (above) included all the peripherals and software needed to create any permutation of a digital media device you wanted.  Centered around the (super low cost) Cirrus Logic Maverick 7212, an ARM7 with internal 32kb of SRAM and access to both 16bit or 32bit wide FLASH. As you can see from the picture above, the system supported ethernet, CD-ROM, HDD, Dataplay, SD, MMC, and Smart Media was supported as well as various sized LCD 2-bit, 4-bit, etc. In the 1998 the feature ot differentiate was what was the storage, how easy was it to use, and where did you get your content. For example, cutting edge format plays such as [Dataplay](https://www.bizjournals.com/denver/stories/2001/06/04/daily41.html) was also supported. The company folded before any significant launch so here is a picture.
 
@@ -173,6 +168,10 @@ NEC's VR4111 provided the madd16 operator which worked.
 
 ## Additional Devices
 
+![Microsoft AutoPC](../images/autopc.png)
+![Handheld Reference](images/mediadevice.png) mp3 player barebones hardware. circa 1999.
+![Iomega Hipzip](images/iomega.jpg) [Iomega Hipzip](https://www.electronicsweb.com/doc/iomega-announces-retail-launch-of-revolutiona-0001) 
+![DJ Player](images/dj.jpg)
 ![DJ Player](images/dj-close.jpg)
 ![First genration embedded reference player](images/maverick_chip.jpg)
 ![Microsoft Windows Media](images/mediaplayer.png)
