@@ -8,9 +8,7 @@ The following codebase was developed at the aforementioned companies between 199
 
 The software stack system supports a number of hardware architectures, specifically, [Windows CE MIPS VR4111 (first generation PalmPC)](https://www.eetimes.com/nec-electronics-vr4111-cpu-at-the-heart-of-casios-new-cassiopeia-e-10-palm-pc/#), [Window CE Pocket PC Casseopia (VR4121)](https://www.digchip.com/datasheets/download_datasheet.php?id=1039903&part-number=VR4121), [Microsoft's First Generation AutoPC (SH3)](https://www.cnet.com/news/clarion-to-build-autopc-using-ms-software/), [Cirrus Logic Maverick (7412)](http://ecos.sourceware.org/ecos/boards/edb7212.html).  Additionally, the software sits on top of [eCos](http://ecos.sourceware.org/). So in summary, MIPS, SH3, and ARM.
 
-The Dharma system (above) included all the peripherals and software needed to create any permutation of a digital media device you wanted.  Centered around the (super low cost) Cirrus Logic Maverick 7212, an ARM7 with internal 32kb of SRAM and access to both 16bit or 32bit wide FLASH. As you can see from the picture above, the system supported ethernet, CD-ROM, HDD, Dataplay, SD, MMC, and Smart Media was supported as well as various sized LCD 2-bit, 4-bit, etc. In the 1998 the feature ot differentiate was what was the storage, how easy was it to use, and where did you get your content. For example, cutting edge format plays such as [Dataplay](https://www.bizjournals.com/denver/stories/2001/06/04/daily41.html) was also supported. The company folded before any significant launch so here is a picture.
-
-![Dataplay](images/dataplay.jpeg)
+The Dharma system (above) included all the peripherals and software needed to create any permutation of a digital media device you wanted.  Centered around the (super low cost) Cirrus Logic Maverick 7212, an ARM7 with internal 32kb of SRAM and access to both 16bit or 32bit wide FLASH. As you can see from the picture above, the system supported ethernet, CD-ROM, HDD, Dataplay, SD, MMC, and Smart Media was supported as well as various sized LCD 2-bit, 4-bit, etc. In the 1998 the feature ot differentiate was what was the storage, how easy was it to use, and where did you get your content. For example, cutting edge format plays such as [Dataplay](https://www.bizjournals.com/denver/stories/2001/06/04/daily41.html) was also supported.
 
 ## Removed code
 
@@ -31,7 +29,7 @@ See License.MD file for complete License.
 
 Mp3 had just been approved for a streaming audio format, the [RIO](https://en.wikipedia.org/wiki/Rio_PMP300) was released in Korea and I had a [Sony mini-disc](https://en.wikipedia.org/wiki/MiniDisc) which I wondered why I couldn't connect the disk to a PC or write arbitrary data as the 170MB were dedicated to the propritary ATRAC format. PC audio jukeboxes were not a thing, storage and [RAM were prohibatively expensive](https://mkomo.com/cost-per-gigabyte). Palm Pilot was the dominate handheld. From the date of the idea to create an mp3 player for a pocket device, my collegues Ed Miller, Matt Tadd, and myself worked on a half dozen hardware platforms, none of which were powerful enough to decode faster than realtime, resulting in audio stutters. First generation PocketPC, AutoPC, even the first generation mp3 player RIO (Micronas 3507D) were all unable work. Additionally, Compact Flash storage was between 4 to 128 MBs, at about $1 per MB. Six months later, we recieved the Casio E-100 prototype, and our player worked. _Moral: You have to fail alot before succeeding, its part of the process._
 
-![Microsoft Windows Media Player](images/mediadevice.png) Windows Media only playback, first digital audio portable player. circa 1998.
+![Microsoft Windows Media Player](../images/mediadevice.png) Windows Media only playback, first digital audio portable player. circa 1998.
 
 ## Fixed point
 
@@ -166,16 +164,4 @@ NEC's VR4111 provided the madd16 operator which worked.
 
 ```
 
-## Additional Devices
-
-![Iomega Hipzip](images/iomega.jpg) [Iomega Hipzip](https://www.electronicsweb.com/doc/iomega-announces-retail-launch-of-revolutiona-0001) 
-![DJ Player](images/dj.jpg)
-![DJ Player](images/dj-close.jpg)
-![First genration embedded reference player](images/maverick_chip.jpg)
-![Microsoft Windows Media](images/mediaplayer.png)
-![mp3 Player and a Gameboy Emulator](images/mediadevice.png)
-![Microdrive](images/ibm340.png)
-
-
-![A DOT Corporation](images/adot.png)
 
