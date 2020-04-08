@@ -168,16 +168,13 @@ NEC's VR4111 provided the madd16 operator which worked.
 
 ## Additional Devices
 
-![Microsoft AutoPC](../images/autopc.png)
-![Handheld Reference](images/mediadevice.png) mp3 player barebones hardware. circa 1999.
 ![Iomega Hipzip](images/iomega.jpg) [Iomega Hipzip](https://www.electronicsweb.com/doc/iomega-announces-retail-launch-of-revolutiona-0001) 
 ![DJ Player](images/dj.jpg)
 ![DJ Player](images/dj-close.jpg)
 ![First genration embedded reference player](images/maverick_chip.jpg)
 ![Microsoft Windows Media](images/mediaplayer.png)
 ![mp3 Player and a Gameboy Emulator](images/mediadevice.png)
-![Digital Jukebox](images/dj.jpg)
-![Microdrive](images/ibm340.jpg)
+![Microdrive](images/ibm340.png)
 
 
 ![A DOT Corporation](images/adot.png)
