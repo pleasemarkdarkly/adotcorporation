@@ -133,7 +133,8 @@ Find processors which have special operations generally called multiply and accu
             mips_macc_end(_sum, &sum);
 ```
 
-NEC's VR4111 provided the madd16 operator which worked.
+NEC's VR4121 provided the madd16 operator which worked. And finally was able to ship with a digital media player, the first of its kind.
+
 
 ```
     __asm("lw %t3,0(%0);" //load pointer to first array in %t3
