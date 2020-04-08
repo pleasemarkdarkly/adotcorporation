@@ -6,32 +6,31 @@
 
 The following codebase was developed at the aforementioned companies between 1998 and 2006. The code comprises of various configurations of an embedded media player or commonly known as mp3 players. 
 
-The software stack system supports a number of hardware architectures, specifically, [Windows CE MIPS VR4111 (first generation PalmPC)](https://www.eetimes.com/nec-electronics-vr4111-cpu-at-the-heart-of-casios-new-cassiopeia-e-10-palm-pc/#), [Window CE Pocket PC Casseopia (VR4121)](https://www.digchip.com/datasheets/download_datasheet.php?id=1039903&part-number=VR4121), [Microsoft's First Generation AutoPC (SH3)](https://www.cnet.com/news/clarion-to-build-autopc-using-ms-software/), [Cirrus Logic Maverick (7412)](http://ecos.sourceware.org/ecos/boards/edb7212.html).  Additionally, the software sits on top of [eCos](http://ecos.sourceware.org/). So in summary, MIPS, SH3, and ARM.
+The software stack system supports a number of hardware architectures, specifically, [Windows CE MIPS VR4111 (first generation PalmPC)](https://www.eetimes.com/nec-electronics-vr4111-cpu-at-the-heart-of-casios-new-cassiopeia-e-10-palm-pc/#), [Window CE Pocket PC Casseopia (VR4121)](https://www.digchip.com/datasheets/download_datasheet.php?id=1039903&part-number=VR4121), [Microsoft's First Generation AutoPC (SH3)](https://www.cnet.com/news/clarion-to-build-autopc-using-ms-software/), [Cirrus Logic Maverick (7412) ARM7 @ 72 MHz](http://ecos.sourceware.org/ecos/boards/edb7212.html).  Additionally, the software sits on top of [eCos](http://ecos.sourceware.org/).
 
-The Dharma system (above) included all the peripherals and software needed to create any permutation of a digital media device you wanted.  Centered around the (super low cost) Cirrus Logic Maverick 7212, an ARM7 with internal 32kb of SRAM and access to both 16bit or 32bit wide FLASH. As you can see from the picture above, the system supported ethernet, CD-ROM, HDD, Dataplay, SD, MMC, and Smart Media was supported as well as various sized LCD 2-bit, 4-bit, etc. In the 1998 the feature ot differentiate was what was the storage, how easy was it to use, and where did you get your content. For example, cutting edge format plays such as [Dataplay](https://www.bizjournals.com/denver/stories/2001/06/04/daily41.html) was also supported.
+The Dharma system (above) included all the peripherals and software needed to create any permutation of a digital media device you wanted.  Centered around the (super low cost) Cirrus Logic Maverick 7212, an ARM7 with internal 32kb of SRAM and access to both 16bit or 32bit wide FLASH. As you can see from the picture above, the system supported ethernet, CD-ROM, HDD, Dataplay, SD, MMC, and Smart Media. Customers could configure arious sized LCD (2-bit, 4-bit) through the remaining GPIO pins. In the 1998 the feature set for differentiation was around storage - which also effected cost. Dharma also supported cutting edge formats such the supremely funded [Dataplay](https://www.bizjournals.com/denver/stories/2001/06/04/daily41.html).
 
 ## Removed code
 
-_The Microsoft Windows Media Codec has been removed due to licensing restrictions. As well as the FreeDB .dat file, circa 1998.  If you need this, let me know._
+_The Microsoft Windows Media Codec has been removed due to licensing restrictions. The FreeDB (Open Source version of GraceNote) was removed solely due to the .dat file size._
 
 ## MIT License
 
 _Developers listed in alphabetical order._
 
-Copyright (c) 1998-2020 Benjamin Eitzen, Dan Conti, Daniel Bolstad, Daniel Coughlin, Edward Miller, Ezra Dreisbach, James Zipperer, Kenneth Gordon, Matthew Tadd, Morgan Belford, Noah Maas, Phil Rutchman, Todd Malsbury, A DOT Corporation.
+Copyright (c) 1998-2020 A DOT Corporation. Developers: Benjamin Eitzen, Dan Conti, Daniel Bolstad, Daniel Coughlin, Edward Miller, Ezra Dreisbach, James Zipperer, Kenneth Gordon, Matthew Tadd, Morgan Belford, Noah Maas, Phil Rutchman, and Todd Malsbury.
 
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 
 See License.MD file for complete License.
 
 ## Background
 
-Mp3 had just been approved for a streaming audio format, the [RIO](https://en.wikipedia.org/wiki/Rio_PMP300) was released in Korea and I had a [Sony mini-disc](https://en.wikipedia.org/wiki/MiniDisc) which I wondered why I couldn't connect the disk to a PC or write arbitrary data as the 170MB were dedicated to the propritary ATRAC format. PC audio jukeboxes were not a thing, storage and [RAM were prohibatively expensive](https://mkomo.com/cost-per-gigabyte). Palm Pilot was the dominate handheld. From the date of the idea to create an mp3 player for a pocket device, my collegues Ed Miller, Matt Tadd, and myself worked on a half dozen hardware platforms, none of which were powerful enough to decode faster than realtime, resulting in audio stutters. First generation PocketPC, AutoPC, even the first generation mp3 player RIO (Micronas 3507D) were all unable work. Additionally, Compact Flash storage was between 4 to 128 MBs, at about $1 per MB. Six months later, we recieved the Casio E-100 prototype, and our player worked. _Moral: You have to fail alot before succeeding, its part of the process._
+Mp3 had just been approved for a streaming audio format, the [RIO](https://en.wikipedia.org/wiki/Rio_PMP300) was released in Korea and the [Sony mini-disc](https://en.wikipedia.org/wiki/MiniDisc) would not allow  the writing of arbitrary data (the format capacity of 170MB was dedicated to the propritary ATRAC format). PC audio jukeboxes were not a thing, storage and [RAM were prohibatively expensive](https://mkomo.com/cost-per-gigabyte). Palm Pilot was the dominate handheld. From the date of the idea to create an mp3 player for a pocket device, Ed Miller, Matt Tadd, and myself worked on a half dozen hardware platforms, none of which were powerful enough to decode faster than realtime, resulting in audio stuttering. First generation PocketPC, AutoPC, even the first generation mp3 player RIO (Micronas 3507D) were all unable work for various reasons. As stated earlier, Compact Flash storage was between 4 to 128 MBs, at about $1 per MB, and underwhelming to store 1 to 35 songs. Nonetheless, six months later, we recieved the Casio E-100 prototype, and our player worked, although the device plus storage was over $500._
 
 ## Fixed point
 
-AThe first Casio PalmPC Casseopia running Microsoft Windows CE used the [NEC VR4111 MIPS processor](https://www.datasheetarchive.com/pdf/download.php?id=f32cdf2af5921ab5d768596e7ec686c4a8df45&type=P&term=VR4111). I acquired the rights to a reference mp3 implementation, using this as a starting point, analyzed the VR4111 processor specification and the output of C code from Microsft Visual Studio compiler for Windows CE.  Inefficiencies in the compilation and unsupported assembly were significant issues to overcome. Below are the highlights. 
+The first Casio Palm PC, Casseopia running Microsoft Windows CE used the [NEC VR4111 MIPS processor](https://www.datasheetarchive.com/pdf/download.php?id=f32cdf2af5921ab5d768596e7ec686c4a8df45&type=P&term=VR4111). I acquired the rights to a reference mp3 implementation, using this as a starting point, I analyzed the VR4111 processor specification and the output of C code from Microsft Visual Studio compiler for Windows CE.  Inefficiencies in the compilation and unsupported assembly were significant issues to overcome. Below are the highlights. Developers Ezra Dreibach, Matt Tadd, and Edward Miller each contributed.
 
 First moving floats to fixed point.
 
@@ -114,7 +113,7 @@ inline int mult_real(int a, int b)
 
 And time the output. Basically, you need a second of audio to be decoded within a second. 
 
-Find processors which have special operations generally called multiply and accumilate.  Using the MACC to speed up the decode process.
+Find processors which have special operations called multiply and accumilate.  Using the MACC to speed up the decode process.
 
 ```
 #elif defined(_MIPS_) && defined(MIPS_4111)
@@ -163,4 +162,6 @@ NEC's VR4121 provided the madd16 operator which worked. And finally was able to 
 
 ```
 
+## Bonus
 
+The above platform also encodes mp3. The encoder is symetical to decode. 
