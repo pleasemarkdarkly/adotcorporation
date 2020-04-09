@@ -164,7 +164,7 @@ NEC's VR4121 provided the madd16 operator which worked. And finally was able to 
 
 ## Bonus
 
-The above platform also encodes mp3. The encoder is symetical to decode. 
+The above platform also encodes mp3 using the ARM7 inside 72MHz.
 
 ## A DOT Corporation
 
