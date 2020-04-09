@@ -12,7 +12,11 @@ The Dharma system (above) included all the peripherals and software needed to cr
 
 ## Removed code
 
-_The Microsoft Windows Media Codec has been removed due to licensing restrictions. The FreeDB (Open Source version of GraceNote) was removed solely due to the .dat file size._
+_The Microsoft Windows Media Codec has been removed due to licensing restrictions.
+
+## FreeDB
+
+The Repo has been updated with Git Large File Storage.  Thus, the FreeDB (Open Source version of GraceNote) images were added._
 
 ## MIT License
 
