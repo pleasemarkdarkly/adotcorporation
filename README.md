@@ -8,15 +8,17 @@ The following codebase was developed at the aforementioned companies between 199
 
 The software stack system supports a number of hardware architectures, specifically, [Windows CE MIPS VR4111 (first generation PalmPC)](https://www.eetimes.com/nec-electronics-vr4111-cpu-at-the-heart-of-casios-new-cassiopeia-e-10-palm-pc/#), [Window CE Pocket PC Casseopia (VR4121)](https://www.digchip.com/datasheets/download_datasheet.php?id=1039903&part-number=VR4121), [Microsoft's First Generation AutoPC (SH3)](https://www.cnet.com/news/clarion-to-build-autopc-using-ms-software/), [Cirrus Logic Maverick (7412) ARM7 @ 72 MHz](http://ecos.sourceware.org/ecos/boards/edb7212.html).  Additionally, the software sits on top of [eCos](http://ecos.sourceware.org/).
 
+The MIPSVR4111 powered PocketPC was the first embedded software mp3 (and Windows Media Audio) player _ever_, in __1998__. So obviously it had to be __super efficient__. 
+
 The Dharma system (above) included all the peripherals and software needed to create any permutation of a digital media device you wanted.  Centered around the (super low cost) Cirrus Logic Maverick 7212, an ARM7 with internal 32kb of SRAM and access to both 16bit or 32bit wide FLASH. As you can see from the picture above, the system supported ethernet, CD-ROM, HDD, Dataplay, SD, MMC, and Smart Media. Customers could configure arious sized LCD (2-bit, 4-bit) through the remaining GPIO pins. In the 1998 the feature set for differentiation was around storage - which also effected cost. Dharma also supported cutting edge formats such the supremely funded [Dataplay](https://www.bizjournals.com/denver/stories/2001/06/04/daily41.html).
 
 ## Removed code
 
-_The Microsoft Windows Media Codec has been removed due to licensing restrictions.
+_The Microsoft Windows Media Codec has been removed due to licensing restrictions._
 
 ## FreeDB
 
-The Repo has been updated with Git Large File Storage.  Thus, the FreeDB (Open Source version of GraceNote) images were added._
+The Repo has been updated with Git Large File Storage.  Thus, the FreeDB (Open Source version of GraceNote) images were added.
 
 ## MIT License
 
