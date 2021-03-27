@@ -24,7 +24,7 @@ The Repo has been updated with Git Large File Storage.  Thus, the FreeDB (Open S
 
 _Developers listed in alphabetical order._
 
-Copyright (c) 1998-2020 A DOT Corporation. Developers: Benjamin Eitzen, Dan Conti, Daniel Bolstad, Daniel Coughlin, Edward Miller, Ezra Dreisbach, James Zipperer, Kenneth Gordon, Matthew Tadd, Morgan Belford, Noah Maas, Phil Rutchman, and Todd Malsbury.
+Copyright (c) 1998-2020 A DOT Corporation. Developers: Benjamin Eitzen, Dan Conti, Daniel Bolstad, Daniel Coughlin, Edward Miller, Ezra Dreisbach, James Zipperer, Teman Clark-Lindh, Kenneth Gordon, Matthew Tadd, Morgan Belford, Noah Maas, Phil Rutchman, and Todd Malsbury.
 
 The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 
